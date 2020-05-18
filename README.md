@@ -1,1 +1,1 @@
-# ethereum-terakoya.github.io
+# ethereum-terakoya.org website
