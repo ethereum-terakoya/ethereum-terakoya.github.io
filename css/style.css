@@ -5,7 +5,7 @@ p,li {
   background: url("../assets/header1.png");
   height: auto;
   width: 100%;
-  background-position: right;
+  background-position: left;
   background-size: cover;
   background-repeat: no-repeat;
   padding: 12%;
