@@ -1,6 +1,3 @@
 RewriteEngine on
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME}\.html -f
-RewriteRule ^(.*)$ $1.html [NC,L]
 RewriteRule ^https://ethereum-terakoya.org/index.html(.*)$ /https://ethereum-terakoya.org/$1 [L,R=301]
 RewriteRule ^https://ethereum-terakoya.org/en/index.html(.*)$ /https://ethereum-terakoya.org/en/$1 [L,R=301]
