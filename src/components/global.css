@@ -1,0 +1,13 @@
+.jumbotron {
+  background: url("../images/header.png");
+  height: auto;
+  width: 100%;
+  background-position: left;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 12%;
+  border-radius: 0;
+}
+.bg-beige {
+  background: #faf7ef;
+}
