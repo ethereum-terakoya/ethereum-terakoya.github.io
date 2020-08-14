@@ -1,0 +1,32 @@
+{
+  "componentChunkName": "component---cache-dev-404-page-js",
+  "path": "/en/dev-404-page/",
+  "result": {
+    "data": {
+      "allSitePage": {
+        "nodes": [
+          { "path": "/id-voting/kickoff-meeting" },
+          { "path": "/en/id-voting/kickoff-meeting" },
+          { "path": "/id-voting" },
+          { "path": "/en/id-voting" },
+          { "path": "/en/dev-404-page/" },
+          { "path": "/404/" },
+          { "path": "/en/404/" },
+          { "path": "/" },
+          { "path": "/en/" },
+          { "path": "/news/" },
+          { "path": "/en/news/" },
+          { "path": "/404.html" },
+          { "path": "/en/404.html" }
+        ]
+      }
+    },
+    "pageContext": {
+      "locale": "en",
+      "hrefLang": "en-US",
+      "originalPath": "/dev-404-page/",
+      "dateFormat": "MM/DD/YYYY"
+    }
+  },
+  "staticQueryHashes": ["1942350144", "698804963"]
+}
