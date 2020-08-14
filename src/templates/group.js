@@ -30,7 +30,7 @@ const Category = ({ pageContext, data }) => {
           {data.allMdx.edges.map(({ node: post }) => (
             <li key={post.frontmatter.slug} className="post-list-item">
               <Row>
-                <Col xs={2}>{post.frontmatter.date}</Col>
+                <Col md={3}>{post.frontmatter.date}</Col>
                 <Col>
                   <LocalizedLink
                     to={`/${pageContext.group}/${post.parent.relativeDirectory}`}
