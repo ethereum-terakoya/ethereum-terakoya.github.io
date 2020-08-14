@@ -6,7 +6,6 @@ module.exports = {
   siteMetadata: {
     siteUrl: `https://ethereum-terakoya.org`,
     title: `Ethereum Terakoya`,
-    description: ``,
     author: `ETHTerakoya`,
   },
   plugins: [

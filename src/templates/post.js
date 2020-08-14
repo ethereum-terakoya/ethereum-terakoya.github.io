@@ -11,7 +11,7 @@ import PostNavigation from "../components/postNavigation";
 import SEO from "../components/seo";
 import TOC from "../components/toc";
 
-const Post = ({ data, pageContext }) => {
+const Post = ({ data }) => {
   return (
     <Layout>
       <SEO title={data.mdx.frontmatter.title} discription={data.mdx.excerpt} />
