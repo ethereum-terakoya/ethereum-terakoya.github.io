@@ -38,7 +38,7 @@ module.exports = {
               enableCustomId: true,
               elements: [`h1`, `h2`, `h3`, `h4`],
               className: `header-anchor`,
-            }
+            },
           },
           {
             resolve: `gatsby-remark-images`,
@@ -78,7 +78,7 @@ module.exports = {
         start_url: `/`,
         display: `standalone`,
         icon: `src/images/icon.png`,
-      }
+      },
     },
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,

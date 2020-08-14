@@ -38,6 +38,7 @@
     "react-intl": "^5.4.6"
   },
   "devDependencies": {
+    "husky": "^4.2.5",
     "prettier": "2.0.5"
   },
   "repository": {
@@ -49,7 +50,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "pretty-quick --staged"
+      "pre-commit": "yarn format --staged"
     }
   }
 }

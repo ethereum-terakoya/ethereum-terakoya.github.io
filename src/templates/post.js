@@ -14,7 +14,7 @@ import TOC from "../components/toc";
 const Post = ({ data, pageContext }) => {
   return (
     <Layout>
-      <SEO title={data.mdx.frontmatter.title} discription={data.mdx.excerpt}/>
+      <SEO title={data.mdx.frontmatter.title} discription={data.mdx.excerpt} />
       <Container>
         <Row>
           <Col>

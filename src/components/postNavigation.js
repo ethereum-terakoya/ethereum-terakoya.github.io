@@ -1,11 +1,7 @@
 import React from "react";
 
 const PostNavigation = () => {
-  return (
-    <>
-      hoge
-    </>
-  )
-}
+  return <>hoge</>;
+};
 
-export default PostNavigation
+export default PostNavigation;
