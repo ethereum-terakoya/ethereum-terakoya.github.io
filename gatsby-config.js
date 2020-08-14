@@ -7,7 +7,7 @@ module.exports = {
     siteUrl: `https://ethereum-terakoya.org`,
     title: `Ethereum Terakoya`,
     description: ``,
-    author: `couger`,
+    author: `ETHTerakoya`,
   },
   plugins: [
     {
@@ -27,14 +27,21 @@ module.exports = {
     {
       resolve: `gatsby-plugin-mdx`,
       options: {
-        // process all `.md` files as MDX
         extensions: [`.mdx`, `.md`],
         defaultLayouts: {
           default: require.resolve(`./src/components/layout.js`),
         },
         gatsbyRemarkPlugins: [
           {
-            resolve: "gatsby-remark-images",
+            resolve: `gatsby-remark-autolink-headers`,
+            options: {
+              enableCustomId: true,
+              elements: [`h1`, `h2`, `h3`, `h4`],
+              className: `header-anchor`,
+            }
+          },
+          {
+            resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 1200,
             },
@@ -62,6 +69,16 @@ module.exports = {
         name: `images`,
         path: `${__dirname}/src/images`,
       },
+    },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Ethereum Terakoya`,
+        short_name: `ETHTerakoya`,
+        start_url: `/`,
+        display: `standalone`,
+        icon: `src/images/icon.png`,
+      }
     },
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,

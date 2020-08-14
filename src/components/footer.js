@@ -1,4 +1,5 @@
 import React from "react";
+import { LocalizedLink } from "gatsby-theme-i18n";
 
 import Container from "react-bootstrap/Container";
 import Col from "react-bootstrap/Col";
@@ -6,26 +7,55 @@ import Row from "react-bootstrap/Row";
 
 const Footer = () => {
   return (
-    <React.Fragment>
-      <Container fluid className="py-5 bg-dark text-white">
-        <Row className="justify-content-md-center">
+    <footer>
+      <Container fluid className="pt-5 pb-2 bg-dark text-white">
+        <Row className="justify-content-md-center mb-5">
           <Col>
-            <h4 className="text-center mb-5">
-              Ethereum
-              <br />
-              Terakoya
-            </h4>
+            <h4 className="text-center">Ethereum Terakoya</h4>
           </Col>
           <Col>
-            <h5>Development</h5>
-            <a
-              href="https://github.com/ethereum-terakoya"
-              target="_blank"
-              rel="noreferrer"
-              className="text-white"
-            >
-              Github
-            </a>
+            <h5>Resources</h5>
+            <ul className="list-unstyled">
+              <li>
+                <LocalizedLink
+                  to={"/news"}
+                  rel="noreferrer"
+                  className="text-white"
+                >
+                  News
+                </LocalizedLink>
+              </li>
+              <li>
+                <a
+                  href="https://github.com/ethereum-terakoya"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-white"
+                >
+                  Github
+                </a>
+              </li>
+            </ul>
+          </Col>
+          <Col>
+            <h5>About</h5>
+            <ul className="list-unstyled">
+              <li>
+                <a href="/" rel="noreferrer" className="text-white">
+                  Contributors
+                </a>
+              </li>
+              <li>
+                <a href="/" rel="noreferrer" className="text-white">
+                  Privacy Policy
+                </a>
+              </li>
+              <li>
+                <a href="/" rel="noreferrer" className="text-white">
+                  Terms
+                </a>
+              </li>
+            </ul>
           </Col>
         </Row>
         <Row>
@@ -36,7 +66,7 @@ const Footer = () => {
           </Col>
         </Row>
       </Container>
-    </React.Fragment>
+    </footer>
   );
 };
 

@@ -36,7 +36,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   const blogPosts = result.data.blog.nodes;
   const groups = result.data.group.group;
 
-  blogPosts.forEach(({ childMdx: node }) => {
+  blogPosts.forEach(({ childMdx: node }, index) => {
     createPage({
       path: `${node.frontmatter.group}/${node.frontmatter.slug}`,
       component: blogTemplate,

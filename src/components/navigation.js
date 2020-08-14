@@ -16,7 +16,7 @@ const Navigation = () => {
       <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
         <Container>
           <Navbar.Brand>
-            <LocalizedLink to="/" className="text-white">
+            <LocalizedLink to="/" className="text-white font-weight-bold">
               ETHTerakoya
             </LocalizedLink>
           </Navbar.Brand>
@@ -28,7 +28,7 @@ const Navigation = () => {
                 id="collasible-nav-dropdown-wg"
               >
                 <NavDropdown.Item>
-                  <LocalizedLink to="/id-voting/">
+                  <LocalizedLink to="/id-voting/" className="text-black">
                     ID x Voting x Blockchain
                   </LocalizedLink>
                 </NavDropdown.Item>

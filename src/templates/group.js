@@ -20,25 +20,30 @@ const Category = ({ pageContext, data }) => {
       <Container className="py-5">
         <Row className="mb-5">
           <Col>
-            <h1 className="text-center">
-              {group} <small>{intl.formatMessage({ id: "group" })}</small>
+            <h1 className="font-weight-bold">
+              {group} {intl.formatMessage({ id: "group" })}
             </h1>
-            <p className="text-center">{intl.formatMessage({ id: "posts" })}</p>
+            <p>{intl.formatMessage({ id: "posts" })}</p>
           </Col>
         </Row>
-        {data.allMdx.edges.map(({ node: post }) => (
-          <Row key={post.frontmatter.slug}>
-            <Col>
-              <LocalizedLink
-                to={`/${pageContext.group}/${post.parent.relativeDirectory}`}
-              >
-                <h4>{post.frontmatter.title}</h4>
-              </LocalizedLink>
-              <div>{post.frontmatter.date}</div>
-            </Col>
-            <hr />
-          </Row>
-        ))}
+        <ul className="list-unstyled">
+          {data.allMdx.edges.map(({ node: post }) => (
+            <li key={post.frontmatter.slug} className="post-list-item">
+              <Row>
+                <Col xs={2}>{post.frontmatter.date}</Col>
+                <Col>
+                  <LocalizedLink
+                    to={`/${pageContext.group}/${post.parent.relativeDirectory}`}
+                  >
+                    <b className="h3 font-weight-bold text-black">
+                      {post.frontmatter.title}
+                    </b>
+                  </LocalizedLink>
+                </Col>
+              </Row>
+            </li>
+          ))}
+        </ul>
       </Container>
     </Layout>
   );

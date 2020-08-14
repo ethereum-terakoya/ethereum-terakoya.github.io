@@ -1,47 +1,38 @@
 import React from "react";
 import { graphql } from "gatsby";
 import { MDXRenderer } from "gatsby-plugin-mdx";
-import { useIntl } from "react-intl";
 
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 
 import Layout from "../components/layout";
+import PostNavigation from "../components/postNavigation";
 import SEO from "../components/seo";
+import TOC from "../components/toc";
 
-const Post = ({ data }) => {
-  const intl = useIntl();
-
+const Post = ({ data, pageContext }) => {
   return (
     <Layout>
-      <SEO title={data.mdx.frontmatter.title} />
+      <SEO title={data.mdx.frontmatter.title} discription={data.mdx.excerpt}/>
       <Container>
         <Row>
-          <Col md={{ span: 10, offset: 1 }}>
-            {data.mdx ? (
-              <div className="py-5">
-                <h2 className="pb-3 blog-title">
-                  {data.mdx.frontmatter.title}
-                </h2>
-                <div className="mb-5">
-                  <div>
-                    <b>{intl.formatMessage({ id: "date" })} :</b>
-                    <span>&nbsp;{data.mdx.frontmatter.date}</span>
-                  </div>
-                  <div>
-                    <b>{intl.formatMessage({ id: "group" })} :</b>
-                    <span>&nbsp;{data.mdx.frontmatter.group}</span>
-                  </div>
-                </div>
-                <hr />
-                <MDXRenderer>{data.mdx.body}</MDXRenderer>
-              </div>
-            ) : (
-              <div>This page hasn't been translated yet</div>
-            )}
+          <Col>
+            <h1 className="pb-3 pt-5 font-weight-bold">
+              {data.mdx.frontmatter.title}
+            </h1>
+            <div>{data.mdx.frontmatter.date}</div>
           </Col>
         </Row>
+        <Row>
+          <Col sm={4} className="d-none d-sm-block">
+            <TOC tableOfContents={data.mdx.tableOfContents.items} />
+          </Col>
+          <Col sm={{ order: "first" }} className="post">
+            <MDXRenderer>{data.mdx.body}</MDXRenderer>
+          </Col>
+        </Row>
+        <PostNavigation />
       </Container>
     </Layout>
   );
@@ -50,15 +41,17 @@ const Post = ({ data }) => {
 export default Post;
 
 export const query = graphql`
-  query($locale: String!, $slug: String!) {
+  query($locale: String!, $slug: String!, $dateFormat: String!) {
     mdx(
       fields: { locale: { eq: $locale } }
       frontmatter: { slug: { eq: $slug } }
     ) {
+      excerpt
+      tableOfContents
       frontmatter {
         slug
         title
-        date(formatString: "YYYY-MM-DD")
+        date(formatString: $dateFormat)
         group
       }
       body
