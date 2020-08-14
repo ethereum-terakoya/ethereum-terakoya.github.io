@@ -1,1 +1,11 @@
-{"data":{"site":{"siteMetadata":{"title":"Ethereum Terakoya","author":"ETHTerakoya","siteUrl":"https://ethereum-terakoya.org"}}}}
+{
+  "data": {
+    "site": {
+      "siteMetadata": {
+        "title": "Ethereum Terakoya",
+        "author": "ETHTerakoya",
+        "siteUrl": "https://ethereum-terakoya.org"
+      }
+    }
+  }
+}
