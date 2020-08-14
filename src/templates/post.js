@@ -7,7 +7,6 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 
 import Layout from "../components/layout";
-import PostNavigation from "../components/postNavigation";
 import SEO from "../components/seo";
 import TOC from "../components/toc";
 
@@ -32,7 +31,6 @@ const Post = ({ data }) => {
             <MDXRenderer>{data.mdx.body}</MDXRenderer>
           </Col>
         </Row>
-        <PostNavigation />
       </Container>
     </Layout>
   );

@@ -10,7 +10,6 @@ after you make a commit to `source` repositoy, please run:
 yarn deploy
 ```
 
-
 ## development
 
 this repository use `gatsbyjs` for CMS. please refer it's [document](https://www.gatsbyjs.com/docs/) for development.
