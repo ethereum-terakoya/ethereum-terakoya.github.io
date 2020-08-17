@@ -32,6 +32,7 @@ module.exports = {
         },
         gatsbyRemarkPlugins: [
           {
+            // Ability to set custom IDs for blog headings
             resolve: `gatsby-remark-autolink-headers`,
             options: {
               enableCustomId: true,
@@ -40,6 +41,7 @@ module.exports = {
             },
           },
           {
+            // Image support in markdown
             resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 1200,
