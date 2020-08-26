@@ -51,3 +51,6 @@
   padding-bottom: 1rem;
   font-weight: bold;
 }
+.post p {
+    margin: .5rem 0;
+}
