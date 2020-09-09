@@ -31,6 +31,8 @@ const SEO = ({ description, children, title, image }) => {
         ogImageDefault.childImageSharp.fixed.src
       );
 
+  const ogUrl = window.location.href
+
   return (
     <Helmet title={title} titleTemplate={`%s | ${site.siteMetadata.title}`}>
       <meta name="description" content={description} />
@@ -39,7 +41,7 @@ const SEO = ({ description, children, title, image }) => {
       <meta property="og:image" content={ogImage} />
       <meta property="og:type" content="website" />
       <meta property="og:site_name" content={site.siteMetadata.title} />
-      <meta property="og:url" content={site.siteMetadata.siteUrl} />
+      <meta property="og:url" content={ogUrl} />
       <meta name="twitter:card" content="summary" />
       <meta name="twitter:creator" content={site.siteMetadata.author} />
       <meta name="twitter:title" content={title} />
