@@ -26,14 +26,8 @@
 .post-list-item {
   line-height: 5rem;
 }
-.text-black {
-  color: initial;
-}
 .header-anchor {
   margin-right: 0.5rem;
-}
-.toc-link {
-  color: gray;
 }
 .post {
   padding-top: 1.5rem;

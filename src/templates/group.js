@@ -35,7 +35,7 @@ const Category = ({ pageContext, data }) => {
                   <LocalizedLink
                     to={`/${pageContext.group}/${post.parent.relativeDirectory}`}
                   >
-                    <b className="h3 font-weight-bold text-black">
+                    <b className="h3 font-weight-bold">
                       {post.frontmatter.title}
                     </b>
                   </LocalizedLink>
