@@ -5,9 +5,7 @@ const Items = ({ tableOfContents, depth }) => {
     <ul>
       {tableOfContents.map((item) => (
         <li key={item.url}>
-          <a href={item.url}>
-            {item.title}
-          </a>
+          <a href={item.url}>{item.title}</a>
           {item.items && (
             <Items tableOfContents={item.items} depth={depth + 1} />
           )}
