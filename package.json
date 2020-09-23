@@ -43,10 +43,7 @@
     "husky": "^4.2.5",
     "prettier": "2.0.5"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/ethereum-terakoya/ethereum-terakoya.github.io"
-  },
+  "repository": "https://github.com/ethereum-terakoya/ethereum-terakoya.github.io",
   "bugs": {
     "url": "https://github.com/ethereum-terakoya/ethereum-terakoya.github.io/issues"
   },
@@ -54,5 +51,6 @@
     "hooks": {
       "pre-commit": "yarn format --staged"
     }
-  }
+  },
+  "main": "index.js"
 }

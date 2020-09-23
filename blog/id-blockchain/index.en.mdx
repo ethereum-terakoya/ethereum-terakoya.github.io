@@ -1,0 +1,233 @@
+---
+title: ID x Voting x Blockchain | No.2
+date: 2020-07-13
+slug: id-blockchain
+group: id-voting
+---
+
+## Purpose of WG
+
+- To study the possibility of realizing online voting in Japan using blockchain.
+- To create a specification for the ideal online voting scheme by input from the experts in various domains. The participants of WG include:
+  - Cryptography and blockchain experts
+  - Lawyers with expertise in online voting
+  - Operators of current voting system
+  - Experts in management of ID and privacy etc
+
+## Agenda
+
+- Executive Summary
+- Introduction
+- Details
+  - About personal authentication that uses biometric ID and blockchain - by Hitachi’s Naganuma
+  - Example of ID design using blockchain - by CollaboGate Japan Inc.’s Kohei Kurihara
+  - Initiatives for ID distribution infrastructure - by Fujitsu’s Imai
+  - Use of the My Number Act for public office elections
+- Conclusions
+
+## List of participants
+
+- Fujitsu Laboratories Ltd.
+
+  - Satoshi Imai
+  - Horii Motoshi
+
+- Hitachi Ltd.
+
+  - Emaru Hironori
+  - Ken Naganuma
+  - Shinichiro Saito
+
+- Act Co., Ltd.
+
+  - Tomohiko Kobayashi
+  - Nobuyuki Asai
+
+- Centaurus Works Inc. / Waseda Legal Commons Law Office
+
+  - Kenichiro Kawasaki
+  - Hiroto Inamura
+
+
+- Cybozu Labs, Inc.
+
+  - Shigeo Mitsunari
+
+- CollaboGate Japan Inc.
+
+  - Kohei Kurihara
+
+- Comps Co., Ltd. / alt Inc.
+
+  - Yoshikazu Nishimura
+
+- Couger Inc.
+  - Atsushi Ishii
+  - Kazuaki Ishiguro
+  - Shunpei Sasaki
+  - Yukari Tatsumi
+  - Kentaro Ishida
+  - Shigeyuki Tanaka
+
+## 1. Executive Summary
+
+- The current ID authentication system is more like device authentication, which is difficult to restore if the device goes missing. Therefore, there is a need for a “last mile,” which can perform identity verification even if a device goes missing.
+- Regarding the current authentication system that requires personal identity reproduction, there is a significant risk of being attacked by an AI that can perform data retrieval or prediction.
+- When entrusting users to manage personal information, ensuring the reliability of the information remains a problem.
+- Korea has a well-developed e-government system, and the barriers to private participation are low.
+- The requirements of internet voting laws will be close to the conditions for electronic voting.
+- Regarding the sharing of information linked to My Number (which is managed by the government) with private bodies, there is a need for law amendments.
+
+
+## 2. Introduction
+
+The use of administrative services and the use of My Number are strongly connected. It can be said that My Number that identifies each citizen is the administrative version of the App IDs that we commonly use. In this discussion, we discussed how to improve the convenience of the public and official staff, while at the same time ensuring security and privacy.
+
+
+## 3. Details
+
+### 3.1 About personal authentication that uses biometric ID and blockchain - by Hitachi’s Naganuma
+
+There is a lot of debate about handling data, from multiple perspectives, including the government’s public interest, businesses’ interests, and the user’s convenience.
+
+Authentication systems have witnessed a lot of updates, such as fingerprint authentication and facial recognition. However, the current authentication mechanism is closer to terminal authentication rather than user authentication. Thus the main problem is that personal authentication becomes impossible in case the terminal is lost.
+
+Hitachi is developing a system (PBI) that enables the use of services from other terminals, even if the terminal is lost, by generating a private key directly on the software from a finger’s vein information.
+
+##### **Discussion**
+
+**Mitsunari**
+Is the features quantity taken from fingerprint robust to noise?
+
+**Naganuma**
+Yes. Cryptographically speaking, it's called fuzzy extractors, which, to some extent, encodes things like error correction and extracts keys from them.
+
+**Mitsunari**
+Will it be impossible to restore if I injure my finger?
+
+**Naganuma**
+Yes. Therefore, it is necessary to take measures such as registering multiple fingers.
+
+**Mitsunari**
+I have heard that the feature of fingerprints is not so many, it is only a few millions.
+
+**Naganuma**
+Fingerprints have less entropy, so it is difficult to use this technology. It can, however, be used when it comes to finger veins. The demo uses finger veins.
+
+**Mitsunari**
+Do you deal with data that is not fixed, such as time information?
+
+**Naganuma**
+It is being used separately in the signature algorithm, and the algorithm is publicly available. It is not connected to the blockchain but is already used by some banks' ATMs. Banks are required to have high security standards, and it seems to meet those requirements.
+
+**Ishii**
+Is there a roadmap for the future, such as what use cases to proceed with after doing it at the bank?
+
+**Naganuma**
+The bank's case was based on Hitachi's dedicated device, but as a roadmap for the future, we are trying out how to study a finger’s vein structure with a smartphone's camera. Furthermore, we want to make it into an SDK so that more people can use it. We are also developing facial recognition technology.
+
+**Nishimura**
+If a third person takes a picture of a person’s fingers, will he/she be able to do false authentication of that person through the smartphone vein recognition system?
+
+**Naganuma**
+Theoretically, it is possible. If PBI alone is used, then that can happen, but biological detection technologies can also be incorporated. For instance, measures such as giving a movement to a finger at the time of recognition.
+
+**Nishimura**
+If there is enough learning data to understand the final feature quantity, by using deep learning, it is possible to generate photos and videos that approximate the feature quality and quantity.
+
+**Ishiguro**
+Is there a way to prove that the private key is thrown away?
+
+**Naganuma**
+It's pretty hard. For now, I can only say, "Please believe in our system."
+
+**Nishimura**
+If an individual has the hardware sign, wouldn't it be resolved?
+
+**Naganuma**
+In fact, aside from removing the hardware's private key, it is possible to prove that the information is not running out on the network.
+
+
+### 3.2 Example of ID design using blockchain - by CollaboGate Japan Inc.’s Kohei Kurihara
+
+The ideal way of handling user privacy is being questioned, led by companies in Europe and the United States. Among them, the new ID mechanism called self-sovereign ID (DID: Decentralized Identifier) ​​is being discussed at major institutions such as W3C.
+
+As the use of self-sovereign IDs advances in a wide range of fields, from the private sector to the public, how should we expand the convenience and use of self-sovereign IDs? One way is to spread the use of ID made by the public institutions into the private sector, and the other is to spread private sector-managed ID into the public institutions. For example, in South Korea, Samsung provides a service that allows users to access multiple banks using the same ID by providing an interbank ID. In Japan’s case, different identities are needed to access different banks, but Samsung has made it easier to use common identities. In the ID domain of the future, IDs that are both commonly usable and convenient will be needed. CollaboGate is developing a mechanism whereby individuals can manage their personal information, and the system will provide them with that information when they need it.
+
+##### **Discussion**
+
+**Ishii**
+I think Korea is progressing in a system like My Number but is there any particular strength of Japan compared to the rest of the world?
+
+**Kurihara**
+It is difficult to call it a strength, but I think that attention is coming into the part of personal information with regard to My Number in Japan. On the other hand, there are still issues in the convenience part, and it is difficult for private companies to take advantage of My Number. In Korea’s case, it is an advanced country in relation to e-governance, and the people face no stress in using these services. There is also an environment where private companies can easily participate in using open IDs.
+
+**Saito**
+Are there businesses overseas that sell IDs? In Japanese companies, there is a stronger perception regarding data owned by the companies instead of data owned by individuals.
+
+**Kurihara**
+There was ID provision through intermediaries since the 2000s, but it collapsed after the dot-com bubble. In the USA, there has been a Patriot Act, after which the FBI and NSA, etc. had acquired private information. Because of these backgrounds, some companies are nervous when it comes to the handling of personal information. The differences in approaches of each country originate from the differences in their background. For instance, in Japan, there are many instances where data and individuals are not linked. In addition to the fact that there is little sense that it is personal data, I personally feel that there are doubts about whether the convenience while exchanging personal data is sufficient. For example, when an algorithm evaluates a person’s credit score, how many people trust this evaluation.
+
+
+### 3.3 Initiatives for ID distribution infrastructure - by Fujitsu’s Imai
+
+I have been working on data distribution in Fujitsu. As part of these efforts, we are promoting a project called IDYX, which focuses on utilizing individual data. In IDYX, we aim at building a mechanism for first digitizing personal information such as career history, which had been managed so far in the form of paper and then maintaining the freshness and integrity of that data. By managing the personal information that has been collected in an unorganized way so far by the users themselves, it is possible to manage and utilize the information that has been siloed efficiently.
+
+There have been issues such as companies leaking out job hunters’ information, but by allowing users to choose information management themselves, data utilization meant for user protection will progress further. Currently, IDYX uses a consortium-type blockchain using Hyperledger Indy, but we are considering connecting it with a public blockchain like Ethreum in the future.
+
+##### **Discussion**
+
+**Saito**
+How do you ensure the credibility of the latest/updated information?
+
+**Imai**
+Regarding updating the latest data, if you apply in one place, it will be verified for correctness and is reflected in other places. As far as the reliability of the information is concerned, it is an optional feature, but we have been developing a credit score about the reliability of providers since the very beginning of the release.
+
+**Saito**
+Some people use different address registration methods depending on the service, so it may be challenging to understand which information should be used.
+
+**Imai**
+It is challenging to decide which one is the master data. In the end, I think it will be a way of leaving it to the person in question.
+
+**Saito**
+If it is left for the user, the risk of falsification will increase, due to which some doubts about trust will remain.
+
+
+### 3.4 Use of the My Number Act for public office elections
+
+The introduction of My Number is being pursued to improve the efficiency of administrative procedures. Until very recently, the old system of the family register was used in government-related processes. My Number Card is expected to improve those mechanisms.
+
+The personal number associated with the My Number Card is based on the residence certificate. Through this, a person is given a unique, personal number right from the time of birth. The My Number law determines which information can be used by which administrative organs and for what purpose. This also leads to the problem of expanding the use of My Number ID to other institutions.
+
+In addition, the My Number system was designed on the premise of utilizing it in public office elections. However, participation in public office elections is subject to registration in the list of registered voters.
+
+There is also an electronic voting law that allows the election to be done by going to the polling place and pressing a button on the machine. In the future, the law will be one of the criteria for stipulating online voting requirements within the working group. In the meantime, the introduction of electronic voting is not moving ahead. The reason is that there have been past machine errors due to computer overflow, which resulted in re-elections. Beyond that, there are concerns such as the high cost of re-election and the possibility of entirely different results in narrow margin elections. As a result, there is a sense of worry regarding electronic voting.
+
+The expected benefit of online elections is the increase in young voter turnout. Young people do not like to transfer their residence certificates. There are many cases in which young people do not change their residence certificates because they want to return to their birthplace at a later time. Absentee voting also has many requirements, and thus young people working in other areas face hurdles in voting.
+
+In the discussion of this working group, it was mentioned several times that the use of My Number has not progressed. The current system of My Number does not consider the right to control self-information. It is interesting to discuss how using a mechanism like a blockchain can solve these problems in the future. But, the relationship between the current mechanism of My Number and the right to control self-information might become one of the bottlenecks in expanding the use of My Number.
+
+##### **Discussion**
+
+**Kurihara**
+You had a chance to meet with young law-makers for a discussion about electronic voting. What are the latest developments?
+
+**Inamura**
+I don't know the latest information, but as far as I know, it is at the stage of identifying and dealing with problems. Also, since there are technologies that were not available at the time of the electronic voting law, discussions are underway on how far new technologies can be used and applied.
+
+**Kurihara**
+Elections require fairness that all people who have the right to vote are given the right to vote. Is there such a debate from a legal point of view?
+
+**Inamura**
+There is a concern about the fairness of the current voting system. The introduction of Internet voting will not be a problem if the fairness guaranteed by the current system is met. So if paper votes are still kept, then that point won’t be an issue. If we go entirely online, then some of the present voters would face problems.
+
+**Kurihara**
+At present, the government holds the personal information, but is it possible from a legal perspective that the government devise a mechanism to expand the information it contains?
+
+**Inamura**
+There are two different discussions: sharing of My Number and sharing personal information linked to My Number. I think the revision of the law about sharing personal data related to My Number is challenging. This is because sharing with the private sector, the information collected by the government will require amendment. But, since elections are a duty of government, the compatibility of My Number information is useful.
+
+
+## 4. Conclusions
+
+The provision of services depends on ID information. While the use of IDs provided by private companies has become commonplace, the IDs issued by the government, such as My Number and the mechanism for connecting it with the private sector is not yet mature. South Korea is an example of e-governance involving cooperation between the government and the private sector regarding individual IDs. However, in the case of My Number in Japan, an issue is that it is not made under the premise of individual self-control of information. On the other hand, in government-centered operations such as voting, the compatibility with the My Number is good, and barriers are low. In the future, to pursue the improvement of the convenience of the people, which is one of the purposes of the introduction of My Number, the working group will consider implementing prototypes and creating specifications and putting them into practice.
