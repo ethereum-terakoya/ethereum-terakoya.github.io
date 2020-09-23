@@ -1,1 +1,46 @@
-{"componentChunkName":"component---src-templates-group-js","path":"/id-voting","result":{"data":{"allMdx":{"edges":[{"node":{"frontmatter":{"slug":"id-blockchain","title":"第2回「IDx投票xブロックチェーン」","date":"2020年07月13日"},"parent":{"__typename":"File","relativeDirectory":"id-blockchain"}}},{"node":{"frontmatter":{"slug":"kickoff-meeting","title":"第1回キックオフ","date":"2020年06月29日"},"parent":{"__typename":"File","relativeDirectory":"kickoff-meeting"}}}]}},"pageContext":{"group":"id-voting","locale":"ja","hrefLang":"ja-JA","originalPath":"/id-voting","dateFormat":"YYYY年MM月DD日"}},"staticQueryHashes":["1239077767","2364640217","3493603132","3493603132"]}
+{
+  "componentChunkName": "component---src-templates-group-js",
+  "path": "/id-voting",
+  "result": {
+    "data": {
+      "allMdx": {
+        "edges": [
+          {
+            "node": {
+              "frontmatter": {
+                "slug": "id-blockchain",
+                "title": "第2回「IDx投票xブロックチェーン」",
+                "date": "2020年07月13日"
+              },
+              "parent": {
+                "__typename": "File",
+                "relativeDirectory": "id-blockchain"
+              }
+            }
+          },
+          {
+            "node": {
+              "frontmatter": {
+                "slug": "kickoff-meeting",
+                "title": "第1回キックオフ",
+                "date": "2020年06月29日"
+              },
+              "parent": {
+                "__typename": "File",
+                "relativeDirectory": "kickoff-meeting"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "pageContext": {
+      "group": "id-voting",
+      "locale": "ja",
+      "hrefLang": "ja-JA",
+      "originalPath": "/id-voting",
+      "dateFormat": "YYYY年MM月DD日"
+    }
+  },
+  "staticQueryHashes": ["1239077767", "2364640217", "3493603132", "3493603132"]
+}
