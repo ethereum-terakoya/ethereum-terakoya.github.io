@@ -1,0 +1,20 @@
+{
+  "componentChunkName": "component---src-templates-post-js",
+  "path": "/en/null/null",
+  "result": {
+    "errors": [
+      {
+        "message": "Variable \"$slug\" of non-null type \"String!\" must not be null.",
+        "locations": [{ "line": 1, "column": 95 }]
+      }
+    ],
+    "pageContext": {
+      "slug": null,
+      "locale": "en",
+      "hrefLang": "en-US",
+      "originalPath": "/null/null",
+      "dateFormat": "MM/DD/YYYY"
+    }
+  },
+  "staticQueryHashes": ["1239077767", "2364640217", "3493603132", "3493603132"]
+}
