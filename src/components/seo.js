@@ -31,7 +31,7 @@ const SEO = ({ description, children, title, image }) => {
         ogImageDefault.childImageSharp.fixed.src
       );
 
-  const ogUrl = typeof window !== "undefined" ? window.location.href : "";
+  const ogUrl = typeof window !== "undefined" ?  window.location.href : "";
 
   return (
     <Helmet title={title} titleTemplate={`%s | ${site.siteMetadata.title}`}>
