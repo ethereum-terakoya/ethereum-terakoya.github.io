@@ -5,11 +5,594 @@ slug: id-blockchain3
 group: id-voting
 ---
 
-(WIP)
-
 ## Agenda
 
 - 1.Executive Summary
 - 2.Introduction
 - 3.Details
+  - 1.System of Elections, by Tomohiko Kobayashi, Act Co., Ltd.
+  - 2.Problems with Internet Voting, by Shigeo Mitsunari, Cybozu Labs, Inc.
+  - 3.About CREAM that enables secret voting, by Kazuaki Ishiguro, Couger Inc.
+  - 4.Requirements of the voting system and blockchain technology, by Yoshikazu Nishimura, Comps Co., Ltd.
+  - 5.Legal Points for Implementing Internet Voting, by Hiroto Inamura, Waseda Legal Commons Law Offices
 - 4.Conclusions
+
+## List of participants
+
+- **Fujitsu Laboratories Ltd.**
+
+  - Satoshi Imai
+  - Horii Motoshi
+
+- **Hitachi Ltd.**
+
+  - Emaru Hironori
+  - Ken Naganuma
+  - Shinichiro Saito
+
+- **Act Co., Ltd.**
+
+  - Tomohiko Kobayashi
+  - Nobuyuki Asai
+
+- **Centaurus Works Inc. / Waseda Legal Commons Law Office**
+
+  - Kenichiro Kawasaki
+  - Hiroto Inamura
+
+* **Cybozu Labs, Inc.**
+
+  - Shigeo Mitsunari
+
+* **CollaboGate Japan Inc.**
+
+  - Kohei Kurihara
+
+* **Comps Co., Ltd. / alt Inc.**
+
+  - Yoshikazu Nishimura
+
+* **Couger Inc.**
+
+  - Atsushi Ishii
+  - Kazuaki Ishiguro
+  - Shunpei Sasaki
+  - Yukari Tatsumi
+  - Kentaro Ishida
+  - Shigeyuki Tanaka
+
+## 1. Executive Summary
+
+*   The My Number (Individual Number Card) in Japan was designed to be adoptable for future internet voting. But the level of technical requirements of internet voting is high, so we need to carefully examine the realistic milestones on the way to it becoming a reality.
+*   Internet voting also needs secure hardware.
+*   It is important to determine the requirements for internet voting based on the amount of "reliability" that can be achieved in the existing voting system. 
+*   In order to revise the law to realize the internet vote, there needs to be enough reason to do so.
+
+
+## 2. Introduction
+
+Elections have a long history, and there are many requirements stipulated by the constitution. It is necessary to sort out the technical specifications needed to be met when a new mechanism like internet voting is adopted. In this working group, the prerequisites for voting and the issues in realizing internet voting were discussed from the viewpoint of technology and law. 
+
+
+## 3. Details
+
+### 1. System of Elections, by Tomohiko Kobayashi, Act Co., Ltd.
+
+**1.1 The flow of election**
+
+**① Creation of Electoral List**
+
+As a preparatory step towards elections, a list of people who are eligible to participate in the election is created. The timing of creating the list varies. In some cases, it is created immediately before the election, and in other cases, it is created much earlier. The timing of creation is not a strict arrangement and varies depending on the policy of the municipality. 
+
+**How the electoral list is created**
+
+The list is created by taking the data about residents who have the right to vote from each municipality’s residence system. The list is not final once it is made, and must be continuously updated at least once a day during the election period. This is because there is a possibility that people’s residence area may change due to, for instance, moving during the election period. So, the roster information during the election period must always be up-to-date. In addition, the creation of the list itself, regardless of whether there is an election or not, continues to happen cyclically every three months. 
+
+**② Voting on other than the day of voting**
+
+**Absentee ballots**
+
+Absentee ballots may be used when the person cannot come to vote due to hospitalization or when he/she is temporarily away. However, in the case of hospitalized patients, the hospital sends its votes by mail, and the cost of each case is about 1000 yen. 
+
+**Early voting**
+
+Early voting is used when it is not possible to vote on the day due to schedule problems. Early voting is a vote in person before the voting day by going directly to the polling station set up for early voting. 
+
+**Overseas voting**
+
+This is a voting method for voters living abroad for reasons such as work or study and is held at the local embassy. However, overseas voting usually faces delays due to the time-consuming mailing procedure to Japan after voting at the embassy. There can be problems such as votes not reaching Japan during the election period. Since votes arriving after the election period are invalid, this field is considered most in need of internet voting.
+
+**③ Voting on voting day**
+
+The voters bring a pre-mailed ballot to the polling station and cast their ballots at the designated polling station. Election management committee members accept ballots in each polling station based on the voter’s register. 
+
+**④ Vote counting**
+
+At present, ballot boxes are collected in gymnasiums, etc. The ballot counting is done manually. Vote counting continues to be a very analog task.
+
+**1.2 Issues with the existing system**
+
+Problems with the current voting system include:
+
+
+
+*   Low voter turnout
+*   Even people with mobility issues, such as some elderly or handicapped, need to go to polling stations
+*   In rural areas, the distance from some homes to the polling station is far, and thus it takes a long time
+*   We can only go when the polling stations are open
+*   Absentee voting is grounded on the premise that human nature is generally good
+*   Since the counting of votes is manual, mistakes are likely to occur
+*   The cost of manual labor is high
+*   It's expensive to build an on-premise voting environment every time
+
+**1.3 Policy of the Ministry of Internal Affairs and Communications**
+
+The Ministry of Internal Affairs and Communications recognizes that there is a problem with the current voting system and plans to improve the voting system in the future. However, the current specifications submitted by the ministry include quite a lot of requirements, and it is important to consider which are essential requirements. 
+
+**1.4 Expectations from internet voting**
+
+The present election system has the following prerequisites, which must be followed in the election. 
+
+
+
+*   Secret vote (not known who voted)
+*   Equal vote (voters who have the right to vote can vote equally)
+*   Direct elections (members of the diet and the head of the municipality to be decided by voters)
+
+The following benefits can be achieved when internet voting is realized after the prerequisites are met.
+
+
+
+*   Eliminate mistakes in ballot counting
+*   No ambiguous votes
+*   Reduction of errors in during vote handling
+*   Shorter hours and costs of clerical work
+
+Internet voting can be expected to eliminate human error and significantly improve time efficiency. However, to conduct internet voting, it is necessary to incorporate sufficient counter-measures in the event of system failure, so that the election will continue even if a failure occurs.
+
+
+### 2. Problems with Internet Voting, by Shigeo Mitsunari, Cybozu Labs, Inc.
+
+It is necessary for electronic voting that voting and aggregation is done without others knowing the contents of people's vote. For that purpose, the points to consider are as follows: 
+
+
+
+1. Confidentiality (no one knows the content of the vote)
+2. Authenticity (voting content is not tampered with)
+3. Authentication (whether the voter has the correct voting rights or is it a fraudulent vote)
+4. Verifiability (allows voters to see that their votes are counted)
+
+The above conditions can be achieved by the following approaches or a combination of them:
+
+
+
+1. Blind signature (have the administrator sign the vote with voting content hidden)
+2. Mix-net (mixing everyone's vote with voting content hidden)
+3. Preparatory cryptography (aggregate with voting content hidden) 
+
+**Electronic voting using blockchain**
+
+Electronic voting has already been conducted by using Ethereum. According to a report, voting was held on a small scale of about 40 people in which blockchain was used as a public bulletin board. Voter IDs were assigned to voters in advance, and voting rights were confirmed at a place other than the blockchain. The advantages and disadvantages of such a self-aggregating voting system are as follows:
+
+**Advantages**
+
+
+
+*   Open procedure for anyone to check the aggregation results after all the voting is done.
+*   You don't have to assume a reliable aggregator.
+*   Anyone can verify the correctness of voting results.
+
+**Disadvantage**
+
+
+
+*   The last voter can know the aggregation results faster than others, and if the aggregate results are not good, they can stop the aggregation.
+
+OpenVote was used as the main algorithm for this voting system. The mechanism of OpenVote is explained below: 
+
+**Symbols used:**
+
+N: Number of voters
+
+P: A point on an elliptic curve
+
+u<sub>i</sub>: Voter
+
+x<sub>i</sub>n: Voter U<sub>n</sub>'s private key
+
+x<sub>i</sub>P: ​​Voter's public key
+
+Sign x<sub>i</sub>(m): Signature of message m from x<sub>i</sub>
+
+BBS: Public bulletin board
+
+**Formula**
+
+Each voter U<sub>i</sub> signs the XiP and posts it to the BBS.
+
+=(x<sub>n</sub>P,sign x<sub>n</sub>(x<sub>n</sub>P))
+
+When writing to the BBS, each person enters the public key, but the public key used at that time is the public key obtained by multiplying P’s value by its own private key (X<sub>n</sub>P). And everyone takes the number Y<sub>i</sub> in the following formula to verify the correctness of the writing. 
+
+Y<sub>i</sub>=x<sub>i</sub>P+・・・+x<sub>i-i</sub>P) - (x<sub>i+1</sub>P+・・・+x<sub>n</sub>P)
+
+**Relationship between x<sub>i</sub> and Y<sub>i</sub>**
+
+The important thing about the relationship between x<sub>i</sub> and Y<sub>i</sub> is that if you add the private key you made and the number multiplied by the value of Y<sub>i</sub>, it will eventually become 0.
+
+Σ<sub>i</sub>x<sub>i</sub>Y<sub>i </sub>= x<sub>1</sub>Y<sub>1 </sub>+<sub> </sub>x<sub>2</sub>Y<sub>2 </sub>+ x<sub>3</sub>Y<sub>3 </sub>+ x<sub>4</sub>Y<sub>4 </sub>+ x<sub>5</sub>Y<sub>5</sub>
+
+= x<sub>1</sub>(x<sub>2 </sub>- x<sub>3 </sub>- x<sub>4 </sub>- x<sub>5</sub>)
+
+\+ x<sub>2</sub>(x<sub>1 </sub>- x<sub>3 </sub>- x<sub>4 </sub>- x<sub>5</sub>)
+
+\+ x<sub>3</sub>(x<sub>1 </sub>+ x<sub>2 </sub>+ x<sub>4 </sub>+ x<sub>5</sub>)
+
+\+ x<sub>4</sub>(x<sub>1 </sub>+ x<sub>2 </sub>+ x<sub>3 </sub>+ x<sub>5</sub>)
+
+\+ x<sub>5</sub>(x<sub>1 </sub>+ x<sub>2 </sub>+ x<sub>3 </sub>+ x<sub>4</sub>)
+= 0
+
+**Verification of ZKP by each u<sub>i</sub>**
+
+Once the values ​​of x<sub>i</sub> and Y<sub>i</sub> are obtained, ZKP is then verified. ZKP is for indicating v<sub>i</sub> = 0 (no) or 1 (yes), and since x<sub>i</sub> is secret, v<sub>i</sub> is, in principle, known only to the person himself/herself. The value of Z<sub>i</sub> is taken by using the value of v<sub>i</sub> that only the person himself/herself knows. 
+
+Z<sub>i </sub>= x<sub>i</sub>Y<sub>i</sub> ; v<sub>i</sub>P
+
+**Aggregation**
+
+Only after the verification of ZKP is completed can the aggregation be started. If everyone enters Z<sub>i</sub>, anyone can add up the sum. In addition, since the aggregation only adds all the values of Z<sub>i</sub>, the calculation is very simple. Furthermore, if the result is about 232, it can be obtained in a few milliseconds. These algorithms have been proposed for almost ten years and have been trial implemented for about three years. 
+
+**2.3 Future improvements**
+
+As mentioned above, the drawback of the self-counting voting system is that it is possible for the last voter to interfere with counting. If the last voter intentionally did not upload the Z<sub>i</sub> value, the verification would be insufficient, and the aggregation would not be performed. Here, the introduction of deposits is being considered as an improvement proposed against unauthorized interference with counting. After verification, all voters enter Z<sub>i</sub> and ZKP, but if they are not entered, the deposit will be forfeited. However, at this stage, it has not been determined how the amount of the deposit will be determined.
+
+…
+
+Naganuma
+
+The voting system we discussed is only 1 or 0 type, but how about a multiple-choice based voting system?
+
+Mitsunari
+
+Probably it is being done. The main thing I introduced this time is implementation, and it is not an impossible task if you move the parameters.
+
+Ishiguro
+
+It is written on the BBS, but what are the specific expectations? 
+
+Mitsunari
+
+Ethereum itself does not calculate anything. BBS is just a place to store data.
+
+...
+
+
+### 3. About CREAM that enables secret voting, by Kazuaki Ishiguro, Couger Inc.
+
+Important voting requirements are defined below, and the advantages and disadvantages of each voting method are listed:
+
+**Prerequisites of voting**
+
+
+
+1. Voting and aggregation must be tamper-resistant.
+2. Voting content must be kept confidential.
+3. The entire process of voting must be transparent and publicly verifiable.
+
+**Advantages and disadvantages of paper voting**
+
+Most of the paper-based voting is done manually, which is the biggest drawback.
+
+Advantages
+
+
+
+1. Hard to make a big mistake
+2. Less susceptible to large-scale attacks
+
+Disadvantages
+
+
+
+1. Centralized management
+2. The controversy surrounding the authenticity of mail-in ballots
+3. There are invalid votes, such as incomplete characters, non-readable, or incomplete markup
+
+**Advantages and disadvantages of electronic voting**
+
+At present, electronic voting has more disadvantages than advantages, so it is highly possible that paper voting will continue for some time to come.
+
+Advantages
+
+
+
+1. Reducing invalid votes
+
+Disadvantages
+
+
+
+1. Device hijacking
+2. Attacks on networks
+3. Ensuring software transparency
+
+**Mixnet-based voting**
+
+Advantages
+
+
+
+1. Ensuring confidentiality
+2. Can be verified
+
+Disadvantages
+
+
+
+1. Mixer trust model
+2. Error in encryption
+3. Attack detection difficulty is high 
+
+What is a mixer trust model?
+
+
+
+1. Each mixer must be honest
+2. There should be no vulnerability at the time of casting
+3. The network must not collapse
+4. Network attack during a demonstration experiment in Switzerland.
+
+Such arrangements are obstacles to the implementation of mixnet.
+
+**3.2 CREAM for electronic voting**
+
+**Electronic voting is difficult**
+
+When conducting electronic voting, there are still many problems, such as difficulty in public auditing and the absence of a universal design. A concealment protocol, CREAM, has been implemented to solve these electronic voting-related problems. CREAM is inspired by an application currently used on Ethereum and aims to enable confidential voting.
+
+**What is CREAM?**
+
+
+
+1. Public verification possible
+2. Uses zk-SHARK
+3. Secret transaction mixer
+4. Voting-specific protocols
+
+The protocol is considerably simpler and has the following features:
+
+
+
+1. Insert/deposit money in the mixer
+
+(Can be done in a single transaction for a certain amount of money)
+
+
+
+2. Withdraw money from the mixer
+
+**Overview of CREAM**
+
+When you first sign up from the client-side, a deposit is made, and the token is locked into the smart contract. A QR code will be issued when the lock is completed, and that QR code is used to vote. There is, however, the problem that if QR code is leaked to others, it will be possible to vote by spoofing. Therefore, at present, it is required that the QR code be printed on paper and used for voting instead of being displayed on the terminal. 
+
+**3.3 Issues to consider in the future**
+
+The following points should be considered in the future:
+
+
+
+1. Honest operator
+2. Appropriate Merkle Tree size for large-scale voting
+3. Trusted set-up for every election
+4. Reliable hardware
+5. Appropriate scalability
+6. Gas station
+7. Guidance on how to use for users
+
+In addition to technical challenges, possible malicious acts such as conspiracy or voter bribery require proper designing of the entire voting mechanism.
+
+…
+
+Horii
+
+You need to use reliable hardware, but do you mean you're assuming that something will be attacked?
+
+Ishiguro
+
+The reliability of the hardware itself is important, not the attack. Calculations are performed on a PC when creating a trusted setup. Still, in the future, there will be a need for a method that can verify the reliability of the PC used in performing distributed work. 
+
+Naganuma
+
+If a candidate was at the polling station, could he/she be able to see his/her total votes in real-time?
+
+Ishiguro
+
+This can be avoided by using a method of creating transactions all at once at the end of voting.
+
+Nishimura
+
+For example, if you vote on the 11th, does it mean that you will see the result of the vote up to the 10th? 
+
+Ishiguro
+
+It is a specification that can be seen at present. However, we believe that we can respond by specifying blocking time.
+
+…
+
+### 4. Requirements of the voting system and blockchain technology, by Yoshikazu Nishimura, Comps Co., Ltd.
+
+Here are some examples of the basic requirements of voting and the use of blockchain.
+
+**Confidentiality**
+
+During voting, who votes for whom should be completely confidential. In addition, from the viewpoint of personal information protection, it is necessary to protect personal information so that race, sex, age, and the individual cannot be identified. In the current public office elections, secret ballots and methods of ballot box management are used to ensure the anonymity of the content of votes as well as the voters. This confidentiality can also be achieved by using smart contracts of blockchain technology. 
+
+**Voting rights (one vote per person)**
+
+All voters are allowed to vote only once in a single election, and only eligible voters can participate in the vote. In the current system of voting, there is an issue with a voter getting verified only by telling name, address, and date of birth. The blockchain, however, uses Ethereum's signature’s authenticity verification function as well as voter lists and voting history to identify authentic voters. 
+
+**Transparency and accuracy **
+
+Transparency means that all ballots must be counted under visible surveillance, and all procedures, equipment, programs, and storage facilities must be inspected before and after the election. Similarly, as for accuracy, all votes must be recorded and counted accurately, and all counting methods and results should be publicly reviewed. In the current public office elections, transparency and accuracy can be achieved by having voting observers and ballot counting observers. However, no matter how many people there are, mistakes always occur when humans do it, so there is still a question of whether there is complete transparency and accuracy. Regarding this, blockchain technology can be said to be a unique tool for transparency and accuracy of information. If blockchain is used for the voting system, all voting transactions will be published on the blockchain. However, since the high transparency of the blockchain contradicts the confidentiality, the realization of both transparency and confidentiality is required. 
+
+**Reliability**
+
+Reliability in voting means that the voting equipment and process are clear and accurate. This means that we have to ensure that equipment does not fail during the election period and that there is no human error. In the blockchain, if enough nodes are running, the smart contract will not stop even if the device breaks down, so it can be said that highly reliable operation is possible. In the blockchain, if enough nodes are running, the smart contract will not stop even if the equipment fails, so it can be said that highly reliable operation is indeed possible. 
+
+**Future challenges**
+
+In future implementations, we should consider whether the requirements mentioned above are essential. Of course, we also have to consider whether there are any other requirements. For example, many issues need to be considered, such as what should be kept secret, what should be disclosed, and how much information should be required to confirm the voter’s identity in voter registration. 
+
+…
+
+Kurihara
+
+Is reliability about the system? Or is it about the operator who runs the system?
+
+Nishimura
+
+Reliability is required for voting equipment and processes, including operators who are part of the process. However, in the blockchain, it refers to the code itself. 
+
+Kurihara
+
+Designing the reliability of the operator seems to be very difficult. What do you think? 
+
+Nishimura
+
+First, we need to see what improvements are required for the credibility of the current election system.
+
+…
+
+### 5. Legal Points for Implementing Internet Voting, by Hiroto Inamura,  Waseda Legal Commons Law Offices
+
+To realize internet voting, revision of the current law is required. Let's figure out what would be needed to amend the law. 
+
+**(1) Legal facts that are the basis of legislation**
+
+To make or change the law, it is necessary to have some reason (legal fact). 
+
+
+
+*   The existing laws and regulations are grossly unreasonable, given the current level of technology.
+*   With the birth of new technology, it becomes necessary to have rules corresponding to that technology.
+*   New problems are also surfacing, and they need to be addressed.
+
+Let's think about the points that need to be considered concerning the elections law. The right to vote (suffrage) is the very essence of the sovereignty of the people, and that is why certain requirements are upheld by the constitution. Therefore, even if the law is amended, the new law must be suitable for such constitutional provisions. The constitutional demands for suffrage are as follows.
+
+① Universal suffrage
+
+Article 15, Paragraph 3 of the constitution states that adults’ universal suffrage is guaranteed for the election of a public servant. 
+
+② No discrimination in electoral qualifications
+
+Article 44 of the constitution states that the qualification of members of both houses of parliament and their voters shall be determined by law, but shall not be discriminated against by race, creed, gender, social status, family origin, education, property, or income.
+
+③ Secrecy of the vote
+
+Article 15, Paragraph 4 of the constitution states that the secrecy of voting in elections shall not be violated. Here, confidentiality is not only about personal information, but also about the information about whether someone voted or not. Although local governments do know the voters, their secrecy is protected by the law that prevents them from being leaked to the outside world.
+
+④ Effect of elections
+
+Article 43, paragraph 1 of the Constitution states that both houses shall be composed of elected members representing the whole nation. Furthermore, article 93, paragraph 2 of the constitution states that the heads of local public bodies and members of its parliament shall be elected directly by the residents of that local government. 
+
+Thus, although the constitution sets the requirements for elections, the provisions of the constitution are abstract and ambiguous, leaving much room for interpretation. Therefore, it is necessary to interpret how much needs to be protected in this law. For instance, “adult” does not only mean 20 years old but rather "humans over a certain age," so it is possible to make 10 or 50 years old the adult line. 
+
+**5.2 Constitutional Requests for Voting-Related Legislation**
+
+When revising election-related laws, it is necessary to keep in mind the constitutional requirements described above. It would be required to consider the following three points: 
+
+(1) System design that can be used by as many people as possible
+
+(2) The secrecy of ballot must be protected
+
+(3) Ensure stability and security so that legitimate elections can be held
+
+In the past, during electronic voting for the legislative assembly of Kani city, there was a system error. Still, the process was continued despite the error, due to which the entire election had to be canceled on the grounds of lack of stability and security in the election process. 
+
+Next, let's discuss the possible voting method stipulated in the Public Offices Election Law.  
+
+**Early Voting**
+
+A system that allows voters to vote before the election date if there are legitimate reasons. The polling is held at a polling station set up by the municipal level election control committee. 
+
+**Absentee ballots**
+
+A system that allows voters to vote by mail before the election date if there are legitimate reasons. The ballot is filled out on the ballot paper at the place of the nearest absentee ballot manager and sealed in an envelope. 
+
+**Overseas voting**
+
+This system allows people registered in the overseas electoral list to vote abroad. Voting is done by filling out a ballot and enclosing it in an envelope at a facility managed by the head of a diplomatic mission abroad. 
+
+In order to ensure the confidentiality of voting, there must always be a neutral third party in each of the above methods.
+
+**5.4 Standards for Electronic Voting Law**
+
+The current requirements for electronic voting are stated in Article 4 of the Electronic Voting Act. 
+
+
+
+1. Being able to prevent a voter from making more than one vote in one election
+2. The secrecy of voting should not be compromised
+3. The voter shall be able to confirm all the names of the candidates of the public office
+4. The electronic voting machine should be able to record which candidate has been elected
+5. In case of an error with the machine, the machine should be able to record and protect the entire record
+6. The electronic recording of the voting must be able to be extracted from the electronic machine
+7. It should be possible to prevent an unauthorized person from operating the voting machine
+8. In addition to those listed in the preceding numbers, it should not impair the fair and proper execution of elections
+
+These requirements also apply to online voting. Since there is no description of technical restrictions in the constitution, it is necessary to discuss what technology should be used to meet all of these requirements.
+
+**5.5 Which law should be amended**
+
+The following options are possible to incorporate online voting as a new voting system:
+
+
+
+1. Prescribe it as a new voting system in Chapter 6 of the Public Office Election Law
+2. After removing the clause about a “designated place where absentee votes would be managed by absentee ballots administrator” in Article 49, Paragraph 1 of the Public Office Election Act and replacing it with “online voting to be regarded as one of the methods of absentee voting”
+3. Delete Article 4, Paragraph 2 of the Electronic Voting Law, and expand the scope to national elections and early voting
+4. Enact a new law on online voting
+
+In addition to technical issues, the implementation of electronic voting would involve a legal approach as well. The current voting system has some drawbacks, and the electronic voting system is required to build a more accurate system. At present, there are still many issues in the design of internet voting that have not been clarified yet, and it is necessary to discuss how to solve them. 
+
+…
+
+Nishimura
+
+What does the secrecy of voting specifically mean?
+
+Inamura
+
+In general, information about participation or non-participation in voting is kept secret. This information should not be leaked because participation and non-participation in elections are recognized as the rights of the people. The local government knows about the participation and non-participation of voters, but if such information is leaked, it would be considered a crime. 
+
+Sasaki
+
+Does the municipality make the voter registration list? Also, will My Number be mandatory if I try to electronically check the presence or absence of my right to vote?
+
+Inamura
+
+The local government manages the electoral register. Still, registration to the register is through the residence register, so if you have the right to vote, you will be automatically registered. I think it would be convenient to use My Number for electronic verification, but it is not mandatory. 
+
+Sasaki
+
+The electoral list is currently managed by the local government, but is it possible for companies to undertake the management? 
+
+Inamura
+
+New laws will be needed for companies to manage them. In addition, when outsourcing to a company, there is also a question of whether the public will be convinced because the information to be handled is sensitive.
+
+Kobayashi
+
+Is the government currently doing demonstration experiments for online voting? And will the online voting be implemented for overseas voters only?
+
+Inamura
+
+First of all, it is thought that it will be initiated only for overseas voters. However, it is possible that in the future other votes can be done online through revisions of the law. It is also considered that internet voting would be done through a centralized system, so it is important to think about how to implement it in the blockchain.
+
+…
+
+
+## 4. Conclusion
+
+In addition to technical issues, legal issues are also involved in implementing electronic voting. The current voting system has some drawbacks, and the electronic voting system is required to build a more accurate system. The designing of internet voting still faces several issues. It is important to discuss how to address them.
