@@ -1,1 +1,5 @@
-{"data":{"site":{"siteMetadata":{"siteUrl":"https://ethereum-terakoya.org"}}}}
+{
+  "data": {
+    "site": { "siteMetadata": { "siteUrl": "https://ethereum-terakoya.org" } }
+  }
+}
