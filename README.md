@@ -49,7 +49,8 @@ group: id-voting
 ```
 
 ### add new group
-1. update i18n json files. (i18n/react-intl/**.json)
+
+1. update i18n json files. (i18n/react-intl/\*\*.json)
 2. add group name each json files.
-  1. group name rule is "groupName_${xxxxx}"
-  2. xxxxx is new group name
+3. group name rule is "groupName\_\${xxxxx}"
+4. xxxxx is new group name
