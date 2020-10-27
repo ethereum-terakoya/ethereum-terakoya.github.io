@@ -29,7 +29,7 @@ const Navigation = () => {
               >
                 <NavDropdown.Item>
                   <LocalizedLink to="/id-voting/">
-                    ID x Voting x Blockchain
+                    {intl.formatMessage({ id: "groupName_id-voting" })}
                   </LocalizedLink>
                 </NavDropdown.Item>
               </NavDropdown>

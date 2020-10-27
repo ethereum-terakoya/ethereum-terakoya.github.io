@@ -19,5 +19,7 @@
   "support": "後援",
   "date": "投稿日",
   "group": "ワーキンググループ",
-  "posts": "記事一覧"
+  "posts": "記事一覧",
+
+  "groupName_id-voting": "ID x 投票 x ブロックチェーン"
 }
