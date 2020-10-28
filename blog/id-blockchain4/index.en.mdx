@@ -13,3 +13,172 @@ group: id-voting
 - 2.Introduction
 - 3.Details
 - 4.Conclusions
+
+## List of participants
+
+- **Fujitsu Laboratories Ltd.**
+
+  - Satoshi Imai
+  - Horii Motoshi
+
+- **Hitachi Ltd.**
+
+  - Emaru Hironori
+  - Ken Naganuma
+  - Shinichiro Saito
+
+- **Act Co., Ltd.**
+
+  - Tomohiko Kobayashi
+  - Nobuyuki Asai
+
+- **Centaurus Works Inc. / Waseda Legal Commons Law Office**
+
+  - Kenichiro Kawasaki
+  - Hiroto Inamura
+
+* **Cybozu Labs, Inc.**
+
+  - Shigeo Mitsunari
+
+* **CollaboGate Japan Inc.**
+
+  - Kohei Kurihara
+
+* **Comps Co., Ltd. / alt Inc.**
+
+  - Yoshikazu Nishimura
+
+* **VOTE FOR**
+
+  - Mitsuru Ichinosawa
+
+* **Couger Inc.**
+  - Atsushi Ishii
+  - Kazuaki Ishiguro
+  - Shunpei Sasaki
+  - Yukari Tatsumi
+  - Kentaro Ishida
+  - Shigeyuki Tanaka
+
+## 1. Executive Summary
+
+- In principle voters’ anonymity must be preserved throughout the voting process.
+- Including the prevention of fraudulent substitutional voting, the voter’s eligibility and identification must be verified correctly.
+- The principle of one-person-one-vote must be respected.
+- Before voting the fact that the ballot box is empty must be checked. Also the fact that no manipulation has been performed must be proved.
+- Vote-buying, which is also a growing issue in the current election system, needs to be dealt with in online voting.
+- In terms of equality the voting must not be prevented by the requirement to possess a certain device etc.
+- It should also be possible for any voter to check his or her own vote has been counted and each vote is correctly aggregated to produce the final results.
+
+**Asai:**
+
+At present, the problems such as intimidation are prevented by conducting the voting in polling stations under the surveillance by a 3rd party. As such in the case of online voting, should people still go to polling stations even if they vote on their own devices? Also, the introduction of online voting would require changes to the law. Can that be done?
+
+**Inamura:**
+
+Ensuring that voters are not intimidated while voting is one of the biggest challenges to oneline voting. Therefore, it seems necessary to take measures such as enabling voters to update their vote as many times as they desire. In addition, yes, it is necessary to change the Public Offices Election Law related to electronic voting itself, and at present, the ordinance prohibits online voting.
+
+**Mitsunari:**
+
+VR may be of use to deal with the issue of intimidation. By voting in VR, it is possible to hide the voting content from a third party, and thus it may prevent intervention through intimidation.
+
+**Inamura:**
+
+I think we should not worry too much about the requirement to use a certain device because those voters who cannot use the device can always use the current voting system.
+
+## 2. Introduction
+
+It is necessary to investigate the problems in the current election system in order to list up the requirements for online voting. Until now, we have discussed several requirements for online voting. We would now like to analyze those requirements and come up with proposals to satisfy the requirements. In this working group, we have decided who will be in charge of each area and discussed upcoming tasks.
+
+## 3. Details
+
+### 3.1 Moving towards the results and final output
+
+**3.1.1 Roles and Responsibilities**
+
+The challenge is that online voting is expected to outperform paper-based voting. Therefore, things where online voting can outperform paper-based voting, for example anonymous voting and one-person-one-vote, are better to be kept as the requirements for online voting.
+
+The roles and responsibilities are as follows.
+Anonymous voting: Nishimura (Comps Co., Ltd.); Mitsunari (Cybozu Labs, Inc.); Couger
+Verification of voting eligibility: Hitachi and Fujitsu
+Verification of Identity: Hitachi and Fujitsu
+One-person-one-vote: Nishimura (Comps Co., Ltd.); Couger
+Proof of empty ballot box at start: Nishimura (Comps Co., Ltd.); Couger
+Accuracy, verifiability, and transparency: Mitsunari (Cybozu Labs, Inc.)
+
+**Inamura:**
+
+If technically possible, I think we should consider the prevention of intimidation. And it is a feature which, if successfully handled, would be advantageous.
+
+**Ishii:**
+
+In response to threats and intimidation, it may be possible to check by observing the amount of sweating and pupil dilation. Reading emotions from the physiological phenomena is a hot topic in the game industry. It is being used as a means of analyzing the ups and downs of emotions during gameplay.
+
+**Asai:**
+
+In the current setup of elections, ballots are counted on the same day. However, is it legally possible to count the votes in several days? If possible, the analysis time of the blockchain can be provided.
+
+**Inamura:**
+
+Ballot counting must be done on the same day but announcing the result on the same day is not mandatory. If the reason is to improve the accuracy, then maybe it is possible to delay the result announcements. As far as the early voting is concerned, if they are counted in sequence but the results are not announced till the end, then I believe it should be fine as well.
+
+**3.1.2 Checking the scope**
+
+The scope options aimed at in this working group are as follows.
+
+- Online voting for people abroad
+- Electronic voting through fixed terminals at polling stations
+- Online voting with no limitation
+
+**Sasaki:**
+
+It is said that online voting may start with the people abroad. From the government’s point of view, which option has a higher priority? Online voting for the people abroad or electronic voting through fixed terminals at polling stations?
+
+**Asai:**
+It seems that electronic voting from polling stations is more important in terms of risk and feasibility because it does not use the internet. Maybe overseas voting through the internet would not be initiated until electronic voting is completed.
+
+### 3.2 Challenges with online voting, by Mitsuru Ichinosawa, VOTE FOR
+
+**3.2.1 Initiatives of VOTE FOR**
+
+- VOTE FOR, as its name suggests, aims to achieve online voting and was split from Piped Bits.
+- VOTE FOR also operates a platform to publish e-magazines from local districts, which will be useful for voters when making decisions for elections.
+- VOTE FOR tries many different approaches to realize fair and safe voting for public elections.
+- Currently, the turnout in overseas voting is very low at around 2%. The voter turnout should be improved in the future, and VOTE FOR continues to propose improvements.
+
+**3.2.2 Issues with the existing election system**
+
+The current election is a very elaborate scheme. However, there are still certain issues that have not yet been overcome. While proposing new election methods for the future, it is important to address the issues in the current system of election.
+
+The problems in the current electoral system are as follows:
+
+- Gender does not play any role in the current elections system, but there is a point that there is pressure on voters to “come out” about their gender.
+- In the case of voting by proxy, it is necessary to tell the contents of the vote to the proxy and the observer, and thus the secrecy of the vote is not preserved. In addition, there is no way to confirm that the content of the vote held on behalf of the voter accurately reflects the intention of the voter.
+- In almost all national elections, there are some undeterminable votes which impact the accuracy of the process. It is because there is no way for the voters to check if their vote has been counted correctly.
+- Due to the special processing on the ballots -- one side is coated with plastic -- there is a problem that they are not properly disposed
+- Fax is used to vote from overseas, but because of the use of unique technology, there is a possibility that if the manufacturing of the special machine is discontinued, it will not be possible to vote through that channel. In the US, voters can already vote using email.
+
+**3.3.3 Demonstration experiment of Online Voting in Tsukuba City**
+
+How to resolve the above-mentioned issues through online voting requires both technical and legal approaches. In 2018, Tsukuba City conducted the PoC of blockchain for personal authentication using My Number Card and voting data. However since the number of participants was only 120 people, it was not enough for PoC. In the 2019 PoC, facial recognition and hyper-ledger fabric were also used. Electronic voting until 2019 required dedicated equipment, but since the Ministry of Internal Affairs and Communications reviewed the specifications of electronic devices in the spring of 2020, it is now possible to vote even if it is not through a dedicated device if it meets technical requirements.
+
+**Asai**
+
+In 2018, only 120 voters cast ballots through the internet, but is it not because the demonstration was conducted on election day? Since local government officials are busy on election day, it might have been hard to get people together in the first place?
+
+**Ichinosawa**
+
+This PoC was not for the public office elections. The PoC was carried out online and was carried out using a tablet device placed in a designated location.
+
+**Sasaki**
+
+Has there been any progress with regards to the online voting for the people abroad?
+
+**Ichinosawa**
+
+My Number Card’s penetration rate is still limited, and we cannot be sure about the future trend. There is also a problem with voting with a card that cannot be taken out of the country. Since these issues have not been resolved, it is expected that it will be challenging to achieve it until 2022.
+
+## 4. Conclusions
+
+In general, there is an expectation for digital systems to be perfect. And in order to realize online voting, there is a need for proposals to outperform the current system of elections. As the issues outlined in this article get cleared, it is expected that the possibility of using online voting will increase in the future. The transition to the new system will be accelerated not only by overcoming the problems of the current election system but also by providing the additional values from digitization.
