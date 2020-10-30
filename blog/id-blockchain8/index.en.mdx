@@ -5,10 +5,191 @@ slug: id-blockchain8
 group: id-voting
 ---
 
-(WIP)
-
 ## Agenda
 
 - 1.Executive Summary
 - 2.Introduction
 - 3.Details
+    - Laws concerning online internet voting
+    - Towards the realization of internet online voting
+    - Reliability of internet voting ID authentication and ID ID information for online voting
+    - Voting confidentialityanonymity
+    - Future developments
+    - Information sharing
+
+## List of participants
+
+- **Fujitsu Laboratories Ltd.**
+
+  - Motoshi Horii
+
+- **Hitachi, Ltd.**
+
+  - Ken Naganuma
+
+- **Act Co., Ltd.**
+
+  - Nobuyuki Asai
+
+- **Centaur Works Co., Ltd. / Waseda Legal Commons, LPC**
+
+  - Hiroto Inamura
+
+- **Comps Co., Ltd. / al+ Inc.**
+
+  - Yoshikazu Nishimura
+
+- **CollaboGate Japan**
+
+  - Kohei Kurihara
+
+- **Cybozu Labs, Inc.**
+
+  - Mitsunari Shigeo
+
+- **Couger Inc. (sponsor)**
+
+  - Atsushi Ishii
+  - Kazuaki Ishiguro
+  - Shumpei Sasaki
+  - Yukari Tatsumi
+  - Shigeyuki Tanaka
+  - Keita Shimizu
+
+## 1. Executive Summary
+
+- We We updated the information progress of for the responsible area in preparation for the each areas of responsibility on public workshop.
+- We will examine the legal regulations, operations, and technical aspects surrounding internet online voting and, for each aspect, provide explanations towards for understanding the current situation, identifying challenges, and solving those challenges.
+- It is not easy to require perfection for the technology.We cannot require perfect operation by using technology. ActuallyIn fact, we cannot operate perfectly in the current voting system is not operating perfectly either. Therefore, we should can consider applyingusing punishmentspenalties, etc. to compensate for the problematic areas in the current operstion instead of developing trying to cover within the operations ,as current operation.
+    The Societal implementation in society may proceed by first recognizing the issues and then revealing aspects that have been missedfinding out the point of compromise.measure.
+
+## 2. Introduction
+
+In prepration for the publich workshop public announcements, we gave progress reports and discussed each member’s responsible area.  of responsibility.
+
+1. Towards the realization of internet online voting
+2. Points of consideration for internet online voting
+3. Laws concerning internet online voting
+4. Reliability of authentication and internet voting ID authentication and ID information for online voting
+5. Voting confidentialityanonymity
+6. Voting transparency and verifiability
+7. Future developments
+
+* At In this meeting, discussions and reports were held in no particular order.
+
+
+## 3. Details
+
+### 3.1 Laws concerning internet online voting
+
+Hiroto Inamura ｜ Centaur Works Co., Ltd. / Waseda Legal Commons, LPC
+
+**Inamura**: The general story for the announcement presentation is almost complete. I would like to use today’s review to progress towards finalization. 
+
+#### 3.1.1 Definition of internet online voting
+
+When considering internet online voting, we need to first confirm the legal requirements before considering what measures can be taken. Under the current law, internet online voting is subject to the Constitution, the Public Officers Election Act, and the Special Provisions of the Public Offices Election Act.
+
+#### 3.1.2 Is realization possible under the current law?
+
+In principle, under the current law, the following three requirements need to be met.
+
+- The voter must personally visit the polling place on the day of the election (election date),
+- write the name of the candidate(s) for public office (or political party name(s), etc.), and
+- submit his or her vote.
+
+However, the following exceptions are permitted. Each method requires the voter to "visit a specific location" (i.e. a place where a third party can confirm the vote) to place his or her vote.
+
+- Early voting
+- Absentee voting
+- Overseas voting
+
+If third party confirmation is also needed for internet online voting, then introduction under the current law will be difficult.
+
+There are similar cases laws of for systems where electronic devices are used for voting. 
+
+According to the “Act on Special Exceptions to Voting Methods Using Electromagnetic Recording Voting Machines for Elections of Members and Chiefs of Local Public Organizations,” such voting is possible if (1) the voter (2) personally (3) at the polling place (4) operates the electromagnetic recording voting machine. However, as seen in (3), this also imposes a restriction that requires the voter to be on-site.
+
+
+#### 3.1.3 Legal revisions for the realization of internet online voting
+
+As seen in the previous sections, the introduction of internet online voting will be difficult under the current law. Therefore, efforts to revise the law are needed. As such revisions are only subject to consideration under the conditions of “legislative fact” and “constitutional conformity,” the important matters of concern, in this case, are “the need for internet voting (legislative fact) and the permissibility of internet voting (constitutional conformity).”
+
+With the current coronavirus-induced need to avoid crowding in voting locations and the decline of voter turnout among the young, the acceptance of legal revision may be possible.
+
+Possible targets for legal revision include the Public Officers Election Act and the Electronic Voting Act. There have also been proposals to enact new laws concerning online elections, but amending the Public Officers Election Law seems to be a better option.
+
+#### 3.1.4 What kind of voting method would be accepted?
+
+The following concerns must be addressed before an internet election can be held.
+
+- **Concerns about election equality**
+
+  - The one-person-one-vote principle (infringement of purchasing of voting rights, multiple votes due to system failure, etc.)
+  - Loss of voting opportunities due to system failures
+
+- **Concerns about secret ballots**
+
+  - Risk of hacking and cracking
+  - Infringement of confidentialityanonymity due to compulsory voting in the sight of a third party
+
+- **Concerns about direct elections**
+
+  - Mistaken votes
+
+#### 3.1.5 To what extent should technology be used to address concerns?
+
+With how elections are currently managed, there is a risk that an observer may see the contents of the ballot (candidate name) in advance and leak that information. Such "events that cannot be structurally prevented" are prevented by establishing penalties. The same can be done for internet elections. 
+
+Separating matters into rules-secured and technology-secured domains and considering these domains separately may help us see a path towards the introduction of internet elections. 
+
+**Ishii**：: Since, in the latter portion, there is an explanation about the use of IDs in elections later on, I think adding an explanation about the My Number system could improve persuasiveness.
+
+
+### 3.2 Towards the realization of internet online voting
+
+Kohei Kurihara ｜ CollaboGate Japan
+
+**Kurihara**: Voting is the basis of democracy. I believe that internet online voting is a front-and-center issue for digital governments, and I have added commentary to emphasize the importance of future efforts.
+I have also added an example of internet online voting in Russia.
+That system is vulnerable and is beingthe personal data was sold out on the dark web, so I would like to use it as an example of a system that needs improvement.
+
+
+### 3.3 Reliability of internet voting ID authentication and ID information for online voting
+
+Ken Naganuma | Hitachi, Ltd., Motoshi Horii | Fujitsu Laboratories Ltd.
+
+**Horii**: I would like to raise issues concerning the three important themes: the one-person-one-vote principle, transparency, and confidentialityanonymity.
+
+I have added a section about the debate over whether tokens need to be issued for revoting. I also added a section about how information opacity results from strict confidentialityanonymity, interfering with the one-person-one-vote principle. 
+
+In this respect, confidentialityanonymity requires compromise on the other two themes. This trade-off relationship is a problem and requires countermeasures.
+
+### 3.4 Voting confidentialityanonymity
+
+Kazuaki Ishiguro ｜ Couger Inc.
+
+**Ishiguro**：As some content here overlaps with the above section on the requirements for revision to the law, I will organize this section so that it can continue from there. I would also like to emphasize that I believe some of the requirements can be resolved. This would be beneficial in terms of considering future practical implementation. 
+
+We are currently implementing batch transactions, and I would like to update my presentation with thepoints we make corrections that add what we have learned have learned from this implementation.
+
+### 3.5 Future developments
+
+Atsushi Ishii | Couger Inc.
+
+**Ishii**: The working group on ID-Voting will be ending, but I would like to continue discussions on the societal implementation of blockchain in society. Perhaps shareholder’s general meetings maybe  a good usecase.there could be a general assembly decision, etc. 
+
+Public workshops will be the main focus going forward, but and I am considering Ethereum 2.0 as a topic.
+
+Also, the Ethereum Association's APAC event is scheduled for December.
+
+I would also like to discuss this.
+
+
+### 3.6 Information sharing
+
+**Nishimura**： We have received inquiries about building an election system using a public cryptographic library. 
+
+[https://www.belenios.org/index.html](https://www.belenios.org/index.html)
+
+**Ishii**: I would like to continue with information sharing as we consider these matters.
