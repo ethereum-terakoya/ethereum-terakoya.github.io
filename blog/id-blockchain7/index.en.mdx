@@ -10,11 +10,12 @@ group: id-voting
 - 1.Executive Summary
 - 2.Introduction
 - 3.Details
-    - 3.1 Voting Operation
-    - 3.2 Verification Technology
-    - 3.3 Voting Technology
+  - 3.1 Voting Operation
+  - 3.2 Verification Technology
+  - 3.3 Voting Technology
 
 ## List of participants
+
 - **Fujitsu Laboratories Ltd.**
 
   - Motoshi Horii
@@ -45,11 +46,10 @@ group: id-voting
   - Kentaro Ishida
   - Shigeyuki Tanaka
 
-
 ## 1. Executive Summary
 
 - Before we examine the operation of online voting, compared the expected degree of cost and effort with that of the current voting system.
-- Vein verification is desirable if countermeasures against impersonation is the highest priority in identity confirmation, but the cost is still an issue. From the perspective of reducing the ✖️ evaluation items as much as possible, a combination of facial recognition and  “My Number Card” would likely be effective.
+- Vein verification is desirable if countermeasures against impersonation is the highest priority in identity confirmation, but the cost is still an issue. From the perspective of reducing the ✖️ evaluation items as much as possible, a combination of facial recognition and “My Number Card” would likely be effective.
 - We examined what kind of additional information could be utilized in cases where it is difficult to verify the person's identity via facial recognition and an “My Number Card”. Such cases involve voting on behalf of a person currently in a far-off areas and voting by someone who transferred overseas and has returned their “My Number Card”. It will be necessary to further examine what kind of logic will be used for verification.
 - We discussed whether it was necessary for the system to retain the link between personal information and the ID used when voting. In light of the current voting operations, it is also necessary to retain information on whether the ID was issued to each individual. However, it was concluded that it was unnecessary to retain which ID was involved.
 - In the process of development of blockchain voting application CREAM (which uses Ethereum), the process in which the Election Management Committee creates certificate parameters locally is considered risky. As such, we are currently examining safer methods .
@@ -75,16 +75,15 @@ We held discussions and progress reports of each responsible area, aiming toward
 
 Expected Degree of Cost and Effort
 
-- The points covered by the current voting systems should be  covered with at least the same degree of effort and cost.
-    - e.g. Operate in parallel with current polling stations instead of completely abolishing them.
+- The points covered by the current voting systems should be covered with at least the same degree of effort and cost.
+  - e.g. Operate in parallel with current polling stations instead of completely abolishing them.
 - The cost of the areas that is already covered in current voting systems can be reduced. (cost, time, manpower)
-    - e.g. Reduces work, by such as manually counting votes and reduce the number of polling stations to set up.
+  - e.g. Reduces work, by such as manually counting votes and reduce the number of polling stations to set up.
 - Online voting enables us to operate things that we could not do in the current voting systems.
-    - e.g. Be able to vote anywhere.
-    - e.g. Reduce human error and lawsuits.
+  - e.g. Be able to vote anywhere.
+  - e.g. Reduce human error and lawsuits.
 
-*Based on the premise that local governments and election management committees can operate without violating the law.
-
+\*Based on the premise that local governments and election management committees can operate without violating the law.
 
 ### 3.2 Verification Technology
 
@@ -105,7 +104,7 @@ From the perspective of reducing the ✖️ evaluation items as much as possible
 - “My Number Card” is widespread; and
 - The “My Number Card”'s face photo can be used for facial recognition.
 
-    Compared to selecting vein verification, evaluation of inclusion become ✖️→◯, pre-registration load become △→◯, operating costs become ✖️→◯. Though usage record ✖️, the other parameters can be at certain level.
+  Compared to selecting vein verification, evaluation of inclusion become ✖️→◯, pre-registration load become △→◯, operating costs become ✖️→◯. Though usage record ✖️, the other parameters can be at certain level.
 
 ![working_group](images/image2.png)
 
@@ -118,20 +117,19 @@ It is necessary to examine a specific system architecture when performing identi
 Examined additional information and use cases that can be utilized for identity verification based on the following preconditions:
 
 - Method
-    - The basic method is identity verification via “My Number Card”.
-    - The verification/authorization system compares the four basic information (name, sex, address, date of birth) with the contents of the voter list to verify identity and confirm rights.
-    - Voting is fundamentally done remotely via smartphone or PC. However, polling stations will still be set up for those without access to such devices.
+  - The basic method is identity verification via “My Number Card”.
+  - The verification/authorization system compares the four basic information (name, sex, address, date of birth) with the contents of the voter list to verify identity and confirm rights.
+  - Voting is fundamentally done remotely via smartphone or PC. However, polling stations will still be set up for those without access to such devices.
 - Items to Study/Examine
-    - Impact of the Digital Divide: Can those unfamiliar with IT technology vote?
-    - Economic Cost: Are the costs realistic?
-    - Information Reliability: Is the utilized information reliable enough?
+  - Impact of the Digital Divide: Can those unfamiliar with IT technology vote?
+  - Economic Cost: Are the costs realistic?
+  - Information Reliability: Is the utilized information reliable enough?
 
 Overall Image
 
 The part inside the dotted box signifies the verification/authorization system. It is assumed that the Situation Assessment Component will assess the situation of the externally acquired additional information based on a certain logic. However, it will be necessary to examine the specific logic required in the future.
 
 ![working_group](images/image3.png)
-
 
 Useable Additional Information
 
@@ -169,7 +167,7 @@ Afterward, from the perspective of verifiability of voting within the WG, it was
 
 - If the voter wants to verify that their vote was counted correctly ⇒ This can be confirmed by following the voting system's history since the voter knows their ID.
 - If the voter claims that their vote was not counted correctly \
-    ⇒Since the Election Management Committee and the third parties do not know which ID the voter is associated with, they cannot verify whether the claim is true or false.
+   ⇒Since the Election Management Committee and the third parties do not know which ID the voter is associated with, they cannot verify whether the claim is true or false.
 
 However, these cases have some contradictions concerning secret ballots. Even in the current voting, it is possible to verify whether or not a voting ticket has been issued. However, no mechanism has been implemented for verifying whether or not votes were counted correctly. Accordingly, there is room for consideration as to how much this will be incorporated.
 
@@ -197,4 +195,4 @@ Deposit
 
 **Ishiguro**: Not in the current specifications. If batch processing is fully functional, it will be possible to make specifications like overwriting previous votes.
 
-**Sasaki**: There was a debate on whether it would be possible to guarantee free will even in online voting by making it possible to vote multiple times. As such, it would be desirable to reflect this in the technical specifications. 
+**Sasaki**: There was a debate on whether it would be possible to guarantee free will even in online voting by making it possible to vote multiple times. As such, it would be desirable to reflect this in the technical specifications.
