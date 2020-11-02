@@ -1930,7 +1930,7 @@
             plugins: [],
             defaultLang: "ja",
             configPath:
-              "/Users/hirokona/ethereum-terakoya.github.io/i18n/config.json",
+              "/Users/hirasaki/work/couger/sources/ethereum-terakoya.github.io/i18n/config.json",
           },
         },
         {
@@ -1944,7 +1944,7 @@
             extensions: [".mdx", ".md"],
             defaultLayouts: {
               default:
-                "/Users/hirokona/ethereum-terakoya.github.io/src/components/layout.js",
+                "/Users/hirasaki/work/couger/sources/ethereum-terakoya.github.io/src/components/layout.js",
             },
             gatsbyRemarkPlugins: [
               {
@@ -8123,4 +8123,4 @@
   },
   [["UxWs", 2, 9]],
 ]);
-//# sourceMappingURL=app-6023de3abaf700525a57.js.map
+//# sourceMappingURL=app-84bbe5c6b777ba46ecf5.js.map

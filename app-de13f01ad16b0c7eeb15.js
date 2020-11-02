@@ -1930,7 +1930,7 @@
             plugins: [],
             defaultLang: "ja",
             configPath:
-              "/Users/hirokona/ethereum-terakoya.github.io/i18n/config.json",
+              "/Users/hirasaki/work/couger/sources/ethereum-terakoya.github.io/i18n/config.json",
           },
         },
         {
@@ -1944,7 +1944,7 @@
             extensions: [".mdx", ".md"],
             defaultLayouts: {
               default:
-                "/Users/hirokona/ethereum-terakoya.github.io/src/components/layout.js",
+                "/Users/hirasaki/work/couger/sources/ethereum-terakoya.github.io/src/components/layout.js",
             },
             gatsbyRemarkPlugins: [
               {
@@ -2497,7 +2497,7 @@
     },
     OjiQ: function (e) {
       e.exports = JSON.parse(
-        '{"description":"EthTerakoya(イーサテラコヤ)はブロックチェーンの応用領域について、技術・ビジネス・法律の観点から課題を深掘りし、企業が事業の自走力をつける場となるコミュニティです","contact":"お問い合わせ","slogan":"技術・ビジネス・法律の観点から課題を深掘りし、企業のブロックチェーン事業の自走力をつけるコミュニティ","what":"ETHTerakoya（イーサテラコヤ）とは","whatDetail":"ブロックチェーン事業を進める中で、技術や法律などあらゆる判断軸が必要とされます。しかし、技術視点とビジネス視点の隔たりから、課題解決に対して十分なリソースを生かし切れていないとった課題があります。その隔たりを埋めるために、それぞれの業界エキスパートが課題を深掘りし、ワークショップを多くの事業者が自走するためのアウトプットを作り出すためのコミュニティが「ETHTerakoya」です。","wg":"ワーキンググループ","wgList1":"法律・技術・ビジネスなどの複数観点から課題を深掘り","wgList2":"課題からこれからの必要なアクションプランを明確化","wgList3":"Ethereum Foundationのスポンサーシップのもと海外からの知見をフィードバック","ws":"ワークショップ","wsList1":"実践型のワークショップを通じて、ブロックチェーン事業を自走するための力を身に着ける","wsList2":"テーマ深掘り型から、事業に対する適応を実現する","target":"参加対象","target1":"技術者： 課題解決に必要な仕様の提案や技術的アプローチの深掘りなどをビジネスや法律などの文脈を理解しながら提案したい","target2":"事業者： ブロックチェーン事業を進めていく上で必要な判断軸を知りたい、実際に進めていきたいという意思がある","target3":"法律家： 技術的文脈、ビジネス的な文脈を読み取りながら規制を理解し、現在の最適解や必要な解決策を提案していきたい方","organize":"主催","support":"後援","date":"投稿日","group":"ワーキンググループ","posts":"記事一覧"}'
+        '{"description":"EthTerakoya(イーサテラコヤ)はブロックチェーンの応用領域について、技術・ビジネス・法律の観点から課題を深掘りし、企業が事業の自走力をつける場となるコミュニティです","contact":"お問い合わせ","slogan":"技術・ビジネス・法律の観点から課題を深掘りし、企業のブロックチェーン事業の自走力をつけるコミュニティ","what":"ETHTerakoya（イーサテラコヤ）とは","whatDetail":"ブロックチェーン事業を進める中で、技術や法律などあらゆる判断軸が必要とされます。しかし、技術視点とビジネス視点の隔たりから、課題解決に対して十分なリソースを生かし切れていないとった課題があります。その隔たりを埋めるために、それぞれの業界エキスパートが課題を深掘りし、ワークショップを多くの事業者が自走するためのアウトプットを作り出すためのコミュニティが「ETHTerakoya」です。","wg":"ワーキンググループ","wgList1":"法律・技術・ビジネスなどの複数観点から課題を深掘り","wgList2":"課題からこれからの必要なアクションプランを明確化","wgList3":"Ethereum Foundationのスポンサーシップのもと海外からの知見をフィードバック","ws":"ワークショップ","wsList1":"実践型のワークショップを通じて、ブロックチェーン事業を自走するための力を身に着ける","wsList2":"テーマ深掘り型から、事業に対する適応を実現する","target":"参加対象","target1":"技術者： 課題解決に必要な仕様の提案や技術的アプローチの深掘りなどをビジネスや法律などの文脈を理解しながら提案したい","target2":"事業者： ブロックチェーン事業を進めていく上で必要な判断軸を知りたい、実際に進めていきたいという意思がある","target3":"法律家： 技術的文脈、ビジネス的な文脈を読み取りながら規制を理解し、現在の最適解や必要な解決策を提案していきたい方","organize":"主催","support":"後援","date":"投稿日","group":"ワーキンググループ","posts":"記事一覧","groupName_id-voting":"ID x 投票 x ブロックチェーン"}'
       );
     },
     PJYZ: function (e, t) {
@@ -2820,10 +2820,10 @@
           );
         })(i.a.Component),
         F = n("cSJ8"),
-        M = n("Vd8h"),
-        N = new h.ProdLoader(x.a, M);
-      Object(h.setLoader)(N),
-        N.setApiRunner(o.apiRunner),
+        N = n("Vd8h"),
+        M = new h.ProdLoader(x.a, N);
+      Object(h.setLoader)(M),
+        M.setApiRunner(o.apiRunner),
         (window.asyncRequires = x.a),
         (window.___emitter = g.a),
         (window.___loader = h.publicLoader),
@@ -2933,7 +2933,7 @@
           m &&
             "" + m !== g.pathname &&
             !(
-              N.findMatchPath(Object(F.a)(g.pathname, "")) ||
+              M.findMatchPath(Object(F.a)(g.pathname, "")) ||
               "/404.html" === m ||
               m.match(/^\/404\/?$/) ||
               m.match(/^\/offline-plugin-app-shell-fallback\/?$/)
@@ -3140,10 +3140,10 @@
           return w;
         }),
         n.d(t, "Match", function () {
-          return N;
+          return M;
         }),
         n.d(t, "Redirect", function () {
-          return M;
+          return N;
         }),
         n.d(t, "Router", function () {
           return P;
@@ -3626,7 +3626,7 @@
             t
           );
         })(o.a.Component),
-        M = function (e) {
+        N = function (e) {
           return o.a.createElement(j.Consumer, null, function (t) {
             var n = t.baseuri;
             return o.a.createElement(b, null, function (t) {
@@ -3634,7 +3634,7 @@
             });
           });
         },
-        N = function (e) {
+        M = function (e) {
           var t = e.path,
             n = e.children;
           return o.a.createElement(j.Consumer, null, function (e) {
@@ -3702,15 +3702,15 @@
             if (n.type === o.a.Fragment && n.props.children)
               return o.a.Children.map(n.props.children, e(t));
             if (
-              (n.props.path || n.props.default || n.type === M || i()(!1),
-              n.type !== M || (n.props.from && n.props.to) || i()(!1),
-              n.type !== M ||
+              (n.props.path || n.props.default || n.type === N || i()(!1),
+              n.type !== N || (n.props.from && n.props.to) || i()(!1),
+              n.type !== N ||
                 Object(l.validateRedirect)(n.props.from, n.props.to) ||
                 i()(!1),
               n.props.default)
             )
               return { value: n, default: !0 };
-            var r = n.type === M ? n.props.from : n.props.path,
+            var r = n.type === N ? n.props.from : n.props.path,
               a = "/" === r ? t : z(t) + "/" + z(r);
             return {
               value: n,
@@ -5101,8 +5101,8 @@
       var I = n("6koa"),
         L = n.n(I),
         F = ["localeMatcher", "type", "style"],
-        M = Date.now();
-      function N(e, t, n, r) {
+        N = Date.now();
+      function M(e, t, n, r) {
         var o = e.locale,
           u = e.onError;
         void 0 === r && (r = {}),
@@ -5119,7 +5119,7 @@
             l = n.map(function (e, t) {
               if ("object" == typeof e) {
                 var n = (function (e) {
-                  return M + "_" + e + "_" + M;
+                  return N + "_" + e + "_" + N;
                 })(t);
                 return (s[n] = e), n;
               }
@@ -5211,7 +5211,7 @@
           wrapRichTextChunksInFragment: e.wrapRichTextChunksInFragment,
         };
       }
-      function $(e, t) {
+      function V(e, t) {
         var n = Object(a.c)(t),
           r = z(z({}, a.a), e),
           o = r.locale,
@@ -5260,19 +5260,19 @@
             formatTimeToParts: w.bind(null, r, n.getDateTimeFormat),
             formatPlural: j.bind(null, r, n.getPluralRules),
             formatMessage: D.bind(null, r, n),
-            formatList: N.bind(null, r, n.getListFormat),
+            formatList: M.bind(null, r, n.getListFormat),
             formatDisplayName: U.bind(null, r, n.getDisplayNames),
           })
         );
       }
-      var V = (function (e) {
+      var $ = (function (e) {
           function t() {
             var t = (null !== e && e.apply(this, arguments)) || this;
             return (
               (t.cache = Object(a.d)()),
               (t.state = {
                 cache: t.cache,
-                intl: $(G(t.props), t.cache),
+                intl: V(G(t.props), t.cache),
                 prevConfig: G(t.props),
               }),
               t
@@ -5284,7 +5284,7 @@
               var n = t.prevConfig,
                 r = t.cache,
                 o = G(e);
-              return H(n, o) ? null : { intl: $(o, r), prevConfig: o };
+              return H(n, o) ? null : { intl: V(o, r), prevConfig: o };
             }),
             (t.prototype.render = function () {
               return (
@@ -5305,7 +5305,7 @@
           var t = e.element,
             o = e.props.pageContext.locale,
             a = n("fQgO")("./" + o + ".json");
-          return r.createElement(V, { locale: o, key: o, messages: a }, t);
+          return r.createElement($, { locale: o, key: o, messages: a }, t);
         };
     },
     lSNA: function (e, t) {
@@ -5547,8 +5547,8 @@
           I = "defer",
           L = "encodeSpecialCharacters",
           F = "onChangeClientState",
-          M = "titleTemplate",
-          N = Object.keys(k).reduce(function (e, t) {
+          N = "titleTemplate",
+          M = Object.keys(k).reduce(function (e, t) {
             return (e[k[t]] = t), e;
           }, {}),
           q = [w.NOSCRIPT, w.SCRIPT, w.STYLE],
@@ -5609,7 +5609,7 @@
               ? e
               : t;
           },
-          $ = function (e) {
+          V = function (e) {
             var t =
               !(arguments.length > 1 && void 0 !== arguments[1]) ||
               arguments[1];
@@ -5622,9 +5622,9 @@
                   .replace(/"/g, "&quot;")
                   .replace(/'/g, "&#x27;");
           },
-          V = function (e) {
+          $ = function (e) {
             var t = X(e, w.TITLE),
-              n = X(e, M);
+              n = X(e, N);
             if (n && t)
               return n.replace(/%s/g, function () {
                 return Array.isArray(t) ? t.join("") : t;
@@ -5908,14 +5908,14 @@
                             ' data-react-helmet="true" ' +
                             o +
                             ">" +
-                            $(a, r) +
+                            V(a, r) +
                             "</" +
                             e +
                             ">"
                         : "<" +
                             e +
                             ' data-react-helmet="true">' +
-                            $(a, r) +
+                            V(a, r) +
                             "</" +
                             e +
                             ">";
@@ -5963,7 +5963,7 @@
                               var o =
                                 void 0 === r[t]
                                   ? t
-                                  : t + '="' + $(r[t], n) + '"';
+                                  : t + '="' + V(r[t], n) + '"';
                               return e ? e + " " + o : o;
                             }, ""),
                           a = r.innerHTML || r.cssText || "",
@@ -6021,7 +6021,7 @@
                 onChangeClientState: Y(e),
                 scriptTags: Z(w.SCRIPT, [x, E], e),
                 styleTags: Z(w.STYLE, [j], e),
-                title: V(e),
+                title: $(e),
                 titleAttributes: J(b, e),
               };
             },
@@ -6148,7 +6148,7 @@
                                 ? arguments[1]
                                 : {};
                             return Object.keys(e).reduce(function (t, n) {
-                              return (t[N[n] || n] = e[n]), t;
+                              return (t[M[n] || n] = e[n]), t;
                             }, t);
                           })(H(o, ["children"]));
                         switch ((n.warnOnInvalidChildren(e, a), e.type)) {
@@ -6315,7 +6315,7 @@
     },
     "s+WA": function (e) {
       e.exports = JSON.parse(
-        '{"description":"A community that digs deep into issues from the perspectives of technology, business, and law, and gives companies the ability to run their blockchain businesses on their own.","contact":"Contact us","slogan":"A community that digs deep into issues from the perspective of technology, business, and law, and gives companies the ability to run their blockchain businesses on their own.","what":"About ETHTerakoya","whatDetail":"As we move forward with our blockchain business, we are required to make all sorts of decisions, ranging from technology to law. However, due to the usual differences in the point of view of technical and business sides, there are times when we cannot allocate our full resources towards finding a solution. To bridge such an expertise gap, ETHTerakoya is a community where experts from various industries come together, hold workshops, and produce output that could help businesses to self-propel themselves.","wg":"Working group","wgList1":"Exploring issues from multiple perspectives, such as law, technology, and business","wgList2":"Clarifying the required action plan by looking at the issue","wgList3":"Feedback from overseas thanks to the sponsorship of the Ethereum Foundation","ws":"Workshop","wsList1":"Through practical workshops, gain the power to self-propel your blockchain business","wsList2":"Deeper topics for a workshop, with practical demonstrations on how to apply them to businesses","target":"Eligibility for participation","target1":"Engineers/Technical experts: Those who want to propose technical solutions while keeping business and legal aspects into consideration.","target2":"Businesspersons: Those who have a desire to pursue a business related to blockchain technology and want to gain useful knowledge.","target3":"Lawyers: Those who want to understand the governing laws and regulations while knowing about the technical and business context, and those who would like to propose solutions.","organize":"Organized by","support":"Sponsored by","date":"Post date","group":"Working group","posts":"All posts"}'
+        '{"description":"A community that digs deep into issues from the perspectives of technology, business, and law, and gives companies the ability to run their blockchain businesses on their own.","contact":"Contact us","slogan":"A community that digs deep into issues from the perspective of technology, business, and law, and gives companies the ability to run their blockchain businesses on their own.","what":"About ETHTerakoya","whatDetail":"As we move forward with our blockchain business, we are required to make all sorts of decisions, ranging from technology to law. However, due to the usual differences in the point of view of technical and business sides, there are times when we cannot allocate our full resources towards finding a solution. To bridge such an expertise gap, ETHTerakoya is a community where experts from various industries come together, hold workshops, and produce output that could help businesses to self-propel themselves.","wg":"Working group","wgList1":"Exploring issues from multiple perspectives, such as law, technology, and business","wgList2":"Clarifying the required action plan by looking at the issue","wgList3":"Feedback from overseas thanks to the sponsorship of the Ethereum Foundation","ws":"Workshop","wsList1":"Through practical workshops, gain the power to self-propel your blockchain business","wsList2":"Deeper topics for a workshop, with practical demonstrations on how to apply them to businesses","target":"Eligibility for participation","target1":"Engineers/Technical experts: Those who want to propose technical solutions while keeping business and legal aspects into consideration.","target2":"Businesspersons: Those who have a desire to pursue a business related to blockchain technology and want to gain useful knowledge.","target3":"Lawyers: Those who want to understand the governing laws and regulations while knowing about the technical and business context, and those who would like to propose solutions.","organize":"Organized by","support":"Sponsored by","date":"Post date","group":"Working group","posts":"All posts","groupName_id-voting":"ID x Voting x Blockchain"}'
       );
     },
     t55B: function (e, t, n) {
@@ -6508,7 +6508,7 @@
             I = /^[^a-zA-Z'{}]/,
             L = Se([["a", "z"], ["A", "Z"], "'", "{", "}"], !0, !1),
             F = /^[a-zA-Z]/,
-            M = Se(
+            N = Se(
               [
                 ["a", "z"],
                 ["A", "Z"],
@@ -6516,7 +6516,7 @@
               !1,
               !1
             ),
-            N = Pe("date", !1),
+            M = Pe("date", !1),
             q = Pe("time", !1),
             U = Pe("plural", !1),
             W = Pe("selectordinal", !1),
@@ -6524,8 +6524,8 @@
             z = Pe("select", !1),
             H = Pe("=", !1),
             G = Ee("whitespace"),
-            $ = /^[\t-\r \x85\xA0\u1680\u2000-\u200A\u2028\u2029\u202F\u205F\u3000]/,
-            V = Se(
+            V = /^[\t-\r \x85\xA0\u1680\u2000-\u200A\u2028\u2029\u202F\u205F\u3000]/,
+            $ = Se(
               [
                 ["\t", "\r"],
                 " ",
@@ -6682,7 +6682,7 @@
                 be++,
                   (e = Le()) === r &&
                     ((e = he),
-                    (t = Fe()) !== r && (n = _e()) !== r && (a = Me()) !== r
+                    (t = Fe()) !== r && (n = _e()) !== r && (a = Ne()) !== r
                       ? ((me = e),
                         (c = n),
                         (u = t) !== (s = a) &&
@@ -6714,7 +6714,7 @@
                     123 === e.charCodeAt(he)
                       ? ((n = "{"), he++)
                       : ((n = r), 0 === be && Re(v));
-                  n !== r && Ve() !== r && (a = Xe()) !== r && Ve() !== r
+                  n !== r && $e() !== r && (a = Xe()) !== r && $e() !== r
                     ? (125 === e.charCodeAt(he)
                         ? ((u = "}"), he++)
                         : ((u = r), 0 === be && Re(y)),
@@ -6737,21 +6737,21 @@
                       123 === e.charCodeAt(he)
                         ? ((n = "{"), he++)
                         : ((n = r), 0 === be && Re(v));
-                    n !== r && Ve() !== r && (o = Xe()) !== r && Ve() !== r
+                    n !== r && $e() !== r && (o = Xe()) !== r && $e() !== r
                       ? (44 === e.charCodeAt(he)
                           ? ((a = ","), he++)
                           : ((a = r), 0 === be && Re(R)),
-                        a !== r && Ve() !== r
+                        a !== r && $e() !== r
                           ? ("number" === e.substr(he, 6)
                               ? ((u = "number"), (he += 6))
                               : ((u = r), 0 === be && Re(C)),
-                            u !== r && Ve() !== r
+                            u !== r && $e() !== r
                               ? ((c = he),
                                 44 === e.charCodeAt(he)
                                   ? ((s = ","), he++)
                                   : ((s = r), 0 === be && Re(R)),
                                 s !== r &&
-                                (l = Ve()) !== r &&
+                                (l = $e()) !== r &&
                                 (f = (function () {
                                   var t, n, o;
                                   (t = he),
@@ -6784,7 +6784,7 @@
                                   ? (c = s = [s, l, f])
                                   : ((he = c), (c = r)),
                                 c === r && (c = null),
-                                c !== r && (s = Ve()) !== r
+                                c !== r && (s = $e()) !== r
                                   ? (125 === e.charCodeAt(he)
                                       ? ((l = "}"), he++)
                                       : ((l = r), 0 === be && Re(y)),
@@ -6803,25 +6803,25 @@
                         123 === e.charCodeAt(he)
                           ? ((n = "{"), he++)
                           : ((n = r), 0 === be && Re(v));
-                      n !== r && Ve() !== r && (o = Xe()) !== r && Ve() !== r
+                      n !== r && $e() !== r && (o = Xe()) !== r && $e() !== r
                         ? (44 === e.charCodeAt(he)
                             ? ((a = ","), he++)
                             : ((a = r), 0 === be && Re(R)),
-                          a !== r && Ve() !== r
+                          a !== r && $e() !== r
                             ? ("date" === e.substr(he, 4)
                                 ? ((u = "date"), (he += 4))
-                                : ((u = r), 0 === be && Re(N)),
+                                : ((u = r), 0 === be && Re(M)),
                               u === r &&
                                 ("time" === e.substr(he, 4)
                                   ? ((u = "time"), (he += 4))
                                   : ((u = r), 0 === be && Re(q))),
-                              u !== r && Ve() !== r
+                              u !== r && $e() !== r
                                 ? ((c = he),
                                   44 === e.charCodeAt(he)
                                     ? ((s = ","), he++)
                                     : ((s = r), 0 === be && Re(R)),
                                   s !== r &&
-                                  (l = Ve()) !== r &&
+                                  (l = $e()) !== r &&
                                   (f = (function () {
                                     var t, n, o;
                                     (t = he),
@@ -6861,7 +6861,7 @@
                                     ? (c = s = [s, l, f])
                                     : ((he = c), (c = r)),
                                   c === r && (c = null),
-                                  c !== r && (s = Ve()) !== r
+                                  c !== r && (s = $e()) !== r
                                     ? (125 === e.charCodeAt(he)
                                         ? ((l = "}"), he++)
                                         : ((l = r), 0 === be && Re(y)),
@@ -6883,16 +6883,16 @@
                       ? ((n = "{"), he++)
                       : ((n = r), 0 === be && Re(v));
                   if (n !== r)
-                    if (Ve() !== r)
+                    if ($e() !== r)
                       if ((a = Xe()) !== r)
-                        if (Ve() !== r)
+                        if ($e() !== r)
                           if (
                             (44 === e.charCodeAt(he)
                               ? ((u = ","), he++)
                               : ((u = r), 0 === be && Re(R)),
                             u !== r)
                           )
-                            if (Ve() !== r)
+                            if ($e() !== r)
                               if (
                                 ("plural" === e.substr(he, 6)
                                   ? ((c = "plural"), (he += 6))
@@ -6903,33 +6903,33 @@
                                     : ((c = r), 0 === be && Re(W))),
                                 c !== r)
                               )
-                                if (Ve() !== r)
+                                if ($e() !== r)
                                   if (
                                     (44 === e.charCodeAt(he)
                                       ? ((s = ","), he++)
                                       : ((s = r), 0 === be && Re(R)),
                                     s !== r)
                                   )
-                                    if (Ve() !== r)
+                                    if ($e() !== r)
                                       if (
                                         ((l = he),
                                         "offset:" === e.substr(he, 7)
                                           ? ((f = "offset:"), (he += 7))
                                           : ((f = r), 0 === be && Re(B)),
                                         f !== r &&
-                                        (p = Ve()) !== r &&
+                                        (p = $e()) !== r &&
                                         (d = Ye()) !== r
                                           ? (l = f = [f, p, d])
                                           : ((he = l), (l = r)),
                                         l === r && (l = null),
                                         l !== r)
                                       )
-                                        if ((f = Ve()) !== r) {
+                                        if ((f = $e()) !== r) {
                                           if (((p = []), (d = He()) !== r))
                                             for (; d !== r; )
                                               p.push(d), (d = He());
                                           else p = r;
-                                          p !== r && (d = Ve()) !== r
+                                          p !== r && (d = $e()) !== r
                                             ? (125 === e.charCodeAt(he)
                                                 ? ((h = "}"), he++)
                                                 : ((h = r), 0 === be && Re(y)),
@@ -6997,34 +6997,34 @@
                       ? ((n = "{"), he++)
                       : ((n = r), 0 === be && Re(v));
                   if (n !== r)
-                    if (Ve() !== r)
+                    if ($e() !== r)
                       if ((a = Xe()) !== r)
-                        if (Ve() !== r)
+                        if ($e() !== r)
                           if (
                             (44 === e.charCodeAt(he)
                               ? ((u = ","), he++)
                               : ((u = r), 0 === be && Re(R)),
                             u !== r)
                           )
-                            if (Ve() !== r)
+                            if ($e() !== r)
                               if (
                                 ("select" === e.substr(he, 6)
                                   ? ((c = "select"), (he += 6))
                                   : ((c = r), 0 === be && Re(z)),
                                 c !== r)
                               )
-                                if (Ve() !== r)
+                                if ($e() !== r)
                                   if (
                                     (44 === e.charCodeAt(he)
                                       ? ((s = ","), he++)
                                       : ((s = r), 0 === be && Re(R)),
                                     s !== r)
                                   )
-                                    if (Ve() !== r) {
+                                    if ($e() !== r) {
                                       if (((l = []), (f = ze()) !== r))
                                         for (; f !== r; ) l.push(f), (f = ze());
                                       else l = r;
-                                      l !== r && (f = Ve()) !== r
+                                      l !== r && (f = $e()) !== r
                                         ? (125 === e.charCodeAt(he)
                                             ? ((p = "}"), he++)
                                             : ((p = r), 0 === be && Re(y)),
@@ -7142,7 +7142,7 @@
               (t = he),
               (n = he),
               be++,
-              (o = Fe()) === r && (o = Me()) === r && (o = Le()),
+              (o = Fe()) === r && (o = Ne()) === r && (o = Le()),
               be--,
               o === r ? (n = void 0) : ((he = n), (n = r)),
               n !== r
@@ -7162,7 +7162,7 @@
               60 === e.charCodeAt(he)
                 ? ((a = "<"), he++)
                 : ((a = r), 0 === be && Re(s)),
-              a !== r && (u = Ke()) !== r && (c = Ve()) !== r
+              a !== r && (u = Ke()) !== r && (c = $e()) !== r
                 ? ("/>" === e.substr(he, 2)
                     ? ((l = "/>"), (he += 2))
                     : ((l = r), 0 === be && Re(d)),
@@ -7191,7 +7191,7 @@
               t
             );
           }
-          function Me() {
+          function Ne() {
             var t, n, o, a;
             return (
               (t = he),
@@ -7207,7 +7207,7 @@
               t
             );
           }
-          function Ne() {
+          function Me() {
             var t, n, o, a, i;
             if (
               (be++,
@@ -7263,7 +7263,7 @@
               47 === e.charCodeAt(he)
                 ? ((n = "/"), he++)
                 : ((n = r), 0 === be && Re(S)),
-              n !== r && (o = Ne()) !== r
+              n !== r && (o = Me()) !== r
                 ? ((me = t), (t = n = o))
                 : ((he = t), (t = r)),
               be--,
@@ -7273,8 +7273,8 @@
           }
           function Ue() {
             var e, t, n, o;
-            if ((be++, (e = he), Ve() !== r))
-              if ((t = Ne()) !== r) {
+            if ((be++, (e = he), $e() !== r))
+              if ((t = Me()) !== r) {
                 for (n = [], o = qe(); o !== r; ) n.push(o), (o = qe());
                 n !== r
                   ? ((me = e),
@@ -7341,14 +7341,14 @@
               ((t = []),
               F.test(e.charAt(he))
                 ? ((n = e.charAt(he)), he++)
-                : ((n = r), 0 === be && Re(M)),
+                : ((n = r), 0 === be && Re(N)),
               n !== r)
             )
               for (; n !== r; )
                 t.push(n),
                   F.test(e.charAt(he))
                     ? ((n = e.charAt(he)), he++)
-                    : ((n = r), 0 === be && Re(M));
+                    : ((n = r), 0 === be && Re(N));
             else t = r;
             return t;
           }
@@ -7356,7 +7356,7 @@
             var t, n, o, a, u, c, s;
             return (
               (t = he),
-              Ve() !== r && (n = tt()) !== r && Ve() !== r
+              $e() !== r && (n = tt()) !== r && $e() !== r
                 ? (123 === e.charCodeAt(he)
                     ? ((o = "{"), he++)
                     : ((o = r), 0 === be && Re(v)),
@@ -7384,7 +7384,7 @@
             var t, n, o, a, u, c, s;
             return (
               (t = he),
-              Ve() !== r &&
+              $e() !== r &&
               (n = (function () {
                 var t, n, o, a;
                 return (
@@ -7400,7 +7400,7 @@
                   t
                 );
               })()) !== r &&
-              Ve() !== r
+              $e() !== r
                 ? (123 === e.charCodeAt(he)
                     ? ((o = "{"), he++)
                     : ((o = r), 0 === be && Re(v)),
@@ -7428,15 +7428,15 @@
             var t;
             return (
               be++,
-              $.test(e.charAt(he))
+              V.test(e.charAt(he))
                 ? ((t = e.charAt(he)), he++)
-                : ((t = r), 0 === be && Re(V)),
+                : ((t = r), 0 === be && Re($)),
               be--,
               t === r && (r, 0 === be && Re(G)),
               t
             );
           }
-          function $e() {
+          function Ve() {
             var t;
             return (
               be++,
@@ -7448,7 +7448,7 @@
               t
             );
           }
-          function Ve() {
+          function $e() {
             var t, n, o;
             for (be++, t = he, n = [], o = Ge(); o !== r; )
               n.push(o), (o = Ge());
@@ -7610,7 +7610,7 @@
                     ((o = he),
                     (a = he),
                     be++,
-                    (i = Ge()) === r && (i = $e()),
+                    (i = Ge()) === r && (i = Ve()),
                     be--,
                     i === r ? (a = void 0) : ((he = a), (a = r)),
                     a !== r
@@ -7629,7 +7629,7 @@
                           ((o = he),
                           (a = he),
                           be++,
-                          (i = Ge()) === r && (i = $e()),
+                          (i = Ge()) === r && (i = Ve()),
                           be--,
                           i === r ? (a = void 0) : ((he = a), (a = r)),
                           a !== r
@@ -7695,7 +7695,7 @@
               (o = he),
               (a = he),
               be++,
-              (i = Ge()) === r && (i = $e()),
+              (i = Ge()) === r && (i = Ve()),
               be--,
               i === r ? (a = void 0) : ((he = a), (a = r)),
               a !== r
@@ -7711,7 +7711,7 @@
                   (o = he),
                   (a = he),
                   be++,
-                  (i = Ge()) === r && (i = $e()),
+                  (i = Ge()) === r && (i = Ve()),
                   be--,
                   i === r ? (a = void 0) : ((he = a), (a = r)),
                   a !== r
@@ -8123,4 +8123,4 @@
   },
   [["UxWs", 2, 9]],
 ]);
-//# sourceMappingURL=app-c87c6a6c364e0cee3a98.js.map
+//# sourceMappingURL=app-de13f01ad16b0c7eeb15.js.map
