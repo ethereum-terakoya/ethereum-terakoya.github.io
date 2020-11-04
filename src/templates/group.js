@@ -21,9 +21,7 @@ const Category = ({ pageContext, data }) => {
         <Row className="mb-5">
           <Col>
             <h1 className="font-weight-bold">
-              {intl.formatMessage({ id: `groupName_${pageContext.group}` })}
-              &nbsp;
-              {intl.formatMessage({ id: "group" })}
+              {group} {intl.formatMessage({ id: "group" })}
             </h1>
             <p>{intl.formatMessage({ id: "posts" })}</p>
           </Col>
