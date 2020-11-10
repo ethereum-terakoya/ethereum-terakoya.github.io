@@ -139,17 +139,17 @@ group: id-voting
 
 （本人認証技術の評価項目）
 
-![group](images/image1.png)
+![group](./images/image1.png)
 
 ※投票の機密性・個人情報保護などは、認証技術グループとしてはスコープ外とする。
 
 （本人認証技術の分類）
 
-![group](images/image2.png)
+![group](./images/image2.png)
 
 （本人認証技術の評価）
 
-![group](images/image3.png)
+![group](./images/image3.png)
 
 - 評価項目を横軸、本人認証技術の中分類を縦軸として評価を行った。
 - すべての評価項目で「◯」の技術は無いと思われるため、複数技術を組み合わせた多要素認証が必要となると考える。
@@ -229,14 +229,14 @@ group: id-voting
 - 本質的な匿名性を考えた場合、誰がどのアドレスか？ということの紐付ができないことをもって匿名性があるということは可能か。
 - 仮に可能だとすれば、下図フローで実現できる。これは、途中でキーペア（秘密鍵とアドレスのペア）に封をしてシャッフルする工程を除けば、現行の投票所入場券の送付フローと基本的には同じである。
 
-![group](images/image4.png)
+![group](./images/image4.png)
 
 （途中経過の秘匿性）
 
 - commit/reveal 方式によって、途中経過の秘匿性を実現できる。（下図参照）
 - 但し、この方式はブロックチェーンがなくても実現できる。
 
-![group](images/image5.png)
+![group](./images/image5.png)
 
 （経済的コスト）
 
@@ -330,7 +330,7 @@ group: id-voting
      - この時 𝐶 は符号なし 256 ビット整数。
    - マークル木に空きが有れば 𝑐 はトランザクションを受入れ、𝐶 　をマークル木にゼロではない値として追加する。
 
-![group](images/image6.png)
+![group](./images/image6.png)
 
 5. **withdraw（投票）**
    - 候補者 𝐵 を選択。
@@ -343,7 +343,7 @@ group: id-voting
      - リレイヤーへトランザクションリクエストを 𝑅, ℎ, 𝐵, 𝑓, 𝑡, 𝑃 と共に 𝑐 へ送る。
    - 実行後、ℎ を 𝑐 上のマッピング変数 𝐿 へ 𝐿[ℎ] = true をマップする。
 
-![group](images/image7.png)
+![group](./images/image7.png)
 
 6. **　二重投票の防止**
 
