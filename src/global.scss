@@ -1,0 +1,143 @@
+$primary: #bb4e4e;
+$text-color: #4c4c4c;
+body {
+  font-family: "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", serif;
+}
+
+.navbar {
+  padding: 0;
+}
+.navbar-brand {
+  background-color: #880d0dd4;
+  padding: 0.4rem 1.5rem;
+}
+
+.jumbotron {
+  height: 463px;
+  width: 100%;
+  background-size: cover;
+  background: linear-gradient(
+    rgba(187, 78, 75, 0.25),
+    rgba(187, 78, 75, 0.1)
+  ), url("./images/header.png") no-repeat fixed;
+  //padding: 12%;
+  border-radius: 0;
+  position: relative;
+  .catch {
+    position: absolute;
+    background: linear-gradient(#880d0d12, #880d0d3d);
+    padding: 0;
+    margin: auto;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    //border-bottom: brown 1px solid;
+
+    //border-left: #faf7ef 4px solid;
+    & .title {
+      font-size: 2rem;
+      display: inline-block;
+      //background-color: #880d0dd4;
+      margin-left: 0.7rem;
+      padding-bottom: 1.8rem;
+    }
+
+    & .slogan {
+      vertical-align: bottom;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+
+    .description {
+      display: inline-block;
+      vertical-align: bottom;
+      color:white;
+      font-size: 1.6rem;
+      line-height: 141%;
+      background-color: #880d0dd4;
+      padding: 0.3rem 0.6rem;
+    }
+  }
+
+}
+.bg-beige {
+  background: #faf7ef;
+}
+.toc-container {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 4rem;
+  height: calc(100vh - 4rem);
+  overflow-y: auto;
+  -ms-flex-order: 2;
+  order: 2;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  font-size: 0.875rem;
+}
+.post-list-item {
+  line-height: 5rem;
+}
+.header-anchor {
+  margin-right: 0.5rem;
+}
+.post {
+  padding-top: 1.5rem;
+  padding-bottom: 2rem;
+  max-width: 760px;
+  word-break: break-all;
+}
+.post h1,
+.post h2,
+.post h3 {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+  font-weight: bold;
+}
+.post h4,
+.post h5 {
+  padding-bottom: 1rem;
+  font-weight: bold;
+}
+.post p {
+  margin: 0.5rem 0;
+}
+
+.main-menu-item {
+  margin-bottom: 4rem;
+
+  & .title {
+    color: #000;
+    font-size: 2rem;
+    padding: 2.0rem 1rem;
+    display: block;
+    border-bottom: #8a8a8a 1px solid;
+  }
+
+  & .description {
+    padding-top: 2.0rem;
+  }
+
+  & .category {
+    font-size: 0.86rem;
+    font-weight: bold;
+    color: $primary;
+    letter-spacing: 0.15rem;
+  }
+
+  & .link-icon {
+    font-size: 1.8rem;
+    margin-top: 0.8rem;
+    a {
+      color: $text-color;
+      &:hover {
+        color: $primary;
+      }
+    }
+  }
+
+}
+.bg-terakoya {
+  background-color: rgba(0,0,0,0);
+}

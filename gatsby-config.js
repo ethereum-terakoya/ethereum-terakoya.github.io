@@ -83,5 +83,11 @@ module.exports = {
     },
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
+    {
+      resolve: `gatsby-plugin-sass`,
+      options: {
+        includePaths: ["/home/ito/repos/ethereum-terakoya.github.io/src"],
+      }
+    }
   ],
 };
