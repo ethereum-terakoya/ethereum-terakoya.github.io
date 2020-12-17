@@ -56,12 +56,15 @@ $main-submenu-color: #950000;
 }
 
 .main-submenu-title {
-  background-color: $main-submenu-color;
+  // background-color: $main-submenu-color;
   width: 100%;
   margin: auto;
-  color: white;
-  display: inline;
+  // color: white;
+  // display: inline;
+  font-size: 1.75rem;
+  font-weight: 500;
   padding: 8px 16px 8px 16px;
+  text-align: center;
 }
 
 .main-menu-item {
