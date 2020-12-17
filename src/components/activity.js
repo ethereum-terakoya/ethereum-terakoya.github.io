@@ -13,7 +13,7 @@ const Activity = () => {
   const intl = useIntl();
 
   return (
-    <>
+    <div className={'activity-container'}>
       <Row>
         {/* title */}
         <Col>
@@ -24,7 +24,7 @@ const Activity = () => {
       </Row>
       <Row className={'pt-5'}>
         {/* ID x Voting x Blockchain */}
-        <Col>
+        <Col className={'item'}>
           <Container className="main-menu-item">
             <Row>
               <Col className="text-center">
@@ -47,7 +47,7 @@ const Activity = () => {
         </Col>
 
         {/* C.R.E.A.M */}
-        <Col>
+        <Col className={'item'}>
           <Container className="main-menu-item">
             <Row>
               <Col className="text-center">
@@ -74,7 +74,7 @@ const Activity = () => {
           </Container>
         </Col>
       </Row>
-    </>
+    </div>
   )
 }
 

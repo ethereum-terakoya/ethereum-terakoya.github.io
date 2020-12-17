@@ -67,8 +67,17 @@ $main-submenu-color: #950000;
   text-align: center;
 }
 
+.activity-container {
+  & .item {
+    border: 1px gray solid;
+    margin: 8px;
+    padding: 24px;
+  }
+}
+
+
 .main-menu-item {
-  margin-bottom: 4rem;
+  // margin-bottom: 4rem;
 
   & .title {
     color: #000;
