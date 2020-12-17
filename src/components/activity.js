@@ -15,14 +15,54 @@ const Activity = () => {
   return (
     <div className={'activity-container'}>
       <Row>
-        {/* title */}
+        {/* アクティビティ */}
         <Col>
           <p className={'main-submenu-title'}>
             {intl.formatMessage({id: "activity"})}
           </p>
         </Col>
       </Row>
-      <Row className={'pt-5'}>
+
+      {/* ワーク */}
+      <Row className="pt-4">
+        {/* ワークキンググループ */}
+        <Col className="col-sm py-md-3">
+          <h4 className="text-center mb-5">
+              <span role="img" aria-label="friendship">
+                👬
+              </span>
+            <span role="img" aria-label="friendship different order">
+                👫
+              </span>
+            {intl.formatMessage({ id: "wg" })}
+          </h4>
+          <ul>
+            <li>{intl.formatMessage({ id: "wgList1" })}</li>
+            <li>{intl.formatMessage({ id: "wgList2" })}</li>
+            <li>{intl.formatMessage({ id: "wgList3" })}</li>
+          </ul>
+        </Col>
+
+        {/* ワークショップ */}
+        <Col className="col-sm py-md-3">
+          <h4 className="text-center mb-5">
+              <span role="img" aria-label="male researcher">
+                👨‍🔬
+              </span>
+            <span role="img" aria-label="female researcher">
+                👩‍⚕
+              </span>
+            {intl.formatMessage({ id: "ws" })}
+          </h4>
+          <ul>
+            <li>{intl.formatMessage({ id: "wsList1" })}</li>
+            <li>{intl.formatMessage({ id: "wsList2" })}</li>
+          </ul>
+        </Col>
+      </Row>
+
+
+      <Row className={'pt-4 pb-5'}>
         {/* ID x Voting x Blockchain */}
         <Col className={'item'}>
           <Container className="main-menu-item">
