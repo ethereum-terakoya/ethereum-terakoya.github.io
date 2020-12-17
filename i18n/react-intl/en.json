@@ -19,5 +19,8 @@
   "support": "Sponsored by",
   "date": "Post date",
   "group": "Working group",
-  "posts": "All posts"
+  "posts": "All posts",
+  "news": "News",
+  "activity": "activity",
+  "activityWorkingGroupSubtitle": "internet voting"
 }

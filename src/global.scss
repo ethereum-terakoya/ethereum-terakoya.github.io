@@ -1,3 +1,7 @@
+$primary: #bb4e4e;
+$text-color: #4c4c4c;
+$main-submenu-color: #950000;
+
 .jumbotron {
   background: url("./images/header.png");
   height: auto;
@@ -49,4 +53,47 @@
 }
 .post p {
   margin: 0.5rem 0;
+}
+
+.main-submenu-title {
+  background-color: $main-submenu-color;
+  width: 100%;
+  margin: auto;
+  color: white;
+  display: inline;
+  padding: 8px 16px 8px 16px;
+}
+
+.main-menu-item {
+  margin-bottom: 4rem;
+
+  & .title {
+    color: #000;
+    font-size: 2rem;
+    padding: 2.0rem 1rem;
+    display: block;
+    border-bottom: #8a8a8a 1px solid;
+  }
+
+  & .description {
+    padding-top: 2.0rem;
+  }
+
+  & .category {
+    font-size: 0.86rem;
+    font-weight: bold;
+    color: $primary;
+    letter-spacing: 0.15rem;
+  }
+
+  & .link-icon {
+    font-size: 1.8rem;
+    margin-top: 0.8rem;
+    a {
+      color: $text-color;
+      &:hover {
+        color: $primary;
+      }
+    }
+  }
 }
