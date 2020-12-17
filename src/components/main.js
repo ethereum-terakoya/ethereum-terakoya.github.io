@@ -7,6 +7,7 @@ import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 import Jumbotron from "react-bootstrap/Jumbotron";
 import Row from "react-bootstrap/Row";
+import Activity from "../components/activity"
 
 const Hero = ({ logo }) => {
   return (
@@ -54,48 +55,28 @@ const Main = ({ data }) => {
           </Col>
         </Row>
         <Row>
-          <Col className="py-5">
+          <Col className="">
             <h4 className="text-center mb-5 h3">
               {intl.formatMessage({ id: "what" })}
             </h4>
             <p>{intl.formatMessage({ id: "whatDetail" })}</p>
           </Col>
         </Row>
-        <Row>
-          <Col className="col-sm py-md-5 pb-5">
-            <h4 className="text-center mb-5">
-              <span role="img" aria-label="friendship">
-                👬
-              </span>
-              <span role="img" aria-label="friendship different order">
-                👫
-              </span>
-              {intl.formatMessage({ id: "wg" })}
-            </h4>
-            <ul>
-              <li>{intl.formatMessage({ id: "wgList1" })}</li>
-              <li>{intl.formatMessage({ id: "wgList2" })}</li>
-              <li>{intl.formatMessage({ id: "wgList3" })}</li>
-            </ul>
-          </Col>
-          <Col className="col-sm py-md-5 pb-5">
-            <h4 className="text-center mb-5">
-              <span role="img" aria-label="male researcher">
-                👨‍🔬
-              </span>
-              <span role="img" aria-label="female researcher">
-                👩‍⚕
-              </span>
-              {intl.formatMessage({ id: "ws" })}
-            </h4>
-            <ul>
-              <li>{intl.formatMessage({ id: "wsList1" })}</li>
-              <li>{intl.formatMessage({ id: "wsList2" })}</li>
-            </ul>
+
+        <Row className="mb-4">
+          <Col>
+            <hr />
           </Col>
         </Row>
+
+        {/* activity */}
+        <Activity />
+
+        {/* お問い合わせ */}
         <ContactUs title={intl.formatMessage({ id: "contact" })} />
       </Container>
+
+      {/* 参加対象 */}
       <Container fluid className="bg-beige">
         <Row className="justify-content-md-center py-5 bg-beige">
           <Col className="col-12 col-sm-6">
@@ -110,7 +91,9 @@ const Main = ({ data }) => {
           </Col>
         </Row>
       </Container>
+
       <Container>
+        {/* 主催 */}
         <Row className="py-5">
           <Col>
             <h4 className="text-center mb-5">
@@ -121,6 +104,8 @@ const Main = ({ data }) => {
             </div>
           </Col>
         </Row>
+
+        {/* 後援 */}
         <Row className="py-5">
           <Col>
             <h4 className="text-center mb-5">
@@ -131,6 +116,8 @@ const Main = ({ data }) => {
             </div>
           </Col>
         </Row>
+
+        {/* お問い合わせ */}
         <ContactUs title={intl.formatMessage({ id: "contact" })} />
       </Container>
     </React.Fragment>

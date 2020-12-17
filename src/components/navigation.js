@@ -22,6 +22,7 @@ const Navigation = () => {
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
+            {/* working group */}
             <Nav className="mr-auto">
               <NavDropdown
                 title={intl.formatMessage({ id: "wg" })}
@@ -33,10 +34,21 @@ const Navigation = () => {
                   </LocalizedLink>
                 </NavDropdown.Item>
               </NavDropdown>
+
+              {/* news */}
+              <div className={"nav-item"} style={{display: 'flex', alignItems: 'center', marginLeft: '4px'}}>
+                <LocalizedLink to="/news" style={{color: 'rgba(255,255,255,.5)'}} >
+                  {intl.formatMessage({id: "news"})}
+                </LocalizedLink>
+              </div>
             </Nav>
+
+            {/* contact */}
             <Button variant="info" href="https://forms.gle/3ptEzDnWtrzqShMz8">
               {intl.formatMessage({ id: "contact" })}
             </Button>
+
+            {/* language */}
             <Nav>
               <NavDropdown title="Languages" id="collasible-nav-dropdown">
                 <NavDropdown.Item href="/">日本語</NavDropdown.Item>
