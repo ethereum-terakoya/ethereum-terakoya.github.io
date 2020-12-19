@@ -96,14 +96,14 @@ const Activity = () => {
             </Row>
             <Row>
               <Col className="text-center" >
-                <Link to="https://github.com/couger-inc/cream" className="title">
+                <Link to="https://zkcre.am/" className="title">
                   C.R.E.A.M
                 </Link>
               </Col>
             </Row>
             <Row>
               <Col className="text-center">
-                <div className={"description"}>Confidential Reliable Ethereum Anonymous Mixer</div>
+                <div className={"description"}>{intl.formatMessage({id: "activityCreamSubtitle"})}</div>
                 <div className={"link-icon"}>
                   <Link to="https://github.com/couger-inc/cream" target={"blank"}>
                     <FontAwesomeIcon icon={faGithub}/>

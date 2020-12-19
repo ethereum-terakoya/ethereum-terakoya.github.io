@@ -32,17 +32,17 @@ const News = ({ data, pageContext }) => {
     // en
     {
       date: '2020/11/30',
-      title: 'public event',
-      linkTitle: 'title1',
+      title: 'Public Event',
+      linkTitle: 'Deep insight into "ETH2.0" the major update of Ethereum',
       link: 'https://peatix.com/event/1713336?lang=ja',
-      description: 'description1'
+      description: 'Ethereum is one of the largest developer community in the world. The major update "Ethereum2.0" will be launched to accelerate to the next phase. ETHTerakoya supported by Ethereum Foundation explain the latest trend in Ethereum.'
     },
     {
       date: '2020/11/06',
-      title: 'public work shop',
-      linkTitle: 'title2',
+      title: 'Public Workshop',
+      linkTitle: 'Possibility to introduce online voting by using blockchain - Blockchain × My Number -',
       link: 'https://peatix.com/event/1679864?lang=ja',
-      description: 'description2'
+      description: 'Business/technology/legal professionals have gathered as ETHTerakoya community supported by Ethereum Foundation and discussed how to introduce online voting by using blockchain. We hold the workshop to share the final report shows legal and technology requirement and other insights.'
     }
   ]
 

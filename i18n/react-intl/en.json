@@ -21,6 +21,7 @@
   "group": "Working group",
   "posts": "All posts",
   "news": "News",
-  "activity": "activity",
-  "activityWorkingGroupSubtitle": "internet voting"
+  "activity": "Activity",
+  "activityWorkingGroupSubtitle": "Study on the possibility to introduce online voting by using blockchain",
+  "activityCreamSubtitle": "Development of C.R.E.A.M (Confidential Reliable Ethereum Anonymous Mixer)"
 }
