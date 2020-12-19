@@ -87,7 +87,7 @@ module.exports = {
       resolve: `gatsby-plugin-sass`,
       options: {
         includePaths: ["src"],
-      }
-    }
+      },
+    },
   ],
 };

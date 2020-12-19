@@ -36,9 +36,19 @@ const Navigation = () => {
               </NavDropdown>
 
               {/* news */}
-              <div className={"nav-item"} style={{display: 'flex', alignItems: 'center', marginLeft: '4px'}}>
-                <LocalizedLink to="/news" style={{color: 'rgba(255,255,255,.5)'}} >
-                  {intl.formatMessage({id: "news"})}
+              <div
+                className={"nav-item"}
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  marginLeft: "4px",
+                }}
+              >
+                <LocalizedLink
+                  to="/news"
+                  style={{ color: "rgba(255,255,255,.5)" }}
+                >
+                  {intl.formatMessage({ id: "news" })}
                 </LocalizedLink>
               </div>
             </Nav>

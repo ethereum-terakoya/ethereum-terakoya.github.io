@@ -4,21 +4,21 @@ import { LocalizedLink } from "gatsby-theme-i18n";
 import Container from "react-bootstrap/Container";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
-import {Link} from "gatsby";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGithub } from '@fortawesome/free-brands-svg-icons'
-import {useIntl} from "react-intl";
+import { Link } from "gatsby";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { useIntl } from "react-intl";
 
 const Activity = () => {
   const intl = useIntl();
 
   return (
-    <div className={'activity-container'}>
+    <div className={"activity-container"}>
       <Row>
         {/* アクティビティ */}
         <Col>
-          <p className={'main-submenu-title'}>
-            {intl.formatMessage({id: "activity"})}
+          <p className={"main-submenu-title"}>
+            {intl.formatMessage({ id: "activity" })}
           </p>
         </Col>
       </Row>
@@ -28,12 +28,12 @@ const Activity = () => {
         {/* ワークキンググループ */}
         <Col className="col-sm py-md-3">
           <h4 className="text-center mb-5">
-              <span role="img" aria-label="friendship">
-                👬
-              </span>
+            <span role="img" aria-label="friendship">
+              👬
+            </span>
             <span role="img" aria-label="friendship different order">
-                👫
-              </span>
+              👫
+            </span>
             {intl.formatMessage({ id: "wg" })}
           </h4>
           <ul>
@@ -46,12 +46,12 @@ const Activity = () => {
         {/* ワークショップ */}
         <Col className="col-sm py-md-3">
           <h4 className="text-center mb-5">
-              <span role="img" aria-label="male researcher">
-                👨‍🔬
-              </span>
+            <span role="img" aria-label="male researcher">
+              👨‍🔬
+            </span>
             <span role="img" aria-label="female researcher">
-                👩‍⚕
-              </span>
+              👩‍⚕
+            </span>
             {intl.formatMessage({ id: "ws" })}
           </h4>
           <ul>
@@ -61,10 +61,9 @@ const Activity = () => {
         </Col>
       </Row>
 
-
-      <Row className={'pt-4 pb-5'}>
+      <Row className={"pt-4 pb-5"}>
         {/* ID x Voting x Blockchain */}
-        <Col className={'item'}>
+        <Col className={"item"}>
           <Container className="main-menu-item">
             <Row>
               <Col className="text-center">
@@ -80,14 +79,16 @@ const Activity = () => {
             </Row>
             <Row>
               <Col className="text-center">
-                <div className={"description"}>{intl.formatMessage({id: "activityWorkingGroupSubtitle"})}</div>
+                <div className={"description"}>
+                  {intl.formatMessage({ id: "activityWorkingGroupSubtitle" })}
+                </div>
               </Col>
             </Row>
           </Container>
         </Col>
 
         {/* C.R.E.A.M */}
-        <Col className={'item'}>
+        <Col className={"item"}>
           <Container className="main-menu-item">
             <Row>
               <Col className="text-center">
@@ -95,7 +96,7 @@ const Activity = () => {
               </Col>
             </Row>
             <Row>
-              <Col className="text-center" >
+              <Col className="text-center">
                 <Link to="https://zkcre.am/" className="title">
                   C.R.E.A.M
                 </Link>
@@ -103,10 +104,15 @@ const Activity = () => {
             </Row>
             <Row>
               <Col className="text-center">
-                <div className={"description"}>{intl.formatMessage({id: "activityCreamSubtitle"})}</div>
+                <div className={"description"}>
+                  {intl.formatMessage({ id: "activityCreamSubtitle" })}
+                </div>
                 <div className={"link-icon"}>
-                  <Link to="https://github.com/couger-inc/cream" target={"blank"}>
-                    <FontAwesomeIcon icon={faGithub}/>
+                  <Link
+                    to="https://github.com/couger-inc/cream"
+                    target={"blank"}
+                  >
+                    <FontAwesomeIcon icon={faGithub} />
                   </Link>
                 </div>
               </Col>
@@ -115,7 +121,7 @@ const Activity = () => {
         </Col>
       </Row>
     </div>
-  )
-}
+  );
+};
 
-export default Activity
+export default Activity;
