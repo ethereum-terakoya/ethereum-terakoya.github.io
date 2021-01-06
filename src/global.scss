@@ -215,3 +215,66 @@ hr {
   }
 }
 
+.header {
+  .header-logo {
+    &:before {
+      background-image: url('/img/logo.png');
+      display: inline-block;
+      width: 36px;
+      height: 36px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      vertical-align: middle;
+      content: '';
+    }
+  }
+
+  .news {
+    margin-left: 1em;
+    a {
+      color: white;
+    }
+  }
+
+  .working-group {
+    a {
+      color: white;
+    }
+
+    .working-group-item {
+      a {
+        color: black;
+      }
+    }
+
+    .dropdown-menu {
+      // background-color: black;
+
+      a {
+        color: black;
+      }
+    }
+  }
+
+  .contact-button {
+    color: white;
+    background-color: black;
+    border-radius: 50px;
+    width: 200px;
+  }
+}
+
+.footer {
+  .footer-title {
+    &:before {
+      background-image: url('/img/logo.png');
+      display: inline-block;
+      width: 36px;
+      height: 36px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      vertical-align: middle;
+      content: '';
+    }
+  }
+}

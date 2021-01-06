@@ -7,6 +7,10 @@ import Container from "react-bootstrap/Container";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import NavDropdown from "react-bootstrap/NavDropdown";
+import DropdownToggle from "react-bootstrap/DropdownToggle";
+import {Dropdown} from "react-bootstrap";
+import DropdownMenu from "react-bootstrap/DropdownMenu";
+import DropdownItem from "react-bootstrap/DropdownItem";
 
 const Navigation = () => {
   const intl = useIntl();
@@ -14,57 +18,53 @@ const Navigation = () => {
   return (
     <React.Fragment>
       <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-        <Container>
+        <Container className="header">
+          {/* logo */}
           <Navbar.Brand>
             <LocalizedLink to="/" className="text-white font-weight-bold">
-              ETHTerakoya
+              <span className="header-logo">ETHTerakoya</span>
             </LocalizedLink>
           </Navbar.Brand>
+
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
-            {/* working group */}
             <Nav className="mr-auto">
-              <NavDropdown
-                title={intl.formatMessage({ id: "wg" })}
-                id="collasible-nav-dropdown-wg"
-              >
-                <NavDropdown.Item>
-                  <LocalizedLink to="/id-voting/">
-                    ID x Voting x Blockchain
-                  </LocalizedLink>
-                </NavDropdown.Item>
-              </NavDropdown>
-
-              {/* news */}
-              <div
-                className={"nav-item"}
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  marginLeft: "4px",
-                }}
-              >
-                <LocalizedLink
-                  to="/news"
-                  style={{ color: "rgba(255,255,255,.5)" }}
-                >
-                  {intl.formatMessage({ id: "news" })}
-                </LocalizedLink>
-              </div>
             </Nav>
 
+            {/* news */}
+            <div className={"nav-item news"}>
+              <LocalizedLink to="/news">
+                {intl.formatMessage({ id: "news" })}
+              </LocalizedLink>
+            </div>
+
+            {/* working group */}
+            <NavDropdown
+              title={intl.formatMessage({ id: "wg" })}
+              id="collasible-nav-dropdown-wg"
+              className="working-group">
+              <NavDropdown.Item class="working-group-item">
+                <LocalizedLink to="/id-voting/">
+                  ID x Voting x Blockchain
+                </LocalizedLink>
+              </NavDropdown.Item>
+            </NavDropdown>
+
             {/* contact */}
-            <Button variant="info" href="https://forms.gle/3ptEzDnWtrzqShMz8">
+            <Button variant="none" href="https://forms.gle/3ptEzDnWtrzqShMz8" className="contact-button">
               {intl.formatMessage({ id: "contact" })}
             </Button>
 
             {/* language */}
-            <Nav>
-              <NavDropdown title="Languages" id="collasible-nav-dropdown">
-                <NavDropdown.Item href="/">日本語</NavDropdown.Item>
-                <NavDropdown.Item href="/en">English</NavDropdown.Item>
-              </NavDropdown>
-            </Nav>
+            <Dropdown className="ml-2">
+              <DropdownToggle variant="none" >
+                <img src="/svg/np_language.svg" height="32" width="32" />
+              </DropdownToggle>
+              <DropdownMenu id="collasible-nav-dropdown" className="dropdown-menu">
+                <DropdownItem className="dropdown-item" href="/">日本語</DropdownItem>
+                <DropdownItem className="dropdown-item" href="/en">English</DropdownItem>
+              </DropdownMenu>
+            </Dropdown>
           </Navbar.Collapse>
         </Container>
       </Navbar>

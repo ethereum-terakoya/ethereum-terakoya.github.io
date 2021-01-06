@@ -12,6 +12,8 @@ import ParticipationTarget from "./participationTarget";
 import Sponsor from "./sponsor";
 
 const Hero = ({ logo }) => {
+  const intl = useIntl();
+
   return (
     <div className="main-header container-fluid">
       <div className="header-contents">
@@ -26,11 +28,8 @@ const Hero = ({ logo }) => {
         <div>
           <Col sm={4}>
             {/*slogan*/}
-            <div className="slogan text-right text-white">
-              <span className="description">技術・ビジネス・法律の観点から課題を協議し</span>
-              <span className="description">企業のブロックチェーン活用における</span>
-              <span className="description">標準化策定を目指すコミュニティ</span>
-              {/*{intl.formatMessage({ id: "slogan" })}*/}
+            <div className="slogan text-white text-left">
+              {intl.formatMessage({ id: "slogan" })}
             </div>
           </Col>
         </div>
@@ -62,18 +61,7 @@ const Main = ({ data }) => {
   return (
     <React.Fragment>
       <Hero logo={data.logo} />
-      <Container>
-        <Row>
-          <Col className="py-5">
-            <h3 className="text-center mb-5">
-              <span role="img" aria-label="hand">
-                👉
-              </span>
-              {intl.formatMessage({ id: "slogan" })}
-            </h3>
-          </Col>
-        </Row>
-
+      <Container className="mt-5">
         {/* ETHTerakoya（イーサテラコヤ）とは */}
         <AboutETHTerakoya />
 
@@ -87,7 +75,7 @@ const Main = ({ data }) => {
       {/* 参加対象 */}
       <ParticipationTarget />
 
-      <Container>
+      <Container className="mb-4">
         <Sponsor data={data} />
 
         {/* お問い合わせ */}

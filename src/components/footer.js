@@ -4,17 +4,18 @@ import { LocalizedLink } from "gatsby-theme-i18n";
 import Container from "react-bootstrap/Container";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
+import Img from "gatsby-image";
 
 const Footer = () => {
   return (
-    <footer>
+    <footer className="footer">
       <Container fluid className="pt-5 pb-2 bg-dark text-white">
         <Row className="justify-content-md-center mb-5">
           <Col>
-            <h4 className="text-center">Ethereum Terakoya</h4>
+            <h4 className="text-center footer-title">ETHTerakoya</h4>
           </Col>
+          <Col />
           <Col>
-            <h5>Resources</h5>
             <ul className="list-unstyled">
               <li>
                 <LocalizedLink
@@ -35,11 +36,6 @@ const Footer = () => {
                   Github
                 </a>
               </li>
-            </ul>
-          </Col>
-          <Col>
-            <h5>About</h5>
-            <ul className="list-unstyled">
               <li>
                 <a href="/" rel="noreferrer" className="text-white">
                   Contributors
