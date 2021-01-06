@@ -8,21 +8,39 @@ import Container from "react-bootstrap/Container";
 import Jumbotron from "react-bootstrap/Jumbotron";
 import Row from "react-bootstrap/Row";
 import Activity from "../components/activity";
+import AboutETHTerakoya from "./aboutETHTerakoya";
 
 const Hero = ({ logo }) => {
   return (
-    <Jumbotron>
-      <Container>
-        <Img fixed={logo.childImageSharp.fixed} />
-        <h1 className="display-6 text-white">ETHTerakoya</h1>
-      </Container>
-    </Jumbotron>
+    <div className="main-header container-fluid">
+      <div className="header-contents">
+        <div className="title-area">
+          <Col sm={4} className="upper">
+            <div>
+              <Img fixed={logo.childImageSharp.fixed} className="ml-3" />
+            </div>
+            <div className="title display-6 text-white">ETHTerakoya</div>
+          </Col>
+        </div>
+        <div>
+          <Col sm={4}>
+            {/*slogan*/}
+            <div className="slogan text-right text-white">
+              <span className="description">技術・ビジネス・法律の観点から課題を協議し</span>
+              <span className="description">企業のブロックチェーン活用における</span>
+              <span className="description">標準化策定を目指すコミュニティ</span>
+              {/*{intl.formatMessage({ id: "slogan" })}*/}
+            </div>
+          </Col>
+        </div>
+      </div>
+    </div>
   );
 };
 
 const ContactUs = ({ title }) => {
   return (
-    <Row className="py-2 mb-5">
+    <Row className="py-2 mb-5 contact-us">
       <Col>
         <div className="text-center">
           <a
@@ -54,20 +72,9 @@ const Main = ({ data }) => {
             </h3>
           </Col>
         </Row>
-        <Row>
-          <Col className="">
-            <h4 className="text-center mb-5 h3">
-              {intl.formatMessage({ id: "what" })}
-            </h4>
-            <p>{intl.formatMessage({ id: "whatDetail" })}</p>
-          </Col>
-        </Row>
 
-        <Row className="mb-4">
-          <Col>
-            <hr />
-          </Col>
-        </Row>
+        {/* ETHTerakoya（イーサテラコヤ）とは */}
+        <AboutETHTerakoya />
 
         {/* activity */}
         <Activity />
