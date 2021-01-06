@@ -18,15 +18,15 @@ const Hero = ({ logo }) => {
     <div className="main-header container-fluid">
       <div className="header-contents">
         <div className="title-area">
-          <Col sm={4} className="upper">
-            <div>
-              <Img fixed={logo.childImageSharp.fixed} className="ml-3" />
+          <Col sm={5} className="upper">
+            <div className="header-img">
+              <Img fixed={logo.childImageSharp.fixed} className="" />
             </div>
-            <div className="title display-6 text-white">ETHTerakoya</div>
+            <div className="title text-white text-left">ETHTerakoya</div>
           </Col>
         </div>
         <div>
-          <Col sm={4}>
+          <Col sm={5}>
             {/*slogan*/}
             <div className="slogan text-white text-left">
               {intl.formatMessage({ id: "slogan" })}

@@ -1,3 +1,5 @@
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
 $primary: #bb4e4e;
 $text-color: #4c4c4c;
 $main-submenu-color: #950000;
@@ -10,8 +12,14 @@ hr {
 .main-header {
   min-height: 463px;
   background: url("./images/header.png") no-repeat fixed;
-  background-position: top center;
+
+
+  @include media-breakpoint-down(sm) {
+    background-position: top center;
+  }
+
   background-size: cover;
+  background-origin:content-box;
 
   border-radius: 0;
   display: flex;
@@ -34,18 +42,33 @@ hr {
         flex-direction: column;
         align-items: flex-start;
 
-        div {
-          width: 100%;
-          text-align: center;
+        @include media-breakpoint-down(sm) {
+          & .header-img {
+            margin-left: 4em;
+          }
+        }
+        @include media-breakpoint-up(md) {
+          & .header-img {
+            margin-left: 8em;
+          }
+        }
+
+        & .title {
+          font-size: 2rem;
+          display: inline-block;
+          // background-color: #880d0dd4;
+          padding-bottom: 1.8rem;
+
+          @include media-breakpoint-up(md) {
+            margin-left: 2em;
+          }
         }
       }
+    }
 
-      & .title {
-        font-size: 2rem;
-        display: inline-block;
-        //background-color: #880d0dd4;
-        margin-left: 0.7rem;
-        padding-bottom: 1.8rem;
+    @include media-breakpoint-up(md) {
+      & .slogan {
+        margin-left: 4em;
       }
     }
   }
@@ -54,6 +77,7 @@ hr {
 .bg-beige {
   background: #faf7ef;
 }
+
 .toc-container {
   position: -webkit-sticky;
   position: sticky;
