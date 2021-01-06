@@ -8,6 +8,7 @@ import { Link } from "gatsby";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { useIntl } from "react-intl";
+import HrComponent from "./hrComponent";
 
 const Activity = () => {
   const intl = useIntl();
@@ -23,17 +24,12 @@ const Activity = () => {
         </Col>
       </Row>
 
-      <Row className="mb-4">
-        <Col>
-          <hr />
-        </Col>
-      </Row>
-
+      <HrComponent />
 
       {/* ワーク */}
       <Row className="pt-4">
         {/* ワークキンググループ */}
-        <Col className="col-sm py-md-3">
+        <Col className="col-sm py-md-3" md={6}>
           <h4 className="text-center mb-4">
             <span role="img" aria-label="friendship">
               <img src="/svg/np_group.svg" />
@@ -50,7 +46,7 @@ const Activity = () => {
         </Col>
 
         {/* ワークショップ */}
-        <Col className="col-sm py-md-3">
+        <Col className="col-sm py-md-3" md={6}>
           <h4 className="text-center mb-4">
             <span role="img" aria-label="male researcher">
               <img src="/svg/np_programming.svg" />

@@ -8,6 +8,7 @@ import { Link } from "gatsby";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { useIntl } from "react-intl";
+import HrComponent from "./hrComponent";
 
 const AboutETHTerakoya = () => {
   const intl = useIntl();
@@ -19,11 +20,8 @@ const AboutETHTerakoya = () => {
           {intl.formatMessage({ id: "what" })}
         </h4>
 
-        <Row className="mb-4">
-          <Col>
-            <hr />
-          </Col>
-        </Row>
+        <HrComponent />
+
         <Row>
           <p className="a-description">{intl.formatMessage({ id: "whatDetail" })}</p>
         </Row>
