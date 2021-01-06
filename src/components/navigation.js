@@ -33,6 +33,11 @@ const Navigation = () => {
                     ID x Voting x Blockchain
                   </LocalizedLink>
                 </NavDropdown.Item>
+                <NavDropdown.Item>
+                  <LocalizedLink to="/ethereum2.0/">
+                    Ethereum2.0
+                  </LocalizedLink>
+                </NavDropdown.Item>
               </NavDropdown>
 
               {/* news */}
