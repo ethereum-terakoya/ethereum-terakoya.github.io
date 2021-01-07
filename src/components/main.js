@@ -10,6 +10,7 @@ import Activity from "../components/activity";
 import AboutETHTerakoya from "./aboutETHTerakoya";
 import ParticipationTarget from "./participationTarget";
 import Sponsor from "./sponsor";
+import Contributor from "./contributor";
 
 const Hero = ({ logo }) => {
   const intl = useIntl();
@@ -81,6 +82,8 @@ const Main = ({ data }) => {
         {/* お問い合わせ */}
         <ContactUs title={intl.formatMessage({ id: "contact" })} />
       </Container>
+
+      <Contributor className="mb-4" />
     </React.Fragment>
   );
 };
