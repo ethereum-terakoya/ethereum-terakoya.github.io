@@ -8,6 +8,7 @@ import { Link } from "gatsby";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { useIntl } from "react-intl";
+import HrComponent from "./hrComponent";
 
 const Activity = () => {
   const intl = useIntl();
@@ -23,19 +24,20 @@ const Activity = () => {
         </Col>
       </Row>
 
+      <HrComponent />
+
       {/* ワーク */}
       <Row className="pt-4">
         {/* ワークキンググループ */}
-        <Col className="col-sm py-md-3">
-          <h4 className="text-center mb-5">
+        <Col className="col-sm py-md-3" md={6}>
+          <h4 className="text-center mb-4">
             <span role="img" aria-label="friendship">
-              👬
+              <img src="/svg/np_group.svg" />
             </span>
-            <span role="img" aria-label="friendship different order">
-              👫
-            </span>
-            {intl.formatMessage({ id: "wg" })}
           </h4>
+          <div className="activity-item-title mb-4">
+            {intl.formatMessage({ id: "wg" })}
+          </div>
           <ul>
             <li>{intl.formatMessage({ id: "wgList1" })}</li>
             <li>{intl.formatMessage({ id: "wgList2" })}</li>
@@ -44,16 +46,15 @@ const Activity = () => {
         </Col>
 
         {/* ワークショップ */}
-        <Col className="col-sm py-md-3">
-          <h4 className="text-center mb-5">
+        <Col className="col-sm py-md-3" md={6}>
+          <h4 className="text-center mb-4">
             <span role="img" aria-label="male researcher">
-              👨‍🔬
+              <img src="/svg/np_programming.svg" />
             </span>
-            <span role="img" aria-label="female researcher">
-              👩‍⚕
-            </span>
-            {intl.formatMessage({ id: "ws" })}
           </h4>
+          <div className="activity-item-title mb-4">
+            {intl.formatMessage({ id: "ws" })}
+          </div>
           <ul>
             <li>{intl.formatMessage({ id: "wsList1" })}</li>
             <li>{intl.formatMessage({ id: "wsList2" })}</li>
@@ -61,9 +62,9 @@ const Activity = () => {
         </Col>
       </Row>
 
-      <Row className={"pt-4 pb-5"}>
+      <Row className={"pt-4 pb-5 activity-bottom"}>
         {/* ID x Voting x Blockchain */}
-        <Col className={"item"}>
+        <Col className={"item working-group"}>
           <Container className="main-menu-item">
             <Row>
               <Col className="text-center">
@@ -88,7 +89,7 @@ const Activity = () => {
         </Col>
 
         {/* C.R.E.A.M */}
-        <Col className={"item"}>
+        <Col className={"item oss-cream"}>
           <Container className="main-menu-item">
             <Row>
               <Col className="text-center">
