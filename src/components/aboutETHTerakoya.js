@@ -23,11 +23,13 @@ const AboutETHTerakoya = () => {
         <HrComponent />
 
         <Row>
-          <p className="a-description">{intl.formatMessage({ id: "whatDetail" })}</p>
+          <p className="a-description">
+            {intl.formatMessage({ id: "whatDetail" })}
+          </p>
         </Row>
       </Col>
     </Row>
-  )
-}
+  );
+};
 
-export default AboutETHTerakoya
+export default AboutETHTerakoya;

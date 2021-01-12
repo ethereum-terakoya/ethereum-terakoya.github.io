@@ -3,7 +3,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import { useIntl } from "react-intl";
 import Img from "gatsby-image";
 import HrComponent from "./hrComponent";
-import { StaticQuery, graphql} from "gatsby";
+import { StaticQuery, graphql } from "gatsby";
 
 const contributorImages = graphql`
   query {
@@ -46,39 +46,48 @@ const contributorImages = graphql`
 `;
 
 const Contributor = (props) => {
-    const intl = useIntl();
-    return (
-        <Container className="py-5 mb-5">
-            <Row>
-                <Col >
-                    <h4 className="text-center mb-4">{intl.formatMessage({ id: "contributor" })}</h4>
-                    <HrComponent />
+  const intl = useIntl();
+  return (
+    <Container className="py-5 mb-5">
+      <Row>
+        <Col>
+          <h4 className="text-center mb-4">
+            {intl.formatMessage({ id: "contributor" })}
+          </h4>
+          <HrComponent />
+        </Col>
+      </Row>
+      <Row className="justify-content-start">
+        <StaticQuery
+          query={contributorImages}
+          render={(data) => {
+            const list = [];
+            const contributors = [
+              { name: "hitachi", fixed: data.hitachi.childImageSharp.fixed },
+              { name: "fujitsu", fixed: data.fujitsu.childImageSharp.fixed },
+              { name: "act", fixed: data.act.childImageSharp.fixed },
+              {
+                name: "collabo_gate",
+                fixed: data.collabo_gate.childImageSharp.fixed,
+              },
+              { name: "comps", fixed: data.comps.childImageSharp.fixed },
+            ];
+            contributors.forEach((c, i) => {
+              list.push(
+                <Col className="text-center py-2" key={i} sm={3}>
+                  <Img fixed={c.fixed} />
+                  <div>
+                    {intl.formatMessage({ id: `contributor.${c.name}` })}
+                  </div>
                 </Col>
-            </Row>
-            <Row className="justify-content-start">
-                <StaticQuery
-                    query={contributorImages}
-                    render={ data => {
-                        const list = [];
-                        const contributors = [
-                            {name: "hitachi", fixed: data.hitachi.childImageSharp.fixed},
-                            {name: "fujitsu", fixed: data.fujitsu.childImageSharp.fixed},
-                            {name: "act", fixed: data.act.childImageSharp.fixed},
-                            {name: "collabo_gate", fixed: data.collabo_gate.childImageSharp.fixed},
-                            {name: "comps", fixed: data.comps.childImageSharp.fixed},
-                        ]
-                        contributors.forEach((c, i) => {
-                            list.push(<Col className="text-center py-2" key={i} sm={3}>
-                                <Img fixed={c.fixed}/>
-                                <div>{intl.formatMessage({ id: `contributor.${c.name}` })}</div>
-                            </Col>);
-                        })
-                        return list
-                    }}
-                />
-            </Row>
-        </Container>
-    )
-}
+              );
+            });
+            return list;
+          }}
+        />
+      </Row>
+    </Container>
+  );
+};
 
-export default Contributor
+export default Contributor;

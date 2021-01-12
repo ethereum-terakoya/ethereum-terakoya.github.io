@@ -64,7 +64,7 @@ const ParticipationTarget = () => {
         </Col>
       </Row>
     </Container>
-  )
-}
+  );
+};
 
-export default ParticipationTarget
+export default ParticipationTarget;
