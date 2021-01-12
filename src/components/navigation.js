@@ -1,5 +1,5 @@
 import React from "react";
-import { useIntl } from "react-intl";
+import {FormattedMessage, useIntl} from "react-intl";
 import { LocalizedLink } from "gatsby-theme-i18n";
 
 import Button from "react-bootstrap/Button";
@@ -43,16 +43,12 @@ const Navigation = () => {
               title={intl.formatMessage({ id: "wg" })}
               id="collasible-nav-dropdown-wg"
               className="working-group">
-              <NavDropdown.Item className="working-group-item">
-                <LocalizedLink to="/id-voting/">
-                  {intl.formatMessage({ id: "groupName_id-voting" })}
-                </LocalizedLink>
-              </NavDropdown.Item>
-              <NavDropdown.Item>
-                  <LocalizedLink to="/ethereum2.0/">
-                    {intl.formatMessage({ id: "groupName_ethereum2.0" })}
-                  </LocalizedLink>
-                </NavDropdown.Item>
+              <LocalizedLink to="/id-voting/" className="working-group-item dropdown-item">
+                {intl.formatMessage({ id: "groupName_id-voting" })}
+              </LocalizedLink>
+              <LocalizedLink to="/ethereum2.0/" className="working-group-item dropdown-item">
+                {intl.formatMessage({ id: "groupName_ethereum2.0" })}
+              </LocalizedLink>
             </NavDropdown>
 
             {/* contact */}
