@@ -22,7 +22,7 @@ const ParticipationTarget = () => {
         <Col className="text-center" md={3}>
           <Container>
             <div className="pt-img mb-3">
-              <img src="/svg/np_office-working.svg" />
+              <img src="/svg/np_office-working.svg" alt={"engineers"} />
             </div>
             <div className="pt-target mb-3">
               {intl.formatMessage({ id: "target1" })}
@@ -37,7 +37,7 @@ const ParticipationTarget = () => {
         <Col className="text-center" md={3}>
           <Container>
             <div className="pt-img mb-3">
-              <img src="/svg/np_buildings.svg" />
+              <img src="/svg/np_buildings.svg" alt={"business-persons"} />
             </div>
             <div className="pt-target mb-3">
               {intl.formatMessage({ id: "target2" })}
@@ -52,7 +52,7 @@ const ParticipationTarget = () => {
         <Col className="text-center" md={3}>
           <Container>
             <div className="pt-img mb-3">
-              <img src="/svg/np_law.svg" />
+              <img src="/svg/np_law.svg" alt={"lawyers"} />
             </div>
             <div className="pt-target mb-3">
               {intl.formatMessage({ id: "target3" })}

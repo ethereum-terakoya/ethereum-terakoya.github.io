@@ -43,14 +43,14 @@ const Navigation = () => {
               title={intl.formatMessage({ id: "wg" })}
               id="collasible-nav-dropdown-wg"
               className="working-group">
-              <NavDropdown.Item class="working-group-item">
+              <NavDropdown.Item className="working-group-item">
                 <LocalizedLink to="/id-voting/">
                   {intl.formatMessage({ id: "groupName_id-voting" })}
                 </LocalizedLink>
               </NavDropdown.Item>
               <NavDropdown.Item>
                   <LocalizedLink to="/ethereum2.0/">
-                    {intl.formatMessage({ id: "groupName_ethereum-2.0" })}
+                    {intl.formatMessage({ id: "groupName_ethereum2.0" })}
                   </LocalizedLink>
                 </NavDropdown.Item>
             </NavDropdown>
@@ -63,7 +63,7 @@ const Navigation = () => {
             {/* language */}
             <Dropdown className="ml-2">
               <DropdownToggle variant="none" >
-                <img src="/svg/np_language.svg" height="32" width="32" />
+                <img src="/svg/np_language.svg" height="32" width="32" alt="language" />
               </DropdownToggle>
               <DropdownMenu id="collasible-nav-dropdown" className="dropdown-menu">
                 <DropdownItem className="dropdown-item" href="/">日本語</DropdownItem>
