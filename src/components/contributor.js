@@ -7,6 +7,13 @@ import { StaticQuery, graphql} from "gatsby";
 
 const contributorImages = graphql`
   query {
+    hitachi: file(relativePath: { eq: "contributor/hitachi.jpg" }) {
+      childImageSharp {
+        fixed(width: 200) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
     fujitsu: file(relativePath: { eq: "contributor/fujitsu.jpg" }) {
       childImageSharp {
         fixed(width: 200) {
@@ -14,21 +21,21 @@ const contributorImages = graphql`
         }
       }
     }
-    contributorSample1: file(relativePath: { eq: "contributor/contributor-sample1.jpg" }) {
+    act: file(relativePath: { eq: "contributor/act.jpg" }) {
       childImageSharp {
         fixed(width: 200) {
           ...GatsbyImageSharpFixed
         }
       }
     }
-    contributorSample2: file(relativePath: { eq: "contributor/contributor-sample2.jpg" }) {
+    collabo_gate: file(relativePath: { eq: "contributor/collabo_gate.jpg" }) {
       childImageSharp {
         fixed(width: 200) {
           ...GatsbyImageSharpFixed
         }
       }
     }
-    contributorSample3: file(relativePath: { eq: "contributor/contributor-sample3.jpg" }) {
+    comps: file(relativePath: { eq: "contributor/comps.jpg" }) {
       childImageSharp {
         fixed(width: 200) {
           ...GatsbyImageSharpFixed
@@ -45,7 +52,6 @@ const Contributor = (props) => {
             <Row>
                 <Col >
                     <h4 className="text-center mb-4">{intl.formatMessage({ id: "contributor" })}</h4>
-
                     <HrComponent />
                 </Col>
             </Row>
@@ -55,10 +61,11 @@ const Contributor = (props) => {
                     render={ data => {
                         const list = [];
                         const contributors = [
-                            {name: "sample1", fixed: data.contributorSample1.childImageSharp.fixed},
+                            {name: "hitachi", fixed: data.hitachi.childImageSharp.fixed},
                             {name: "fujitsu", fixed: data.fujitsu.childImageSharp.fixed},
-                            {name: "sample2", fixed: data.contributorSample2.childImageSharp.fixed},
-                            {name: "sample3", fixed: data.contributorSample3.childImageSharp.fixed},
+                            {name: "act", fixed: data.act.childImageSharp.fixed},
+                            {name: "collabo_gate", fixed: data.collabo_gate.childImageSharp.fixed},
+                            {name: "comps", fixed: data.comps.childImageSharp.fixed},
                         ]
                         contributors.forEach((c, i) => {
                             list.push(<Col className="text-center py-2" key={i} sm={3}>
