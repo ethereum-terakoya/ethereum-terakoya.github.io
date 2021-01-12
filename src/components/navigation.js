@@ -45,12 +45,12 @@ const Navigation = () => {
               className="working-group">
               <NavDropdown.Item class="working-group-item">
                 <LocalizedLink to="/id-voting/">
-                  ID x Voting x Blockchain
+                  {intl.formatMessage({ id: "groupName_id-voting" })}
                 </LocalizedLink>
               </NavDropdown.Item>
               <NavDropdown.Item>
                   <LocalizedLink to="/ethereum2.0/">
-                    Ethereum2.0
+                    {intl.formatMessage({ id: "groupName_ethereum-2.0" })}
                   </LocalizedLink>
                 </NavDropdown.Item>
             </NavDropdown>

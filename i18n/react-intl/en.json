@@ -23,6 +23,8 @@
   "contributor": "contributor",
   "date": "Post date",
   "group": "Working group",
+  "groupName_id-voting": "ID x Voting x Blockchain",
+  "groupName_ethereum-2.0": "Ethereum2.0",
   "posts": "All posts",
   "news": "News",
   "activity": "Activity",
