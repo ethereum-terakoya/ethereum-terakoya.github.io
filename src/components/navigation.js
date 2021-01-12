@@ -1,5 +1,5 @@
 import React from "react";
-import {FormattedMessage, useIntl} from "react-intl";
+import { useIntl } from "react-intl";
 import { LocalizedLink } from "gatsby-theme-i18n";
 
 import Button from "react-bootstrap/Button";
