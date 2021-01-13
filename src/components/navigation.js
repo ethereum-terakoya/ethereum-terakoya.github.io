@@ -30,18 +30,11 @@ const Navigation = () => {
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="mr-auto"></Nav>
 
-            {/* news */}
-            <div className={"nav-item news"}>
-              <LocalizedLink to="/news">
-                {intl.formatMessage({ id: "news" })}
-              </LocalizedLink>
-            </div>
-
             {/* working group */}
             <NavDropdown
-              title={intl.formatMessage({ id: "wg" })}
-              id="collasible-nav-dropdown-wg"
-              className="working-group">
+                title={intl.formatMessage({ id: "wg" })}
+                id="collasible-nav-dropdown-wg"
+                className="working-group">
               <LocalizedLink to="/id-voting/" className="working-group-item dropdown-item">
                 {intl.formatMessage({ id: "groupName_id-voting" })}
               </LocalizedLink>
@@ -49,6 +42,13 @@ const Navigation = () => {
                 {intl.formatMessage({ id: "groupName_ethereum2.0" })}
               </LocalizedLink>
             </NavDropdown>
+
+            {/* news */}
+            <div className={"nav-item news pr-3"}>
+              <LocalizedLink to="/news">
+                {intl.formatMessage({ id: "news" })}
+              </LocalizedLink>
+            </div>
 
             {/* contact */}
             <Button
