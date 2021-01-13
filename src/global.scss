@@ -10,14 +10,25 @@ hr {
 }
 
 .main-header {
-  min-height: 463px;
 
-  background: url("./images/header.png") no-repeat fixed;
+  background-image: url("./images/header.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   background-size: cover;
   background-origin:content-box;
-  background-position: top left 20%;
   @include media-breakpoint-down(sm) {
-    background-position: top center;
+    min-height: 288px;
+    background-size: auto 79%;
+    background-position: top left 31%;
+  }
+  @include media-breakpoint-only(md) {
+    min-height: 360px;
+    background-size: auto 76%;
+    background-position: top left 28%;
+  }
+  @include media-breakpoint-up(lg) {
+    min-height: 463px;
+    background-position: top left 20%;
   }
 
 
