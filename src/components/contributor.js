@@ -57,8 +57,8 @@ const Contributor = (props) => {
         </Col>
       </Row>
     <HrComponent />
-    <Container className="pb-5">
-      <Row className="justify-content-start">
+    <Container className="pb-5" >
+      <Row className="justify-content-start" style={{width:"80%", margin:"auto"}}>
         <StaticQuery
           query={contributorImages}
           render={(data) => {
