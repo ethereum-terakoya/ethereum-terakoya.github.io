@@ -215,6 +215,10 @@ hr {
       width: 400px;
       border-radius: 30px;
       height: 3em;
+
+      @include media-breakpoint-down(sm) {
+        width: 300px;
+      }
     }
   }
 }
