@@ -48,15 +48,16 @@ const contributorImages = graphql`
 const Contributor = (props) => {
   const intl = useIntl();
   return (
-    <Container className="py-5">
-      <Row>
+      <>
+      <Row className="pt-5">
         <Col>
           <h4 className="text-center mb-4">
             {intl.formatMessage({ id: "contributor" })}
           </h4>
-          <HrComponent />
         </Col>
       </Row>
+    <HrComponent />
+    <Container className="pb-5">
       <Row className="justify-content-start">
         <StaticQuery
           query={contributorImages}
@@ -86,7 +87,7 @@ const Contributor = (props) => {
           }}
         />
       </Row>
-    </Container>
+    </Container></>
   );
 };
 
