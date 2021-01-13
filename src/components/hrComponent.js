@@ -12,7 +12,7 @@ const HrComponent = () => {
         <hr />
       </Col>
     </Row>
-  )
-}
+  );
+};
 
-export default HrComponent
+export default HrComponent;

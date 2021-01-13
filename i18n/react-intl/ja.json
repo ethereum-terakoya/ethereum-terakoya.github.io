@@ -30,8 +30,9 @@
   "activity": "アクティビティ",
   "activityWorkingGroupSubtitle": "ブロックチェーンの活用によるインターネット投票の実現性検討",
   "activityCreamSubtitle": "秘匿化プロトコルC.R.E.A.Mの開発",
-  "contributor.sample1": "株式会社日立製作所",
-  "contributor.fujitsu": "富士通株式会社",
-  "contributor.sample2": "サイボウズ・ラボ株式会社",
-  "contributor.sample3": "株式会社アクト"
+  "contributor.hitachi": " ",
+  "contributor.fujitsu": " ",
+  "contributor.act": " ",
+  "contributor.collabo_gate": " ",
+  "contributor.comps": " "
 }

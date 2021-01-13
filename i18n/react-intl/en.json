@@ -20,7 +20,7 @@
   "target3-desc": "Those who want to understand the governing laws and regulations while knowing about the technical and business context, and those who would like to propose solutions.",
   "organize": "Organized by",
   "support": "Sponsored by",
-  "contributor": "contributor",
+  "contributor": "Contributor",
   "date": "Post date",
   "group": "Working group",
   "groupName_id-voting": "ID x Voting x Blockchain",
@@ -30,8 +30,9 @@
   "activity": "Activity",
   "activityWorkingGroupSubtitle": "Study on the possibility to introduce online voting by using blockchain",
   "activityCreamSubtitle": "Development of C.R.E.A.M (Confidential Reliable Ethereum Anonymous Mixer)",
-  "contributor.sample1": "XXXX",
-  "contributor.fujitsu": "XXXX",
-  "contributor.sample2": "XXXX",
-  "contributor.sample3": "XXXX"
+  "contributor.hitachi": " ",
+  "contributor.fujitsu": " ",
+  "contributor.act": " ",
+  "contributor.collabo_gate": " ",
+  "contributor.comps": " "
 }

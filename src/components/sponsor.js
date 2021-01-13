@@ -40,7 +40,7 @@ const Sponsor = (props) => {
         </Col>
       </Row>
     </>
-  )
-}
+  );
+};
 
-export default Sponsor
+export default Sponsor;
