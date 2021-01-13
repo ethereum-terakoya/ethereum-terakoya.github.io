@@ -79,11 +79,13 @@ const Main = ({ data }) => {
       <Container className="mb-4">
         <Sponsor data={data} />
 
+      {/* 参画企業 */}
+      <Contributor className="mb-4" />
+
         {/* お問い合わせ */}
         <ContactUs title={intl.formatMessage({ id: "contact" })} />
       </Container>
 
-      <Contributor className="mb-4" />
     </React.Fragment>
   );
 };

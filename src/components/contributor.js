@@ -9,35 +9,35 @@ const contributorImages = graphql`
   query {
     hitachi: file(relativePath: { eq: "contributor/hitachi.jpg" }) {
       childImageSharp {
-        fixed(width: 200) {
+        fixed(width: 160) {
           ...GatsbyImageSharpFixed
         }
       }
     }
     fujitsu: file(relativePath: { eq: "contributor/fujitsu.jpg" }) {
       childImageSharp {
-        fixed(width: 200) {
+        fixed(width: 160) {
           ...GatsbyImageSharpFixed
         }
       }
     }
     act: file(relativePath: { eq: "contributor/act.jpg" }) {
       childImageSharp {
-        fixed(width: 200) {
+        fixed(width: 160) {
           ...GatsbyImageSharpFixed
         }
       }
     }
     collabo_gate: file(relativePath: { eq: "contributor/collabo_gate.jpg" }) {
       childImageSharp {
-        fixed(width: 200) {
+        fixed(width: 160) {
           ...GatsbyImageSharpFixed
         }
       }
     }
     comps: file(relativePath: { eq: "contributor/comps.jpg" }) {
       childImageSharp {
-        fixed(width: 200) {
+        fixed(width: 160) {
           ...GatsbyImageSharpFixed
         }
       }
@@ -48,7 +48,7 @@ const contributorImages = graphql`
 const Contributor = (props) => {
   const intl = useIntl();
   return (
-    <Container className="py-5 mb-5">
+    <Container className="py-5">
       <Row>
         <Col>
           <h4 className="text-center mb-4">
