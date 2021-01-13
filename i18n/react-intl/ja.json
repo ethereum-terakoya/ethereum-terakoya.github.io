@@ -23,6 +23,8 @@
   "contributor": "参画企業",
   "date": "投稿日",
   "group": "ワーキンググループ",
+  "groupName_id-voting": "ID x 投票 x ブロックチェーン",
+  "groupName_ethereum2.0": "Ethereum2.0",
   "posts": "記事一覧",
   "news": "お知らせ",
   "activity": "アクティビティ",

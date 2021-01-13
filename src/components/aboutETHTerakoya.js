@@ -1,12 +1,6 @@
 import React from "react";
-import { LocalizedLink } from "gatsby-theme-i18n";
-
-import Container from "react-bootstrap/Container";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
-import { Link } from "gatsby";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { useIntl } from "react-intl";
 import HrComponent from "./hrComponent";
 
