@@ -342,3 +342,24 @@ hr {
     }
   }
 }
+
+.blog-block {
+  background-color:#e7e7e7;
+  border:1px solid #a9a9a9;
+  width: 80%;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  margin-left:3rem;
+  @include media-breakpoint-down(xs) {
+    margin-left:0rem;
+    width: 100%;
+  }
+
+  ul {
+    list-style-type: square;
+    margin: 1rem 0.5rem;
+  }
+  .sub {
+    margin: 1rem 0 1rem 3rem;
+  }
+}
