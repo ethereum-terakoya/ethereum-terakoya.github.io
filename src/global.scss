@@ -320,6 +320,12 @@ hr {
       display: none;
     }
   }
+  .working-group-item {
+    @include media-breakpoint-down(md) {
+      padding-top: .75rem;
+      padding-bottom: .75rem;
+    }
+  }
 }
 
 .footer {
