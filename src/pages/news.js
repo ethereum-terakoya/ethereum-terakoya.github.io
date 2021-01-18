@@ -74,10 +74,10 @@ const News = ({ data, pageContext }) => {
         {list.map((item, index) => {
           return (
             <Row className="py-5" key={index}>
-              <Col xs={2} sm={2}>
+              <Col xs={12} sm={2}>
                 <p>{item.date}</p>
               </Col>
-              <Col xs={10} sm={10}>
+              <Col xs={12} sm={10}>
                 <Card style={{ width: "100%" }}>
                   <Card.Header>{item.title}</Card.Header>
                   <Card.Body>
