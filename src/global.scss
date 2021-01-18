@@ -102,7 +102,8 @@ hr {
   font-size: 0.875rem;
 }
 .post-list-item {
-  line-height: 5rem;
+  line-height: 2.4rem;
+  margin-bottom: 1.8rem;
 }
 .header-anchor {
   margin-right: 0.5rem;
@@ -303,6 +304,29 @@ hr {
     width: 200px;
   }
 }
+.nav-item {
+  @include media-breakpoint-down(md) {
+    margin-bottom: 1.5rem;
+  }
+}
+#responsive-navbar-nav{
+  .up-lg {
+    @include media-breakpoint-down(md) {
+      display: none;
+    }
+  }
+  .down-md {
+    @include media-breakpoint-up(lg) {
+      display: none;
+    }
+  }
+  .working-group-item {
+    @include media-breakpoint-down(md) {
+      padding-top: .75rem;
+      padding-bottom: .75rem;
+    }
+  }
+}
 
 .footer {
   .footer-title {
@@ -316,5 +340,26 @@ hr {
       vertical-align: middle;
       content: '';
     }
+  }
+}
+
+.blog-block {
+  background-color:#e7e7e7;
+  border:1px solid #a9a9a9;
+  width: 80%;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  margin-left:3rem;
+  @include media-breakpoint-down(xs) {
+    margin-left:0rem;
+    width: 100%;
+  }
+
+  ul {
+    list-style-type: square;
+    margin: 1rem 0.5rem;
+  }
+  .sub {
+    margin: 1rem 0 1rem 3rem;
   }
 }
