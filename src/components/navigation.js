@@ -51,7 +51,7 @@ const Navigation = () => {
             </div>
 
             {/* contact lg以上はボタン md以下はテキスト */}
-            <div class="up-lg">
+            <div className={"up-lg"}>
               <Button
                   variant="none"
                   href="https://forms.gle/3ptEzDnWtrzqShMz8"
@@ -60,7 +60,7 @@ const Navigation = () => {
                 {intl.formatMessage({ id: "contact" })}
               </Button>
             </div>
-            <div class="down-md">
+            <div className={"down-md"}>
               <div className={"nav-item news pr-3"}>
                 <a
                   href="https://forms.gle/3ptEzDnWtrzqShMz8"
@@ -73,7 +73,7 @@ const Navigation = () => {
 
 
             {/* language lg以上はボタン md以下はテキスト */}
-            <div className="up-lg">
+            <div className={"up-lg"}>
               <Dropdown className="ml-2">
                 <DropdownToggle variant="none" >
                   <img src="/svg/np_language.svg" height="32" width="32" alt="language" />
@@ -91,7 +91,7 @@ const Navigation = () => {
                 </DropdownMenu>
               </Dropdown>
             </div>
-            <div className="down-md">
+            <div className={"down-md"}>
               <div className={"nav-item news pr-3"}>
                 <a href="/">日本語</a>
                 <span style={{color: 'white'}}> / </span>
