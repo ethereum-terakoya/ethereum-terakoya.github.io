@@ -304,6 +304,23 @@ hr {
     width: 200px;
   }
 }
+.nav-item {
+  @include media-breakpoint-down(md) {
+    margin-bottom: 1.5rem;
+  }
+}
+#responsive-navbar-nav{
+  .up-lg {
+    @include media-breakpoint-down(md) {
+      display: none;
+    }
+  }
+  .down-md {
+    @include media-breakpoint-up(lg) {
+      display: none;
+    }
+  }
+}
 
 .footer {
   .footer-title {
