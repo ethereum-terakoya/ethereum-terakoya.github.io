@@ -63,7 +63,12 @@ hr {
             margin-left: 8em;
           }
         }
-
+        @include media-breakpoint-only(xs) {
+          justify-content: center;
+          & .header-img {
+            margin: auto;
+          }
+        }
         & .title {
           font-size: 2rem;
           display: inline-block;
@@ -73,6 +78,10 @@ hr {
           @include media-breakpoint-up(md) {
             margin-left: 2em;
           }
+
+          @include media-breakpoint-only(xs) {
+            margin: auto;
+          }
         }
       }
     }
@@ -80,6 +89,12 @@ hr {
     @include media-breakpoint-up(md) {
       & .slogan {
         margin-left: 4em;
+      }
+    }
+
+    @include media-breakpoint-only(xs) {
+      & .slogan {
+        margin: auto;
       }
     }
   }
