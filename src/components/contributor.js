@@ -42,6 +42,13 @@ const contributorImages = graphql`
         }
       }
     }
+    waseda: file(relativePath: { eq: "contributor/waseda.jpg" }) {
+      childImageSharp {
+        fixed(width: 200, height:90) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
   }
 `;
 
@@ -72,6 +79,7 @@ const Contributor = (props) => {
                 fixed: data.collabo_gate.childImageSharp.fixed,
               },
               { name: "comps", fixed: data.comps.childImageSharp.fixed },
+              { name: "waseda", fixed: data.waseda.childImageSharp.fixed },
             ];
             contributors.forEach((c, i) => {
               list.push(
