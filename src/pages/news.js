@@ -17,6 +17,15 @@ const News = ({ data, pageContext }) => {
       ? [
           // jp
           {
+            date: "2021/2/4",
+            title: "公開イベント",
+            linkTitle:
+              "【ETH2.0特集】識者が語る、スケーリング技術によるこれからのEthereum",
+            link: "https://peatix.com/event/1778244?lang=ja",
+            description:
+              "今回はETH2.0の最新動向、主に「スケーリング」「シャーディング」について、開発/実用/研究の最前線で活躍する識者達が解説します。",
+          },
+          {
             date: "2020/11/30",
             title: "公開イベント",
             linkTitle:
@@ -37,6 +46,15 @@ const News = ({ data, pageContext }) => {
         ]
       : [
           // en
+          {
+            date: "2021/2/4",
+            title: "Public Event",
+            linkTitle:
+              "Ethereum in the near future and the new scaling technology",
+            link: "https://peatix.com/event/1778244?lang=ja",
+            description:
+              "The experts in system development / operation / research explain the latest trend in Ethereum, especially about scaling and sharding.",
+          },
           {
             date: "2020/11/30",
             title: "Public Event",
@@ -73,7 +91,7 @@ const News = ({ data, pageContext }) => {
         {/* list */}
         {list.map((item, index) => {
           return (
-            <Row className="py-5" key={index}>
+            <Row className="py-4" key={index}>
               <Col xs={12} sm={2}>
                 <p>{item.date}</p>
               </Col>
