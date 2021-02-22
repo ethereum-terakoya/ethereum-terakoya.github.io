@@ -17,6 +17,15 @@ const News = ({ data, pageContext }) => {
       ? [
           // jp
           {
+            date: "2021/3/4",
+            title: "公開イベント",
+            linkTitle:
+              "次世代リサーチャーから見るブロックチェーン技術の可能性とは？【ETHTerakoya x Blockchain EXE】",
+            link: "https://peatix.com/event/1826527",
+            description:
+              "今回のETHTerakoyaは、次世代若手リサーチャーが集い、ブロックチェーン技術に対するインサイトとその可能性について議論を深掘りします。",
+          },
+          {
             date: "2021/2/4",
             title: "公開イベント",
             linkTitle:
@@ -46,6 +55,15 @@ const News = ({ data, pageContext }) => {
         ]
       : [
           // en
+          {
+            date: "2021/3/4",
+            title: "Public Event",
+            linkTitle:
+              "the possibility of blockchain technology",
+            link: "https://peatix.com/event/1826527",
+            description:
+              "The up and coming researchers discuss the possibility of blockchain and introduce their insight.",
+          },
           {
             date: "2021/2/4",
             title: "Public Event",
