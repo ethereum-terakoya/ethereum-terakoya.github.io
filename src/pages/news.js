@@ -59,7 +59,7 @@ const News = ({ data, pageContext }) => {
             date: "2021/3/4",
             title: "Public Event",
             linkTitle:
-              "the possibility of blockchain technology",
+              "The possibility of blockchain technology",
             link: "https://peatix.com/event/1826527",
             description:
               "The up and coming researchers discuss the possibility of blockchain and introduce their insight.",
