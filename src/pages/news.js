@@ -17,6 +17,15 @@ const News = ({ data, pageContext }) => {
       ? [
           // jp
           {
+            date: "2021/3/10",
+            title: "公開イベント",
+            linkTitle:
+              "【AMAイベント】宮口あやとヴィタリックにEthereumとEFについてなんでも聞いてみよう！",
+            link: "http://ptix.at/D7M4IR",
+            description:
+              "Ethereumコミュニティをリードする、宮口あや氏とヴィタリック氏を招き、Ethereumを深堀りしていきます。また、質問箱を通じて、視聴者様からの質問を拾って回答します。詳細は上記リンクよりご参照ください。",
+          },
+          {
             date: "2021/3/4",
             title: "公開イベント",
             linkTitle:
@@ -55,6 +64,15 @@ const News = ({ data, pageContext }) => {
         ]
       : [
           // en
+          {
+            date: "2021/3/10",
+            title: "Public Event",
+            linkTitle:
+              "【AMA Event】Interactive session about Ethereum and Ethereum Foundation with Aya Miyaguchi and Vitalik Buterin",
+            link: "http://ptix.at/D7M4IR",
+            description:
+              "We invite Aya Miyaguchi and Vitalik Buterin who lead the Ethereum community and have an interactive session that viewer also can ask them questions.",
+          },
           {
             date: "2021/3/4",
             title: "Public Event",
