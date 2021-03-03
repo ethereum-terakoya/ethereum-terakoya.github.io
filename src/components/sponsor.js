@@ -10,6 +10,21 @@ const Sponsor = (props) => {
 
   return (
     <>
+      {/* 後援 */}
+      <Row className="py-5">
+        <Col>
+          <h4 className="text-center mb-4">
+            {intl.formatMessage({ id: "support" })}
+          </h4>
+
+          <HrComponent />
+
+          <div className="text-center">
+            <Img fixed={props.data.ef.childImageSharp.fixed} />
+          </div>
+        </Col>
+      </Row>
+
       {/* 主催 */}
       <Row className="py-5">
         <Col>
@@ -25,20 +40,6 @@ const Sponsor = (props) => {
         </Col>
       </Row>
 
-      {/* 後援 */}
-      <Row className="py-5">
-        <Col>
-          <h4 className="text-center mb-4">
-            {intl.formatMessage({ id: "support" })}
-          </h4>
-
-          <HrComponent />
-
-          <div className="text-center">
-            <Img fixed={props.data.ef.childImageSharp.fixed} />
-          </div>
-        </Col>
-      </Row>
     </>
   );
 };

@@ -77,10 +77,11 @@ const Main = ({ data }) => {
       <ParticipationTarget />
 
       <Container className="mb-4">
-        <Sponsor data={data} />
 
-      {/* 参画企業 */}
-      <Contributor className="mb-4" />
+      {/* 参加企業 */}
+      <Contributor />
+
+        <Sponsor data={data} />
 
         {/* お問い合わせ */}
         <ContactUs title={intl.formatMessage({ id: "contact" })} />
