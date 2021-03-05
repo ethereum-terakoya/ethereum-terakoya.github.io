@@ -7,20 +7,6 @@ import { StaticQuery, graphql } from "gatsby";
 
 const contributorImages = graphql`
   query {
-    hitachi: file(relativePath: { eq: "contributor/hitachi.jpg" }) {
-      childImageSharp {
-        fixed(width: 160) {
-          ...GatsbyImageSharpFixed
-        }
-      }
-    }
-    fujitsu: file(relativePath: { eq: "contributor/fujitsu.jpg" }) {
-      childImageSharp {
-        fixed(width: 160) {
-          ...GatsbyImageSharpFixed
-        }
-      }
-    }
     act: file(relativePath: { eq: "contributor/act.jpg" }) {
       childImageSharp {
         fixed(width: 160) {
@@ -36,6 +22,20 @@ const contributorImages = graphql`
       }
     }
     comps: file(relativePath: { eq: "contributor/comps.jpg" }) {
+      childImageSharp {
+        fixed(width: 160) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+    fujitsu: file(relativePath: { eq: "contributor/fujitsu.jpg" }) {
+      childImageSharp {
+        fixed(width: 160) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+    hitachi: file(relativePath: { eq: "contributor/hitachi.jpg" }) {
       childImageSharp {
         fixed(width: 160) {
           ...GatsbyImageSharpFixed
@@ -71,14 +71,14 @@ const Contributor = (props) => {
           render={(data) => {
             const list = [];
             const contributors = [
-              { name: "hitachi", fixed: data.hitachi.childImageSharp.fixed },
-              { name: "fujitsu", fixed: data.fujitsu.childImageSharp.fixed },
               { name: "act", fixed: data.act.childImageSharp.fixed },
               {
                 name: "collabo_gate",
                 fixed: data.collabo_gate.childImageSharp.fixed,
               },
               { name: "comps", fixed: data.comps.childImageSharp.fixed },
+              { name: "fujitsu", fixed: data.fujitsu.childImageSharp.fixed },
+              { name: "hitachi", fixed: data.hitachi.childImageSharp.fixed },
               { name: "waseda", fixed: data.waseda.childImageSharp.fixed },
             ];
             contributors.forEach((c, i) => {
