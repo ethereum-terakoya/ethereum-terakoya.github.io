@@ -86,7 +86,7 @@ const News = ({ data, pageContext }) => {
             date: "2021/2/4",
             title: "Public Event",
             linkTitle:
-              "Ethereum in the near future and the new scaling technology",
+              "Ethereum's future, which is shaped by scaling technology",
             link: "https://peatix.com/event/1778244?lang=ja",
             description:
               "The experts in system development / operation / research explain the latest trend in Ethereum, especially about scaling and sharding.",
