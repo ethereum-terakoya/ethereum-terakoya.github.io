@@ -42,6 +42,13 @@ const contributorImages = graphql`
         }
       }
     }
+    layerx: file(relativePath: { eq: "contributor/layerx.jpg" }) {
+      childImageSharp {
+        fixed(width: 160) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
     waseda: file(relativePath: { eq: "contributor/waseda.jpg" }) {
       childImageSharp {
         fixed(width: 200, height:90) {
@@ -79,6 +86,7 @@ const Contributor = (props) => {
               { name: "comps", fixed: data.comps.childImageSharp.fixed },
               { name: "fujitsu", fixed: data.fujitsu.childImageSharp.fixed },
               { name: "hitachi", fixed: data.hitachi.childImageSharp.fixed },
+              { name: "layerx", fixed: data.layerx.childImageSharp.fixed },
               { name: "waseda", fixed: data.waseda.childImageSharp.fixed },
             ];
             contributors.forEach((c, i) => {
