@@ -28,6 +28,13 @@ const contributorImages = graphql`
         }
       }
     }
+    cryptel: file(relativePath: { eq: "contributor/cryptel.png" }) {
+      childImageSharp {
+        fixed(width: 200, height:90) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
     fujitsu: file(relativePath: { eq: "contributor/fujitsu.jpg" }) {
       childImageSharp {
         fixed(width: 160) {
@@ -84,6 +91,7 @@ const Contributor = (props) => {
                 fixed: data.collabo_gate.childImageSharp.fixed,
               },
               { name: "comps", fixed: data.comps.childImageSharp.fixed },
+              { name: "cryptel", fixed: data.cryptel.childImageSharp.fixed },
               { name: "fujitsu", fixed: data.fujitsu.childImageSharp.fixed },
               { name: "hitachi", fixed: data.hitachi.childImageSharp.fixed },
               { name: "layerx", fixed: data.layerx.childImageSharp.fixed },
