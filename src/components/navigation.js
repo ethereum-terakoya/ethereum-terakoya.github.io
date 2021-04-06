@@ -41,6 +41,9 @@ const Navigation = () => {
               <LocalizedLink to="/ethereum2.0/" className="working-group-item dropdown-item">
                 {intl.formatMessage({ id: "groupName_ethereum2.0" })}
               </LocalizedLink>
+              <LocalizedLink to="/students/" className="working-group-item dropdown-item">
+                {intl.formatMessage({ id: "groupName_students" })}
+              </LocalizedLink>
             </NavDropdown>
 
             {/* news */}
