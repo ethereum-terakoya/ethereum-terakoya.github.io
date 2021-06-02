@@ -17,6 +17,15 @@ const News = ({ data, pageContext }) => {
       ? [
           // jp
           {
+            date: "2021/6/10",
+            title: "公開イベント",
+            linkTitle:
+              "企業でのブロックチェーン研究開発最前線！ブロックチェーンの研究課題から見える可能性",
+            link: "https://peatix.com/event/1923158/view",
+            description:
+              "今回は企業に属しながらも、学生として研究をされている2名のスピーカーをお招きし、プライバシー・ゼロ知識証明に関する解説を行います。",
+          },
+          {
             date: "2021/3/10",
             title: "公開イベント",
             linkTitle:
@@ -64,6 +73,15 @@ const News = ({ data, pageContext }) => {
         ]
       : [
           // en
+          {
+            date: "2021/6/10",
+            title: "Public Event",
+            linkTitle:
+              "The latest trend of Blockchain - subject and possibility -",
+            link: "https://peatix.com/event/1923158/view",
+            description:
+              "The student researchers talk about privacy and zero-knowledge proof.",
+          },
           {
             date: "2021/3/10",
             title: "Public Event",
