@@ -63,7 +63,7 @@ const Activity = () => {
       </Row>
 
       <Row className={"pt-4 pb-5 activity-bottom"}>
-        {/* ID x Voting x Blockchain */}
+        {/* ID x Voting */}
         <Col className={"item working-group"}>
           <Container className="main-menu-item">
             <Row>
@@ -74,7 +74,7 @@ const Activity = () => {
             <Row>
               <Col className="text-center">
                 <LocalizedLink to="/id-voting/" className={"title"}>
-                  ID x Voting x Blockchain
+                  ID x Voting
                 </LocalizedLink>
               </Col>
             </Row>
