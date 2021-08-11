@@ -39,7 +39,6 @@ const Sponsor = (props) => {
           </div>
         </Col>
       </Row>
-
     </>
   );
 };

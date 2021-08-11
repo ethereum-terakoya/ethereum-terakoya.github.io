@@ -32,19 +32,32 @@ const Navigation = () => {
 
             {/* working group */}
             <NavDropdown
-                title={intl.formatMessage({ id: "wg" })}
-                id="collasible-nav-dropdown-wg"
-                className="working-group nav-item">
-              <LocalizedLink to="/id-voting/" className="working-group-item dropdown-item">
+              title={intl.formatMessage({ id: "wg" })}
+              id="collasible-nav-dropdown-wg"
+              className="working-group nav-item"
+            >
+              <LocalizedLink
+                to="/id-voting/"
+                className="working-group-item dropdown-item"
+              >
                 {intl.formatMessage({ id: "groupName_id-voting" })}
               </LocalizedLink>
-              <LocalizedLink to="/ethereum2.0/" className="working-group-item dropdown-item">
+              <LocalizedLink
+                to="/ethereum2.0/"
+                className="working-group-item dropdown-item"
+              >
                 {intl.formatMessage({ id: "groupName_ethereum2.0" })}
               </LocalizedLink>
-              <LocalizedLink to="/students/" className="working-group-item dropdown-item">
+              <LocalizedLink
+                to="/students/"
+                className="working-group-item dropdown-item"
+              >
                 {intl.formatMessage({ id: "groupName_students" })}
               </LocalizedLink>
-              <LocalizedLink to="/scaling/" className="working-group-item dropdown-item">
+              <LocalizedLink
+                to="/scaling/"
+                className="working-group-item dropdown-item"
+              >
                 {intl.formatMessage({ id: "groupName_scaling" })}
               </LocalizedLink>
             </NavDropdown>
@@ -59,9 +72,9 @@ const Navigation = () => {
             {/* contact lg以上はボタン md以下はテキスト */}
             <div className={"up-lg"}>
               <Button
-                  variant="none"
-                  href="https://forms.gle/3ptEzDnWtrzqShMz8"
-                  className="contact-button nav-item"
+                variant="none"
+                href="https://forms.gle/3ptEzDnWtrzqShMz8"
+                className="contact-button nav-item"
               >
                 {intl.formatMessage({ id: "contact" })}
               </Button>
@@ -77,12 +90,16 @@ const Navigation = () => {
               </div>
             </div>
 
-
             {/* language lg以上はボタン md以下はテキスト */}
             <div className={"up-lg"}>
               <Dropdown className="ml-2">
-                <DropdownToggle variant="none" >
-                  <img src="/svg/np_language.svg" height="32" width="32" alt="language" />
+                <DropdownToggle variant="none">
+                  <img
+                    src="/svg/np_language.svg"
+                    height="32"
+                    width="32"
+                    alt="language"
+                  />
                 </DropdownToggle>
                 <DropdownMenu
                   id="collasible-nav-dropdown"
@@ -100,7 +117,7 @@ const Navigation = () => {
             <div className={"down-md"}>
               <div className={"nav-item news pr-3"}>
                 <a href="/">日本語</a>
-                <span style={{color: 'white'}}> / </span>
+                <span style={{ color: "white" }}> / </span>
                 <a href="/en">English</a>
               </div>
             </div>

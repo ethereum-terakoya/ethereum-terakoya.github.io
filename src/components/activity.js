@@ -32,7 +32,7 @@ const Activity = () => {
         <Col className="col-sm py-md-3" md={6}>
           <h4 className="text-center mb-4">
             <span role="img" aria-label="friendship">
-              <img src="/svg/np_group.svg" alt={"working-group"}/>
+              <img src="/svg/np_group.svg" alt={"working-group"} />
             </span>
           </h4>
           <div className="activity-item-title mb-4">

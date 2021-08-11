@@ -30,7 +30,7 @@ const contributorImages = graphql`
     }
     cryptel: file(relativePath: { eq: "contributor/cryptel.png" }) {
       childImageSharp {
-        fixed(width: 200, height:90) {
+        fixed(width: 200, height: 90) {
           ...GatsbyImageSharpFixed
         }
       }
@@ -58,7 +58,7 @@ const contributorImages = graphql`
     }
     waseda: file(relativePath: { eq: "contributor/waseda.jpg" }) {
       childImageSharp {
-        fixed(width: 200, height:90) {
+        fixed(width: 200, height: 90) {
           ...GatsbyImageSharpFixed
         }
       }
@@ -69,7 +69,7 @@ const contributorImages = graphql`
 const Contributor = (props) => {
   const intl = useIntl();
   return (
-      <>
+    <>
       <Row className="pt-5">
         <Col>
           <h4 className="text-center mb-4">
@@ -77,41 +77,45 @@ const Contributor = (props) => {
           </h4>
         </Col>
       </Row>
-    <HrComponent />
-    <Container className="pb-5" >
-      <Row className="justify-content-start" style={{width:"80%", margin:"auto"}}>
-        <StaticQuery
-          query={contributorImages}
-          render={(data) => {
-            const list = [];
-            const contributors = [
-              { name: "act", fixed: data.act.childImageSharp.fixed },
-              {
-                name: "collabo_gate",
-                fixed: data.collabo_gate.childImageSharp.fixed,
-              },
-              { name: "comps", fixed: data.comps.childImageSharp.fixed },
-              { name: "cryptel", fixed: data.cryptel.childImageSharp.fixed },
-              { name: "fujitsu", fixed: data.fujitsu.childImageSharp.fixed },
-              { name: "hitachi", fixed: data.hitachi.childImageSharp.fixed },
-              { name: "layerx", fixed: data.layerx.childImageSharp.fixed },
-              { name: "waseda", fixed: data.waseda.childImageSharp.fixed },
-            ];
-            contributors.forEach((c, i) => {
-              list.push(
-                <Col className="text-center py-2" key={i} sm={3}>
-                  <Img fixed={c.fixed} />
-                  <div>
-                    {intl.formatMessage({ id: `contributor.${c.name}` })}
-                  </div>
-                </Col>
-              );
-            });
-            return list;
-          }}
-        />
-      </Row>
-    </Container></>
+      <HrComponent />
+      <Container className="pb-5">
+        <Row
+          className="justify-content-start"
+          style={{ width: "80%", margin: "auto" }}
+        >
+          <StaticQuery
+            query={contributorImages}
+            render={(data) => {
+              const list = [];
+              const contributors = [
+                { name: "act", fixed: data.act.childImageSharp.fixed },
+                {
+                  name: "collabo_gate",
+                  fixed: data.collabo_gate.childImageSharp.fixed,
+                },
+                { name: "comps", fixed: data.comps.childImageSharp.fixed },
+                { name: "cryptel", fixed: data.cryptel.childImageSharp.fixed },
+                { name: "fujitsu", fixed: data.fujitsu.childImageSharp.fixed },
+                { name: "hitachi", fixed: data.hitachi.childImageSharp.fixed },
+                { name: "layerx", fixed: data.layerx.childImageSharp.fixed },
+                { name: "waseda", fixed: data.waseda.childImageSharp.fixed },
+              ];
+              contributors.forEach((c, i) => {
+                list.push(
+                  <Col className="text-center py-2" key={i} sm={3}>
+                    <Img fixed={c.fixed} />
+                    <div>
+                      {intl.formatMessage({ id: `contributor.${c.name}` })}
+                    </div>
+                  </Col>
+                );
+              });
+              return list;
+            }}
+          />
+        </Row>
+      </Container>
+    </>
   );
 };
 
