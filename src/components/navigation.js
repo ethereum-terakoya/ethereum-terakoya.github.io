@@ -60,6 +60,12 @@ const Navigation = () => {
               >
                 {intl.formatMessage({ id: "groupName_scaling" })}
               </LocalizedLink>
+              <LocalizedLink
+                to="/zero-knowledge-proof/"
+                className="working-group-item dropdown-item"
+              >
+                {intl.formatMessage({ id: "groupName_zero-knowledge-proof" })}
+              </LocalizedLink>
             </NavDropdown>
 
             {/* news */}
