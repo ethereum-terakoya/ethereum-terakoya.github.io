@@ -1,5 +1,5 @@
 ---
-title: 【イーサリアム財団トップリサーチャー登壇】ゼロ知識証明の最新動向とQ&A
+title: The Latest Trend of Zero-Knowledge Proofs and Q&A Joined by the Ethereum Foundation's Top Researchers
 date: 2021-06-22
 slug: zero-knowledge-proof
 group: students
@@ -16,7 +16,7 @@ group: students
         href="https://www.youtube.com/watch?v=ilG-FdmMZpc&ab_channel=ETHTerakoya"
         target="_blank"
       >
-        【イーサリアム財団トップリサーチャー登壇】ゼロ知識証明の最新動向とQ&A(通訳あり)
+        The Latest Trend of Zero-Knowledge Proofs and Q&A Joined by the Ethereum Foundation's Top Researchers
       </a>
     </li>
   </ul>
@@ -63,144 +63,145 @@ group: students
 <div class="mt-4"></div>
 
 <p style="margin-top: 1em;font-weight: bold;font-size: 1.2em;margin-left: 0em;">
-  モデレーター
+  Participants
 </p>
 
-- **長沼　健**：
-  日立製作所
+- **Ken Naganuma**：
+  Hitachi, Ltd.
 
-- **石黒 一明**：
-  クーガー株式会社, チーフブロックチェーンアーキテクト
+- **Kazuaki Ishiguro**：
+  Couger Inc.
 
-- **石井 敦**：
-  クーガー株式会社, CEO
+- **Atsushi Ishii**：
+  Couger Inc.
 
-## 構成
+## Schedule
 
-1. Overview <br/> 1.【イーサリアム財団トップリサーチャー登壇】ゼロ知識証明の最新動向と Q&A(通訳あり)
+1. Introduction <br/> 1. The Latest Trend of Zero-Knowledge Proofs and Q&A 
+Joined by the Ethereum Foundation's Top Researchers
+
 2. Session <br/>
-   2.1. イーサリアムのゼロ知識証明最新動向 ｜ Barry Whitehat <br/>
-   2.1.1. メディアにおけるプライバシー <br/>
-   2.1.2. ゼロ知識証明について <br/>
-3. ゼロ知識証明 Q&A <br/>
+   2.1. The latest trend of zero-knowledge proofs in Ethereum ｜ Presenter: Barry Whitehat <br/>
+   2.1.1. How to build a private social network <br/>
+   2.1.2. Zero-knowledge proof <br/>
+3. Q&A on zero-knowledge proof <br/>
 4. Conclusion
 
-## Overview
+## Introduction
 
-セキュリティやコストの面では課題が残っている状況ではあるが、確実に進捗を見せている Ethereum2.0。難しい開発環境でありながらも、高い志を持って開発を進めている事が今回のイベントを通じて感じ取れた。今後予定されているマージ作業以降は、さらなる状況の変化が予測される。
+In this event, we invited the Ethereum Foundation's Mr. Barry Whitehat, who talked about the growing trend of zero-knowledge proofs. He provided us with a lot of new information, making this event very meaningful. In the Q&A session, we received a wide range of questions, from specialized ones to simple ones. Berry's answers helped us in becoming more familiar with Ethereum.
 
-## Session
+## Main topics
 
-### イーサリアムのゼロ知識証明最新動向
+### The latest trend of zero-knowledge proofs in Ethereum
 
 <p style="margin-top: -1em;font-weight: bold;font-size: 1.2em;margin-left: 1em;">
-  Barry Whitehat
+  Presenter: Barry Whitehat
 </p>
 
-#### 1. メディアにおけるプライバシー
+#### 1. How to build a private social network
 
-**1.1 プライバシーの定義について**
+**1.1 Definition of privacy**
 
-プライバシーとは個人、もしくはそのグループ内で決めたルールに沿って情報の提供内容を制限できるものである。情報開示の制限を設けなければ無限に情報が共有され、DOS 攻撃のターゲットになる可能性も出て来る。そこで重要となるのが Relative privacy という考え方であり、個人の証明者ではなくグループに帰属した個人として行動するという事である。この様な考え方により、仮に個人の行動内容が分からない状態でも、正準値により相対的に情報開示の状態を管理する事が可能だ。
+Privacy is the ability of an individual or group to seclude themselves or information about themselves, and thereby express themselves selectively. If information is disclosed without restrictions, information can be shared widely without limit, making it potential target for DoS attacks. This is where the idea of relative privacy becomes essential, where an individual is not completely secluded. Instead, an individual is considered to be a member of a group, and an action can be taken by any member of the group. With this concept, even if it is impossible to tell who takes the action, we can control the level of the information disclosed relatively by using canonical values.
 
-**1.2 アプリケーション運用におけるプライバシー**
+**1.2 Privacy applications**
 
-たとえば匿名のメッセージボードにおけるプライバシーの場合、匿名なので利用者の個人情報は一切共有されないし、誰でも使用する事が可能である。ただし、インターネット掲示板に何かの情報を開示するという事は大きな範囲の中で情報が取り扱われるという事であり、物理的に掲示板にチラシを貼り付ける行為とは全く違うと言えるでしょう。オンラインでは無限にアカウントを作り、投稿数にも制限がないため過去の投稿との紐づけが為されず風評が発生しないという特性がある。そのため、ソーシャルメディアという領域では本当の意味でのプライバシーに関しての実験が為されておらず、今後実験していく価値があると言えるだろう。
+For example, take privacy on anonymous message boards. Anyone can use it anonymously, and the user's identity is not shared at all. However, disclosing any information on the internet message board means that the information is handled in a larger scope. This is very different from posting a flyer on a physical bulletin board in the local level. In addition, since a user can create infinite accounts and post infinite posts online, the user cannot link with past posts, preventing from building reputations. For this reason, privacy has not been experimented in the social media space in the true sense, but I think it will be interesting to experiment.
 
-**1.3 透明性のあるソーシャルメディアについて**
+**1.3 Transparent social media**
 
-Facebook や tiktok は匿名のメッセージボードに比べてプライバシーに関しての透明性が高いメディアであると言える。こうした透明性の高いメディアには個人を証明するためのシステムがあり、個人の風評や評価を確かめる事ができるのが匿名のメディアとの大きな違いである。facebook と tiktok は同じ様な仕組みを再実装する事で構築されている。そのため、私個人の考え方としては再実装するのではなく同じシステムを共有したほうが良いのではないかとも感じているが、企業同士の力関係などもあり現状では実現が難しいのだろう。
+Facebook and TikTok provide more transparency in terms of privacy compared to anonymous message boards. The media with greater transparency have reputation systems to verify identity and allow users to check individual's reputations and ratings, which is a big difference from anonymous media. Facebook and TikTok have re-implemented similar mechanisms. It would be better to share the same system instead of re-implementing, though it may be difficult to do that due to the competitiveness and power relations between those companies.
 
-**1.4 中立的なソーシャルメディア**
+**1.4 Neutral social media**
 
-企業間の問題を解消するには中立的なソーシャルメディアが必要となる。ソーシャルメディア自体が中立であれば企業同士で力関係を気にする必要がなくなり、どの企業でも容易に参入する事が可能となるだろう。しかし、このシステムを実現するには情報の透明性という問題点を克服しなければならない。ユーザーの情報を大きな範囲で公開するには課題が多く、現状では実現が難しいとされている。もしも完璧なシステムを構築できる事があれば、政府による個人 ID の管理からプライベートな情報まで、あらゆる分野で活用する事が可能となるはずだ。
+To solve the issue among companies, we need neutral social media with a neutral reputation system. If social media themselves are neutral, there will be no need for them to worry about power relations among companies, making any company would easily enter the market. However, we need to achieve information transparency to materialize this system. There are many issues with disclosing user information in a broader scope, so it seems difficult to do so at this point. If we build a perfect system, we can apply it to any area, such as government-controlled individual IDs and private information.
 
-**1.5 分散型ソーシャルメディアの実現**
+**1.5 Decentralized social media**
 
-分散型ソーシャルメディアとは、利用がお互いに投稿や評価などの作業を自由に行えるメディアである。実現には風評システムが重要であり、自分の行った投稿に対しての評価が把握できるシステムでなければならない。そうした個人への評価が社会的なシステムと繋がる事により、さらに有効的なシステムを実現できる。今後の課題としてはコンテンツの提案やコミュニティー間の調整、衝突防止のインフラ整備などが重要となるだろう。
-
-<div class="mt-4"></div>
-
-#### 2. ゼロ知識証明について
-
-**2.1 ゼロ知識証明とは**
-
-仮にチャーリーとデイブ、アリスとボブの 2 組のグループが存在したとする。この 2 組のグループは自分がどちらのグループに属しているのかを明らかにせずとも、自らを証明する事が可能である。こうした仕組みにより 4 名はプライベートな投稿が可能であり、フォーラム形成も行える。しかし、この場合投稿に関しての評価を得るも失う事も出来ない。
-
-**2.2 Unirep という考え方**
-
-評価を得る事も失う事も出来ないという問題点を解消するには Unirep という考え方が有効である。Unirep では暫定的なアドレスを介する事で評価の受け取りを実現し、個人情報の秘匿性も保たれる。仮にアリスが投稿した場合、Unirep を利用すれば所属グループを開示する事なく評価が得られるという事である。
-
-**2.3 Unirep に期待する事**
-
-良い評価を集める事で何かしらの特典を受けられる様になれば、という希望がある。例えば一定数以上の評価を得られたらデブコンのチケットが無料で貰えるなど、特典と結び付ける事で様々な商品展開が可能であると感じている。
-
-**2.4 ダイレクトメッセージについて**
-
-ダイレクトメッセージの場合、誰が誰にメッセージを送ったのかという情報を隠す必要が生まれる。全てのメッセージを暗号化や複合化する事は難しく、それが出来なければ攻撃に対しての脆弱性が生まれる要因となるだろう。また、攻撃したユーザーに対しての特定も出来ないため、攻撃者に対して何かしらの罰を与えるという事も困難である。仮に Unirep の機能を用いてマイナス評価を与えたとしても罰としての役割は期待できない。
-
-**2.5 RLN(Rate Limit Nodefire)**
-
-RLN はダイレクトメッセージ機能において Unirep に代わり効果的であるとされる方法である。RLN では最初にグループのメンバーシップを証明する。ここで演算を行う事により Secret share というプライベートキーを活用する。これにより share が明らかになればプライベートキーが何かが分かる様になるため他の情報を開示する必要がなくなる。罰則はプライベートキーをスラッシュするなどスマートコントラクト上で行うようにする。RLN は他の場面でも展開されており、グループチャットや p2p などで活用されている。チェーン上で proof of list を構成し、自分が誰かを明かさずに相手を検索し繋がる事も可能である。ただし、あまりスケーリング自体は得意ではなく、あくまで小さなネットワーク上での活用が有効的であると言える。
-
-**2.6 コミュニティー間におけるモデレーション**
-
-モデレーションにおいては、マルチシグを使い投票を募る様なシステムがある。この方法の場合、膨大な作業が発生する事が予想されるため予測市場の様な物を作成し事前に有効・無効の判断をしなければならない。また、ライバル問題を解消するためには衝突防止のインフラ整備が必要であり、これが実現できればクアドラティックボーティングの様なメカニズムも活用できる様になる。クアドラティックボーティングが実装できれば良い・悪いといった単純な評価ではなく、更に深い評価が可能となるだろう。
-
-**2.7 Maci について**
-
-Maci はクアドラティックなページをマージさせる事が可能である。現在はクアドラティックフ・ファンディングという手法により、様々な場所で資金調達を行っている。今後の課題としては UI や UX の改善が必要であると感じている。また、Maci がどの様な取り扱いになるかも掘り下げていく必要があり、今後様々な統治関係におけるポータルで使用された際に投票システムとして組み込まれれば興味深い内容となるだろう。
-
-**2.8 今後の課題**
-
-今後はプライバシーを用いた風評システムなどを用い、より潤沢で多用な評価を行っていく。多くの可能性を秘めているシステムであるため、様々な仕組みを考え実験していく事で大変興味深い成果が得られると考えている。
+Decentralized social media allows users to act freely, such as to post, upvote, and downvote. The reputation system is essential to achieve this. The system should enable users to grasp the reputation of their own posts. The system will be more useful if individuals' reputations are made based on social connections. The issues to focus on are content suggestions, community moderation, and anti-collusion infrastructure.
 
 <div class="mt-4"></div>
 
-#### 3. ゼロ知識証明 Q&A
+#### 2. Zero-knowledge proof
+
+**2.1 What is zero-knowledge proof?**
+
+Suppose that there are two groups: Charlie and Dave; Alice and Bob. These two groups can prove themselves without revealing to which group they belong. This mechanism allows four of them to post privately and form forums. However, they are not able to gain or lose reputations on their posts.
+
+**2.2 Unirep theory**
+
+A useful theory to solve this issue is Unirep, which allows users to gain and lose reputation through a temporal address while keeping the user's identity confidential. If Alice posts on social media, Unirep will enable her to gain a reputation without disclosing which group she belongs to.
+
+**2.3 Expectations for Unirep**
+
+One idea is that we could have the system to provide people with incentives by gaining good reputations, leading to the development of various products. For example, users could receive a devcon ticket once they gained a certain volume of good reputations.
+
+**2.4 Direct messages**
+
+When sending direct messages, we would need to hide who is messaging who. However, encrypting and decrypting all messages would be difficult. Without doing so will lead to being very vulnerable to spam or DoS attacks. Since we cannot identify the attacker, there is no way to punish the attacker. Even if we use Unirep, where we can downvote, there is no real incentive to downvote the attacker.
+
+**2.5 RLN (rate-limiting nullifier)**
+
+RLN is an effective method used for direct messages besides Unirep. In RLN, you first prove your group membership. Then, through computation, you use a secret share of your private key. If you reveal two secret shares, it is enough to calculate your private key. But if you reveal a single share, you reveal nothing. To punish people who break the rule, we create a smart contract that allows slashing the private key. One idea to use RLN is to make a simple group chat app. Another is to use this with eth2 for the peer-to-peer network. We can also build a proof of connection in the social network to search for a target pier in a group without revealing who you are searching for. Note that this does not work well for scaling and can only work well for small networks.
+
+**2.6 Community moderation**
+
+As a way to do community moderation, people can express good or bad using multisig. To avoid having to do a lot of work, we need to make a prediction market to predict whether it is valid or invalid. To prevent bribery, we need some anti-collusion infrastructure, which will allow us to do more advanced mechanisms like quadratic upvoting and quadratic downvoting. The quadratic voting should be much more expressive than simple good or bad used in linear voting.
+
+**2.7 Maci (minimum anti-collusion infrastructure)**
+
+The quadratic page merges the million-dollar home page with quadratic voting. We are trying to do several local rounds of quadratic funding in different communities. But we need to improve the user interface (UI) and user experience (UX). In addition, we need to consider how Maci will be handled. It would be interesting to add Maci to popular governance portals as popular voting systems.
+
+**2.8 What's next**
+
+We can build a much richer reputation system with privacy in mind. We could have exciting results by implementing and experimenting a system that has high potentials.
+
+<div class="mt-4"></div>
+
+#### 3. Q&A on zero-knowledge proof
 
 <div class="mt-4"></div>
 <p style="margin-top: -1em;font-weight: bold;font-size: 1.2em;margin-left: 1em;">
-  モデレーター: 石黒 一明、長沼 健
+  Moderators: Kazuaki Ishiguro, Ken Naganuma
 </p>
 
-#### Q1. ゼロ知識証明を理解するために 1 から学ぶにはどうしたら良いか？
+#### Q1. How can I learn about zero-knowledge proofs from scratch?
 
-まずは ZKP を使い応用するのが良いだろう。また、ヴィタリックが行うセミナーに参加するのも効果的だと思われる。私も参加したが、様々な事をハイレベルで学ぶ事が可能であり、FFT の分野にも繋げる事ができるため非常に有意義だ。
+It is good to learn the concepts, apply ZKP and try to build some simple projects. For implementing ZKP, I would recommend Vitalik's seminars, which I have attended, and it was an excellent learning experience. It gives you a high-level introduction, which you can go deeper to implement FFT.
 
-#### Q2. ERC725 - Ethereum Identity Standard に関しての見解を教えてください
+#### Q2. What is your view on ERC 725 (an Ethereum identity standard), self-sovereign identity, and decentralized identity?
 
-ERC725 に関してはさほど深く理解している訳ではないが、追加情報として分散型 ID と self solving について話しをさせてもらう。まず分散型 ID とは何なのかという所だが、分散型とは ID を発行した側なのかユーザー側なのかという疑問があるだろう。仮にユーザー側が ID をコントロールしているという事であれば self solving となる。これは個人の証明をどのように行うかという点で非常に重要である。self solving はユーザー側が自由に ID をコントロールできるという利点があるが、他のグループが中央的な力を活用する事でリムーブする事が可能となってしまうという特性もある。
+I think I am not familiar with ERC 725, so let me talk a little about decentralized identity and self-sovereign identity. What do you mean by decentralization here? Is it that the issuer of the identity is decentralized, or are the users in control of ID? I guess that would be self-sovereign identity if the users are in control. I think the proof of individuality is a crucial issue that we will face in the future. Also, it is important to give users control of their identity. However, other groups can build on top of that identity knowing that some central authority can remove them from that system.
 
-#### Q3. ロールアップによって複数の取引をまとめて 1 つのオンチェーンの取引を作る仕
+#### Q3. Will we be able to bundle several transactions into one on-chain transaction by using a rollup? Is there any limit on the amount of the transactions and any technical limitations on this?
 
-組みを教えてください、また上限はあるのでしょうか？
-ゼロ知識のロールアップを活用する事により、1 つのユースケース間でいくつかの取引をまとめる事が可能である。また、ゼロ知識証明には制限値があり、まとめられる上限は決められている。制限値は多項式を別の多項式で割れる限界の値であり、それが出来なくなった時点で限界とされている。情報量を拡大する方法としてリカージョンというものがあり、この方法を活用する事で制限値の中でも使える情報を増やしていく事は可能だ。将来的にはゼロ知識のロールアップをスマートコントラクト上で行えるようになればと考えている。
+It is possible to have a ZK-rollup to bundle multiple transactions for a single use case. In addition, there is a fundamental limit on the size of a zero-knowledge proof that you can create. The limitation comes when one polynomial cannot be divided by another polynomial, and there is a limit on the size of the polynomial that you can divide. Another method that we can use to increase the amount of information is recursion. We can sidestep this limit defined by the FFT. We are hoping to be able to build a ZK-rollup that can verify smart contract transactions.
 
-#### Q4. Unirep などプロジェクトの実装状況について教えてください
+#### Q4. What is the current implementation phase of projects such as Unirep?
 
-Unirep に関しては pre 実装済みである。発表した今後の内容に関しては展望であり、具体的に実装が予定されているものではない。
+We have implemented a basic version of Unirep. It would be interesting to see other applications in the wish lists.
 
-#### Q5. 次々と新しい技術が発表されますが、新技術の採用にはどの様なプロセスがあるのでしょうか？
+#### Q5. We have seen a lot of momentum in terms of the ZKP concept. What processes do you undertake when selecting new technologies?
 
-Ethereum Foundation としてどうかは私のほうから答えられないが、個人的には様々な興味深いプロジェクトが存在している中で可能性が高い物が選ばれていると思う。最終的なところではコミュニティーが何を使いたいかという点に大きく左右される。Ethereum2.0 に関してはどの様なプロセスで決定されているのか私も全ては把握していないが、実務的なところから重点的に決まっていくのではないかと考えている。
+I do not know how to answer that from the Etherium Foundation perspective, but from my perspective, I feel pretty excited about recursion, etc. Our goal would be that we can just let the community decide what they want to use. In terms of Ethereum 2.0, I am not sure exactly how they determine what they will use or what will not, but I think it is probably the pragmatic process fast.
 
-#### Q6. リカージョンを使用した例で何か興味深いものがあれば教えてください
+#### Q6. If you can think of any interesting case using recursion, I would like to know more about it.
 
-fat solver にゼロ知識証明を使用し、解決していくというのは興味深い例と言えるだろう。これまで高価で難しかった事でもリカージョンを使用する事で実現可能となる事も増えるはずだ。また、ゼロ知識証明を利用する事により、これまで多くの演算式を用いていた処理も簡潔に済ませられるようになる。今後挑戦していきたい事としては、集計・集約を用いた検索機能の仕組みを構築していきたいと考えている。
+One idea is to apply a FUD solver that uses zero-knowledge proofs. Recursion is useful for so many different things that were previously prohibitively expensive. Zero-knowledge proofs allow us to do succinct verification for things that previously used mathematical methods. I've been trying to build something like blind find where you aggregate people's connections together.
 
-#### Q7. アプリケーションによるパフォーマンスへの影響について教えてください
+#### Q7. Regarding application case studies that have been implemented, are there any performance issues?
 
-計算量を少なく抑える事が出来ればパフォーマンスへの影響も少なくて済むのだが、現状はユースケースによって計算量は変わるためパフォーマンスへの影響が大きい場合もある。例えば VM での proof of validity の場合は影響はあるだろうが、演算力は十分に発揮できると思われる。ただし、携帯電話の様なデバイスでは十分な演算力は発揮できない事が予測されるため、ゼロ知識証明を用いて早く proof を出せる仕組みを構築していかなければならない。
+In general, it would be better if the long proving time was less. It depends on the use case, but it would be a problem for cases that use a lot of computing power. I think computation shouldn't be as big of a problem in the use case using the proof of validity for the Ethereum Virtual Machine. However, it would be a problem when creating proof on limited devices like a mobile phone. We could have separate two different proof systems, one of which is a quick zero-knowledge proof system for mobile phones.
 
-#### Q8. ゼロ知識証明はどこまで普及すると考えていますか？また、難解さにより一般化する印象を受けない部分もありますが、どの様な解決策を考えているのでしょうか？
+#### Q8. To what degree do you think zero-knowledge proofs will be adopted? Because the zero-knowledge proof is not an accessible technology to be implemented, some people may think that this will not be widely adopted. How would you make zero-knowledge proof more accessible to people?
 
-ゼロ知識証明は使用できる範囲がかなり広いため、十分に普及する可能性を秘めていると考えている。今までサインが必要だった場面においては全てゼロ知識証明が取って替われるため、これだけでもかなりの普及率と言えるだろう。また、ゼロ知識証明が難解で普及しにくいという意見に関しては、一度触れてみたら印象はガラッと変わるはずだと考えている。確かに技術的に説明する事が難しいという点はあるが、現実世界にある物と連動した例があれば受け入れやすくなるはずだ。しかし現実世界の物を例にしづらい技術も存在し、私が現在行っている Unirep という考え方はプライバシーがグローバルな物に含まれてしまうという考え方であり、理解を得るのは難解であると感じている。しかし、過去のインターネットと同様に最初は意味が分からずとも利用されていくうちに理解は広まっていくのではないかと考えている。
+Since zero-knowledge proofs can be used in many applications, they have a huge potential to change the world. Since wherever you use a signature will use a zero-knowledge proof in the future, I think ZKPs could become ubiquitous. As for the difficulty of widely adopting zero-knowledge proofs due to complexity, as we have more and more things that use a ZKP, and once people use it, I think it will help people better understand what they are. When we find it technically difficult to explain people about it, a good way is to find some real-world analogy to this. But one of the concepts that are difficult to educate people is Uniswap, which is very difficult to make private as it can have a global state that is public to everybody. It took people a while to figure out what the internet was, but we might have eventually figured it out. Likewise, I think we will have a similar kind of process with ZKPs.
 
-#### Q9. Barry Whitehat というのはセキュリティ・エンジニアとして素晴らしい名前ですが本名なのでしょうか？
+#### Q9. I think Barry Whitehat is a nice name as a security engineer. Is this your real name?
 
-本名ではありません。ただ、哲学的な考え方をするのならば『名前とは何か？』という疑問に当たってしまうため、Barry Whitehat は私にとって名前であると言えるでしょう。
+That is a pseudonym. I don't know what a real name is--I mean, that is more of a philosophical question.
 
 #### 4. Conclusions
 
-新技術の開発が目覚ましい速度で行われている Ethereum。続々と情報が開示されていく中で、その情報に追い付くだけでも大変だと感じている方も多くいる事だろう。しかし、それでも新しい情報に触れ、興味を持ったのならば積極的に研究に参加し、Ethereum に触れる機会を作っていくべきである。なぜならば、この技術はこれからの未来にとって掛け替えのない物であり、必ず自分自身にとって大きな財産となる分野であると言えるからだ。
+We have seen a lot of momentum in new technologies in the realm of Ethereum. As more and more information is out in public, some people may feel that it is hard to keep up with it. If you find the new information interesting, you should get involved in research and take the opportunity to learn more about Ethereum. That is because this is promising a technology that will certainly build you up.
