@@ -166,39 +166,39 @@ We can build a much richer reputation system with privacy in mind. We could have
 
 #### Q1. How can I learn about zero-knowledge proofs from scratch?
 
-It is good to learn the concepts, apply ZKP and try to build some simple projects. For implementing ZKP, I would recommend Vitalik's seminars, which I have attended, and it was an excellent learning experience. It gives you a high-level introduction, which you can go deeper to implement FFT.
+**Barry :** It is good to learn the concepts, apply ZKP and try to build some simple projects. For implementing ZKP, I would recommend Vitalik's seminars, which I have attended, and it was an excellent learning experience. It gives you a high-level introduction, which you can go deeper to implement FFT.
 
 #### Q2. What is your view on ERC 725 (an Ethereum identity standard), self-sovereign identity, and decentralized identity?
 
-I think I am not familiar with ERC 725, so let me talk a little about decentralized identity and self-sovereign identity. What do you mean by decentralization here? Is it that the issuer of the identity is decentralized, or are the users in control of ID? I guess that would be self-sovereign identity if the users are in control. I think the proof of individuality is a crucial issue that we will face in the future. Also, it is important to give users control of their identity. However, other groups can build on top of that identity knowing that some central authority can remove them from that system.
+**Barry :** I think I am not familiar with ERC 725, so let me talk a little about decentralized identity and self-sovereign identity. What do you mean by decentralization here? Is it that the issuer of the identity is decentralized, or are the users in control of ID? I guess that would be self-sovereign identity if the users are in control. I think the proof of individuality is a crucial issue that we will face in the future. Also, it is important to give users control of their identity. However, other groups can build on top of that identity knowing that some central authority can remove them from that system.
 
 #### Q3. Will we be able to bundle several transactions into one on-chain transaction by using a rollup? Is there any limit on the amount of the transactions and any technical limitations on this?
 
-It is possible to have a ZK-rollup to bundle multiple transactions for a single use case. In addition, there is a fundamental limit on the size of a zero-knowledge proof that you can create. The limitation comes when one polynomial cannot be divided by another polynomial, and there is a limit on the size of the polynomial that you can divide. Another method that we can use to increase the amount of information is recursion. We can sidestep this limit defined by the FFT. We are hoping to be able to build a ZK-rollup that can verify smart contract transactions.
+**Barry :** It is possible to have a ZK-rollup to bundle multiple transactions for a single use case. In addition, there is a fundamental limit on the size of a zero-knowledge proof that you can create. The limitation comes when one polynomial cannot be divided by another polynomial, and there is a limit on the size of the polynomial that you can divide. Another method that we can use to increase the amount of information is recursion. We can sidestep this limit defined by the FFT. We are hoping to be able to build a ZK-rollup that can verify smart contract transactions.
 
 #### Q4. What is the current implementation phase of projects such as Unirep?
 
-We have implemented a basic version of Unirep. It would be interesting to see other applications in the wish lists.
+**Barry :** We have implemented a basic version of Unirep. It would be interesting to see other applications in the wish lists.
 
 #### Q5. We have seen a lot of momentum in terms of the ZKP concept. What processes do you undertake when selecting new technologies?
 
-I do not know how to answer that from the Etherium Foundation perspective, but from my perspective, I feel pretty excited about recursion, etc. Our goal would be that we can just let the community decide what they want to use. In terms of Ethereum 2.0, I am not sure exactly how they determine what they will use or what will not, but I think it is probably the pragmatic process fast.
+**Barry :** I do not know how to answer that from the Etherium Foundation perspective, but from my perspective, I feel pretty excited about recursion, etc. Our goal would be that we can just let the community decide what they want to use. In terms of Ethereum 2.0, I am not sure exactly how they determine what they will use or what will not, but I think it is probably the pragmatic process fast.
 
 #### Q6. If you can think of any interesting case using recursion, I would like to know more about it.
 
-One idea is to apply a FUD solver that uses zero-knowledge proofs. Recursion is useful for so many different things that were previously prohibitively expensive. Zero-knowledge proofs allow us to do succinct verification for things that previously used mathematical methods. I've been trying to build something like blind find where you aggregate people's connections together.
+**Barry :** One idea is to apply a FUD solver that uses zero-knowledge proofs. Recursion is useful for so many different things that were previously prohibitively expensive. Zero-knowledge proofs allow us to do succinct verification for things that previously used mathematical methods. I've been trying to build something like blind find where you aggregate people's connections together.
 
 #### Q7. Regarding application case studies that have been implemented, are there any performance issues?
 
-In general, it would be better if the long proving time was less. It depends on the use case, but it would be a problem for cases that use a lot of computing power. I think computation shouldn't be as big of a problem in the use case using the proof of validity for the Ethereum Virtual Machine. However, it would be a problem when creating proof on limited devices like a mobile phone. We could have separate two different proof systems, one of which is a quick zero-knowledge proof system for mobile phones.
+**Barry :** In general, it would be better if the long proving time was less. It depends on the use case, but it would be a problem for cases that use a lot of computing power. I think computation shouldn't be as big of a problem in the use case using the proof of validity for the Ethereum Virtual Machine. However, it would be a problem when creating proof on limited devices like a mobile phone. We could have separate two different proof systems, one of which is a quick zero-knowledge proof system for mobile phones.
 
 #### Q8. To what degree do you think zero-knowledge proofs will be adopted? Because the zero-knowledge proof is not an accessible technology to be implemented, some people may think that this will not be widely adopted. How would you make zero-knowledge proof more accessible to people?
 
-Since zero-knowledge proofs can be used in many applications, they have a huge potential to change the world. Since wherever you use a signature will use a zero-knowledge proof in the future, I think ZKPs could become ubiquitous. As for the difficulty of widely adopting zero-knowledge proofs due to complexity, as we have more and more things that use a ZKP, and once people use it, I think it will help people better understand what they are. When we find it technically difficult to explain people about it, a good way is to find some real-world analogy to this. But one of the concepts that are difficult to educate people is Uniswap, which is very difficult to make private as it can have a global state that is public to everybody. It took people a while to figure out what the internet was, but we might have eventually figured it out. Likewise, I think we will have a similar kind of process with ZKPs.
+**Barry :** Since zero-knowledge proofs can be used in many applications, they have a huge potential to change the world. Since wherever you use a signature will use a zero-knowledge proof in the future, I think ZKPs could become ubiquitous. As for the difficulty of widely adopting zero-knowledge proofs due to complexity, as we have more and more things that use a ZKP, and once people use it, I think it will help people better understand what they are. When we find it technically difficult to explain people about it, a good way is to find some real-world analogy to this. But one of the concepts that are difficult to educate people is Uniswap, which is very difficult to make private as it can have a global state that is public to everybody. It took people a while to figure out what the internet was, but we might have eventually figured it out. Likewise, I think we will have a similar kind of process with ZKPs.
 
 #### Q9. I think Barry Whitehat is a nice name as a security engineer. Is this your real name?
 
-That is a pseudonym. I don't know what a real name is--I mean, that is more of a philosophical question.
+**Barry :** That is a pseudonym. I don't know what a real name is--I mean, that is more of a philosophical question.
 
 #### 4. Conclusions
 

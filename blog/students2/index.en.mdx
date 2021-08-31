@@ -1,247 +1,255 @@
 ---
-title: 第2回「ブロックチェーンの研究課題から見える可能性」
+title: Session 2 New potential in blockchain research
 date: 2021-06-10
 slug: students2
-group: students22222
+group: students
 ---
 
-## 目次
+## Table of Contents
 
 - 1.Introduction
 - 2.Details
-  - 2.1 プライバシーを考慮したブロックチェーン連携による取引記録証明技術の提案
-  - 2.2 ブロックチェーン向けゼロ知識証明の研究
-  - 2.3 ディスカッション
-  - 2.4 まとめ
+  - 2.1 A proof of transaction technology powered by blockchain integration towards greater privacy
+  - 2.2 Research on zero-knowledge proof for blockchain use cases
+  - 2.3 Discussion
+  - 2.4 Conclusions
 
-## 参加者一覧
+## List of participants
 
-- 富士通株式会社 データ&セキュリティ研究所 ブロックチェーンエコノミー PJ シニアリサーチャー
+- Fujitsu Laboratories Ltd.
 
-  - 坂本拓也
+  - Takuya Sakamoto
 
-- 日立製作所 研究開発グループ セキュリティ研究部所属
+- Hitachi, Ltd.
 
-  - 長沼　健
+  - Ken Naganuma
 
-* 博報堂ブロックチェーン・イニシアティブ
+* Hakuhodo DY Holdings Inc.
 
-  - 伊藤 佑介
+  - YUSUKE ITO
 
-- クーガー株式会社（主催）
+- Couger Inc. (sponsor)
 
-  - 石井 敦
+  - Atsushi Ishii
 
 ## 1. Introduction
 
-ブロックチェーンの研究開発は様々な企業により行われているが、その中でも現在進行形で研究されている２企業から最新の研究課題を発表頂き、今後のブロックチェーンの可能性を議論していく。
+Blockchain research and development is being conducted by various companies. Among this, the latest research themes will be presented by companies currently engaged in research, and the possibilities for the future of blockchain will be discussed.
 
 ## 2. Details
 
-### 2.1 プライバシーを考慮したブロックチェーン連携による取引記録証明技術の提案
+### 2.1 A proof of transaction technology powered by blockchain integration towards greater privacy
 
 <p style="margin-top: -1em;font-weight: bold;font-size: 1.2em;margin-left: 1em;">
-  坂本拓也 | 富士通株式会社研究本部データ＆セキュリティ研究所シニアリサーチャー
+  Takuya Sakamoto | Senior Researcher, Data & Security Research Division, Fujitsu Laboratories Ltd.
 </p>
 
-#### 富士通ブロックチェーンの取り組み
+#### Fujitsu's initiatives around blockchain technology
 
-富士通では分散台帳の機能にフォーカスしブロックチェーンを使った独自技術の研究開発を進めブロックチェーンのセキュリティー強化など機能拡張、そして様々な事業者と連携をして情報や価値を改ざんなくつなげる基盤としてエコシステム化の連携、データ利活用などの拡大に取り組んでいる。
+Fujitsu is researching and developing proprietary blockchain solutions based on distributed ledgers, and is widely involved in initiatives that include expanding the functionality of existing technology, such as by strengthening blockchain security; collaborating with various businesses to create an ecosystem in which information and value can be provided in a trusted, inalterable fashion; and other uses of data.
 
-#### 富士通のアクティビティについて
+#### Fujitsu's activities in detail
 
-基盤技術をして様々なブロックチェーンを連携した取引を可能とするブロックチェーン連携技術（コネクションチェーン）の一部をさらに標準化、ブロックチェーンの OSS の大手である Hyperledger で Cactus として標準化を進め、さらに応用としてユーザーの独性などのアイデンティティーデータを自身で活用することを可能にする分散型アイデンティティーであったり電力の需要間での取引を可能にするサプライチェーン/トークンエコノミーなども進めている。これまでの活動としてブロックチェーン連携が２０１７年、分散型アイデンティティーが２０１９年、今現在も研究を進めている。基盤技術とその標準化から応用まで広く取り組んでいるということが富士通での活動である。
+Fujitsu is working with blockchain integration technologies (connection chains), which serve as a basic technology used to enable transactions across multiple, linked blockchains. It is further standardizing some aspects of these connection chains, as well as pursuing standardization of Hyperledger, one of the major blockchain open-source projects, implementing it in the form of Cactus. Other projects include distributed identity solutions, which allow users to autonomously control and use their own identity, and supply chain/token economy solutions designed to support transactions around energy. Fujitsu first began blockchain integration in 2017, followed by creation of a decentralized identity solution in 2019, with research today ongoing. Fujitsu's work in this space is wide-ranging, spanning from developing basic technologies and standardizing them, onto finding new applications.
 
-#### プライバシー強化技術、特にゼロ知識証明
+#### Enhanced privacy, notably for zero-knowledge proof
 
-プライバシーは法的側面化の強化もあり、ユーザーにまつわる様々データ利活用にはプライバシー強化は重要な課題である。また、様々なプライバシー強化技術の研究が進められている。
+Privacy today is also being shored up in terms of legislation, and increased privacy has come to be an issue of critical importance when using data pertaining to users. In addition, research into various privacy enhancement technologies is actively underway.
 
-世界経済フォーラム２０１９で紹介された最も注目されているの５つの技術
-・差分プライバシー…特定の個人がデータに含まれているかわからない指標を使ってデータにノイズをかけて匿名する技術
-・統合分析…データを集積せずに色々なところにバラバラであるままで計算をしデータ解析をするような技術、AI と連携し使われる技術
-・準同型暗号…暗号化したまま計算可能な技術
-・秘密分散＋ MPC…秘密分散データを元データが分からないように分割し個々のデータを元に計算して集約して結果を得るという技術
-・ゼロ知識証明…証明したい情報を明かすことなくその情報に関することを証明する手法で分析などに関係なく個々のデータに着目してプライバシーを保護をすることに使える技術
-証明したい情報を明かすことなく、その情報に関することを証明する手法とは、その情報を知らないとできない計算をすることで証明することである。例えばある公開鍵に対応する秘密鍵を知っていることを秘密鍵に明かさずに証明するという場合を考えてみると証明者が秘密鍵を知っている証明者、検証者は秘密鍵を知らない。証明者が検証者に秘密鍵を知っていることを伝えようとする。まず検証者が乱数値を生成して証明者に渡す。証明者が乱数値で秘密鍵に署名する。そして検証者がその署名を公開鍵で使って検証すると秘密鍵を知っているということがわかるということなる。この時、証明者は検証者に秘密鍵の中身は明かしてないが知っているということが伝わっているということで知識を与えずに証明しているということが言える。証明者は秘密鍵自体を検証者に伝えてないが秘密鍵を持ってないと正しい署名を作ることができないので持っていることを伝えることができるということである。何を証明したいかを考えてそれに合うプロトコルを作れば様々なことを証明が可能である。様々な証明を可能とするゼロ知識証明のプロトコルが考えてられており、それを実証したライブラリーも公開されている。idemix, zkSNARKs, Bulletproof など色々なプロトコルが存在している。
+Five of the most-talked about technologies at the World Economic Forum 2019
+- Differential privacy: a technology to apply noise to anonymize data using indicators that do not point to the presence of a specific individual within the data
+- Pooled analysis: a technology used in conjunction with AI for applications such as calculating and analyzing data while it is still present in diverse locations, eschewing the need to centrally accumulate it
+- Homomorphic cryptography: a technology used to perform calculations while data is encrypted
+- Secret sharing + MPC: a technology that divides secret data in such a way that the original data cannot be inferred, and uses the individual data pieces to perform calculations and obtain the aggregate results
+- Zero-knowledge proof: a technology that can be used to protect the privacy of individual data agnostic of analysis or certification methodology, without exposing the underlying data. Certifying information without exposing the underlying data refers to a method whereby calculations are performed that would only be possible in reference to the original data, acting as a single source of truth. For example, if you demonstrate that you know the private key corresponding to a public key without exposing the private key information, this implies that the attestor knows the private key, and the relying party does not know the private key. Suppose the attestor attempts to convey to the relying party that the former knows the private key. The relying party first generates a random value and passes it to the attestor. The attestor signs the private key with the random value. When the relying party verifies the signature with the public key, it implies that the attestor knows the private key. While the attestor has not exposed the contents of the private key to the relying party, it has conveyed its knowledge of said key's contents, allowing it to verify the authenticity of the transaction without leaking information. While the attestor has not shared the contents of the private key itself with the relying party, it is unable to properly sign the record without access to the private key, enabling it to authentically convey its ownership of said key. Using this paradigm, one is able to attest to the authenticity of various things by developing protocols around them. One such method is zero-knowledge proof, with libraries available as a proof of concept. There are various protocols to that end, such as idemix, zk-SNARKs, and Bulletproof.
 
-#### 分散型アイデンティティーとプライバシー強化技術
+#### Decentralized identity and privacy-enhancing technologies
 
-分散型アイデンティティーとは
+Decentralized identities explained
 
-インターネットでアイデンティティー情報を自分で制御する要求というのが高まっている。分散型アイデンティティーは自分が制御することにフォーカスしており主権型アイデンティティーとも言われている。リアルな世界だと警察署から運転免許証を受け取る。そうすると警察に断りを受けることもなく例えば銀行だと運転免許証を使い銀行口座を開設する時の身分証として使うことができる。一方サイバーの世界だと自身のアイデンティティー情報は色んなところにあるはずだが自由に使うことができないという状況にある。そこで第三者に確認されたアイデンティティー情報をデジタル化し第三者に左右されずに使えるようにするためのしくみの実現が進められている。これにより自身で所有するさまざまなアイデンティティー情報を組み合わせ口座開設や就職活動、アパートの賃貸契約するなどの紙の証明を集めることなくサイバー上で行うことができる。分散型アイデンティティーは分散型 PKI という呼ばれ方もする。最近では首相関係による Trusted Web 推進協議会でのホワイトペーパーでも Trust 実現を使う技術として位置付けされていたり、欧州ではコロナのワクチンを打った証明のために使うということも考えられており分散型アイデンティティーは社会の基盤なり Trust を実現できる技術である。
+There is growing demand by users for the ability to control their own identity online. Decentralized identity solutions seek to provide a way of controlling one's identity in this way. This is also referred to as self-sovereign identity. In the real world, we obtain a driver's license issued by the police department. This allows you to, for example, use that driver's license as a proof of identification to open a bank account without needing additional approval from the police department. In the cyber world, however, one's identity information exists in disparate locations, but we cannot currently make use of it. That is why today, there are methods being developed to allow a third party to confirm and digitize the content of this identity information and allow the user to autonomously control it without the agency of third parties. This would allow the user to combine the various identity information that pertains to them and use it to open accounts, apply for jobs, enter into apartment lease agreements, and other situations in which paper proof would normally be needed, but do it all online. Decentralized identity is also referred to as decentralized PKI. Recently, a whitepaper issued by parties close to the prime minister at the Trusted Web Promotion Council positioned this as a technology that could be used towards realization of trust. In Europe, it is being explored as a means of demonstrating that a person received COVID-19 vaccination. In this way, decentralized identity is being looked to as a technology that may form a part of the foundations of society and enable trust.
 
-課題：アイデンティティー開示証明時のプライバシー
+Issue: maintaining privacy when disclosing identity verification documents
 
-第三者に確認されたアイデンティティー情報を利用できるようにするにはどうすればいいか単純に考えるとアイデンティティー情報が書かれたファイルに第三者にデジタル証明をしてもらう、証明者はデジタル証明付きのファイルを検証者に送信し、検証者は発行者先の公開先で検証する。必要な情報のみを開示することが望ましいが普通の証明だと全項目を開示しないと検証できないので必要な情報に限定することができないということである。
+How should we best go about enabling the use of identity information verified by third parties? One simple implementation might be sending a file containing the identity information to a third party and having the third party digitally sign it; the attestor then sends a file with a digital certificate to a relying party, and the relying party verifies its authenticity before disclosing it to a downstream recipient. Ideally, only the requisite information, and no more, would be disclosed. With typical identity documents, all items must be disclosed at once to verify them, meaning disclosure cannot be constrained to atomic parts of the document.
 
-解決技術：ゼロ知識証明による秘匿開示証明技術
+Technical solution: secret disclosure certification using zero-knowledge proof
 
-富士通ではゼロ知識証明を使い情報を隠して情報を伝えるプロトコルを開発。自身の正確な属性を伝えることなしに情報の一部を使い正当性を証明することが可能である。従来、発行者がアイデンティティー情報の範囲を決める必要があったが証明者と検証者側で秘匿開示を柔軟に対応することができる。またアイデンティティー流通技術 IDYX を開発しており実証実験などで使用。取引関係を元に発行者の信用度を算出するしくみなどアイデンティティー流通に必要となる機能を提供する基盤である。この技術のサービス利用者が自身の属性を開示することで本技術を適用できるようにしている。これによりプライバシーを考慮したアイデンティティー情報の開示が可能である。
+Fujitsu is developing a protocol that allows for conveying information using zero-knowledge proof without exposing the underlying data. This allows for using part of the data to demonstrate its authenticity, all while not disclosing personally-identifying attributes. Traditionally, the issuer had to decide the scope of identity information to be used. With this updated solution, the attestor and relying party can flexibly accommodate different confidentiality disclosure levels. Fujitsu is also developing IDYX, an identity distribution technology, and has used it in some proof of concept trials. This serves as a platform to provide the functionality necessary for identity distribution, such as mechanisms to calculate issuer credit based on business relations. This allows service users to utilize the technology by disclosing select attributes pertaining to them. Ultimately, it enables disclosing identity information in a private fashion.
 
-#### ブロックチェーン連携とプライバシー強化技術
+#### Blockchain integration and privacy enhancement technologies
 
-デジタルトラストとブロックチェーン連携
+Digital trust and blockchain integrations
 
-ビットコイン、アルトコインなどの仮想通貨を交換する取引所のサービスやアプリケーションは通常透明性がない。つまり実際には何が起こっているか分からず不正が起こっている可能性がある。またブロックチェーンをまたがる取引を実現させるために複数のブロックチェーンを連動させてお金を移動し交換させようとするとその間で失敗する可能性もありえる。
+Exchange services and applications used to trade cryptocurrencies such as Bitcoin and altcoins are typically not transparent. In other words, users do not know what is going on behind the scenes, so there may be malfeasance. Moreover, linking multiple blockchains in order to implement transactions across these chains and move and swap money between them can cause failures.
 
-富士通はコネクションチェーンというものを開発しており異なるブロックチェーン間での価値の交換、スマートコントラクトを拡張し取引の透明性を確保する。このしくみにより人手の処理をブロックチェーンで置換し、システム全体での透明性確保が可能である。
+Fujitsu is developing connection chains, which allow for extending the exchange of value and use of smart contracts between blockchains in a transparent manner. This system would replace manual processes with a blockchain solution while lending transparency to the system as a whole.
 
-トークンエコノミーへの展開
+Use in the token economy
 
-地域通貨を使いテレワーク用などのスペースの一時利用権を購入したり、ポイントを使い一時的に自転車を借りる権利を購入することが出来るなど権利の売買が可能になるので誰が何を買ったなどを取引記録やパーソナルデータが分散台帳にはいることになる。
+This allows for the purchase and sale of rights, which could be used to, for example, use a local currency to purchase the rights to temporary use of a space for teleworking purposes, using points to temporarily borrow a bicycle, or other uses. A record of what was purchased and the personal data of the traders is stored on the distributed ledger.
 
-課題：トークンエコノミーでの登録記録活用とプライバシーの両立
+Issue: Use of token economy records while maintaining privacy
+ 
+There are two major issues here: the first is that transactions are stored in a distributed fashion on connection blockchains, so when disclosing or verifying transaction records, selectively disclosing, out of privacy concerns, only parts of the information, is dependent on the types of blockchains connected in the chain.
 
-大きな課題が二つ、一つ目は連携ブロックチェーンに分散されて保存されているため取引記録を開示、証明しようとした時に開示する情報をプライバシーに考慮して一つの情報のみ開示をしようとした時、連携ブロックチェーン次第になるということが考えられる。
-二つ目はコンソーシアム参加企業からのアクセスを防ぐ必要である。
+The second issue is that this private information must be structured such that consortium companies cannot access it.
+ 
+Technical solution: utilizing secret disclosure certification solutions for records
 
-解決技術：秘匿開示証明技術の登録記録活用への適用
+In this system, administrators configure which types of items can be utilized, allowing for a range of different transaction types. In lieu of transaction records, a ledger for certification is saved, with this certification ledger being used in place of a distributed ledger. This would allow for disclosing the record of the transaction. In this way, we utilize a zero-knowledge proof method of polling and disclosing discrete information.
 
-様々な取引ができるように管理者が取り込む項目を設定できるようにし、取引記録の代わりに証明用の台帳を保存し分散台帳には証明用の台帳をおくようにする。そうすることで取引記録だけを開示できるようになる。項目ごとに取得開示できるしくみをゼロ知識証明を使い構築した。
 
-#### 質疑応答
+#### Q&A
 
-**Q1.**W3CVC との関連は準御しているのか？
+**Q1.** Does this solution conform to W3CVC?
 
-**A.**まだ合わせこめていない。このプロトコルは Hyperledger Indy の上で動くように開発されており id mx というゼロ知識証明のプロトコルがのっていて、それを拡張し文字の一部を隠す証明をのせている。Indy が W3CVC に対応するように作り替えている状態なのでいずれは対応した状態で動くようになると思いますがそれを使わせていただいてるだけの状態なので現時点では対応はしていない状況である。
+**A.** It has not been fully aligned yet. This protocol has been developed to run on Hyperledger Indy and includes the idmx zero-knowledge proof protocol, which has been extended to allow for masking certain characters. Indy is being rebuilt to support W3CVC, so we believe this solution should support it in the future, but it is currently being presented as-is.
 
-**Q2.**コネクションチェーンで接続した際に個人 ID の同一性はどのように確保されているのか？
+**Q2.** How is the identity of individual IDs maintained when connecting to connection chains?
 
-取引事業者の ID がチェーンごとに E-mail と氏名などで分かれているなどの場合があると思うが。
+In some cases, transacting parties' IDs are stored on chains by their e-mail, while in other cases, by their name.
 
-**A.**アカウントの情報を認証用のサーバーを用意し置き換えてアクセス出来るつくりにしている。
+**A.** An authentication server is used, with account information sent through that server to enable access.
 
-**Q3.**コネクションチェーンのパフォーマンスがボトルネックになることになることはないのか？
+**Q3.** Do connection chains not present a performance bottleneck?
 
-**A.**コネクショクションチェーンはブロックチェーンの Hyperledger Fabric を使用している。Hyperledger Fabric のスピードに依存してしまうのでそこがネックである。
+**A.** We use Hyperledger Fabric for the connection chain. This depends on Hyperledger Fabric, so that would be the chief bottleneck.
 
-**Q4.**コネクションチェーンのインセンティブは今後どのようになっていくのか？
+**Q4.** What incentives will there be going forward to using connection chains?
 
-**A.**やり取りする時に手数料をとるのでその手数料がとれるということでビジネスになるということが考えられる。
+**A.** The idea is to charge fees on transactions as a way of realizing the business model.
 
-### 2.2 ブロックチェーン向けゼロ知識証明の研究
+### 2.2 Research on zero-knowledge proof for blockchain use cases
 
 <p style="margin-top: -1em;font-weight: bold;font-size: 1.2em;margin-left: 1em;">
-  長沼　健　| 株式会社日立製作所　社会システム研究部
+  Ken Naganuma |  Social Systems Research Division, Hitachi, Ltd.
 </p>
 
-東大卒、日立研究開発グループ入社、東大の複雑理工学選考に戻り、大学院を卒業、その後日立に戻る。この大学院３年間の研究の一部を紹介する。
+Graduate of the University of Tokyo. Joined the Hitachi Research and Development Group prior to returning to the University of Tokyo for a master's degree in complexity science and engineering. Upon obtaining that degree, returned once again to Hitachi. Here we feature some of the research Mr. Naganuma performed during his three years at graduate school.
 
-ブロックチェーンでどうやってゼロ知識証明を使うのか？
+How can we implement zero-knowledge proof on the blockchain?
 
-透明性とプライバシーを両立するための規律として使われている。ブロックチェーンの台帳情報はだれでも閲覧できるのでプライバシー情報が守れない。透明性 Max のプライバシー０の関係である。そこでプライバシー情報を暗号化（Hash 化）し情報を守る。暗号化したらマイナーが正当性を確認できない問題が生じる。そこで正当性を証明するゼロ知識証明を付ける。
+This is used as a means of imposing rules that ensure both transparency and privacy. Blockchain ledger information can be viewed by anyone, which means privacy is not ensured. This means there is total transparency, but zero privacy. However, the private information could be hashed and encrypted. Once encrypted, miners would be unable to confirm the validity of the data. This is where zero-knowledge proof comes in, which allows for demonstrating the authenticity of the transactions.
 
-自身の社会人博士専攻としてのテーマであるゼロ知識証明（zk-SNARK）を発展させる研究しており、いくつかの課題があり、まず量子計算計算機へ耐性を有していないこと、信頼できる第 3 者によるパラメータ生成をどう実現化するかである。
+Mr. Naganuma is conducting doctorate research into zero-knowledge proof (zk-SNARK), with various issues around that subject including a lack of resilience to quantum computing attacks and the question of how to implement parameter generation by trusted third parties.
 
-#### 応用：セキュアスマートコントラクト
+#### Application: secure smart contracts
 
-具体例：セカンドプライスオークション例。通常のオークションは例えばヤフーオークション、払ってもいい最高金額をベットし、最高価格を付けた人が落札する。セカンドプライスオークションは落札者が支払う金額は 2 位の人の金額を支払う。入札者に有利なオークション形式である。分散台帳が誰でも見ることができると入札が成り立たない。公開入札、セリになってしまい、セカンドプライスオークションにならない。出品者にのみ入札状況がみられるようにした場合、出品者が一番高い入札金額に近いセカンドプライスを引数に対して SC 実行する不正が可能になる。このようにセカンドプライスオークションをブロックチェーン上で実行するのは難しい。ここにどうゼロ知識証明を利用するかというと、まずスマートコントラクトとしてブロックチェーン上にセカンドオークションのコードをデプロイする。ファーストオークションのようにならない様、そして不正が入らない様に各入札者の入札金額をハッシュ値を用いて、非公開する。そして、例えばアリスの公開鍵を使って、各入札金額と各 Hash 値を seller（このスマートコントラクトの実行者）に渡し、seller がそれを元にスマートコントラクトを実行する。そうして、winner と 2nd price の算出を行う。最後に seller は本当に正しく実行をしたかの証明をゼロ知識証明として台帳に書き込む事で、入札金額は明かせないが、正しくその金額を利用した事を証明できる。もし、その結果に不正がある場合でも、Miner がチェックをする事が出来る。暗号化されている入札金額の数値とゼロ知識証明を使って正当性の確認が出来るが、この様なところでスマートコントラクトの引数を取得したままスマートコントラクトの実行が出来る使い方ができるのが、ゼロ知識証明である。
+Specific use cases：second-price auctions
 
-#### 性能評価実験
+In typical online auctions, such as those on Yahoo! Auctions, users bid the maximum price they are willing to spend, with the top bidder winning. In second-price auctions, the highest bidder pays the price bid by the second-highest bidder. This auction format works in favor of bidders. With distributed ledgers, however, an auction format would fail to be possible if everyone could see the contents of the ledger. This would instead lead to a public bid or open auction, impeding second-price auctions from coming to fruition. If you only allow the seller to see the bid status, it can lead to fraud, whereby the seller executes a smart contract against the second highest price as an argument. In this way, executing second-price auctions on the blockchain can be a challenge. Use of zero-knowledge proof in this case could be achieved by first deploying second-price auction code on the blockchain in the form of a smart contract. The amount bid by each bidder is hashed and kept private in order to prevent fraud and ensure that the system does not slide back into a first-price auction. Public keys could be used to hash the bid prices and then submit those to the seller (the party executing the smart contract), with the seller then executing the smart contract based on that. This allows for calculating the winner and 2nd price. Finally, zero-knowledge proof of the seller actually having executed the contract correctly is stored in the ledger. While the actual bid amounts are not disclosed, this testifies that the correct prices were used. If there were any fraud in the results, miners could check it. The encrypted bid amounts and zero-knowledge proof can be used to verify the validity of the auction results; in this way, zero-knowledge proof enables polling the arguments to a smart contract to obtain a verifiable outcome.
 
-評価方法は、量子計算機への耐性を考慮し、LWE 暗号方式をベースに方式設計して、zk-SNARK の標準ライブラリ libsnark の一部機能を利用し実装している。
-実行結果は、ユーザー処理時間（ゼロ知識証明生成）では回路サイズに比例して処理時間が大きくなり、Hash 関数を使う評価には２１０秒、３００ GB のメモリが必要になる計算だが、実用的なユースケースとしては３００ GB は少し大き過ぎるのが課題である。
-Miner 処理時間（ゼロ知識証明検証）では処理時間は常に一定で、大体１ミリ秒ぐらいで固定なので、実用的である。
+#### Performance evaluation
 
-#### 研究のまとめ
+The evaluation method is designed based on LWE cryptography, out of consideration for resilience to quantum computing attacks, and implemented using some of the functions of libsnark, a standard library of zK-SNARK.
 
-・量子計算機耐性を有する zk-SNARK 方式を提案、実装評価
+User processing time (generating the zero-knowledge proof) grows relative to the circuit size, with evaluations of the hash function requiring 210 seconds and 300GB of memory to achieve the intended time outcome. However, the problem presented by this is that 300GB is quite large in terms of practical use cases.
 
-・Trusted setup の必要ない方式も提案、実装評価
+The time it takes for a miner to verify zero-knowledge proof is constant and is generally fixed at about 1 millisecond, so it is nevertheless viable in practice.
 
-・Universal circuit にも対応
+#### Research summary
 
-・Hyperledger Fabric 向けの実装アーキテクチャを設計
+・Proposal and implementation evaluation of zK-SNARK method resistant to quantum computing attacks
 
-・ゼロ知識証明初心者向けに、いくつかのガジェット作成
+・Proposal and implementation evaluation of methods that do not require a trusted setup
 
-#### 今後の課題
+・Supporting universal circuits
 
-１、ゼロ知識証明生成の処理軽量化
-量子計算機耐性を持たせると非常に処理が重たくなってしまう事があるので軽量化することが課題である。
+・Design implementation architecture for Hyperledger Fabric
 
-２、初心者向け＆開発効率向上に向けたガジェットの拡充
-ゼロ知識証明を扱うのは敷居が高いと思う人が多い。そういった方向けツールを作っていくことが課題である。
+・Creating various gadgets catering to beginners in zero-knowledge proof
 
-#### 質疑応答
+#### Future challenges
 
-**Q、**セカンドオークションの実装で、スマートコントラクトを実行する Node にはデータが漏れてしまうのではないか？
+1. Streamlining the time it takes to generate zero-knowledge proof
 
-**A、**スマートコントラクトを実行する人だけには取得データを全部伝えないといけない。そこも課題の一つである。
+Processing takes considerably longer when incorporating resilience to quantum computing attacks, so one issue is finding ways of streamlining this.
 
-**Q、**Miner が検証するインセンティブはあるか？
+2. Offering more gadgets tailored to beginners, and to optimize development time
 
-**A、**ブロックを確定することによってビットコインなどをゲットできるので、基本的には通常通りのインセンティブである。
+For many people, using zero-knowledge proof can be technically challenging. Therefore, one present issue is developing tools for a lay audience.
 
-**Q、**ゼロ知識証明のどんな汎用性があるか、典型的に何に使えそうか？
+#### Q&A
 
-**A、**幾つかなユースケースはあり、典型的なのは送金である。例えば現在ブロックチェーンの取引は全てオープンなので誰がビットコインを売ったかなども把握出来てしまい市場に影響も出るので、ゼロ知識証明が使えれば価格安定に繋がると考えられる。
-また個人情報を隠したまま署名が出来るなど。ゼロ知識証明が盛り上がっている要因としては、応用範囲が広いという事が大きい。ゼロ知識証明の重要なポイント「プライバシーを担保しながら透明性との良い按配を付けれる技術」は使い勝手が良く色々なユースケースがある。
+**Q.** Is there the possibility of data being leaked to a node when executing a smart contract in a second-price auction?
 
-### 2.3 ディスカッション
+**A.** All of the polled data must be sent solely to the person executing the smart contract. This, too, is one of the issues with this implementation.
 
-#### ゼロ知識証明の限界について
+**Q.** Are there any incentives to miners verifying the data?
 
-**坂本:**ゼロ知識証明でどう事にプロトコルを作るのか、が難しい。結局何がしたいのかの要件を定義するのが難しい。アイデンティティの面で考えるのが、どういう隠し方をしたら皆んなはプライバシー守れたと思うのか。
-「現在は免許証も見せてるし、そんなに細かい事する必要があるのか？」と言う人もいるので、皆に受け入れられる要件を決めるのも難しい。
+**A.** Since you can obtain Bitcoins and other tokens by validating blocks, it comes with the usual incentives.
 
-**石井:**技術的に毎回、手工を考えないといけない事もあるが、毎回データをそもそもどれくらい取得するのかが、課題としてある。という事である。
+**Q.** What versatility does zero-knowledge proof offer? What would be the most typical example?
 
-**長沼:**坂本さんがおっしゃる通りだと思う。理論的な限界というよりも、実際に使う段階での必要性。トランザクションのデータ量も増え、それに伴い金額も増える。オーバーヘッドになるので、そこまでしてプライバシーを守るのかという意見はある。
+**A.** There are a variety of use cases; the most typical is money transfer. For example, since all blockchain transactions are currently open, you can ascertain who sold a particular Bitcoin, which affects the market. Using zero-knowledge proof is believed to lead to greater price stability.
 
-**石井:**「個人情報の非開示ではなく、企業法人情報の非開示では応用方法が広いのではないか」と質問がきている。個人の場合は自分の意思で選択が出来るかと思う。企業の場合は開示するもの、しないものがあるが、それでも要件は難しいのかもしれない。
+In addition, you can sign transactions while keeping personal details anonymous. One reason we are seeing this interest in zero-knowledge proof is how extensive its possible applications are. One key point to zero-knowledge proof is that it allows for handling data in a transparent manner while still ensuring privacy. This makes it easy to use and suitable to a wide range of use cases.
 
-**伊藤:**例えばコンテンツ業界の場合、IP を貸すかを判断する時に相手側の企業の取引実績などが信用に繋がり判断材料になる。過去の送金実績や守秘義務などで内容は明かせない部分にゼロ知識認証が使えそうである。
+### 2.3 Discussion
 
-**石井:**その時には、証明されていると感じないといけない部分が難しそうだ。
+#### The limits of zero-knowledge proof
 
-#### 日立 ⇆ 富士通間での質疑応答
+**Sakamoto :** The challenge is how to create a protocol around zero-knowledge proof, to say little of defining what the requirements are for what it is you intend to do. One key question associated with managing identity data is how to properly conceal it in such a way as to protect privacy.
 
-**長沼:**実はディセントライズ・アイデンティティが大好きで、「日立でも、しよう！」と言っているがイマイチ盛り上がっていない。一方、富士通では IDYX をされて、製品化もされている。ディセントライズじゃなく、Google ID や Facebook ID、Apple ID を使うセントライズで良いのではと思う人もいるが、言われたりするか？その場合どの様に返事するのか？
+Some people may be of the opinion that insofar as you are disclosing your driver's license, you have already consented to sharing personal information, so the system need not be so restrictive. However, this is a matter of opinion, and requirements differ from person to person.
 
-**坂本:**アイデンティティで言えば、色々な会社が入り繋がってきて、基本的なコンソーシアムで組む場合はブロックチェーンを使ってするのが良いと提案、国際化されて色んな所が使う場合は一つの ID じゃない方が良いとはなる。ただこの件はいつも苦しむ話である。富士通はプラットフォームなどの基盤技術も提供しているので、富士通がプラットフォームを提供したら良いのでは。
+**Ishii :** On a technical front, we have to consider with each use case how to handle the data. The question becomes how to obtain that data on a case to case basis, which is a challenge. That is where we stand today.
 
-**長沼:**でもちゃんと製品化までいっているのが羨ましいなと思っている。
+**Naganuma :** I think it's exactly as Mr. Sakamoto says. It's not so much about a theoretical limit, but about the need in actual usage contexts. Transaction data volume is rising, and in turn so are the amounts being traded. It does introduce overhead, so some people ask if it's really worth it to go to that extent to build in privacy.
 
-**坂本:**そこは研究所ではなく別の部署が売り込みにいき、実証実験が進んでいるからだと思う。
+**Ishii :** We've received a question asking whether a broader application would be, rather than non-disclosure methods for personal information, non-disclosure for corporate data. I think for the individual, the person would have the option to elect how they want to proceed. In the corporate case, there are different kinds of data -- some you need to disclose, and some you don't. Nevertheless, the requirements might be difficult.
 
-**石井:**ゼロ知識証明で、どうしてもオーバーヘッドの部分で演算など掛かると思うが、パフォーマンス（処理速度など）を向上する研究などは進んでいるか？
+**Ito :** Take the content industries. When deciding whether to license IP, one factor influencing the decision-making process that can lead to increased trust in the other party is what kind of transactions they have done in the past. That may include past wire transfers or items subject to confidentiality obligations, so zero-knowledge proof could be used in those cases to compensate for those absolutely confidential elements.
 
-**長沼:**SNARK はネックなので、日進月歩で進んでいる所だ。
+**Ishii :** The end-user must be able to trust that the results returned actually demonstrate the credibility of the other party. That does represent a challenge.
 
-**石井:**アルゴリズムで高速化するのか？
+#### Q&A session between Hitachi and Fujitsu
 
-**長沼:**色々ある。並列化したり、アルゴリズム自体も変えてしまったりなど。
+**Naganuma :** Personally, I love the idea of decentralized identity, and I've been trying to get people at Hitachi on board with the concept, but haven't gotten much traction yet. By contrast, Fujitsu is using IDYX to create a downstream package. Some people may feel that centralized solutions like Google ID, Facebook ID, and Apple ID are good enough. Do you get that reaction? How do you tend to reply?
 
-**石井:**画期的に早くするというのは難しいと思うが、ゼロ知識証明を使わない処理と遜色がない位のスピードになれば汎用的になっていくと思う。
+**Sakamoto :** Well, in terms of the identity space, we have a lot of corporate players in the mix. When working on a consortium basis, we would tend to propose using blockchain. However, if internationalizing it, with different parties using such a system, we would tend to advise that it's best not to use a single, unified ID. But this tends to be quite a tricky topic to discuss in the first place. Fujitsu is providing basic technology solutions like platforms, so we feel our role there is catering to those platform needs first and foremost.
 
-**長沼:** ゼロ知識証明の限界の一つになるが、そうはならないと言うのはあるかと。中々普通の処理にはならない。
+**Naganuma :** I'm quite envious to see how you've managed to take it all the way to a finished product.
 
-**石井:**では、計算やマイニングなどの課題、実際にどこで動かすか、などを並行して進めている形か。
+**Sakamoto :** Well, we owe that not to the research division as such, but another department making the pitch for us and getting it traction towards a trial.
 
-**坂本:**スケーラビリティも我々取り組んでいるが、基本的にはブロックチェーンでしてしまうと遅いから、どこまでブロックチェーンのセカンドレイヤーでするかという話はある。ゼロ知識証明は、高速なアルゴリズムを生み出すのは難しいので手はつけられていない。世の中としたら、速いプロトコルは生み出されているのでそれを使っていく。それでも結局はゼロ知識証明をしないといけないので、しない事に比べると速くはならない。ある程度オーバーヘッドは出てしまう。
+**Ishii :** There tend to be some overhead issues associated with computation of zero-knowledge proof. Are you doing any research on how to improve this, such as in terms of processing speed?
 
-#### イベント参加者からの質問
+**Naganuma :** SNARK is a bottleneck, so we are working to make incremental progress there.
 
-**Q、**人材業界でのブロックチェーンの応用は研究されているが、経歴自体の真偽が証明できないと中々普及は難しいと思う。ゼロ知識証明をリファレンスチェックなどに応用するアイデアはあるか？
+**Ishii :** Can the algorithm be made faster?
 
-**A、**
+**Naganuma :** There are various approaches. Those include parallelization, or changing the algorithm itself.
 
-**長沼 : **まさに富士通の IDYX が使えるのでは。これから大学自体も無くなってしまう場合でも、卒業証書の証明を管理でき、自分で証明ができる。
+**Ishii :** Achieving breakthrough speeds will be unlikely, but if we can achieve processing speed on par with implementations not using zero-knowledge proof, then it should become mainstream.
 
-**坂本 : **皆んなが賛同してそういうシステム上で、卒業証書や職歴証明書などを提出してくれるとリファレンスチェックに使える。そうなると、証書など自分で持っていて提出が出来たら良いという話なので、ゼロ知識証明が必要とは限らない。世の中では卒業証明書も私的に発行するサービスも既にある。
+**Naganuma :** Processing speed does represent one possible limitation of zero-knowledge proof, but that may not definitely be the case all the time. Nevertheless, given the nature of the implementation, it won't be operating like a typical process.
 
-**Q、**ゼロ知識証明を研究している立場として、ここ数年で大きな環境変化は起きたか。もしくは起きそうか？
+**Ishii :** So in terms of issues around calculations and mining, are you also exploring how best to allocate these processes?
 
-**A、**
+**Sakamoto :** We are working on scalability as well, but basically, things slow when you use a blockchain, so there's been some discussion about to what extent to perform this on a second layer blockchain. It's exceedingly difficult to achieve fast algorithms with zero-knowledge proof, so it's not a domain we are working on. There are faster protocols coming out these days, so we are amenable to using them. Nevertheless, the goal is zero-knowledge proof, so it's not going to be as fast as implementations without that. So you do get some overhead, to some extent.
 
-**長沼:**ゼロ知識証明は 1980 年代からあるが、ブロックチェーンに使われる様になり一気に研究が進歩した。Gcash などを作っている暗号研究者がいきなり大金をゲットして、私はとても驚いた。これまでは暗号研究者のおもちゃの様な、学会の為に論文を書く分野だったが、急にお金に直結する技術になった。
+#### Remaining questions
 
-**坂本:**他に、ゼロ知識証明とは少し違うが、日本の国も興味を持っている気がする。Trusted Web 推進協議会を国が立ち上げ、EID みたいなものを基盤に使っていく流れになっている。
-そうなると国がブロックチェーンを使って何かを作っていくのかとなれば、大きな変化が起こるのかなと感じている。
+**Q.** There is research in the HR space into use of blockchain--however, it's struggling to gain wider acceptance, since one of the key issues is the inability to demonstrably prove whether someone's career history is real. Are you floating any ideas around using zero-knowledge proof to aid in reference checks or the like?
 
-### 2.4 まとめ
 
-**伊藤 :** 感想になるが、本日の説明を聞いてゼロ知識証明は何の為に必要かと考えるとブロックチェーンだなと。また長沼さんが言われたブロックチェーンでゼロ知識証明が注目された事に納得したのが、ブロックチェーンの表現で石井さんが言う「物理法則をデジタル」に、持っている物は持っていて所有している事をデジタル上で出来ると言う意味だが、その通りだと思う。でも現実と少し違い不便な所は、現実では家にある所有物は何があるか他の人は分からないが、デジタルで持っている物は全てが曝されている。その事に違和感があったが、その足りたない所にゼロ知識証明によって、より現実に近づきデジタル上の所有物が開示されないので、ブロックチェーンには必須のものかなと思う。
 
-**石井:** まさに透明性とプライバシーの両立と言う所だと思う。国家など垣根が無くなった状態で資産を動かし、資産は今までは通貨だったが、NFT など他のデジタルデータが価値を持ち動いている。そうなればなる程、完全に透明性にする訳にもいかないし秘匿化してしまうのも問題。長沼さんが仰った、80 年代に生まれて理論のみがあったゼロ知識証明がブロックチェーンにより一気に脚光を浴びた事で言うと、今後ブロックチェーンの発展によりこれまで注目されてなかったアルゴリズムや数式などが突然適応されることが相当ありそうだ。AI でも似たような事がある。
+**Naganuma : ** **A.** I think Fujitsu's IDYX could definitely be used there. If brick and mortar universities themselves go out of favor, then it would fall on the individual to manage their own diplomas and other documents.
+
+**Sakamoto : ** If everyone agrees to switch to submitting diplomas and resumes on such a system, it could be used for reference checks. In that case, it's less a hard and fast requirement than it is that it would be desirable for the individual user to retain their certificates and be able to submit them, so you may not necessarily need zero-knowledge proof there. There are already services that allow people to issue their own diplomas.
+
+**Q.** As someone researching zero-knowledge proof, have you witnessed any major changes over the past few years? Or do you see anything coming down the pipeline?
+
+
+**A.** **Naganuma:** The concept of zero-knowledge proof has been around since the 1980s, but research really ramped up after it started being used in blockchain. Cryptographic researchers involved in Gcash and other solutions suddenly made a fortune. It was quite a surprise. It had been something seen as more of a toy or a bit of trivia you could write a paper about for a conference, not something that could be turned into a profit so suddenly.
+
+**Sakamoto :** It seems that Japan has also taken an interest in similar implementations, albeit a bit different from zero-knowledge proof. Japan launched the Trusted Web Promotion Council and is trying to create a platform that would be analogous to EID.
+If this leads to Japan using blockchain to create some new technology, my sense is that it will usher in a lot of change.
+
+### 2.4 Conclusions
+
+**Ito :** To summarize today's talk, my impression was that, in a word, the point of zero-knowledge proof is its use in blockchain. Mr. Naganuma's comments on zero-knowledge proof gaining wider recognition through blockchain hit home for me in the sense of, to use Mr. Ishii's words on the subject, blockchain being a means of "describing physical laws in the context of digital." In other words, using digital technology to attest to your ownership of goods. One sticking point, though, is that while in the physical world, people may not know what you have in your home, when it's digital, it's all out there in the open. I had some misgivings about that, but the idea of using zero-knowledge proof to compensate for this flaw and be able to disclose goods online in a way more proximate to how we do in real life made sense, and I feel it's something essential for blockchain going forward.
+
+**Ishii :** It really comes down to that idea of balancing transparency and privacy. If we reach an age where the concept of sovereign borders erodes, and we move from traditional assets like currency, we may see a need to manage and transfer other types of digital data assets like NFTs. The more that becomes the norm, the more we can't simply have total transparency with everything, and the question becomes how to ensure privacy. As Mr. Naganuma said, zero-knowledge proof as a concept came about in the 1980s, but it only came into practical use after coming into the spotlight through blockchain technology. That means that there's a good chance that other algorithms or formulae that were previously on backburner may suddenly emerge thanks to developments in blockchain. It sort of resembles developments in the AI space.
