@@ -41,7 +41,8 @@ Blockchain research and development is being conducted by various companies. Amo
 ### 2.1 A proof of transaction technology powered by blockchain integration towards greater privacy
 
 <p style="margin-top: -1em;font-weight: bold;font-size: 1.2em;margin-left: 1em;">
-  Takuya Sakamoto | Senior Researcher, Data & Security Research Division, Fujitsu Laboratories Ltd.
+  Takuya Sakamoto | Senior Researcher, Data & Security Research Division,
+  Fujitsu Laboratories Ltd.
 </p>
 
 #### Fujitsu's initiatives around blockchain technology
@@ -57,6 +58,7 @@ Fujitsu is working with blockchain integration technologies (connection chains),
 Privacy today is also being shored up in terms of legislation, and increased privacy has come to be an issue of critical importance when using data pertaining to users. In addition, research into various privacy enhancement technologies is actively underway.
 
 Five of the most-talked about technologies at the World Economic Forum 2019
+
 - Differential privacy: a technology to apply noise to anonymize data using indicators that do not point to the presence of a specific individual within the data
 - Pooled analysis: a technology used in conjunction with AI for applications such as calculating and analyzing data while it is still present in diverse locations, eschewing the need to centrally accumulate it
 - Homomorphic cryptography: a technology used to perform calculations while data is encrypted
@@ -65,40 +67,39 @@ Five of the most-talked about technologies at the World Economic Forum 2019
 
 #### Decentralized identity and privacy-enhancing technologies
 
-Decentralized identities explained
+**Decentralized identities explained**
 
 There is growing demand by users for the ability to control their own identity online. Decentralized identity solutions seek to provide a way of controlling one's identity in this way. This is also referred to as self-sovereign identity. In the real world, we obtain a driver's license issued by the police department. This allows you to, for example, use that driver's license as a proof of identification to open a bank account without needing additional approval from the police department. In the cyber world, however, one's identity information exists in disparate locations, but we cannot currently make use of it. That is why today, there are methods being developed to allow a third party to confirm and digitize the content of this identity information and allow the user to autonomously control it without the agency of third parties. This would allow the user to combine the various identity information that pertains to them and use it to open accounts, apply for jobs, enter into apartment lease agreements, and other situations in which paper proof would normally be needed, but do it all online. Decentralized identity is also referred to as decentralized PKI. Recently, a whitepaper issued by parties close to the prime minister at the Trusted Web Promotion Council positioned this as a technology that could be used towards realization of trust. In Europe, it is being explored as a means of demonstrating that a person received COVID-19 vaccination. In this way, decentralized identity is being looked to as a technology that may form a part of the foundations of society and enable trust.
 
-Issue: maintaining privacy when disclosing identity verification documents
+**Issue: maintaining privacy when disclosing identity verification documents**
 
 How should we best go about enabling the use of identity information verified by third parties? One simple implementation might be sending a file containing the identity information to a third party and having the third party digitally sign it; the attestor then sends a file with a digital certificate to a relying party, and the relying party verifies its authenticity before disclosing it to a downstream recipient. Ideally, only the requisite information, and no more, would be disclosed. With typical identity documents, all items must be disclosed at once to verify them, meaning disclosure cannot be constrained to atomic parts of the document.
 
-Technical solution: secret disclosure certification using zero-knowledge proof
+**Technical solution: secret disclosure certification using zero-knowledge proof**
 
 Fujitsu is developing a protocol that allows for conveying information using zero-knowledge proof without exposing the underlying data. This allows for using part of the data to demonstrate its authenticity, all while not disclosing personally-identifying attributes. Traditionally, the issuer had to decide the scope of identity information to be used. With this updated solution, the attestor and relying party can flexibly accommodate different confidentiality disclosure levels. Fujitsu is also developing IDYX, an identity distribution technology, and has used it in some proof of concept trials. This serves as a platform to provide the functionality necessary for identity distribution, such as mechanisms to calculate issuer credit based on business relations. This allows service users to utilize the technology by disclosing select attributes pertaining to them. Ultimately, it enables disclosing identity information in a private fashion.
 
 #### Blockchain integration and privacy enhancement technologies
 
-Digital trust and blockchain integrations
+**Digital trust and blockchain integrations**
 
 Exchange services and applications used to trade cryptocurrencies such as Bitcoin and altcoins are typically not transparent. In other words, users do not know what is going on behind the scenes, so there may be malfeasance. Moreover, linking multiple blockchains in order to implement transactions across these chains and move and swap money between them can cause failures.
 
 Fujitsu is developing connection chains, which allow for extending the exchange of value and use of smart contracts between blockchains in a transparent manner. This system would replace manual processes with a blockchain solution while lending transparency to the system as a whole.
 
-Use in the token economy
+**Use in the token economy**
 
 This allows for the purchase and sale of rights, which could be used to, for example, use a local currency to purchase the rights to temporary use of a space for teleworking purposes, using points to temporarily borrow a bicycle, or other uses. A record of what was purchased and the personal data of the traders is stored on the distributed ledger.
 
-Issue: Use of token economy records while maintaining privacy
- 
+**Issue: Use of token economy records while maintaining privacy**
+
 There are two major issues here: the first is that transactions are stored in a distributed fashion on connection blockchains, so when disclosing or verifying transaction records, selectively disclosing, out of privacy concerns, only parts of the information, is dependent on the types of blockchains connected in the chain.
 
 The second issue is that this private information must be structured such that consortium companies cannot access it.
- 
-Technical solution: utilizing secret disclosure certification solutions for records
+
+**Technical solution: utilizing secret disclosure certification solutions for records**
 
 In this system, administrators configure which types of items can be utilized, allowing for a range of different transaction types. In lieu of transaction records, a ledger for certification is saved, with this certification ledger being used in place of a distributed ledger. This would allow for disclosing the record of the transaction. In this way, we utilize a zero-knowledge proof method of polling and disclosing discrete information.
-
 
 #### Q&A
 
@@ -123,12 +124,12 @@ In some cases, transacting parties' IDs are stored on chains by their e-mail, wh
 ### 2.2 Research on zero-knowledge proof for blockchain use cases
 
 <p style="margin-top: -1em;font-weight: bold;font-size: 1.2em;margin-left: 1em;">
-  Ken Naganuma |  Social Systems Research Division, Hitachi, Ltd.
+  Ken Naganuma | Social Systems Research Division, Hitachi, Ltd.
 </p>
 
 Graduate of the University of Tokyo. Joined the Hitachi Research and Development Group prior to returning to the University of Tokyo for a master's degree in complexity science and engineering. Upon obtaining that degree, returned once again to Hitachi. Here we feature some of the research Mr. Naganuma performed during his three years at graduate school.
 
-How can we implement zero-knowledge proof on the blockchain?
+**How can we implement zero-knowledge proof on the blockchain?**
 
 This is used as a means of imposing rules that ensure both transparency and privacy. Blockchain ledger information can be viewed by anyone, which means privacy is not ensured. This means there is total transparency, but zero privacy. However, the private information could be hashed and encrypted. Once encrypted, miners would be unable to confirm the validity of the data. This is where zero-knowledge proof comes in, which allows for demonstrating the authenticity of the transactions.
 
@@ -136,7 +137,7 @@ Mr. Naganuma is conducting doctorate research into zero-knowledge proof (zk-SNAR
 
 #### Application: secure smart contracts
 
-Specific use cases：second-price auctions
+**Specific use cases：second-price auctions**
 
 In typical online auctions, such as those on Yahoo! Auctions, users bid the maximum price they are willing to spend, with the top bidder winning. In second-price auctions, the highest bidder pays the price bid by the second-highest bidder. This auction format works in favor of bidders. With distributed ledgers, however, an auction format would fail to be possible if everyone could see the contents of the ledger. This would instead lead to a public bid or open auction, impeding second-price auctions from coming to fruition. If you only allow the seller to see the bid status, it can lead to fraud, whereby the seller executes a smart contract against the second highest price as an argument. In this way, executing second-price auctions on the blockchain can be a challenge. Use of zero-knowledge proof in this case could be achieved by first deploying second-price auction code on the blockchain in the form of a smart contract. The amount bid by each bidder is hashed and kept private in order to prevent fraud and ensure that the system does not slide back into a first-price auction. Public keys could be used to hash the bid prices and then submit those to the seller (the party executing the smart contract), with the seller then executing the smart contract based on that. This allows for calculating the winner and 2nd price. Finally, zero-knowledge proof of the seller actually having executed the contract correctly is stored in the ledger. While the actual bid amounts are not disclosed, this testifies that the correct prices were used. If there were any fraud in the results, miners could check it. The encrypted bid amounts and zero-knowledge proof can be used to verify the validity of the auction results; in this way, zero-knowledge proof enables polling the arguments to a smart contract to obtain a verifiable outcome.
 
@@ -234,16 +235,17 @@ Some people may be of the opinion that insofar as you are disclosing your driver
 
 **Q.** There is research in the HR space into use of blockchain--however, it's struggling to gain wider acceptance, since one of the key issues is the inability to demonstrably prove whether someone's career history is real. Are you floating any ideas around using zero-knowledge proof to aid in reference checks or the like?
 
+**A.** 
 
-
-**Naganuma : ** **A.** I think Fujitsu's IDYX could definitely be used there. If brick and mortar universities themselves go out of favor, then it would fall on the individual to manage their own diplomas and other documents.
+**Naganuma : ** I think Fujitsu's IDYX could definitely be used there. If brick and mortar universities themselves go out of favor, then it would fall on the individual to manage their own diplomas and other documents.
 
 **Sakamoto : ** If everyone agrees to switch to submitting diplomas and resumes on such a system, it could be used for reference checks. In that case, it's less a hard and fast requirement than it is that it would be desirable for the individual user to retain their certificates and be able to submit them, so you may not necessarily need zero-knowledge proof there. There are already services that allow people to issue their own diplomas.
 
 **Q.** As someone researching zero-knowledge proof, have you witnessed any major changes over the past few years? Or do you see anything coming down the pipeline?
 
+**A.** 
 
-**A.** **Naganuma:** The concept of zero-knowledge proof has been around since the 1980s, but research really ramped up after it started being used in blockchain. Cryptographic researchers involved in Gcash and other solutions suddenly made a fortune. It was quite a surprise. It had been something seen as more of a toy or a bit of trivia you could write a paper about for a conference, not something that could be turned into a profit so suddenly.
+**Naganuma:** The concept of zero-knowledge proof has been around since the 1980s, but research really ramped up after it started being used in blockchain. Cryptographic researchers involved in Gcash and other solutions suddenly made a fortune. It was quite a surprise. It had been something seen as more of a toy or a bit of trivia you could write a paper about for a conference, not something that could be turned into a profit so suddenly.
 
 **Sakamoto :** It seems that Japan has also taken an interest in similar implementations, albeit a bit different from zero-knowledge proof. Japan launched the Trusted Web Promotion Council and is trying to create a platform that would be analogous to EID.
 If this leads to Japan using blockchain to create some new technology, my sense is that it will usher in a lot of change.
