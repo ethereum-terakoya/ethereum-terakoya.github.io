@@ -79,9 +79,9 @@ The event clip is disclosed as follows.
    Joined by the Ethereum Foundation's Top Researchers
 
 2. Main topics <br/>
-   2.1. The latest trend of zero-knowledge proofs in Ethereum ｜ Presenter: Barry Whitehat <br/>
-   2.1.1. How to build a private social network <br/>
-   2.1.2. Zero-knowledge proof <br/>
+   The latest trend of zero-knowledge proofs in Ethereum ｜ Presenter: Barry Whitehat <br/>
+   2.1. How to build a private social network <br/>
+   2.2. Zero-knowledge proof <br/>
 3. Q&A on zero-knowledge proof <br/>
 4. Conclusions
 
@@ -108,61 +108,61 @@ In this event, we invited the Ethereum Foundation's Mr. Barry Whitehat, who talk
   </a>
 </p>
 
-#### 1. How to build a private social network
+#### 2-1. How to build a private social network
 
-**1.1 Definition of privacy**
+**Definition of privacy**
 
 Privacy is the ability of an individual or group to seclude themselves or information about themselves, and thereby express themselves selectively. If information is disclosed without restrictions, information can be shared widely without limit, making it potential target for DoS attacks. This is where the idea of relative privacy becomes essential, where an individual is not completely secluded. Instead, an individual is considered to be a member of a group, and an action can be taken by any member of the group. With this concept, even if it is impossible to tell who takes the action, we can control the level of the information disclosed relatively by using canonical values.
 
-**1.2 Privacy applications**
+**Privacy applications**
 
 For example, take privacy on anonymous message boards. Anyone can use it anonymously, and the user's identity is not shared at all. However, disclosing any information on the internet message board means that the information is handled in a larger scope. This is very different from posting a flyer on a physical bulletin board in the local level. In addition, since a user can create infinite accounts and post infinite posts online, the user cannot link with past posts, preventing from building reputations. For this reason, privacy has not been experimented in the social media space in the true sense, but I think it will be interesting to experiment.
 
-**1.3 Transparent social media**
+**Transparent social media**
 
 Facebook and TikTok provide more transparency in terms of privacy compared to anonymous message boards. The media with greater transparency have reputation systems to verify identity and allow users to check individual's reputations and ratings, which is a big difference from anonymous media. Facebook and TikTok have re-implemented similar mechanisms. It would be better to share the same system instead of re-implementing, though it may be difficult to do that due to the competitiveness and power relations between those companies.
 
-**1.4 Neutral social media**
+**Neutral social media**
 
 To solve the issue among companies, we need neutral social media with a neutral reputation system. If social media themselves are neutral, there will be no need for them to worry about power relations among companies, making any company would easily enter the market. However, we need to achieve information transparency to materialize this system. There are many issues with disclosing user information in a broader scope, so it seems difficult to do so at this point. If we build a perfect system, we can apply it to any area, such as government-controlled individual IDs and private information.
 
-**1.5 Decentralized social media**
+**Decentralized social media**
 
 Decentralized social media allows users to act freely, such as to post, upvote, and downvote. The reputation system is essential to achieve this. The system should enable users to grasp the reputation of their own posts. The system will be more useful if individuals' reputations are made based on social connections. The issues to focus on are content suggestions, community moderation, and anti-collusion infrastructure.
 
 <div class="mt-4"></div>
 
-#### 2. Zero-knowledge proof
+#### 2-2 Zero-knowledge proof
 
-**2.1 What is zero-knowledge proof?**
+**What is zero-knowledge proof?**
 
 Suppose that there are two groups: Charlie and Dave; Alice and Bob. These two groups can prove themselves without revealing to which group they belong. This mechanism allows four of them to post privately and form forums. However, they are not able to gain or lose reputations on their posts.
 
-**2.2 Unirep theory**
+**Unirep theory**
 
 A useful theory to solve this issue is Unirep, which allows users to gain and lose reputation through a temporal address while keeping the user's identity confidential. If Alice posts on social media, Unirep will enable her to gain a reputation without disclosing which group she belongs to.
 
-**2.3 Expectations for Unirep**
+**Expectations for Unirep**
 
 One idea is that we could have the system to provide people with incentives by gaining good reputations, leading to the development of various products. For example, users could receive a devcon ticket once they gained a certain volume of good reputations.
 
-**2.4 Direct messages**
+**Direct messages**
 
 When sending direct messages, we would need to hide who is messaging who. However, encrypting and decrypting all messages would be difficult. Without doing so will lead to being very vulnerable to spam or DoS attacks. Since we cannot identify the attacker, there is no way to punish the attacker. Even if we use Unirep, where we can downvote, there is no real incentive to downvote the attacker.
 
-**2.5 RLN (rate-limiting nullifier)**
+**RLN (rate-limiting nullifier)**
 
 RLN is an effective method used for direct messages besides Unirep. In RLN, you first prove your group membership. Then, through computation, you use a secret share of your private key. If you reveal two secret shares, it is enough to calculate your private key. But if you reveal a single share, you reveal nothing. To punish people who break the rule, we create a smart contract that allows slashing the private key. One idea to use RLN is to make a simple group chat app. Another is to use this with eth2 for the peer-to-peer network. We can also build a proof of connection in the social network to search for a target pier in a group without revealing who you are searching for. Note that this does not work well for scaling and can only work well for small networks.
 
-**2.6 Community moderation**
+**Community moderation**
 
 As a way to do community moderation, people can express good or bad using multisig. To avoid having to do a lot of work, we need to make a prediction market to predict whether it is valid or invalid. To prevent bribery, we need some anti-collusion infrastructure, which will allow us to do more advanced mechanisms like quadratic upvoting and quadratic downvoting. The quadratic voting should be much more expressive than simple good or bad used in linear voting.
 
-**2.7 Maci (minimum anti-collusion infrastructure)**
+**Maci (minimum anti-collusion infrastructure)**
 
 The quadratic page merges the million-dollar home page with quadratic voting. We are trying to do several local rounds of quadratic funding in different communities. But we need to improve the user interface (UI) and user experience (UX). In addition, we need to consider how Maci will be handled. It would be interesting to add Maci to popular governance portals as popular voting systems.
 
-**2.8 What's next**
+**What's next**
 
 We can build a much richer reputation system with privacy in mind. We could have exciting results by implementing and experimenting a system that has high potentials.
 
