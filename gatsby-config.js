@@ -18,6 +18,19 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-gtag`,
+      options: {
+        trackingId: `UA-107137836-4`,
+        head: true,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: `UA-107137836-4`,
+      },
+    },
+    {
       resolve: `gatsby-theme-i18n-react-intl`,
       options: {
         defaultLocale: `./i18n/react-intl/ja.json`,
