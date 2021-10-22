@@ -17,6 +17,15 @@ const News = ({ data, pageContext }) => {
       ? [
           // jp
           {
+            date: "2021/10/29",
+            title: "公開イベント",
+            linkTitle:
+              "ブロックチェーンのビジネス利用に必要な性能評価観点 - イーサリアム性能評価ワークショップ",
+            link: "https://peatix.com/event/3042248/view",
+            description:
+              "ETHTerakoyaではユーザー企業・開発企業に在籍する有識者でディスカッションを行い、ブロックチェーンの性能比較に必要な「共通の評価指標」を策定。実際にテストの実施までを行っています。今回の公開ワークショップでは、過去7回に渡るグループディスカッションの内容をもとにした成果発表を行います。",
+          },
+          {
             date: "2021/6/10",
             title: "公開イベント",
             linkTitle:
@@ -73,6 +82,14 @@ const News = ({ data, pageContext }) => {
         ]
       : [
           // en
+          {
+            date: "2021/10/29",
+            title: "Public Event",
+            linkTitle:
+              "Performance evaluation viewpoint required for business use of blockchain - Ethereum performance evaluation workshop",
+            link: "https://peatix.com/event/3042248/view",
+            description: `At ETHTerakoya, we hold discussions with experts in companies and developers to establish a "common evaluation standard" required to compare blockchain functionality. We also conduct actual tests. In the public workshop this time, we will announce our results based on the 7 group discussions we have held in the past.`,
+          },
           {
             date: "2021/6/10",
             title: "Public Event",
