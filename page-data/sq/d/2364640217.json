@@ -1,18 +1,1 @@
-{
-  "data": {
-    "site": {
-      "siteMetadata": {
-        "title": "Ethereum Terakoya",
-        "author": "ETHTerakoya",
-        "siteUrl": "https://ethereum-terakoya.org"
-      }
-    },
-    "ogImageDefault": {
-      "childImageSharp": {
-        "fixed": {
-          "src": "/static/0fe9703d6fc54a478a555ed32c3e9e9b/f3583/header.png"
-        }
-      }
-    }
-  }
-}
+{"data":{"site":{"siteMetadata":{"title":"Ethereum Terakoya","author":"ETHTerakoya","siteUrl":"https://ethereum-terakoya.org"}},"ogImageDefault":{"childImageSharp":{"fixed":{"src":"/static/0fe9703d6fc54a478a555ed32c3e9e9b/f3583/header.png"}}}}}
