@@ -1,89 +1,263 @@
 ---
-title: First kickoff meeting | No.1
-date: 2021-06-01
-slug: asd
-group: asd
+title: パフォーマンス測定に関する指標について【第3回】
+date: 2021-07-07
+slug: scaling3
+group: scaling
 ---
 
-## Table of Contents
+## 目次
 
 - 1.Introduction
-- 2.Details
 
-## List of participants
+- 2.調査結果紹介
 
-- Hitachi Ltd.
+  - 2.1 ノード数・典型的なプロセスについて
 
-  - Hironori Emaru
-  - Nao Nishijima Nao
-  - Shiori Harazono
-  - Masaki Hirayama
+  - 2.2 合意形成モデル・トランザクションメソッドについて
 
-- Hitachi Solutions, Ltd.
+  - 2.3 レイテンシー・スループットについて
 
-  - Kenei Tanabe
+  - 2.4 ハードウェア・負荷情報について
 
-- NTT DATA Corporation
+  - 2.5 測定ツールについて
 
-  - Shinichi Yamashita
-  - Jin Watanabe
+- 3.まとめ
 
-- NTT TechnoCross Corporation
+## 参加者一覧
 
-  - Kazuhiro Kanematsu
+- アクセンチュア株式会社
 
-- Accenture Japan Ltd
+  - 旗手 友和
 
-  - Tomokazu Hatate
+- NTT テクノクロス株式会社
 
-- Nomura Asset Management
+  - 兼松 和広
 
-  - Teruyoshi Imamura
+- 野村アセットマネジメント株式会社
 
-- SingulaNet Ltd.
+  - 今村 光良
 
-  - Koji Machi
+- 株式会社コンプス情報技術研究社
 
-- Comps Co., Ltd.
+  - 西村 祥一
 
-  - Yoshikazu Nishimura
+- 株式会社日立製作所
 
-* Couger Inc. (Organizer)
+  - 西島 直
 
-  - Atsushi Ishii
-  - Kazuaki Ishiguro
-  - Shumpei Sasaki
-  - Shigeyuki Tanaka
-  - Yukari Tatsumi
-  - Keita Shimizu
+- 株式会社日立ソリューションズ
 
-## 1. Introduction
+  - 田辺 謙英
 
-![2021年6月-8月ブロックチェーンにおけるスケーリング指標策定ワークショップ計画書](./images/section1-en.png)
+- クーガー株式会社（主催）
+
+  - 石井 敦
+
+  - 石黒 一明
+
+  - 佐々木 俊平
+
+  - 田中 滋之
+
+  - 辰巳 ゆかり
+
+  - 清水 啓太
+
+## 1. 議題
+
+第 3 回目のワークショップは、前回までに挙げられたパフォーマンス測定に際して用いるべき基準について、各参加企業が発表を行った
+
+今回はアクセンチュア株式会社と NTT テクノクロス株式会社、野村アセットマネジメント株式会社、株式会社コンプス情報技術研究所、株式会社日立製作所の 5 社が発表する。
+
+## 2. 調査結果紹介
+
+### 2.1 ノード数・測定のプロセスについて
+
+**アクセンチュア株式会社｜旗手 友和 **
+
+![第1回ブロックチェーンスケーリングに関するワークショップ](./images/img1.png)
 
 <p style="text-align: right;font-weight:bold;">
-  <a
-    href="/pdf/scaling/E-ETHTerakoya_Overview-scaling_v006_en.pdf"
-    target="_blank"
-  >
-    Download
+  ファイルダウンロードはこちら
+  <a href="/pdf/scaling3/scalling-workshop_3_Accenture.pdf" target="_blank">
+    （リンクを貼る）
   </a>
 </p>
 
-ETHTerakoya specializes in blockchain industry- and technology-related areas and delves into issues concerning the use of blockchain. We also make proposals to the Ethereum Foundation and establish standards for blockchain.
+Performance analysis of hyperledger fabric 2.0 blockchain platform の情報をもとに、ノード数・ネットワークサイズに関する考察を行った。PoW、PoA に分けた結果も参照することができ、それぞれに傾向が見られた。
 
-Our working group focuses on and has discussions about solutions to the overall issue surrounding blockchain, which has no global benchmarks to measure the performance.
+また、性能測定を行う際に適したプロセスに関しても考察を行っている。
 
-## 2. Details
+### 2.2 合意形成モデル・トランザクションメソッドについて
 
-![第1回ブロックチェーンスケーリングに関するワークショップ](./images/section2-en.png)
+**NTT テクノクロス株式会社｜兼松 和広**
+
+![第1回ブロックチェーンスケーリングに関するワークショップ](./images/img2.png)
 
 <p style="text-align: right;font-weight:bold;">
-  <a href="/pdf/scaling/E-2021_06_ethterakoya_kickoff_en.pdf" target="_blank">
-    Download
+  ファイルダウンロードはこちら
+  <a href="/pdf/scaling3/scalling-workshop_3_NTTTX.pdf" target="_blank">
+    （リンクを貼る）
   </a>
 </p>
 
-In this kick-off meeting, we will discuss the following topics: 1) Identify performance evaluation criteria, 2) Set required values for each item, and 3) Select measurement tools and perform the measurement.
+合意形成モデルとトランザクション処理がおおまかなテーマである。
 
-Our discussions start with sharing each company's cases. We will look at each topic closely, considering software, networks, and applications separately.
+Proof of Work はビットコインで採用されている一番有名と言える合意形成モデル。他には Proof of Authority, State Machine Replication、Endorsement Ordering と呼ばれる合意形成モデルがある。トランザクション処理に関してはトランザクションの実行を含むか、処理の内部で参照、更新がどのくらい行われているかがポイントである。
+
+**質問**
+
+**Q.**基盤によってアプローチが違うのか？
+
+**A.**パブリックを使う場合はブロックナンバーが証明になるのではないかと予想される。
+
+### 2.3 レイテンシー・スループットについて
+
+**野村アセットマネジメント株式会社｜今村 光良**
+
+![第1回ブロックチェーンスケーリングに関するワークショップ](./images/img3.png)
+
+<p style="text-align: right;font-weight:bold;">
+  ファイルダウンロードはこちら
+  <a href="/pdf/scaling3/scalling-workshop_3_Nomura.pdf" target="_blank">
+    （リンクを貼る）
+  </a>
+</p>
+
+- Hyperlerdger Caliper を用いた性能評価事例を紹介する。
+
+当事例では、空のトランザクションと書き込みありのトランザクションを利用することで、システムにおけるオーバーヘッドを考慮して計測を実施している。また、コントラクトの記載内容別、様々な環境での横断的な測定を行っている点が特徴であった。
+
+### 2.4 ハードウェア・負荷情報について
+
+**株式会社コンプス情報技術研究社｜西村 祥一**
+
+![第1回ブロックチェーンスケーリングに関するワークショップ](./images/img4.png)
+
+<p style="text-align: right;font-weight:bold;">
+  ファイルダウンロードはこちら
+  <a href="/pdf/scaling3/scalling-workshop_3_Comps.pdf" target="_blank">
+    （リンクを貼る）
+  </a>
+</p>
+
+パフォーマンス測定を行う上で提示すべき情報について、過去事例をもとに考察した。
+
+項目や想定する内容は以下のとおり。
+
+- Hardware Spec
+
+  - Cloud の場合：
+
+    - 使用するクラウドサービス
+
+    - インスタンスタイプ
+
+    - RAM 容量
+
+  - 実マシンの場合：
+
+    - CPU 種別
+
+    - GPU 種別 ※ PoW に GPU 使う場合
+
+    - RAM 容量
+
+  上記のスペックを下記の対象に対して記録する想定。
+
+  - ブロックチェーン各ノード
+
+  - 負荷ツールを稼働させるサーバ
+
+- Load
+
+  - 負荷クライアント数
+
+  - 総リクエスト数
+
+  - 負荷継続時間
+
+  - 負荷ツール単体での限界リクエスト数
+
+- Workload (CPU 負荷)
+
+  - vmstat 3 1200
+
+* Workload (Disk 負荷)
+
+  - iostat –x 3
+
+**質問・議論**
+
+**Q.** 例えばノード数が 16 あるところに対して、分散実行などを行う自動化の仕組みが必要か。
+
+**A.** メトリクス収集サーバーの Prometheus と Node Exporter を使うのも一つのアイデアと考える。
+
+### 2.5 測定ツールについて
+
+**株式会社日立製作所｜西島 直**
+
+![第1回ブロックチェーンスケーリングに関するワークショップ](./images/img5.png)
+
+<p style="text-align: right;font-weight:bold;">
+  ファイルダウンロードはこちら
+  <a href="/pdf/scaling3/scalling-workshop_3_Hitachi.pdf" target="_blank">
+    （リンクを貼る）
+  </a>
+</p>
+
+- Benchmark Tools は複数存在する
+
+  - Hyperledger Caliper（一番開発が継続されている）
+
+  - ethereum/test-tools
+
+  - Chainhammer
+
+  - BCTMark
+
+  - Blockbench
+
+- 異なるブロックチェーン間のパフォーマンス測定・比較を正確に一貫して評価するために用語や指標の定義、環境詳細を記載する必要がある。
+
+  - 主要なメトリクスの定義
+
+    - Read Latency = レスポンスを受け取った時間– 送信時間
+
+    - Read Throughput = 総読み取り操作数/総時間
+
+    - Transaction Latency = (確認時間@閾値) - 送信時間
+
+    - Transaction Throughput = コミットされたトランザクションの総数/コミットされたノードの合計時間＠コミットしたノード数
+
+  - テスト環境として考慮すべきこと
+
+    - コンセンサスプロトコル
+
+    - ノードの地理的分布
+
+    - ハードウェア環境
+
+    - ネットワークモデル
+
+    - テストトランザクションに関与するノードの数
+
+    - 依存するソフトウェアコンポーネント
+
+    - テストツール
+
+    - 利用するデータストアの種類
+
+    - ワークロード
+
+**質問**
+
+**Q.** Caliper ではスマートコントラクトにトランザクションを発行するものしか計測できないが、ネイティブトークンの送信はどうやって測るべきか。
+
+**A.** 現時点では対応していない可能性もあると思われる。
+
+## 3. まとめ
+
+今回の各社の発表により、各項目の定義、および明示すべき値が明確になってきた。
+
+今後はホワイトペーパーの作成、およびテストの実施手順・条件に関するディスカッションに進みたい。。
