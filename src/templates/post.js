@@ -13,7 +13,10 @@ import TOC from "../components/toc";
 const Post = ({ data }) => {
   return (
     <Layout>
-      <SEO title={data.mdx.frontmatter.title} description={data.mdx.excerpt} />
+      <SEO
+        title={data.mdx.frontmatter ? data.mdx.frontmatter.title : ""}
+        description={data.mdx.excerpt}
+      />
       <Container>
         <Row>
           <Col>
