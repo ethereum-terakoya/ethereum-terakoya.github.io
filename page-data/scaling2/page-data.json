@@ -1,1 +1,21 @@
-{"componentChunkName":"component---src-templates-group-js","path":"/scaling2","result":{"data":{"allMdx":{"edges":[]}},"pageContext":{"group":"scaling2","locale":"ja","hrefLang":"ja-JA","originalPath":"/scaling2","dateFormat":"YYYY年MM月DD日"}},"staticQueryHashes":["1239077767","1239077767","2364640217","3280999885","3280999885"]}
+{
+  "componentChunkName": "component---src-templates-group-js",
+  "path": "/scaling2",
+  "result": {
+    "data": { "allMdx": { "edges": [] } },
+    "pageContext": {
+      "group": "scaling2",
+      "locale": "ja",
+      "hrefLang": "ja-JA",
+      "originalPath": "/scaling2",
+      "dateFormat": "YYYY年MM月DD日"
+    }
+  },
+  "staticQueryHashes": [
+    "1239077767",
+    "1239077767",
+    "2364640217",
+    "3280999885",
+    "3280999885"
+  ]
+}
