@@ -13,17 +13,14 @@ import TOC from "../components/toc";
 const Post = ({ data }) => {
   return (
     <Layout>
-      <SEO
-        title={data.mdx ? data.mdx.frontmatter.title : ""}
-        description={data.mdx.excerpt}
-      />
+      <SEO title={data.mdx.frontmatter.title} description={data.mdx.excerpt} />
       <Container>
         <Row>
           <Col>
             <h1 className="pb-3 pt-5 font-weight-bold">
-              {data.mdx ? data.mdx.frontmatter.title : ""}
+              {data.mdx.frontmatter.title}
             </h1>
-            <div>{data.mdx ? data.mdx.frontmatter.date : ""}</div>
+            <div>{data.mdx.frontmatter.date}</div>
           </Col>
         </Row>
         <Row>
