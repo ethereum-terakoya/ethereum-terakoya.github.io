@@ -21,9 +21,9 @@ const Post = ({ data }) => {
         <Row>
           <Col>
             <h1 className="pb-3 pt-5 font-weight-bold">
-              {data.mdx.frontmatter.title}
+              {data.mdx.frontmatter ? data.mdx.frontmatter.title : ""}
             </h1>
-            <div>{data.mdx.frontmatter.date}</div>
+            <div>{data.mdx.frontmatter ? data.mdx.frontmatter.date : ""}</div>
           </Col>
         </Row>
         <Row>
