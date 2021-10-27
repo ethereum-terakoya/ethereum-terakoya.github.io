@@ -1,235 +1,240 @@
 ---
-title: 各社におけるブロックチェーン事例共有【第2回】
+title: Blockchain Scaling Workshop No.2
 date: 2021-06-21
 slug: scaling2
-group: scaling2
+group: scaling
 ---
 
-## 目次
+## Contents
 
-- 1.Introduction
+- 1.Agenda
 
-- 2.事例紹介
+- 2.Case Studies
 
-  - 2.1 Corda 利用事例について
+  - 2.1 About Corda use cases
 
-  - 2.2 札幌・沖縄での事例共有
+  - 2.2 Sharing case studies in Sapporo and Okinawa
 
-  - 2.3 PoA / PoW での性能測定
+  - 2.3 Performance measurement of PoA / PoW
 
-  - 2.4 Hyperledger Besu コミュニティの事例
+  - 2.4 Hyperledger Besu community case study
 
-  - 2.5 Hyperledger Fabric 利用の実稼働システムの将来における性能を検証した結果
+  - 2.5 The results of verifying the performance of the workings of the system Hyperledger Fabric in the future
 
-  - 2.6 PoA の Clique 基礎値データ計測事例
+  - 2.6 Case study of PoA Clique basic value data measurement
 
-  - 2.7 Layer2 における性能測定
+  - 2.7 Performance measurement of Layer 2
 
-- 3.まとめ - 比較項目として追加・変更すべき項目
+- 3.Summary - items likely to be changed or added as a comparison
 
-## 参加者一覧
+## List of Participants 
 
-- 株式会社 NTT データ
+- NTT DATA Corporation
 
-  - 兼松 和広
+  - Hitoshi Watanabe
 
-- NTT テクノクロス株式会社
+- NTT TechnoCross Corporation
 
-  - 兼松 和広
+  - Kazuhiro Kanematsu
 
-- 日立製作所株式会社
+- Hitachi, Ltd. 
 
-  - 原園 栞
-  - 平山 雅樹
+  - Shiori Harazono
 
-- アクセンチュア株式会社
+  - Masaki Hirayama
 
-  - 山田 昌嗣
+- Accenture Japan Ltd.
 
-- 株式会社日立ソリューションズ
+  - Masatsugu Yamada
 
-  - 田辺 謙英
+- Hitachi Solutions Ltd.
 
-- SingulaNet 株式会社
+  - Kenei Tanabe
 
-  - 町 浩二
+- SingulaNet Ltd.
 
-- 株式会社コンプス情報技術研究社
+  - Koji Machi
 
-  - 西村 祥一
+- Comps Information Technology Research Co., Ltd.
 
-- クーガー株式会社（主催）
+  - Shoichi Nishimura
 
-  - 石井 敦
+- Couger Inc. (Organizer)
 
-  - 石黒 一明
+  - Atsushi Ishii 
 
-  - 佐々木 俊平
+  - Kazuaki Ishiguro
 
-  - 田中 滋之
+  - Shunpei Sasaki 
 
-  - 辰巳 ゆかり
+  - Shigeyuki Tanaka 
 
-  - 清水 啓太
+  - Yukari Tatsumi
 
-## 1. 議題
+  - Keita Shimizu  
 
-第２回は各参加企業がどのように性能測定を行っているかを共有する場として、事例発表を行った。
+## 1. Agenda
 
-下記の項目を性能測定の必須項目と初期的に想定し、意識を置きながら情報を共有した。
+In the second session, case studies were presented as a way for each participating business to share in what way they are conducting performance measurement.
 
-## 2. 事例紹介
+The following items were initially deemed essential for performance measurement, and that was kept in mind when sharing information.
 
-### 2.1 Corda 利用事例について
+- Blockchain Client Name
+- Number of Nodes (Network size)
+- Transaction Method
+- Read Latency
+- Read Throughput
+- Transaction Latency
+- Transaction Throughput
+- Consensus
+- Use Case
 
-**株式会社 NTT データ ｜ 渡邊 仁 **
+
+## 2. Case Studies
+
+### 2.1 About Corda Use Cases
+
+**NTT DATA Corporation｜Hitoshi Watanbe **
 
 ![第1回ブロックチェーンスケーリングに関するワークショップ](./images/img1.png)
 
 <p style="text-align: right;font-weight:bold;">
-  ファイルダウンロードは
-  <a href="/pdf/scaling2/scalling-workshop_2_NTTDATA.pdf" target="_blank">
-    こちら
+  Download the file
+  <a style="margin-left: 5px" href="/pdf/scaling2/scalling-workshop_2_NTTDATA.pdf" target="_blank">
+   here
   </a>
 </p>
 
-ブロックチェーン基盤「Corda」を使った案件を発表する。 <br/>
-性能測定においては、純粋なブロックチェーンレイヤーでの測定ではなく、アプリ全体として見た業務レイヤーでのレスポンスに注目する案件が多かった。JMeter や EFK のログなどからパフォーマンスを見ているケースが多い。
+We will present a case that used the blockchain infrastructure “Corda”.
 
-### 2.2 札幌・沖縄での事例共有
+For performance measurement, many of the matters focused on the response at a business layer viewed as an entire application, rather than purely at the blockchain layer. In many cases, the performance was assessed from JMeter, EFK logs, etc.
 
-**NTT テクノクロス｜兼松 和広**
+
+### 2.2 Sharing Case Studies in Sapporo and Okinawa
+
+**NTT TechnoCross Corporation｜Kazuhiro Kanematsu**
 
 ![第1回ブロックチェーンスケーリングに関するワークショップ](./images/img2.png)
 
 <p style="text-align: right;font-weight:bold;">
-  ファイルダウンロードは
-  <a href="/pdf/scaling2/scalling-workshop_2_NTTTX.pdf" target="_blank">
-    こちら
+Download the file
+  <a style="margin-left: 5px" href="/pdf/scaling2/scalling-workshop_2_NTTTX.pdf" target="_blank">
+    here
   </a>
 </p>
 
-発表できる案件は２件。札幌市と一般財団法人さっぽろ産業振興財団が運営する「札幌市 ICT 活用プラットホーム」と、沖縄の交通 IC カード「OKICA」を活用した沖縄での MaaS 案件である。
+There are two cases that can be presented. One is the “Sapporo ICT Utilisation Platform”, operated by Sapporo City and the Sapporo Industrial Promotion Foundation. The other is the MaaS case, which utilises Okinawa’s public transportation IC card “OKICA”.
 
-過去の実証実験は、全てプライベートかコンソーシアム型で実施した。
+In past demonstrations, everything was carried out in private or in a consortium.
 
-性能測定においては、どのプロダクトを利用しても実装できるようなレベルの標準的なアプリケーションを実装した上で、合意形成モデルやネットワークレベルを変更しつつ、ブロックチェーンの「非中央集権」「分散性」の変化に応じて、どのように性能が変化するかの測定を合わせて評価を行う事が公平であると考えられる。
+For performance measurement, we implemented a standard application at a level that can be used with any project. Then while changing the level of the network and consensus building model, it was considered fair to carry out an assessment of how performance changed depending on any changes in “dispersiveness” and “decentralisation” of the blockchain. 
 
-### 2.3PoA / PoW での性能測定
+### 2.3 Performance Measurement of PoA / PoW
 
-**日立製作所｜原園 栞・平山 雅樹**
+**Hitachi Ltd. ｜Shiori Harazono, Masaki Hirayama**
 
-![第1回ブロックチェーンスケーリングに関するワークショップ](./images/img3.png)
+We would like to present the results of our performance evaluation using Ethereum before commercialisation. We carried out tests of three scenarios, with separate conditions for numbers of threads and loops. Each was implemented with PoW and PoA respectively.
 
-<p style="text-align: right;font-weight:bold;">
-  ファイルダウンロードは
-  <a href="/pdf/scaling2/scalling-workshop_2_Hitachi.pdf" target="_blank">
-    こちら
-  </a>
-</p>
+The results of the PoW test were compared under three scenarios. The PoA test was carried out in one scenario under the same conditions.
 
-商用化する前に Ethereum を使って性能評価をした結果を発表したい。シナリオは３つ、スレッド数やループ回数の条件を分けてテスト実施。それぞれ PoW と PoA で実施した。
+**Questions**
 
-PoW のテスト結果は、3 パターンのシナリオで比較。PoA のテストは、同条件で 1 シナリオを実施した
+**Q1.**Isn’t the throughput too low for PoA?
 
-**質問**
+**A.**This data seems to be the result of an application-oriented measurement, meaning that rather than evaluation of the blockchain itself, it can be thought of as an evaluation of the application as a whole.
 
-**Q1、**PoA にしてはスループットが低いのでは。
+**Q2.**Can you estimate the upper limit of block gas, and the block raw interval for PoA?
 
-**A、**このデータはアプリ寄りの計測結果のようで、ブロックチェーン自体の評価ではなく、アプリ全体での評価かと思われる。
+**A.**I think it is using Geth’s default settings.
 
-**Q2、**ブロックのガス上限と PoA のブロック生間隔はどのくらいか。
+### 2.4 The Results of Verifying the Performance of the Workings of the System Hyperledger Fabric in the Future
 
-**A、**Geth の初期設定値を使っていると思われる。
-
-### 2.4 Hyperledger Fabric 利用の実稼働システムの将来における性能を検証した結果
-
-**日立製作所｜原園 栞・平山 雅樹**
+**Accenture Japan Ltd.｜Masatsugu Yamada**
 
 ![第1回ブロックチェーンスケーリングに関するワークショップ](./images/img4.png)
 
 <p style="text-align: right;font-weight:bold;">
-  ファイルダウンロードは
-  <a href="/pdf/scaling2/scalling-workshop_2_Accenture.pdf" target="_blank">
-    こちら
+  Download the file
+  <a style="margin-left: 5px" href="/pdf/scaling2/scalling-workshop_2_Accenture.pdf" target="_blank">
+     here
   </a>
 </p>
 
-金融機関のポイント管理システムを、今後数年間稼働させ続けたらどういう影響が出るかを測定した例を紹介したい。
+I would like to introduce an example that measures the influence of continuing to operate a financial institution’s point management system for several years.
 
-この事例では、測定の結果、非機能要件の再定義やパフォーマンス対策が必要と結論づけている。
+In the results of this example, the case study concludes that redefinition of non-functional requirements and performance measures are a necessity.
 
-性能課題は、経年による慢性劣化と負荷集中による急性劣化に分けられ、それぞれに考慮すべきポイントが異なる。
+Performance issues can be separated into individual points that each require individual consideration: The distribution of acute deterioration due to concentration of load, and the chronic deterioration due to the passing of years.
 
-経年による慢性的劣化には、測定をする際に基準点を複数設定することが重要となり、負荷集中による急性的劣化には、想定しうる最大負荷時の参照系 TAT 項目を事前に検討しておくことが大事である。
+For the chronic deterioration due to the passing of time, it is important to establish multiple points of reference when measuring. As for the acute deterioration due to load concentration, it is important to consider in advance what can be assumed as the maximum load of the entries to the TAT reference system.
 
-### 2.5 hyperledger Besu コミュニティの事例
+### 2.5 Hyperledger Besu Community Case Study
 
-**日立ソリューションズ｜田辺 謙英**
+**Hitachi Solutions Ltd.｜Kenei Tanabe**
 
-hyperledger Besu コミュニティの記事から、TPS を謳っている記事について発表する。
+We will present an article from the Hyperledger Besu Community that claims to be TPS.
 
-測定条件の JavaVM では、GraalVM を使用している。
+GraalVM is used as the JavaVM measurement conditions.
 
-以前議題に上がっていた「ハードウェアスペックが記載されていない」記事であるため、別事例との比較ができないことから、参考程度としたい。
+Due to the article “not including the hardware spec”, which was brought up last time, it cannot be compared with another case study, so we would like to keep that as a reference.
 
-**質問**
+**Questions**
 
-**Q1、**具体的なユースケースを元に測定したものか。
+**Q1.**Is the measurement based on a specific use case?
 
-**A、**文献上、スマートコントラクトはかなり簡素なものを使っていると読み取れた。業務ユースケースについては深く意識していない例と思われる。
+**A.**In the document, I read that smart contracts are used in a fairly simple way. It is thought to be an example of a lack of awareness about operational use cases.
 
-**Q2、**テスト対象は Besu をベースにしたものか。
+**Q2.**Is the object of the test based on Besu?
 
-**A、**そのように推測している。
+**A.**That seems to be the case
 
-### 2.6 PoA の Clique 基礎値データ計測事例
+### 2.6 Case Study of PoA Clique Basic Value Data Measurement
 
-**SingulaNet ｜町 浩二**
+**SingulaNet｜Koji Machi**
 
 ![第1回ブロックチェーンスケーリングに関するワークショップ](./images/img5.png)
 
 <p style="text-align: right;font-weight:bold;">
-  ファイルダウンロードは
-  <a href="/pdf/scaling2/scalling-workshop_2_SingulaNet.pdf" target="_blank">
-    こちら
+  Download the file
+  <a style="margin-left: 5px" href="/pdf/scaling2/scalling-workshop_2_SingulaNet.pdf" target="_blank">
+     here
   </a>
 </p>
 
-Ethereum の PoA の Clique 基礎値データを計測することを目的とした調査を紹介したい。この中では Production per second はどこまで目指せるのかなど、基礎研究として測定している。
+I would like to introduce a study intended to measure the Clique basic value data for Ethereum PoA. In this study, we are measuring production per second as a standard research to see just how far we can aim at.
 
-細分化したプロセス単位で見れば、一連の処理の中でどこがボトルネックになっているのかが見えるため、パフォーマンス向上に向けたエンハンスの検討材料とすることも可能となる。
+If we look at a segmented process as a unit, we can see where it bottlenecks in a sequence, and it becomes possible to also use it as a material to study enhancement aimed at performance improvement.
 
-### 2.7 Layer2 における性能測定
+### 2.7 Performance Measurement of Layer 2
 
-**コンプス情報技術研究社｜西村 祥一**
+**Comps Information Technology Research Co., Ltd. ｜Shoichi Nishimura**
 
-独自開発の Layer2 ソリューションズ「Burn」でのスループットなどを測定している。将来的には Crliper での測定も予定している。
+We are measuring the throughput and other aspects of “Burn”, our independently developed Layer 2 Solutions. We also plan to do measurements using Crliper in the future.
 
-測定結果としては、m5.xlarge で 1226TPS までは到達した。Burst するインスタンスの t2 系では始めは速いが、クレジットを使い果たすと急に遅くなるため、波が出た
+As a result of the measurement, we reached up to 1226 TPS on the m5.xlarge. As for the t2 series of Burst instances, they were fast in the beginning, but slowed down suddenly upon running out of credit, so there were waves.
 
-**質問**
+**Questions**
 
-**Q1、**パフォーマンスは、メインネットの状態に依存するか。
+**Q1.**Does the performance rely on the condition of the mainnet?
 
-**A、**メインネットに書き込む設定はできるが、何ブロックごとに束ねてハッシュを書きに行くかは別プロセスで行うので、この性能評価に直接は影響はしない。
+**A.**You can set it to write data to the mainnet, but bundling them together every few blocks to write the hash is carried out as a separate process, so there will be no direct influence on the performance evaluation.
 
-**Q2、**ボトルネックは発生するか。
+**Q2.**Will there be occurrences of bottlenecks?
 
-**A、**頻繁にチェックポイントを Ethereum に書き込む設定をすればボトルネックになり得るが、１時間・１日に１回であれば影響はごく僅かである。
+**A.**If you set it to write frequent checkpoints to Ethereum, there could be bottlenecks, but if only for one hour, or once per day, the impact would be negligible. 
 
-## 3. まとめ - 比較項目として追加・変更すべき項目
+## 3. Summary - items likely to be changed or added as a comparison
 
-各社の発表から、初期仮説として想定した性能比較の際の必須項目に追加して、以下も必要との合意が得られた。
+From the presentations of each company, an agreement was reached that the following items are also necessary, in addition to the required items used when comparing performance assumed from the initial hypothesis. 
 
-- ハードウェアスペック　ー　 CPU やメモリ、ストレージなど、パフォーマンスに影響する内容を明記する必要がある。
+- Hardware specs - CPU, memory, storage, etc. that affect performance need to be clearly specified.
 
-- ワークロード　ー　負荷に関する情報も必要と言える。負荷試験実施中のリソースの消費傾向など、Breakdown した項目があればなおよい。処理遅延のボトルネックとなっている処理が具体的に分かれば、パフォーマンス向上の施策を練る際にも役立つ。
+- Workload - information on the workload is a necessity. It will be even better if there are breakdown items, such as resource consumption trends taken during workload tests. If you know about the specific process that causes a bottleneck for processing delays, it will be helpful when refining plans for performance improvement.
 
-- かけている負荷量
+- Amount of workload being expended.
 
-- 典型的な処理　ー　対象とする処理により測定結果も異なるため、トークン送付など、対象を明示することが望ましい
+- Representative processes - due to the varying measurement results of the target processes, specifying the target process, such as the sending of tokens, would be preferable.
 
-- 利用ツール
+- Tools Used
 
-- Network 有無　ー　インターネットを介しているもの、いないものでは結果が大きく異なることもあるため。
+- Presence or absence of network - results will differ greatly depending on whether the internet is or is not used as an intermediary. 

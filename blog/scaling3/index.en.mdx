@@ -1,214 +1,216 @@
 ---
-title: パフォーマンス測定に関する指標について【第3回】
+title: Workshop No.3 Blockchain Scaling
 date: 2021-07-07
 slug: scaling3
-group: scaling2
+group: scaling
 ---
 
-## 目次
+## Table of Contents
 
-- 1.Introduction
+- 1. Agenda
 
-- 2.調査結果紹介
+- 2. Review of Survey Results
 
-  - 2.1 ノード数・典型的なプロセスについて
+  - 2.1 Number of Nodes and Typical Processes
 
-  - 2.2 合意形成モデル・トランザクションメソッドについて
+  - 2.2 Consensus Algorithms and Transaction Methods
 
-  - 2.3 レイテンシー・スループットについて
+  - 2.3 Latency and Throughput
 
-  - 2.4 ハードウェア・負荷情報について
+  - 2.4 Hardware and Information on Loading
 
-  - 2.5 測定ツールについて
+  - 2.5 Measurement Tools
 
-- 3.まとめ
+- 3. Summary
 
-## 参加者一覧
+## List of Participants
 
-- アクセンチュア株式会社
+- Accenture Japan Ltd
 
-  - 旗手 友和
+  - Tomokazu Hatate 
 
-- NTT テクノクロス株式会社
+- NTT TechnoCross Corporation
 
-  - 兼松 和広
+  - Kazuhiro Kanematsu
 
-- 野村アセットマネジメント株式会社
+- Nomura Asset Management Co., Ltd.
 
-  - 今村 光良
+  - Mitsuyoshi Imamura
 
-- 株式会社コンプス情報技術研究社
+- Comps Information Technology Research Co., Ltd.
 
-  - 西村 祥一
+  - Shoichi Nishimura
 
-- 株式会社日立製作所
+- Hitachi, Ltd.
 
-  - 西島 直
+  - Nao Nishijima 
 
-- 株式会社日立ソリューションズ
+- Hitachi Solutions, Ltd.
 
-  - 田辺 謙英
+  - Kenei Watanabe 
 
-- クーガー株式会社（主催）
+- Couger Inc. (Organizer)
 
-  - 石井 敦
+  - Atsushi Ishii 
 
-  - 石黒 一明
+  - Kazuaki Ishiguro
 
-  - 佐々木 俊平
+  - Shunpei Sasaki 
 
-  - 田中 滋之
+  - Shigeyuki Tanaka 
 
-  - 辰巳 ゆかり
+  - Yukari Tatsumi 
 
-  - 清水 啓太
+  - Keita Shimizu 
 
-## 1. 議題
+## 1. Agenda
 
-第 3 回目のワークショップは、前回までに挙げられたパフォーマンス測定に際して用いるべき基準について、各参加企業が発表を行った
+For the third workshop, participating companies gave a presentation on the previously listed criteria for measuring performance.
 
-今回はアクセンチュア株式会社と NTT テクノクロス株式会社、野村アセットマネジメント株式会社、株式会社コンプス情報技術研究所、株式会社日立製作所の 5 社が発表する。
+This time, presentations were given by the following five companies: Accenture Ltd, NTT TechnoCross Corporation, Nomura Asset Management Co., Ltd., and Comps Information Technology Research Co., Ltd.
 
-## 2. 調査結果紹介
+## 2. Review of Survey Results
 
-### 2.1 ノード数・測定のプロセスについて
+### 2.1 Number of Nodes and Typical Processes
 
-**アクセンチュア株式会社｜旗手 友和 **
+**Accenture Japan Ltd｜Tomokazu Hatate**
 
 ![第1回ブロックチェーンスケーリングに関するワークショップ](./images/img1.png)
 
 <p style="text-align: right;font-weight:bold;">
-  ファイルダウンロードは
-  <a href="/pdf/scaling3/scalling-workshop_3_Accenture.pdf" target="_blank">
-    こちら
+  Download the file
+  <a style="margin-left: 5px" href="/pdf/scaling3/scalling-workshop_3_Accenture.pdf" target="_blank">
+   here
   </a>
 </p>
 
-Performance analysis of hyperledger fabric 2.0 blockchain platform の情報をもとに、ノード数・ネットワークサイズに関する考察を行った。PoW、PoA に分けた結果も参照することができ、それぞれに傾向が見られた。
+Using information from the Performance analysis of hyperledger fabric 2.0 blockchain platform, we are able to take the number of nodes (network size) into consideration. When we divide these results into PoW and PoA, a trend can be seen in both groups.
 
-また、性能測定を行う際に適したプロセスに関しても考察を行っている。
+Again, we are also considering suitable methods of measuring performance.
 
-### 2.2 合意形成モデル・トランザクションメソッドについて
+### 2.2 Consensus Algorithms and Transaction Methods
 
-**NTT テクノクロス株式会社｜兼松 和広**
+**NTT TechnoCross Corporation｜Kazuhiro Kanematsu 兼松 和広**
 
 ![第1回ブロックチェーンスケーリングに関するワークショップ](./images/img2.png)
 
 <p style="text-align: right;font-weight:bold;">
-  ファイルダウンロードは
-  <a href="/pdf/scaling3/scalling-workshop_3_NTTTX.pdf" target="_blank">
-    こちら
+  Download the file
+  <a style="margin-left: 5px" href="/pdf/scaling3/scalling-workshop_3_NTTTX.pdf" target="_blank">
+  here
   </a>
 </p>
 
-合意形成モデルとトランザクション処理がおおまかなテーマである。
+Consensus algorithms and transaction processes are a rough topic.
 
-Proof of Work はビットコインで採用されている一番有名と言える合意形成モデル。他には Proof of Authority, State Machine Replication、Endorsement Ordering と呼ばれる合意形成モデルがある。トランザクション処理に関してはトランザクションの実行を含むか、処理の内部で参照、更新がどのくらい行われているかがポイントである。
+The most well-known example of a consensus algorithm is “Proof of Work” - used by BitCoin. Other examples of consensus algorithms include: “Proof of Authority”, “State Machine Replication”, and “Endorsement Ordering”. Regarding the process of transactions and how they are executed, the key steps within the process and how often updates occur are both important factors.
 
-**質問**
+**Question**
 
-**Q.**基盤によってアプローチが違うのか？
+**Q.**Does the approach differ on a case-by-case basis?
 
-**A.**パブリックを使う場合はブロックナンバーが証明になるのではないかと予想される。
+**A.**When using a public blockchain, the block number is thought to act as proof.
 
-### 2.3 レイテンシー・スループットについて
+### 2.3 Latency and Throughput
 
-**野村アセットマネジメント株式会社｜今村 光良**
+**Nomura Asset Management Co., Ltd.｜Mitsuyoshi Imamura 今村 光良**
 
 ![第1回ブロックチェーンスケーリングに関するワークショップ](./images/img3.png)
 
 <p style="text-align: right;font-weight:bold;">
-  ファイルダウンロードは
-  <a href="/pdf/scaling3/scalling-workshop_3_Nomura.pdf" target="_blank">
-    こちら
+Download the file
+  <a style="margin-left: 5px" href="/pdf/scaling3/scalling-workshop_3_Nomura.pdf" target="_blank">
+    here
   </a>
 </p>
 
-- Hyperlerdger Caliper を用いた性能評価事例を紹介する。
+Presentation of performance evaluation cases using the Hyperledger Caliper.
 
-当事例では、空のトランザクションと書き込みありのトランザクションを利用することで、システムにおけるオーバーヘッドを考慮して計測を実施している。また、コントラクトの記載内容別、様々な環境での横断的な測定を行っている点が特徴であった。
+In this case, by using a blank transaction and a written transaction, measurements can be carried out with any overhead connections in the system taken into account.
 
-### 2.4 ハードウェア・負荷情報について
+Additionally, according to the contents of the contract, a key feature was the ability to carry out these measurements using cross-sectional data from various environments.
 
-**株式会社コンプス情報技術研究社｜西村 祥一**
+### 2.4 Hardware and Information on Loading
+
+**Comps Information Technology Research Co., Ltd.｜Shoichi Nishimura 西村 祥一**
 
 ![第1回ブロックチェーンスケーリングに関するワークショップ](./images/img4.png)
 
 <p style="text-align: right;font-weight:bold;">
-  ファイルダウンロードは
-  <a href="/pdf/scaling3/scalling-workshop_3_Comps.pdf" target="_blank">
-    こちら
+  Download the file
+  <a style="margin-left: 5px" href="/pdf/scaling3/scalling-workshop_3_Comps.pdf" target="_blank">
+    here
   </a>
 </p>
 
-パフォーマンス測定を行う上で提示すべき情報について、過去事例をもとに考察した。
+We considered the information that should be presented when carrying out performance measurements by taking past cases into account.
 
-項目や想定する内容は以下のとおり。
+The items and expected contents are as follows:
 
-- Hardware Spec
+- Hardware Specifications
 
-  - Cloud の場合：
+  - If using Cloud：
 
-    - 使用するクラウドサービス
+    - Usable Cloud service
 
-    - インスタンスタイプ
+    - Instance type
 
-    - RAM 容量
+    - RAM capacity
 
-  - 実マシンの場合：
+  - If using a physical machine：
 
-    - CPU 種別
+    - CPU type
 
-    - GPU 種別 ※ PoW に GPU 使う場合
+    - GPU type ※ If using GPU for PoW
 
-    - RAM 容量
+    - RAM capacity
 
-  上記のスペックを下記の対象に対して記録する想定。
+  The specifications above are to be recorded for the following targets:
 
-  - ブロックチェーン各ノード
+  - Each node of the blockchain
 
-  - 負荷ツールを稼働させるサーバ
+  - The server that will run the load tool
 
 - Load
 
-  - 負荷クライアント数
+  - Number of load clients
 
-  - 総リクエスト数
+  - Total number of requests
 
-  - 負荷継続時間
+  - Duration of loads
 
-  - 負荷ツール単体での限界リクエスト数
+  - Number of limited requests on the load tool alone
 
-- Workload (CPU 負荷)
+- Workload (CPU load)
 
-  - vmstat 3 1200
+  - $ vmstat 3 1200
 
-* Workload (Disk 負荷)
+* Workload (Disk load)
 
-  - iostat –x 3
+  - $ iostat –x 3
 
-**質問・議論**
+**Question・Discussion**
 
-**Q.** 例えばノード数が 16 あるところに対して、分散実行などを行う自動化の仕組みが必要か。
+**Q.** For example, would I need an automated mechanism that can carry out a distributed execution on an area with 16 nodes?
 
-**A.** メトリクス収集サーバーの Prometheus と Node Exporter を使うのも一つのアイデアと考える。
+**A.** Using metrics collection servers such as “Prometheus” and “Node Exporter” is an option.
 
-### 2.5 測定ツールについて
+### 2.5 Benchmark Tools
 
-**株式会社日立製作所｜西島 直**
+**Hitachi, Ltd.｜Nao Nishijima 西島 直**
 
 ![第1回ブロックチェーンスケーリングに関するワークショップ](./images/img5.png)
 
 <p style="text-align: right;font-weight:bold;">
-  ファイルダウンロードは
-  <a href="/pdf/scaling3/scalling-workshop_3_Hitachi.pdf" target="_blank">
-    こちら
+  Download the file
+  <a style="margin-left: 5px" href="/pdf/scaling3/scalling-workshop_3_Hitachi.pdf" target="_blank">
+    here
   </a>
 </p>
 
-- Benchmark Tools は複数存在する
+- There are several existing Benchmark Tools.
 
-  - Hyperledger Caliper（一番開発が継続されている）
+  - Hyperledger Caliper（The furthest developed）
 
   - ethereum/test-tools
 
@@ -218,46 +220,47 @@ Proof of Work はビットコインで採用されている一番有名と言え
 
   - Blockbench
 
-- 異なるブロックチェーン間のパフォーマンス測定・比較を正確に一貫して評価するために用語や指標の定義、環境詳細を記載する必要がある。
+- In order to accurately evaluate the performance measurement between different blockchains, it is necessary to understand the definition of terms, indicators, and have the ability to describe details of the environment.
 
-  - 主要なメトリクスの定義
+  - Definitions of key metrics
 
-    - Read Latency = レスポンスを受け取った時間– 送信時間
+    - Read Latency = Time when response was received  – Time of response
 
-    - Read Throughput = 総読み取り操作数/総時間
+    - Read Throughput = Total number of read operations/Total time
 
-    - Transaction Latency = (確認時間@閾値) - 送信時間
+    - Transaction Latency = (Confirmation time@Threshold) - Time of response
 
-    - Transaction Throughput = コミットされたトランザクションの総数/コミットされたノードの合計時間＠コミットしたノード数
+    - Transaction Throughput = Total number of committed transactions/Total time of committed nodes＠Total number of committed nodes
 
-  - テスト環境として考慮すべきこと
+  - Things to consider in a test environment
 
-    - コンセンサスプロトコル
+    - Consensus protocol
 
-    - ノードの地理的分布
+    - Geographical distribution of the nodes
 
-    - ハードウェア環境
+    - Hardware environment
 
-    - ネットワークモデル
+    - Network model
 
-    - テストトランザクションに関与するノードの数
+    - Number of nodes involved in the test transaction
 
-    - 依存するソフトウェアコンポーネント
+    - Existing software components
 
-    - テストツール
+    - Test tool
 
-    - 利用するデータストアの種類
+    - Type of data storage to use
 
-    - ワークロード
+    - Workload
 
-**質問**
+**Question**
 
-**Q.** Caliper ではスマートコントラクトにトランザクションを発行するものしか計測できないが、ネイティブトークンの送信はどうやって測るべきか。
+**Q.** I can only use Caliper to measure those that issue transactions to smart contracts, but how can I measure the transmission of native tokens?
 
-**A.** 現時点では対応していない可能性もあると思われる。
+**A.** This feature is currently not supported.
 
-## 3. まとめ
+## 3. Summary
 
-今回の各社の発表により、各項目の定義、および明示すべき値が明確になってきた。
+With the company presentations given this time, the definition of each item and important specifics have become clearer to understand.
 
-今後はホワイトペーパーの作成、およびテストの実施手順・条件に関するディスカッションに進みたい。。
+In future, I would like to proceed with discussions on the preparation of white papers, and how to implement the procedures and conditions for testing.
+

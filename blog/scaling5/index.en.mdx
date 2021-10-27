@@ -1,141 +1,133 @@
 ---
-title: パフォーマンス測定指標の俯瞰レビュー【第5回】
+title: Workshop No. 5 - Blockchain Scalability
 date: 2021-08-25
 slug: scaling5
-group: scaling2
+group: scaling
 ---
 
-## 目次
+## Table of Contents
 
-- 1.Introduction
+- 1. Agenda
 
-- 2.White Paper Review
+- 2. White Paper Review
 
-- 3.Test conditions review
+- 3. Test Conditions Review
 
-- 4.まとめ
+- 4. Summary
 
-## 参加者一覧
+## List of Participants
 
-- NTT テクノクロス株式会社
+- NTT TechnoCross Corporation
 
-  - 兼松 和広
+  - Kazuhiro Kanematsu
 
-- 株式会社 NTT データ
+- NTT DATA Corporation
 
-  - 清水 俊平
+  - Shunpei Shimizu
 
-- 株式会社日立ソリューションズ
+- Hitachi Solutions, Ltd.
 
-  - 吉田一省
+  - Kazumi Yoshida
 
-- 株式会社日立製作所
+- Hitachi, Ltd.
 
-  - 西島 直
+  - Nao Nishijima
 
-  - 原園 栞
+  - Shiori Harazono
 
-- 野村アセットマネジメント株式会社
+- Nomura Asset Management
 
-  - 今村 光良
+  - Teruyoshi Imamura
 
-- クーガー株式会社（主催）
+- Couger Inc. (Organizer)
 
-  - 石井 敦
+  - Atsushi Ishi
 
-  - 清水 啓太
+  - Keita Shimizu
 
 ## 1. Introduction
 
-![第1回ブロックチェーンスケーリングに関するワークショップ](./images/img1.jpg)
+![第1回ブロックチェーンスケーリングに関するワークショップ](./images/img1.png)
 
 <p style="text-align: right;font-weight:bold;">
-  ファイルダウンロードは
-  <a href="/pdf/scaling5/2021_08_ethterakoya_5th_v002.pdf" target="_blank">
-    こちら
+  Download the file
+  <a style="margin-left: 5px" href="/pdf/scaling5/2021_08_ethterakoya_5th_v002.pdf" target="_blank">
+    here
   </a>
 </p>
 
-当ワーキンググループのアウトプットとして残すドキュメントとして、これまでの各社発表内容をもとにホワイトペーパーを作成した。今回の第５回目では、そのホワイトペーパーの読み合わせを行い、内容の過不足や不明瞭な点を話し合い、ブラッシュアップを行った。
+The documents resulting from the outcome of our working group were compiled into a white paper based on the information presented by each company thus far. For our fifth workshop meeting, we read through and revised the white paper by discussing any unclear and extraneous details from its contents.
 
 ## 2. White Paper Review
 
-![第1回ブロックチェーンスケーリングに関するワークショップ](./images/img2.jpg)
+![第1回ブロックチェーンスケーリングに関するワークショップ](./images/img2.png)
 
 <p style="text-align: right;font-weight:bold;">
-  ファイルダウンロードは
-  <a
+  Download the file
+  <a style="margin-left: 5px"
     href="/pdf/scaling5/20210825_Ethereum_Performance_Metrics.pdf"
     target="_blank"
   >
-    こちら
+    here
   </a>
 </p>
 
-以下はレビュー内で指摘のあった項目について記載する。 <br/> <br/>
+The points we covered during review are listed below.
 
-- **2.1.2 Consensus Algorithm(合意形成モデル)**
+- **2.1.2 Consensus Algorithm (Consensus-Building Model)**
 
-合意形成モデルを一覧表示は不要ではないか。
+Discussed whether the Consensus-Building Model table is necessary or not.
 
-一覧化せず、「合意形成モデルは PF ごとに異なっており、性能評価に影響を及ぼし得る」だけでも良いのではないか。（Accenture 旗手）
+Without creating a table, it may be better to just “go over each and every difference and affected benchmark of the Consensus-Building Model in the PF”. (Hatate from Accenture)
 
-- 用語集として残した方がいいのではないか。（NTT データ清水）
+- May be better to leave the glossary in. (Shimizu from NTT DATA)
 
-- 無理に消さなくてもよいのではないか。（Couger 石井）
+- May be better not to erase too much. (Ishii from Couger)
 
-**結論：**PF の基礎知識を提供する事も目的の１つなので、コンテンツは残し、構成は引き続き検討していく。
-
-{" "}
+**Conclusion:**Sharing the fundamental knowledge of the PF is our main priority, so the contents will remain unchanged and the format will continue to be under review.
 
 <br />
 
-- **2.1.4 Network Size (Node 数)**
+- **2.1.4 Network Size (Node Number)**
 
-コンセンサスが成立する為に必要な最低ノード数の指標が必要ではないか。（日立ソリューションズ吉田）
+We may need an indicator for the minimum number of nodes required to establish a consensus. (Yoshida from Hitachi Solutions)
 
-**結論：**各条件ごとに必要となるノード数を満たすべきである旨を追記する。
+**Conclusion:**Add the required number of nodes needed to complete each condition.
 
-- **2.2.5 負荷ツール単体での限界リクエスト数**
+- **2.2.5 The Request Number Limit for Load Tools**
 
-当資料での限界リクエスト数の記載は必要か。（Accenture 旗手）
+We may need to mention the request number limit in this document. (Accenture Rep)
 
-- Hyperledger Besu などはパラメータとして、
+- Clients such as Hyperledger Besu have rpc-http-max-active-connections as a parameter, and the default value is set to 80. This is one of the parameters where it is not possible to set the value to more than 80, so we should keep this in mind when measuring performance. (Yoshida from Hitachi Solutions)
 
-rpc-http-max-active-connections というものがあり、デフォルトは 80 となっている。80 以上の接続はできないなどがあるため、性能測定時には、意識しておかないといけないパラメータの１つだと考えられる。（日立ソリューションズ吉田）
-
-<br />
-
-**結論：**基盤側にパラメータがある可能性もあり、その制約がある旨を記載する。
+**Conclusion:** Mention there may be parameters with limits built into a client’s infrastructure. 
 
 <br />
 
-- レイテンシーやスループット、またアプリ側からのレスポンスなどを説明する絵図があれば分かり易いのでは。（NTT データ清水）
+- It may be easier to understand by adding a diagram that shows the latency, throughput, and responses from the application. (Shimizu from NTT DATA)
 
 <br />
 
-**結論：**適宜、画像や資料なども使用する。
+**Conclusion:**We will use figures and data accordingly.
 
 <br />
 
-## 3. Test conditions review
+## 3. Test Conditions Review
 
-過去のディスカッションも鑑み、以下とする。
-
-<br />
-
-項目：Blockchain Name
-
-条件：原則 Ethereum ベースのチェーンを対象とすることが望ましいが、比較対象としての別チェーンも選択は可能
+Taking previous discussions into account, the following has been established.
 
 <br />
 
-項目：Transaction Method
+Item: Blockchain Name
 
-条件：ERC20 スマートコントラクトのトークントランスファー
+Conditions: In principle, Ethereum-Based Blockchains are preferred, but other Blockchains can be selected for comparison
 
-## 4. まとめ
+<br />
 
-各社からの指摘・コメントに基づき、ホワイトペーパーの更新を適宜行う。
+Item: Transaction Method
 
-再鑑のプロセスを経ることで、より読者にとって実用的なドキュメントとなることを目指したい。
+Conditions: ERC20 Smart Contract Token Transfer
+
+## 4. Summary
+
+The white paper will be updated accordingly based on the suggestions and comments from each company. By going through the review process, we aim to make this document more practical for readers. 

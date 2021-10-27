@@ -1,165 +1,165 @@
 ---
-title: パフォーマンス測定の条件・手順について【第4回】
+title: Workshop No.4 on Blockchain Scaling
 date: 2021-08-05
 slug: scaling4
-group: scaling2
+group: scaling
 ---
 
-## 目次
+## Table of Contents
 
-- 1.Introduction
+- 1. Agenda
 
-- 2.調査結果紹介
+- 2. Presentation of Research Findings
 
-  - 2.1 Caliper を使った性能測定
+  - 2.1 Performance Measurement using Caliper
 
-  - 2.2 Ethereum 性能評価に関して
+  - 2.2 Performance Evaluation of Ethereum
 
-  - 2.3 経験に基づく検討観点共有
+  - 2.3 Points to Consider Based on Previous Experiences
 
-- 3.まとめ
+- 3. Summary
 
-## 参加者一覧
+## List of Participants
 
-- NTT テクノクロス株式会社
+- NTT TechnoCross Corporation
 
-  - 兼松 和広
+  - Kazuhiro Kanematsu
 
-- 株式会社日立ソリューションズ
+- Hitachi Solutions, Ltd.
 
-  - 吉田一省
+  - Kazuyoshi Yoshida 
 
-- 株式会社コンプス情報技術研究社
+- Comps Information Technology Research Co., Ltd.
 
-  - 西村 祥一
+  - Shoichi Nishimura
 
-- SingulaNet 株式会社
+- SingulaNet Ltd.
 
-  - 町 浩二
+  - Koji Machi 
 
-- クーガー株式会社（主催）
+- Couger Inc. (Organizer)
 
-  - 石井 敦
+  - Atsushi Ishii
 
-  - 石黒 一明
+  - Kazuaki Ishiguro
 
-  - 佐々木 俊平
+  - Shunpei Sasaki 
 
-  - 田中 滋之
+  - Shigeyuki Tanaka
 
-  - 辰巳 ゆかり
+  - Yukari Tatsumi 
 
-  - 清水 啓太
+  - Keita Shimizu 
 
-## 1. 議題
+## 1. Agenda
 
-第４回では、ブロックチェーンのパフォーマンス測定をどのような前提条件や手法で進めるべきかを議論する。各社調査結果を共有することでディスカッションの材料とし、検討を進めた。
+The fourth workshop focuses on the methods for measuring blockchain performance and the necessary prerequisites. Research findings shared by each company allowed for a discussion and further examination to take place.
 
-## 2. 調査結果紹介
+## 2. Presentation of Research Findings
 
-### 2.1 Caliper を使った性能測定
+### 2.1 Performance Measurement using Caliper
 
-**NTT テクノクロス株式会社｜兼松和広**
+**NTT TechnoCross Corporation｜Kazuhiro Kanematsu**
 
 ![第1回ブロックチェーンスケーリングに関するワークショップ](./images/img1.png)
 
 <p style="text-align: right;font-weight:bold;">
-  ファイルダウンロードは
-  <a href="/pdf/scaling4/scalling-workshop_4_ntttx.pdf" target="_blank">
-    こちら
+  Download the file
+  <a style="margin-left: 5px" href="/pdf/scaling4/scalling-workshop_4_ntttx.pdf" target="_blank">
+    here
   </a>
 </p>
 
-Hyper Caliper の使い方を紹介する。 <br/>
+An introduction on how to use Hyper Caliper.
 
-主に下記を用いることで、負荷の調整、および複数台のノードに対しトランザクションを投げて測定結果をまとめてくれるのが、Caliper の機能である。
+The function of Caliper is to distribute the load and send transactions to multiple nodes using the following methods below.
 
-- caliper を操作するための CLI ツール
+- A CLI tool used to operate Caliper
 
-- 負荷をかける本体
+- A device the load can be applied to
 
-- ベンチマーク用のサンプルアーティファクト
+- Benchmarking artifacts
 
-- worker process に対して指示を与える機能
+- An output that gives instructions to the worker process
 
-大まかな処理の流れは下記のとおり。
+The general process flow is as follows.
 
-- 1.caliper manger を起動
+- 1. Start-up the Caliper manager
 
-  a. docker-compose で環境構築
+  a. Construct the environment with docker-compose
 
-  b. 負荷測定開始
+  b. Start the load measurement
 
-  c. 負荷測定終了
+  c. Completion of load measurement 
 
-  d. docker-compose で環境を解体
+  d. Dismantle the environment with docker-compose
 
-- 2.コマンドラインに結果が返る
+- 2. Results are returned to the command line
 
-- 3.html でレポートが作成される
+- 3. Report is created in html format
 
-### 2.2 Ethereum 性能評価に関して
+### 2.2 Performance Evaluation of Ethereum
 
-**株式会社日立ソリューションズ｜吉田一省**
+**Hitachi Solutions, Ltd.｜Kazuyoshi Yoshida**
 
 ![第1回ブロックチェーンスケーリングに関するワークショップ](./images/img2.png)
 
 <p style="text-align: right;font-weight:bold;">
-  ファイルダウンロードは
-  <a
+Download the file
+  <a style="margin-left: 5px"
     href="/pdf/scaling4/scalling-workshop_4_Hitachi-性能評価.pdf"
     target="_blank"
   >
-    こちら
+    here
   </a>
 </p>
 
-Ethereum の性能評価に関する調査結果を以下のとおり報告する。
+Results of the performance evaluation on Ethereum are reported as follows.
 
-- 測定ポイント
+- Measuring points
 
-  - ブロックチェーンへのトランザクションリクエストから戻りを得るまでの時間。
+  - The time taken for a transaction request to return from the blockchain.
 
-  - 測定種別は、台帳更新系と台帳参照系。
+  - Types of measurement include the ledger update system and ledger reference system.
 
-- 固定項目・変更項目
+- Fixed items / Changeable items
 
-  - 測定するスマートコントラクトは ERC20 などに固定化する必要がある。
+  - Smart Contracts that are to be measured must adhere to ERC-20, or similar alternatives.
 
-  - 初期発行量や測定メソッドなども決める必要あり。
+  - It is also necessary to determine the initial issued amount and the method of measurement.
 
-  - Genesis.json…性能測定用に前提条件として固定値を決めておく必要あり。
+  - Genesis.json - It is necessary to decide on a fixed value as the prerequisite of performance measurement. 
 
-  - ノード数…コンセンサスアリゴリズムにより最低必要なノード数で測定する。
+  - Number of nodes - Measure using the minimum number of nodes required by the Consensus Algorithm.
 
-  - ブートノード…Bootnode を配置した構成にするか、静的に配置するか決めておく必要あり。
+  - Bootnode - You must decide whether you want a static configuration or placed configuration for your bootnode.
 
-- 測定項目
+- Measurement items
 
-  - API の発行と戻り時間
+  - API issue and return times
 
-  - 一定期間でのトランザクション発行可能数
+  - Number of transactions that can be issued within a given time
 
-### 2.3 経験に基づく検討すべき観点の共有
+### 2.3 Points to Consider Based on Previous Experiences
 
-**株式会社コンプス情報技術研究社｜西村祥一**
+**Comps Information Technology Research Co., Ltd.｜Shoichi Nishimura**
 
-過去に Layer2 の負荷計測、パフォーマンス計測を実施した際に検知した、意見を伺いたい点や懸念点などを共有する
+We will share any comments or concerns that were raised in the past when conducting Layer2 load and performance measurements.
 
-西村：キャリパーは web socket 経由でないと利用できず、制約があるのではないか。
+Nishimura : Caliper can only be used via WebSockets, are there limitations to its use?
 
-吉田：利用できない。HL・Geth は web socket に対応できるが、その他対応出来ないチェーンの場合は測定が難しい。
+Yoshida：Can’t be used. HL and Geth can interact with WebSockets, but it is hard to measure other chains that are unable to interact with WebSockets.
 
-西村：Layer2 などをテスト対象とする場合、1 台のマシンでかけられる負荷では不十分な可能性がある。その場合、キャリパーでのマルチワーカー対応が必要になるのではないか。
+Nishimura : When conducting testing of Layer2, the total load that can be applied on a single machine may be insufficient. In this case, would it be necessary to run a multiple Caliper worker process?
 
-⇒ 上記の認識で関係者同意。
+⇒ All parties involved are in agreement with the statement above.
 
-西村：限りなく低負荷な処理を行った場合の性能測定をどのように行うか。
+Nishimura : How can we measure performance using a low-load process?
 
-町：コードログを仕掛けた。アプリログよりも詳細なレベルで出力できることが望ましい。
+Machi : CodeLog has been set up. The aim is to give a more detailed output than the Application Log.
 
-### 3. まとめ
+### 3. Summary
 
-各社の調査・過去事例の共有により、Caliper を利用したパフォーマンス測定の方法が明確になった。次回以降は本ワーキンググループの成果物としてのホワイトペーパー作成、ならびにテスト実施・結果の共有を進めていく。
+Sharing of research findings and past case studies helped clarify how Caliper can be used in performance measurement. In the next session, we will create a white paper as the final product of this working group. This will allow for the testing and results to be shared further.
 
-また、テスト前提とするユースケースは、ネイティブトークンの送金ではなく、少なくともスマートコントラクトを使ったものとし、具体的には ERC20 を対象としたい。
+Additionally, we would like to test the transactions with Smart Contracts instead of Native Tokens at the very least, but we aim to specifically use ERC20 as the test assumption for the Use Case.
