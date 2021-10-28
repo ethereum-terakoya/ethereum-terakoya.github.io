@@ -1,19 +1,20 @@
 ---
-title: Workshop No. 5 - Blockchain Scalability
-date: 2021-08-25
-slug: scaling5
-group: scaling3
+title: Sharing the Results of the Performance Measurement -1 [Workshop No. 6]
+date: 2021-09-16
+slug: scaling6
+group: scaling
 ---
 
 ## Table of Contents
 
 1. Agenda
 
-2. White Paper Review
+2. Sharing Test Results
 
-3. Test Conditions Review
+  2.1 Performance Measurements using Geth and PoA
 
-4. Summary
+  2.2 Performance Measurement of BESU
+
 
 ## List of Participants
 
@@ -21,112 +22,117 @@ group: scaling3
 
   - Kazuhiro Kanematsu
 
-- NTT DATA Corporation
-
-  - Shunpei Shimizu
-
 - Hitachi Solutions, Ltd.
 
-  - Kazumi Yoshida
+  - Issei Yoshida
 
 - Hitachi, Ltd.
 
   - Nao Nishijima
 
-  - Shiori Harazono
+- Couger Inc. (Organiser)
 
-- Nomura Asset Management
+  - Atsushi Ishii
 
-  - Teruyoshi Imamura
+  - Kazuaki Ishiguro
 
-- Couger Inc. (Organizer)
+  - Shunpei Sasaki
 
-  - Atsushi Ishi
+  - Yukari Tatsumi
+
+  - Shigeyuki Tanaka
 
   - Keita Shimizu
 
-## 1. Introduction
+  - Kazuhiro Nakagawa
+
+## 1. Agenda
 
 ![第1回ブロックチェーンスケーリングに関するワークショップ](./images/img1.png)
 
 <p style="text-align: right;font-weight:bold;">
-  Download the file
-  <a
-    style="margin-left: 5px"
-    href="/pdf/scaling5/2021_08_ethterakoya_5th_v002.pdf"
-    target="_blank"
-  >
+   Download file
+  <a style="margin-left: 5px" href="/pdf/scaling6/scalling-workshop_6_introduction.pdf" target="_blank">
     here
   </a>
 </p>
 
-The documents resulting from the outcome of our working group were compiled into a white paper based on the information presented by each company thus far. For our fifth workshop meeting, we read through and revised the white paper by discussing any unclear and extraneous details from its contents.
+This time we used the information from the white paper to share the results of tests carried out by the companies.
 
-## 2. White Paper Review
+We expect to publish the presentation of these results as the appendix. 
+
+## 2. Sharing Test Results
+
+### 2.1 Performance Measurements using Geth and PoA
+
+<p style="margin-top: -1em;font-weight: bold;font-size: 1.2em;margin-left: 1em;">
+  Couger Inc.｜Kazuhiro Nakagawa
+</p>
 
 ![第1回ブロックチェーンスケーリングに関するワークショップ](./images/img2.png)
 
 <p style="text-align: right;font-weight:bold;">
-  Download the file
-  <a
-    style="margin-left: 5px"
-    href="/pdf/scaling5/20210825_Ethereum_Performance_Metrics.pdf"
-    target="_blank"
-  >
-    here
+  Download file
+  <a style="margin-left: 5px" href="/pdf/scaling6/scalling-workshop_6_Couger.pdf" target="_blank">
+   here
   </a>
 </p>
 
-The points we covered during review are listed below.
-
-- **2.1.2 Consensus Algorithm (Consensus-Building Model)**
-
-  Discussed whether the Consensus-Building Model table is necessary or not.
-
-  Without creating a table, it may be better to just “go over each and every difference and affected benchmark of the Consensus-Building Model in the PF”. (Hatate from Accenture)
-
-  - May be better to leave the glossary in. (Shimizu from NTT DATA)
-
-  - May be better not to erase too much. (Ishii from Couger)
-
-  **Conclusion:** Sharing the fundamental knowledge of the PF is our main priority, so the contents will remain unchanged and the format will continue to be under review.
-
-- **2.1.4 Network Size (Node Number)**
-
-  We may need an indicator for the minimum number of nodes required to establish a consensus. (Yoshida from Hitachi Solutions)
-
-  **Conclusion:** Add the required number of nodes needed to complete each condition.
-
-- **2.2.5 The Request Number Limit for Load Tools**
-
-  We may need to mention the request number limit in this document. (Accenture Rep)
-
-  - Clients such as Hyperledger Besu have rpc-http-max-active-connections as a parameter, and the default value is set to 80. This is one of the parameters where it is not possible to set the value to more than 80, so we should keep this in mind when measuring performance. (Yoshida from Hitachi Solutions)
-
-  **Conclusion:** Mention there may be parameters with limits built into a client’s infrastructure.
-
-- It may be easier to understand by adding a diagram that shows the latency, throughput, and responses from the application. (Shimizu from NTT DATA)
-
-  **Conclusion:** We will use figures and data accordingly.
+We tested by creating three nodes on AWS EC2, and carried the load from a Mac device using Caliper. 
 
 <br />
 
-## 3. Test Conditions Review
+Nakagawa: I’d like to review the methods of measuring Read Latency and Read Throughout of Caliper.
 
-Taking previous discussions into account, the following has been established.
+Member: It is assumed that we must add BalanceOf and throw a Read only transaction  to take measurements.
+
+Nakagawa: Another measurement is performed against BalanceOf.
+
+### 2.2 Performance Measurement of BESU
+
+<p style="margin-top: -1em;font-weight: bold;font-size: 1.2em;margin-left: 1em;">
+  NTT TechnoCross Corporation｜Kazuhiro Kanematsu
+</p>
+
+![第1回ブロックチェーンスケーリングに関するワークショップ](./images/img3.png)
+
+<p style="text-align: right;font-weight:bold;">
+  To see the link
+  <a
+   style="margin-left: 5px"
+    href="https://www.ntt-tx.co.jp/column/hyperledger_caliperbesu/210910/"
+    target="_blank"
+  >
+    click here
+  </a>
+</p>
+
+We took measurements using one node configurations of BESU and Ethereum, as well as increasing the number of nodes and using four node configurations of BESU and Tessera nodes
+
+The more pending transactions that accumulate on BESU, the more memory it uses. We found that this results in the process becoming hung up. It is thought that the environmental configurations mentioned below are a way to deal with this issue.
+
+- Have a replacement ready in case the process becomes hung up.
+
+- Depending on the load, increase the number of instances and distribute the amount of load on each node. 
+
+Yoshida: Were measurements carried out using a normal transaction rather than a private transaction for this test?
+
+Kanematsu: You are correct, since we wanted to compare with Ethereum, we did not measure any features that were unavailable to Ethereum.
 
 <br />
 
-Item: Blockchain Name
+Nishijima: What are the criteria for the number of requests?
 
-Conditions: In principle, Ethereum-Based Blockchains are preferred, but other Blockchains can be selected for comparison
+Kanematsu: Generally the configuration and contract are fixed, so the policy is to increase the load.
 
-<br />
+Nishijima: Can we expect to see any impact by increasing or decreasing the number of requests?
 
-Item: Transaction Method
+Kanematsu: You are correct. Since the Send rate and Throughput are both outputs of the measurement results, the maximum limit should be determined by considering those two values.
 
-Conditions: ERC20 Smart Contract Token Transfer
+I think it would be helpful if we measured different amounts of load and studied trends in the graph.
 
-## 4. Summary
+## 3. Summary
 
-The white paper will be updated accordingly based on the suggestions and comments from each company. By going through the review process, we aim to make this document more practical for readers.
+The testing and sharing of findings by the two companies highlighted in the white paper has helped with clarifying information as well as identifying areas of uncertainty.
+
+At the next workshop, we will invite other companies to present their findings and continue our critical review. 

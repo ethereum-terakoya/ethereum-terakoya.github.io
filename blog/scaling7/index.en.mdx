@@ -1,132 +1,117 @@
 ---
-title: Workshop No. 5 - Blockchain Scalability
-date: 2021-08-25
-slug: scaling5
-group: scaling3
+title: Sharing the Results of the Performance Measurement -2 [Workshop No. 7]
+date: 2021-10-01
+slug: scaling7
+group: scaling
 ---
 
 ## Table of Contents
 
 1. Agenda
 
-2. White Paper Review
+2. Sharing Test Results
 
-3. Test Conditions Review
+  2.1 Performance Verification of Quorum
 
-4. Summary
+  2.2 Performance Measurement of Besu
+
 
 ## List of Participants
-
-- NTT TechnoCross Corporation
-
-  - Kazuhiro Kanematsu
 
 - NTT DATA Corporation
 
   - Shunpei Shimizu
 
-- Hitachi Solutions, Ltd.
-
-  - Kazumi Yoshida
-
 - Hitachi, Ltd.
 
   - Nao Nishijima
 
-  - Shiori Harazono
-
-- Nomura Asset Management
-
-  - Teruyoshi Imamura
+  - Shiori Harazono 
 
 - Couger Inc. (Organizer)
 
-  - Atsushi Ishi
+  - Atsushi Ishii 
 
-  - Keita Shimizu
+  - Kazuaki Ishiguro
 
-## 1. Introduction
+  - Shunpei Sasaki
 
-![第1回ブロックチェーンスケーリングに関するワークショップ](./images/img1.png)
+  - Yukari Tatsumi
 
-<p style="text-align: right;font-weight:bold;">
-  Download the file
-  <a
-    style="margin-left: 5px"
-    href="/pdf/scaling5/2021_08_ethterakoya_5th_v002.pdf"
-    target="_blank"
-  >
-    here
-  </a>
+  - Shigeyuki Tanaka
+
+  - Keita Shizumi
+
+  - Kazuhiro Nakagawa
+
+## 1. Agenda
+
+![第1回ブロックチェーンスケーリングに関するワークショップ](./images/img1.jpg)
+
+This time, each company shared the results of the tests they each conducted, based on the contents of the white paper, as a continuation from last time. In addition, we plan the results of this study to be made available as an appendix to the white paper that displays said results. 
+
+## 2. Sharing Test Results
+
+### 2.1 Performance Verification of Quorum
+
+<p style="margin-top: -1em;font-weight: bold;font-size: 1.2em;margin-left: 1em;">
+  NTT DATA Corporation｜Shunpei Shimizu
 </p>
 
-The documents resulting from the outcome of our working group were compiled into a white paper based on the information presented by each company thus far. For our fifth workshop meeting, we read through and revised the white paper by discussing any unclear and extraneous details from its contents.
+![第1回ブロックチェーンスケーリングに関するワークショップ](./images/img2.jpg)
 
-## 2. White Paper Review
+The processing performance of GO Quorum was measured using Hyperledger Caliper, and we summarised the results. The items obtained conformed to the white paper. 
 
-![第1回ブロックチェーンスケーリングに関するワークショップ](./images/img2.png)
+Regardless of the number of transactions sent, the results showed that latency tended to be low on average. 
 
-<p style="text-align: right;font-weight:bold;">
-  Download the file
-  <a
-    style="margin-left: 5px"
-    href="/pdf/scaling5/20210825_Ethereum_Performance_Metrics.pdf"
-    target="_blank"
-  >
-    here
-  </a>
+In addition, despite the constant high speeds of read latency of the query process, the transaction’s latency in the transfer and open processes had a tendency to be high.
+
+**The relevance of number of transactions sent (test time) x target TPS**
+
+We carried out a test of the increase of the number of transactions sent from 1000 to 18,000, but the target TPS and CPU usage had a tendency to stabilise at 4000 or more transactions sent.
+
+NTT DATA, Shimizu: If the target TPS is fixed, then the target TPS = the amount of load, so we can consider a method of measuring the performance by changing the load. It might be good to record how to use Capiper in the white paper. 
+
+### 2.2 Performance Measurement of Besu
+
+<p style="margin-top: -1em;font-weight: bold;font-size: 1.2em;margin-left: 1em;">
+  Hitachi, Ltd. ｜Nao Nishijima
 </p>
 
-The points we covered during review are listed below.
+![第1回ブロックチェーンスケーリングに関するワークショップ](./images/img3.jpg)
 
-- **2.1.2 Consensus Algorithm (Consensus-Building Model)**
+Using Caliper (0.4.3-dev), we measured the performance of Hyperledger Besu with three different instance sizes, and obtained the test results. For test conditions, Smart Contract used caliper-benchmark simple, and we changed the number of Tx transmissions from 500 to 2500. Due to the changes in TPS depending upon the load, in order to reach the highest possible value, we carried out the test after increasing the number of requests.
 
-  Discussed whether the Consensus-Building Model table is necessary or not.
+## 3. About Sharing the Test Results
 
-  Without creating a table, it may be better to just “go over each and every difference and affected benchmark of the Consensus-Building Model in the PF”. (Hatate from Accenture)
+Couger’s Shimizu: Would it be better to mention the block recognition, block generation time, transmission speed, etc. as test condition entries? 
 
-  - May be better to leave the glossary in. (Shimizu from NTT DATA)
+NTT DATA’s Shimizu:  I think it would be better to write them out as test conditions, due to the huge effect it could have on the test results.
 
-  - May be better not to erase too much. (Ishii from Couger)
+Conclusion: it will be mentioned.
 
-  **Conclusion:** Sharing the fundamental knowledge of the PF is our main priority, so the contents will remain unchanged and the format will continue to be under review.
+## 4. Review of the Improvements of the White Paper
 
-- **2.1.4 Network Size (Node Number)**
+The following items were altered or added as items pointed out in <a href="https://ethereum-terakoya.org/en/scaling/scaling5" target="_blank"> workshop No.5. </a>
 
-  We may need an indicator for the minimum number of nodes required to establish a consensus. (Yoshida from Hitachi Solutions)
+**2.1.4 Network Size (Number of Nodes)**
 
-  **Conclusion:** Add the required number of nodes needed to complete each condition.
+Point Made: Is it not necessary to have an indicator of the minimum number of nodes necessary for the sake of reaching a consensus? (Hitachi Solutions, Ltd. Yoshida）
 
-- **2.2.5 The Request Number Limit for Load Tools**
+Additional Information: in the case of there being a minimum number of validator nodes needed by the consensus algorithm to be tested, it is necessary to obtain that number. 
 
-  We may need to mention the request number limit in this document. (Accenture Rep)
+**2.2.5 Limit of the number of requests done by a single load tool**
 
-  - Clients such as Hyperledger Besu have rpc-http-max-active-connections as a parameter, and the default value is set to 80. This is one of the parameters where it is not possible to set the value to more than 80, so we should keep this in mind when measuring performance. (Yoshida from Hitachi Solutions)
+Point Made:
 
-  **Conclusion:** Mention there may be parameters with limits built into a client’s infrastructure.
+・Is it necessary to mention the limit of the number of requests in this document? (Accenture Hatate)
 
-- It may be easier to understand by adding a diagram that shows the latency, throughput, and responses from the application. (Shimizu from NTT DATA)
+・Hyperledger Besu, etc. has a parameter called rpc-http-max-active-connections, and a default value of 80. Due to connections of 80+ not being possible, it can be considered as one of the parameters that we need to be aware of when measuring performance. (Hitachi Solutions, Ltd., Yoshida)
 
-  **Conclusion:** We will use figures and data accordingly.
+Content Altered:
 
-<br />
+The limit value of the number of requests that can be generated by the load tool used for tests. Due to the limit of the number of requests done by a single load tool differing according to the tool used, it is preferable to indicate this as a reference for tests. In addition, due to there being cases with the relevant parameters being on the infrastructure side, it becomes necessary to check the infrastructure.
 
-## 3. Test Conditions Review
+## 5. Summary
 
-Taking previous discussions into account, the following has been established.
-
-<br />
-
-Item: Blockchain Name
-
-Conditions: In principle, Ethereum-Based Blockchains are preferred, but other Blockchains can be selected for comparison
-
-<br />
-
-Item: Transaction Method
-
-Conditions: ERC20 Smart Contract Token Transfer
-
-## 4. Summary
-
-The white paper will be updated accordingly based on the suggestions and comments from each company. By going through the review process, we aim to make this document more practical for readers.
+Two companies, again, carried out the sharing of their test results based on the content mentioned on the white paper. We aim to make the white paper available after adding in the agreed items from this workshop.
