@@ -10,8 +10,7 @@ import Layout from "../components/layout";
 import SEO from "../components/seo";
 import TOC from "../components/toc";
 
-const Post = ({ data }) => {
-  console.log(data, 'datadatadata')
+const Post = ({ data }) => {  
   return (
     <Layout>
       <SEO title={data.mdx.frontmatter.title} description={data.mdx.excerpt} />
