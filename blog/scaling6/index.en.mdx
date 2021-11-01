@@ -11,10 +11,9 @@ group: scaling
 
 2. Sharing Test Results
 
-  2.1 Performance Measurements using Geth and PoA
+   2.1 Performance Measurements using Geth and PoA
 
-  2.2 Performance Measurement of BESU
-
+   2.2 Performance Measurement of BESU
 
 ## List of Participants
 
@@ -51,15 +50,19 @@ group: scaling
 ![第1回ブロックチェーンスケーリングに関するワークショップ](./images/img1.png)
 
 <p style="text-align: right;font-weight:bold;">
-   Download file
-  <a style="margin-left: 5px" href="/pdf/scaling6/scalling-workshop_6_introduction.pdf" target="_blank">
+  Download file
+  <a
+    style="margin-left: 5px"
+    href="/pdf/scaling6/scalling-workshop_6_introduction.pdf"
+    target="_blank"
+  >
     here
   </a>
 </p>
 
 This time we used the information from the white paper to share the results of tests carried out by the companies.
 
-We expect to publish the presentation of these results as the appendix. 
+We expect to publish the presentation of these results as the appendix.
 
 ## 2. Sharing Test Results
 
@@ -73,18 +76,22 @@ We expect to publish the presentation of these results as the appendix.
 
 <p style="text-align: right;font-weight:bold;">
   Download file
-  <a style="margin-left: 5px" href="/pdf/scaling6/scalling-workshop_6_Couger.pdf" target="_blank">
-   here
+  <a
+    style="margin-left: 5px"
+    href="/pdf/scaling6/scalling-workshop_6_Couger.pdf"
+    target="_blank"
+  >
+    here
   </a>
 </p>
 
-We tested by creating three nodes on AWS EC2, and carried the load from a Mac device using Caliper. 
+We tested by creating three nodes on AWS EC2, and carried the load from a Mac device using Caliper.
 
 <br />
 
 Nakagawa: I’d like to review the methods of measuring Read Latency and Read Throughout of Caliper.
 
-Member: It is assumed that we must add BalanceOf and throw a Read only transaction  to take measurements.
+Member: It is assumed that we must add BalanceOf and throw a Read only transaction to take measurements.
 
 Nakagawa: Another measurement is performed against BalanceOf.
 
@@ -99,7 +106,7 @@ Nakagawa: Another measurement is performed against BalanceOf.
 <p style="text-align: right;font-weight:bold;">
   To see the link
   <a
-   style="margin-left: 5px"
+    style="margin-left: 5px"
     href="https://www.ntt-tx.co.jp/column/hyperledger_caliperbesu/210910/"
     target="_blank"
   >
@@ -113,7 +120,7 @@ The more pending transactions that accumulate on BESU, the more memory it uses. 
 
 - Have a replacement ready in case the process becomes hung up.
 
-- Depending on the load, increase the number of instances and distribute the amount of load on each node. 
+- Depending on the load, increase the number of instances and distribute the amount of load on each node.
 
 Yoshida: Were measurements carried out using a normal transaction rather than a private transaction for this test?
 
@@ -135,4 +142,4 @@ I think it would be helpful if we measured different amounts of load and studied
 
 The testing and sharing of findings by the two companies highlighted in the white paper has helped with clarifying information as well as identifying areas of uncertainty.
 
-At the next workshop, we will invite other companies to present their findings and continue our critical review. 
+At the next workshop, we will invite other companies to present their findings and continue our critical review.

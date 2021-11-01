@@ -11,10 +11,15 @@ group: scaling
 
 2. Sharing Test Results
 
-  2.1 Performance Verification of Quorum
+   2.1 Performance Verification of Quorum
 
-  2.2 Performance Measurement of Besu
+   2.2 Performance Measurement of Besu
 
+3. About Sharing the Test Results
+
+4. Review of the Improvements of the White Paper
+
+5. Summary
 
 ## List of Participants
 
@@ -26,11 +31,11 @@ group: scaling
 
   - Nao Nishijima
 
-  - Shiori Harazono 
+  - Shiori Harazono
 
 - Couger Inc. (Organizer)
 
-  - Atsushi Ishii 
+  - Atsushi Ishii
 
   - Kazuaki Ishiguro
 
@@ -48,7 +53,7 @@ group: scaling
 
 ![第1回ブロックチェーンスケーリングに関するワークショップ](./images/img1.jpg)
 
-This time, each company shared the results of the tests they each conducted, based on the contents of the white paper, as a continuation from last time. In addition, we plan the results of this study to be made available as an appendix to the white paper that displays said results. 
+This time, each company shared the results of the tests they each conducted, based on the contents of the white paper, as a continuation from last time. In addition, we plan the results of this study to be made available as an appendix to the white paper that displays said results.
 
 ## 2. Sharing Test Results
 
@@ -60,9 +65,9 @@ This time, each company shared the results of the tests they each conducted, bas
 
 ![第1回ブロックチェーンスケーリングに関するワークショップ](./images/img2.jpg)
 
-The processing performance of GO Quorum was measured using Hyperledger Caliper, and we summarised the results. The items obtained conformed to the white paper. 
+The processing performance of GO Quorum was measured using Hyperledger Caliper, and we summarised the results. The items obtained conformed to the white paper.
 
-Regardless of the number of transactions sent, the results showed that latency tended to be low on average. 
+Regardless of the number of transactions sent, the results showed that latency tended to be low on average.
 
 In addition, despite the constant high speeds of read latency of the query process, the transaction’s latency in the transfer and open processes had a tendency to be high.
 
@@ -70,7 +75,7 @@ In addition, despite the constant high speeds of read latency of the query proce
 
 We carried out a test of the increase of the number of transactions sent from 1000 to 18,000, but the target TPS and CPU usage had a tendency to stabilise at 4000 or more transactions sent.
 
-NTT DATA, Shimizu: If the target TPS is fixed, then the target TPS = the amount of load, so we can consider a method of measuring the performance by changing the load. It might be good to record how to use Capiper in the white paper. 
+NTT DATA, Shimizu: If the target TPS is fixed, then the target TPS = the amount of load, so we can consider a method of measuring the performance by changing the load. It might be good to record how to use Capiper in the white paper.
 
 ### 2.2 Performance Measurement of Besu
 
@@ -84,9 +89,9 @@ Using Caliper (0.4.3-dev), we measured the performance of Hyperledger Besu with 
 
 ## 3. About Sharing the Test Results
 
-Couger’s Shimizu: Would it be better to mention the block recognition, block generation time, transmission speed, etc. as test condition entries? 
+Couger’s Shimizu: Would it be better to mention the block recognition, block generation time, transmission speed, etc. as test condition entries?
 
-NTT DATA’s Shimizu:  I think it would be better to write them out as test conditions, due to the huge effect it could have on the test results.
+NTT DATA’s Shimizu: I think it would be better to write them out as test conditions, due to the huge effect it could have on the test results.
 
 Conclusion: it will be mentioned.
 
@@ -98,7 +103,7 @@ The following items were altered or added as items pointed out in <a href="https
 
 Point Made: Is it not necessary to have an indicator of the minimum number of nodes necessary for the sake of reaching a consensus? (Hitachi Solutions, Ltd. Yoshida）
 
-Additional Information: in the case of there being a minimum number of validator nodes needed by the consensus algorithm to be tested, it is necessary to obtain that number. 
+Additional Information: in the case of there being a minimum number of validator nodes needed by the consensus algorithm to be tested, it is necessary to obtain that number.
 
 **2.2.5 Limit of the number of requests done by a single load tool**
 

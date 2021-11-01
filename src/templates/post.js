@@ -11,6 +11,7 @@ import SEO from "../components/seo";
 import TOC from "../components/toc";
 
 const Post = ({ data }) => {
+  console.log(data, 'datadatadata')
   return (
     <Layout>
       <SEO title={data.mdx.frontmatter.title} description={data.mdx.excerpt} />
