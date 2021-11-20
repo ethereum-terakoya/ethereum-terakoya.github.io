@@ -111,7 +111,7 @@ const contributorImages = graphql`
 `;
 
 const Contributor = (props) => {
-  const intl = useIntl();  
+  const intl = useIntl();
   return (
     <>
       <Row className="pt-5">
@@ -125,7 +125,7 @@ const Contributor = (props) => {
       <Container className="pb-5">
         <Row
           className="justify-content-start"
-          style={{ width: "80%", margin: "auto" }}
+          style={{ width: "100%", margin: "auto" }}
         >
           <StaticQuery
             query={contributorImages}
