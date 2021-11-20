@@ -9,14 +9,14 @@ const contributorImages = graphql`
   query {
     accenture: file(relativePath: { eq: "contributor/accenture.png" }) {
       childImageSharp {
-        fixed(width: 160) {
+        fixed(width: 200) {
           ...GatsbyImageSharpFixed
         }
       }
     }
     act: file(relativePath: { eq: "contributor/act.jpg" }) {
       childImageSharp {
-        fixed(width: 160) {
+        fixed(width: 200) {
           ...GatsbyImageSharpFixed
         }
       }
@@ -24,7 +24,7 @@ const contributorImages = graphql`
 
     nttdata: file(relativePath: { eq: "contributor/nttdata.png" }) {
       childImageSharp {
-        fixed(width: 160) {
+        fixed(width: 200) {
           ...GatsbyImageSharpFixed
         }
       }
@@ -32,7 +32,7 @@ const contributorImages = graphql`
 
     ntt: file(relativePath: { eq: "contributor/ntt.png" }) {
       childImageSharp {
-        fixed(width: 160) {
+        fixed(width: 200) {
           ...GatsbyImageSharpFixed
         }
       }
@@ -40,7 +40,7 @@ const contributorImages = graphql`
 
     collabo_gate: file(relativePath: { eq: "contributor/collabo_gate.jpg" }) {
       childImageSharp {
-        fixed(width: 160) {
+        fixed(width: 200) {
           ...GatsbyImageSharpFixed
         }
       }
@@ -48,7 +48,7 @@ const contributorImages = graphql`
 
     comps: file(relativePath: { eq: "contributor/comps.jpg" }) {
       childImageSharp {
-        fixed(width: 160) {
+        fixed(width: 200) {
           ...GatsbyImageSharpFixed
         }
       }
@@ -63,7 +63,7 @@ const contributorImages = graphql`
 
     singulanet: file(relativePath: { eq: "contributor/singulanet.png" }) {
       childImageSharp {
-        fixed(width: 160) {
+        fixed(width: 200) {
           ...GatsbyImageSharpFixed
         }
       }
@@ -71,7 +71,7 @@ const contributorImages = graphql`
 
     hitachi: file(relativePath: { eq: "contributor/hitachi.jpg" }) {
       childImageSharp {
-        fixed(width: 160) {
+        fixed(width: 200) {
           ...GatsbyImageSharpFixed
         }
       }
@@ -79,7 +79,7 @@ const contributorImages = graphql`
 
     fujitsu: file(relativePath: { eq: "contributor/fujitsu.jpg" }) {
       childImageSharp {
-        fixed(width: 160) {
+        fixed(width: 200) {
           ...GatsbyImageSharpFixed
         }
       }
@@ -87,7 +87,7 @@ const contributorImages = graphql`
 
     imge: file(relativePath: { eq: "contributor/imge.png" }) {
       childImageSharp {
-        fixed(width: 160) {
+        fixed(width: 200) {
           ...GatsbyImageSharpFixed
         }
       }
@@ -95,7 +95,7 @@ const contributorImages = graphql`
 
     layerx: file(relativePath: { eq: "contributor/layerx.jpg" }) {
       childImageSharp {
-        fixed(width: 160) {
+        fixed(width: 200) {
           ...GatsbyImageSharpFixed
         }
       }
@@ -159,7 +159,7 @@ const Contributor = (props) => {
               ];
               contributors.forEach((c, i) => {
                 list.push(
-                  <Col className="text-center py-2" key={i} sm={3}>
+                  <Col className="text-center py-2" key={i} lg={3} md={4} sm={6}>
                     <Img fixed={c.fixed} />
                     <div>
                       {intl.formatMessage({ id: `contributor.${c.name}` })}
