@@ -7,6 +7,13 @@ import { StaticQuery, graphql } from "gatsby";
 
 const contributorImages = graphql`
   query {
+    accenture: file(relativePath: { eq: "contributor/accenture.png" }) {
+      childImageSharp {
+        fixed(width: 160) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
     act: file(relativePath: { eq: "contributor/act.jpg" }) {
       childImageSharp {
         fixed(width: 160) {
@@ -14,6 +21,23 @@ const contributorImages = graphql`
         }
       }
     }
+
+    nttdata: file(relativePath: { eq: "contributor/nttdata.png" }) {
+      childImageSharp {
+        fixed(width: 160) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+
+    ntt: file(relativePath: { eq: "contributor/ntt.png" }) {
+      childImageSharp {
+        fixed(width: 160) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+
     collabo_gate: file(relativePath: { eq: "contributor/collabo_gate.jpg" }) {
       childImageSharp {
         fixed(width: 160) {
@@ -21,6 +45,7 @@ const contributorImages = graphql`
         }
       }
     }
+
     comps: file(relativePath: { eq: "contributor/comps.jpg" }) {
       childImageSharp {
         fixed(width: 160) {
@@ -35,13 +60,15 @@ const contributorImages = graphql`
         }
       }
     }
-    fujitsu: file(relativePath: { eq: "contributor/fujitsu.jpg" }) {
+
+    singulanet: file(relativePath: { eq: "contributor/singulanet.png" }) {
       childImageSharp {
         fixed(width: 160) {
           ...GatsbyImageSharpFixed
         }
       }
     }
+
     hitachi: file(relativePath: { eq: "contributor/hitachi.jpg" }) {
       childImageSharp {
         fixed(width: 160) {
@@ -49,6 +76,23 @@ const contributorImages = graphql`
         }
       }
     }
+
+    fujitsu: file(relativePath: { eq: "contributor/fujitsu.jpg" }) {
+      childImageSharp {
+        fixed(width: 160) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+
+    imge: file(relativePath: { eq: "contributor/imge.png" }) {
+      childImageSharp {
+        fixed(width: 160) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+
     layerx: file(relativePath: { eq: "contributor/layerx.jpg" }) {
       childImageSharp {
         fixed(width: 160) {
@@ -68,6 +112,7 @@ const contributorImages = graphql`
 
 const Contributor = (props) => {
   const intl = useIntl();
+console.log(intl, "intlintlintl")
   return (
     <>
       <Row className="pt-5">
@@ -88,15 +133,22 @@ const Contributor = (props) => {
             render={(data) => {
               const list = [];
               const contributors = [
+                { name: "accenture", fixed: data.accenture.childImageSharp.fixed },
                 { name: "act", fixed: data.act.childImageSharp.fixed },
+                { name: "nttdata", fixed: data.nttdata.childImageSharp.fixed },
+                { name: "ntt", fixed: data.ntt.childImageSharp.fixed },
                 {
                   name: "collabo_gate",
                   fixed: data.collabo_gate.childImageSharp.fixed,
                 },
                 { name: "comps", fixed: data.comps.childImageSharp.fixed },
                 { name: "cryptel", fixed: data.cryptel.childImageSharp.fixed },
-                { name: "fujitsu", fixed: data.fujitsu.childImageSharp.fixed },
+                { name: "singulanet", fixed: data.singulanet.childImageSharp.fixed },
                 { name: "hitachi", fixed: data.hitachi.childImageSharp.fixed },
+                { name: "fujitsu", fixed: data.fujitsu.childImageSharp.fixed },
+
+                { name: "imge", fixed: data.imge.childImageSharp.fixed },
+
                 { name: "layerx", fixed: data.layerx.childImageSharp.fixed },
                 { name: "waseda", fixed: data.waseda.childImageSharp.fixed },
               ];
