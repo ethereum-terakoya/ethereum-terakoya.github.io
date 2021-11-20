@@ -111,8 +111,7 @@ const contributorImages = graphql`
 `;
 
 const Contributor = (props) => {
-  const intl = useIntl();
-console.log(intl, "intlintlintl")
+  const intl = useIntl();  
   return (
     <>
       <Row className="pt-5">
@@ -133,7 +132,10 @@ console.log(intl, "intlintlintl")
             render={(data) => {
               const list = [];
               const contributors = [
-                { name: "accenture", fixed: data.accenture.childImageSharp.fixed },
+                {
+                  name: "accenture",
+                  fixed: data.accenture.childImageSharp.fixed,
+                },
                 { name: "act", fixed: data.act.childImageSharp.fixed },
                 { name: "nttdata", fixed: data.nttdata.childImageSharp.fixed },
                 { name: "ntt", fixed: data.ntt.childImageSharp.fixed },
@@ -143,7 +145,10 @@ console.log(intl, "intlintlintl")
                 },
                 { name: "comps", fixed: data.comps.childImageSharp.fixed },
                 { name: "cryptel", fixed: data.cryptel.childImageSharp.fixed },
-                { name: "singulanet", fixed: data.singulanet.childImageSharp.fixed },
+                {
+                  name: "singulanet",
+                  fixed: data.singulanet.childImageSharp.fixed,
+                },
                 { name: "hitachi", fixed: data.hitachi.childImageSharp.fixed },
                 { name: "fujitsu", fixed: data.fujitsu.childImageSharp.fixed },
 
