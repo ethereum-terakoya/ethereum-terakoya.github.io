@@ -392,3 +392,9 @@ p{
 h3{
   word-break: break-word;
 }
+
+.center-images{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

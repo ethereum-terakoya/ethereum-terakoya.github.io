@@ -1,5 +1,5 @@
 {
-  "description": "EthTerakoya(イーサテラコヤ)はブロックチェーンの応用領域について、技術・ビジネス・法律の観点から課題を深掘りし、企業が事業の自走力をつける場となるコミュニティです",
+  "description": "ETHTerakoya(イーサテラコヤ)はブロックチェーンの応用領域について、技術・ビジネス・法律の観点から課題を深掘りし、企業が事業の自走力をつける場となるコミュニティです",
   "contact": "お問い合わせ",
   "slogan": "技術・ビジネス・法律の観点から課題を協議し、企業のブロックチェーン活用における標準化策定を目指すコミュニティ",
   "what": "ETHTerakoya（イーサテラコヤ）とは",
@@ -45,5 +45,7 @@
   "contributor.nttdata": " ",
   "contributor.ntt": " ",
   "contributor.singulanet": " ",
-  "contributor.imge": " "
+  "contributor.imge": " ",
+  "contributor.new": " "
 }
+

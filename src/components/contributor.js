@@ -77,6 +77,14 @@ const contributorImages = graphql`
       }
     }
 
+    new: file(relativePath: { eq: "contributor/logo-img.png" }) {
+      childImageSharp {
+        fixed(width: 200) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+
     fujitsu: file(relativePath: { eq: "contributor/fujitsu.jpg" }) {
       childImageSharp {
         fixed(width: 200) {
@@ -150,16 +158,28 @@ const Contributor = (props) => {
                   fixed: data.singulanet.childImageSharp.fixed,
                 },
                 { name: "hitachi", fixed: data.hitachi.childImageSharp.fixed },
+
+                { name: "new", fixed: data.new.childImageSharp.fixed },
+
                 { name: "fujitsu", fixed: data.fujitsu.childImageSharp.fixed },
 
                 { name: "imge", fixed: data.imge.childImageSharp.fixed },
 
                 { name: "layerx", fixed: data.layerx.childImageSharp.fixed },
+
                 { name: "waseda", fixed: data.waseda.childImageSharp.fixed },
+
+                
               ];
               contributors.forEach((c, i) => {
                 list.push(
-                  <Col className="text-center py-2" key={i} lg={3} md={4} sm={6}>
+                  <Col
+                    className="text-center py-2 center-images"
+                    key={i}
+                    lg={3}
+                    md={4}
+                    sm={6}
+                  >
                     <Img fixed={c.fixed} />
                     <div>
                       {intl.formatMessage({ id: `contributor.${c.name}` })}
