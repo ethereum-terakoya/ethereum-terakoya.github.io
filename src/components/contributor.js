@@ -168,8 +168,6 @@ const Contributor = (props) => {
                 { name: "layerx", fixed: data.layerx.childImageSharp.fixed },
 
                 { name: "waseda", fixed: data.waseda.childImageSharp.fixed },
-
-                
               ];
               contributors.forEach((c, i) => {
                 list.push(
