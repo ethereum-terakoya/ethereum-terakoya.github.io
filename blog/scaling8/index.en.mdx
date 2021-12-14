@@ -310,29 +310,29 @@ Since June 2021, the blockchain performance evaluation index has been discussed 
 
 1. Differential measurement by product (Besu and Go-Ethereum)
 
-When the measurement conditions were combined, there was not much of a difference
+   When the measurement conditions were combined, there was not much of a difference
 
-    - Since there are fluctuations in the measurement results due to block generation timing and other factors, it is desirable to aggregate the results after multiple trials.
+   - Since there are fluctuations in the measurement results due to block generation timing and other factors, it is desirable to aggregate the results after multiple trials.
 
 2. Differential measurement of consensus building (PoA and IBFT)
 
-It was assumed that IBFT would be "heavier" due to the overhead of consensus building, but this was not the case due to the different settings of the gas upper limit.
+   It was assumed that IBFT would be "heavier" due to the overhead of consensus building, but this was not the case due to the different settings of the gas upper limit.
 
-    - Since the gas upper limit (block size) affects the overall processing performance, it is necessary to properly match the values when measuring.
+   - Since the gas upper limit (block size) affects the overall processing performance, it is necessary to properly match the values when measuring.
 
 3. Differential measurement of block generation interval (block generation interval: 2 and 5 seconds)
 
-We assumed that 2 seconds would be "much faster" than 5 seconds, but the results were different.
+   We assumed that 2 seconds would be "much faster" than 5 seconds, but the results were different.
 
-    - Since the overall network-like distribution affects the processing performance, it is necessary to consider the assumed environment when measuring and test the configuration as close to the production (assumed) configuration as possible.
+   - Since the overall network-like distribution affects the processing performance, it is necessary to consider the assumed environment when measuring and test the configuration as close to the production (assumed) configuration as possible.
 
 4. Differential measurement of node placement (local and AWS)
 
-We assumed that AWS would be "slower for the overhead of consensus building," but the results were different.
+   We assumed that AWS would be "slower for the overhead of consensus building," but the results were different.
 
-    - Because of the comparison between local and cloud environments, the difference in the infrastructure part had a significant impact.
+   - Because of the comparison between local and cloud environments, the difference in the infrastructure part had a significant impact.
 
-    - It is important to understand it only as an "As Is" value, and to measure it in an environment that matches the actual environment (cloud or on-premise).
+   - It is important to understand it only as an "As Is" value, and to measure it in an environment that matches the actual environment (cloud or on-premise).
 
 **Q.** Please explain if there are any differences in behavior or performance specific to Besu compared to Geth or Open Ethereum.
 
