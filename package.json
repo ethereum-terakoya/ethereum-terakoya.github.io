@@ -28,7 +28,7 @@
     "gatsby-plugin-google-analytics": "^3.13.0",
     "gatsby-plugin-gtag": "^1.0.13",
     "gatsby-plugin-manifest": "^2.4.23",
-    "gatsby-plugin-mdx": "^1.2.34",
+    "gatsby-plugin-mdx": "^2.14.1",
     "gatsby-plugin-react-helmet": "^3.3.10",
     "gatsby-plugin-sass": "^2.7.0",
     "gatsby-plugin-sharp": "^2.6.26",
