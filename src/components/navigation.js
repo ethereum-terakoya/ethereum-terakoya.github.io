@@ -12,8 +12,7 @@ import { Dropdown } from "react-bootstrap";
 import DropdownMenu from "react-bootstrap/DropdownMenu";
 import DropdownItem from "react-bootstrap/DropdownItem";
 
-const Navigation = ({logo}) => {
-  console.log(logo, 'logologologologo')
+const Navigation = ({ logo }) => {  
   const intl = useIntl();
 
   return (

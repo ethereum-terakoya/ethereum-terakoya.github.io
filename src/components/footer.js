@@ -11,7 +11,7 @@ const Footer = () => {
       <Container fluid className="pt-5 pb-2 bg-dark text-white">
         <Row className="justify-content-md-center mb-5">
           <Col>
-            <h4 className="text-center footer-title">ETHTerakoya</h4>
+            <h4 className="text-center footer-title">EEA Japan</h4>
           </Col>
           <Col />
           <Col>
@@ -56,7 +56,7 @@ const Footer = () => {
         <Row>
           <Col>
             <p className="small text-center">
-              &copy; {new Date().getFullYear()} Ethereum Terakoya
+              &copy; {new Date().getFullYear()} EEA Japan
             </p>
           </Col>
         </Row>
