@@ -55,18 +55,18 @@ hr {
 
         @include media-breakpoint-down(sm) {
           & .header-img {
-            margin-left: 4em;
+            margin-left: 0em;
           }
         }
         @include media-breakpoint-up(md) {
           & .header-img {
-            margin-left: 8em;
+            margin-left: 3em;
           }
         }
         @include media-breakpoint-only(xs) {
           justify-content: center;
           & .header-img {
-            margin: auto;
+            // margin: auto;
           }
         }
         & .title {
@@ -276,8 +276,8 @@ hr {
     &:before {
       background-image: url('/img/logo.png');
       display: inline-block;
-      width: 36px;
-      height: 36px;
+      width: 150px;
+      height: 55px;
       background-size: contain;
       background-repeat: no-repeat;
       vertical-align: middle;

@@ -4,9 +4,9 @@ require(`dotenv`).config({
 
 module.exports = {
   siteMetadata: {
-    siteUrl: `https://ethereum-terakoya.org`,
-    title: `Ethereum Terakoya`,
-    author: `ETHTerakoya`,
+    siteUrl: `https://entethalliance-japan.org`,
+    title: `EEA Japan`,
+    author: `EEA Japan`,
   },
   plugins: [
     {
@@ -87,8 +87,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Ethereum Terakoya`,
-        short_name: `ETHTerakoya`,
+        name: `EEA Japan`,
+        short_name: `EEAJapan`,
         start_url: `/`,
         display: `standalone`,
         icon: `src/images/icon.png`,

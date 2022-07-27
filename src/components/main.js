@@ -23,7 +23,7 @@ const Hero = ({ logo }) => {
             <div className="header-img">
               <Img fixed={logo.childImageSharp.fixed} className="" />
             </div>
-            <div className="title text-white text-left">ETHTerakoya</div>
+            {/* <div className="title text-white text-left">ETHTerakoya</div> */}
           </Col>
         </div>
         <div>

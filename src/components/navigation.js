@@ -12,7 +12,8 @@ import { Dropdown } from "react-bootstrap";
 import DropdownMenu from "react-bootstrap/DropdownMenu";
 import DropdownItem from "react-bootstrap/DropdownItem";
 
-const Navigation = () => {
+const Navigation = ({logo}) => {
+  console.log(logo, 'logologologologo')
   const intl = useIntl();
 
   return (
@@ -22,7 +23,7 @@ const Navigation = () => {
           {/* logo */}
           <Navbar.Brand>
             <LocalizedLink to="/" className="text-white font-weight-bold">
-              <span className="header-logo">ETHTerakoya</span>
+              <span className="header-logo"></span>
             </LocalizedLink>
           </Navbar.Brand>
 

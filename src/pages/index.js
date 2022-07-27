@@ -27,7 +27,7 @@ export const query = graphql`
   query {
     logo: file(relativePath: { eq: "logo.png" }) {
       childImageSharp {
-        fixed(width: 50) {
+        fixed(width: 300) {
           ...GatsbyImageSharpFixed
         }
       }
