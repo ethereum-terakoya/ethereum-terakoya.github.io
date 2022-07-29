@@ -14,7 +14,7 @@ const SEO = ({ description, children, title, image }) => {
             title
           }
         }
-        ogImageDefault: file(relativePath: { eq: "header.png" }) {
+        ogImageDefault: file(relativePath: { eq: "header.jpg" }) {
           childImageSharp {
             fixed(width: 1200) {
               src
