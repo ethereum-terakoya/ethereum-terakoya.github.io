@@ -1,1 +1,7 @@
-{"data":{"site":{"siteMetadata":{"siteUrl":"https://entethalliance-japan.org"}}}}
+{
+  "data": {
+    "site": {
+      "siteMetadata": { "siteUrl": "https://entethalliance-japan.org" }
+    }
+  }
+}
