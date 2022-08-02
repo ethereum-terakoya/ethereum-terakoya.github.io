@@ -8,7 +8,7 @@ import SEO from "../components/seo";
 
 const Home = ({ data, pageContext }) => {
   const intl = useIntl();
-  const home = pageContext.locale === "ja" ? "ホーム" : "Home";
+  const home = pageContext.locale === "ja" ? "" : "";
 
   return (
     <Layout>
