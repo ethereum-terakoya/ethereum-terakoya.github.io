@@ -18,11 +18,10 @@ const News = ({ data, pageContext }) => {
           // jp
           {
             date: "2022/7/1",
-            title: "公開イベント",
-            linkTitle:
-              "ETHTerakoyaをEEA Japanコミュニティに統合しました。",
+            title: "お知らせ",
+            linkTitle: "",
             link: "#",
-            description: "",
+            description: "ETHTerakoyaをEEA Japanコミュニティに統合しました。",
           },
           {
             date: "2021/10/29",
@@ -92,11 +91,11 @@ const News = ({ data, pageContext }) => {
           // en
           {
             date: "2022/7/1",
-            title: "公開イベント",
-            linkTitle:
-              "ETHTerakoya has been merged into EEA Japan community.",
+            title: "News",
+            linkTitle: "",
             link: "#",
-            description: "",
+            description:
+              "ETHTerakoya has been merged into EEA Japan community.",
           },
           {
             date: "2021/10/29",
@@ -186,11 +185,18 @@ const News = ({ data, pageContext }) => {
                   <Card.Header>{item.title}</Card.Header>
                   <Card.Body>
                     <Card.Title>
-                      <Card.Link href={item.link} target={item.link !== "#" && "blank"}>
+                      <Card.Link
+                        href={item.link}
+                        target={item.link !== "#" && "blank"}
+                      >
                         {item.linkTitle}
                       </Card.Link>
                     </Card.Title>
-                    <Card.Text>{item.description}</Card.Text>
+                    {item.linkTitle === "" ? (
+                      <p>{item.description}</p>
+                    ) : (
+                      <Card.Text>{item.description}</Card.Text>
+                    )}
                   </Card.Body>
                 </Card>
               </Col>
