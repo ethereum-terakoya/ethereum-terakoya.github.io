@@ -12,7 +12,7 @@ import Img from "gatsby-image";
 
 const News = ({ data, pageContext }) => {
   const intl = useIntl();
-  
+
   const list =
     pageContext.locale === "ja"
       ? [
@@ -20,7 +20,7 @@ const News = ({ data, pageContext }) => {
           {
             date: "2022/7/13",
             title: "お知らせ",
-            thumbnail: data.thumbnail, 
+            thumbnail: data.thumbnail,
             linkTitle:
               "EEA Japan主催「インターオペラビリティがもたらすエンタープライズブロックチェーンの進化とは」",
             link: "/events/2022713",
@@ -195,7 +195,15 @@ const News = ({ data, pageContext }) => {
                 <Card style={{ width: "100%" }}>
                   <Card.Header>{item.title}</Card.Header>
                   <Card.Body className="card-body">
-                    <Img fixed={item.thumbnail ? item.thumbnail.childImageSharp.fixed : ""}  className="image-card-body" />
+                  {item.thumbnail ? <Card.Link 
+                          className="image-card-body"  
+                          href={item.link}
+                          target={item.link !== "#" && "blank"}>
+                    <Img
+                      fixed={item.thumbnail.childImageSharp.fixed}                      
+                    />
+                  </Card.Link> : ""}
+                  
                     <div className="card-titles">
                       <Card.Title>
                         <Card.Link
@@ -223,7 +231,6 @@ const News = ({ data, pageContext }) => {
 };
 
 export default News;
-
 
 export const query = graphql`
   query {

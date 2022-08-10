@@ -20,7 +20,7 @@ const Post = ({ data }) => {
             <h1 className="pb-3 pt-5 font-weight-bold">
               {data.mdx.frontmatter.title}
             </h1>
-            <div>{data.mdx.frontmatter.date}</div>
+            <div>{data.mdx.frontmatter.date.toString()}</div>
           </Col>
         </Row>
         <Row>
@@ -39,7 +39,7 @@ const Post = ({ data }) => {
 export default Post;
 
 export const query = graphql`
-  query($locale: String!, $slug: String!, $dateFormat: String!) {
+  query($locale: String!, $slug: String!) {
     mdx(
       fields: { locale: { eq: $locale } }
       frontmatter: { slug: { eq: $slug } }
@@ -49,7 +49,7 @@ export const query = graphql`
       frontmatter {
         slug
         title
-        date(formatString: $dateFormat)
+        date(formatString: "YYYY年M月DD日")        
         group
       }
       body
