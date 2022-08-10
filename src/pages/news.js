@@ -8,10 +8,11 @@ import Layout from "../components/layout";
 import SEO from "../components/seo";
 import { Card } from "react-bootstrap";
 import { useIntl } from "react-intl";
+import Img from "gatsby-image";
 
 const News = ({ data, pageContext }) => {
   const intl = useIntl();
-
+  
   const list =
     pageContext.locale === "ja"
       ? [
@@ -19,9 +20,10 @@ const News = ({ data, pageContext }) => {
           {
             date: "2022/7/13",
             title: "お知らせ",
+            thumbnail: data.thumbnail, 
             linkTitle:
               "EEA Japan主催「インターオペラビリティがもたらすエンタープライズブロックチェーンの進化とは」",
-            link: "/events/20220713",
+            link: "/events/2022713",
             description:
               "2022年7月1日に同イベントを開催いたしました。オンラインではなく、リアル開催となり、セッション終了後に行われた交流会では、登壇者と参加者の間で活発な意見交換が行われ、大いに盛り上がりました。",
           },
@@ -192,20 +194,23 @@ const News = ({ data, pageContext }) => {
               <Col xs={12} sm={10}>
                 <Card style={{ width: "100%" }}>
                   <Card.Header>{item.title}</Card.Header>
-                  <Card.Body>
-                    <Card.Title>
-                      <Card.Link
-                        href={item.link}
-                        target={item.link !== "#" && "blank"}
-                      >
-                        {item.linkTitle}
-                      </Card.Link>
-                    </Card.Title>
-                    {item.linkTitle === "" ? (
-                      <p>{item.description}</p>
-                    ) : (
-                      <Card.Text>{item.description}</Card.Text>
-                    )}
+                  <Card.Body className="card-body">
+                    <Img fixed={item.thumbnail ? item.thumbnail.childImageSharp.fixed : ""}  className="image-card-body" />
+                    <div className="card-titles">
+                      <Card.Title>
+                        <Card.Link
+                          href={item.link}
+                          target={item.link !== "#" && "blank"}
+                        >
+                          {item.linkTitle}
+                        </Card.Link>
+                      </Card.Title>
+                      {item.linkTitle === "" ? (
+                        <p>{item.description}</p>
+                      ) : (
+                        <Card.Text>{item.description}</Card.Text>
+                      )}
+                    </div>
                   </Card.Body>
                 </Card>
               </Col>
@@ -218,3 +223,16 @@ const News = ({ data, pageContext }) => {
 };
 
 export default News;
+
+
+export const query = graphql`
+  query {
+    thumbnail: file(relativePath: { eq: "event-image.jpg" }) {
+      childImageSharp {
+        fixed(width: 250) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+  }
+`;
