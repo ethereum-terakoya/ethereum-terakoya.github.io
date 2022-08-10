@@ -49,7 +49,7 @@ export const query = graphql`
       frontmatter {
         slug
         title
-        date(formatString: "YYYY年M月DD日")        
+        date(formatString: "YYYY年M月DD日")
         group
       }
       body

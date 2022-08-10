@@ -195,15 +195,18 @@ const News = ({ data, pageContext }) => {
                 <Card style={{ width: "100%" }}>
                   <Card.Header>{item.title}</Card.Header>
                   <Card.Body className="card-body">
-                  {item.thumbnail ? <Card.Link 
-                          className="image-card-body"  
-                          href={item.link}
-                          target={item.link !== "#" && "blank"}>
-                    <Img
-                      fixed={item.thumbnail.childImageSharp.fixed}                      
-                    />
-                  </Card.Link> : ""}
-                  
+                    {item.thumbnail ? (
+                      <Card.Link
+                        className="image-card-body"
+                        href={item.link}
+                        target={item.link !== "#" && "blank"}
+                      >
+                        <Img fixed={item.thumbnail.childImageSharp.fixed} />
+                      </Card.Link>
+                    ) : (
+                      ""
+                    )}
+
                     <div className="card-titles">
                       <Card.Title>
                         <Card.Link
