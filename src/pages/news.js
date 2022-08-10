@@ -17,7 +17,7 @@ const News = ({ data, pageContext }) => {
       ? [
           // jp
           {
-            date: "2022/07/13",
+            date: "2022/7/13",
             title: "お知らせ",
             linkTitle:
               "EEA Japan主催「インターオペラビリティがもたらすエンタープライズブロックチェーンの進化とは」",
