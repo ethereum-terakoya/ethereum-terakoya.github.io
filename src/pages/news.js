@@ -101,6 +101,16 @@ const News = ({ data, pageContext }) => {
       : [
           // en
           {
+            date: "2022/7/13",
+            title: "News",
+            thumbnail: data.thumbnail,
+            linkTitle:
+              `"What Interoperability Means for the Evolution of Enterprise Blockchain," hosted by EEA Japan`,
+            link: "/en/events/2022713",
+            description:
+              `The event was held on July 1, 2022. The session was not held online, but on site, and the networking session held after the session was a lively exchange of ideas and opinions between the speakers and the participants.`,
+          },
+          {
             date: "2022/7/1",
             title: "News",
             linkTitle: "",
