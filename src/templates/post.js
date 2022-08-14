@@ -20,7 +20,7 @@ const Post = ({ data }) => {
             <h1 className="pb-3 pt-5 font-weight-bold">
               {data.mdx.frontmatter.title}
             </h1>
-            <div>{data.mdx.frontmatter.date.toString()}</div>            
+            <div>{data.mdx.frontmatter.date.toString()}</div>
           </Col>
         </Row>
         <Row>
