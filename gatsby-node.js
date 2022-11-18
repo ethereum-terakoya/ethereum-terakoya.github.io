@@ -16,7 +16,6 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
               group
               slug
               date(formatString: "YYYY-MM-DD")
-              
             }
           }
         }

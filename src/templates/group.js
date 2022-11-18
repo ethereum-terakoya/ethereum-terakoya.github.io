@@ -13,7 +13,7 @@ import SEO from "../components/seo";
 const Category = ({ pageContext, data }) => {
   const intl = useIntl();
   const group = pageContext.group.toUpperCase();
-  
+
   return (
     <Layout>
       <SEO title={group} />

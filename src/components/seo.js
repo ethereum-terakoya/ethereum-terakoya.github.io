@@ -3,7 +3,6 @@ import { Helmet } from "react-helmet";
 import { graphql, useStaticQuery } from "gatsby";
 
 const SEO = ({ description, children, title, image }) => {
-  
   const { site, ogImageDefault } = useStaticQuery(
     graphql`
       query {
