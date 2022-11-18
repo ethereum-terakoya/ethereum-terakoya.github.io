@@ -16,7 +16,8 @@ const Post = ({ data }) => {
       <SEO
         title={data.mdx.frontmatter.title}
         image={
-          data.mdx.frontmatter.image && data.mdx.frontmatter.image.childImageSharp.fixed.src
+          data.mdx.frontmatter.image &&
+          data.mdx.frontmatter.image.childImageSharp.fixed.src
         }
         description={data.mdx.excerpt}
       />
