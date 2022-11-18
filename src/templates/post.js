@@ -17,7 +17,7 @@ const Post = ({ data }) => {
         title={data.mdx.frontmatter.title}
         image={
           data.mdx.frontmatter.image &&
-          data.mdx.frontmatter.image.childImageSharp.fixed.src
+          data.mdx.frontmatter.image.publicURL
         }
         description={data.mdx.excerpt}
       />
@@ -59,11 +59,7 @@ export const query = graphql`
         date(formatString: $dateFormat)
         group
         image {
-          childImageSharp {
-            fixed(width: 1400, height: 1400) {
-              ...GatsbyImageSharpFixed
-            }
-          }
+          publicURL
         }
       }
       body
