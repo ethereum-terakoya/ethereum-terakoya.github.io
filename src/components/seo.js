@@ -28,8 +28,8 @@ const SEO = ({ description, children, title, image }) => {
   const ogImage = image
     ? site.siteMetadata.siteUrl.concat(image)
     : site.siteMetadata.siteUrl.concat(
-      ogImageDefault.childImageSharp.fixed.src
-    );
+        ogImageDefault.childImageSharp.fixed.src
+      );
 
   const ogUrl = typeof window !== "undefined" ? window.location.href : "";
 
@@ -40,7 +40,7 @@ const SEO = ({ description, children, title, image }) => {
       <meta property="og:description" content={description} />
       <meta property="og:image" content={ogImage} />
       <meta property="og:image:width" content="1024" />
-      <meta property="og:image:height" content="768" />
+      <meta property="og:image:height" content="1024" />
       <meta property="og:type" content="website" />
       <meta property="og:site_name" content={site.siteMetadata.title} />
       <meta property="og:url" content={ogUrl} />
