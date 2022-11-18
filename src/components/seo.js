@@ -28,23 +28,23 @@ const SEO = ({ description, children, title, image }) => {
   const ogImage = image
     ? site.siteMetadata.siteUrl.concat(image)
     : site.siteMetadata.siteUrl.concat(
-        ogImageDefault.childImageSharp.fixed.src
-      );
+      ogImageDefault.childImageSharp.fixed.src
+    );
 
   const ogUrl = typeof window !== "undefined" ? window.location.href : "";
 
   return (
     <Helmet title={title} titleTemplate={`%s | ${site.siteMetadata.title}`}>
       <meta name="description" content={description} />
-      <meta property="og:title" content={title} />
+      <meta property="og:title" content={title} key="title" />
       <meta property="og:description" content={description} />
-      <meta property="og:image" content={ogImage} />
+      <meta property="og:image" content={ogImage} key="image" />
       <meta property="og:image:width" content="1024" />
       <meta property="og:image:height" content="1024" />
       <meta property="og:type" content="website" />
       <meta property="og:site_name" content={site.siteMetadata.title} />
       <meta property="og:url" content={ogUrl} />
-      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:card" content="summary_large_image" key="misc-card" />
       <meta name="twitter:creator" content={site.siteMetadata.author} />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:image" content={ogImage} />
