@@ -60,8 +60,8 @@ export const query = graphql`
         group
         image {
           childImageSharp {
-            fixed(width: 1024, quality: 100) {
-              ...GatsbyImageSharpFixed
+            fixed {
+              src
             }
           }
         }
