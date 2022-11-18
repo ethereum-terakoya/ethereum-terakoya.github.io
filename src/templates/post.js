@@ -16,8 +16,7 @@ const Post = ({ data }) => {
       <SEO
         title={data.mdx.frontmatter.title}
         image={
-          data.mdx.frontmatter.image &&
-          data.mdx.frontmatter.image.publicURL
+          data.mdx.frontmatter.image && data.mdx.frontmatter.image.publicURL
         }
         description={data.mdx.excerpt}
       />

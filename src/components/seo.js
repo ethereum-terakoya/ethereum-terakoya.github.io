@@ -28,8 +28,8 @@ const SEO = ({ description, children, title, image }) => {
   const ogImage = image
     ? site.siteMetadata.siteUrl.concat(image)
     : site.siteMetadata.siteUrl.concat(
-      ogImageDefault.childImageSharp.fixed.src
-    );
+        ogImageDefault.childImageSharp.fixed.src
+      );
 
   const ogUrl = typeof window !== "undefined" ? window.location.href : "";
 
