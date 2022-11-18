@@ -11,8 +11,7 @@ import { useIntl } from "react-intl";
 import Img from "gatsby-image";
 
 const News = ({ data, pageContext }) => {
-  const intl = useIntl();
-
+  const intl = useIntl();  
   const list =
     pageContext.locale === "ja"
       ? [

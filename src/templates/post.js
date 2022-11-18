@@ -10,10 +10,10 @@ import Layout from "../components/layout";
 import SEO from "../components/seo";
 import TOC from "../components/toc";
 
-const Post = ({ data }) => {
+const Post = ({ data }) => {  
   return (
-    <Layout>
-      <SEO title={data.mdx.frontmatter.title} description={data.mdx.excerpt} />
+    <Layout>      
+      <SEO title={data.mdx.frontmatter.title} image={data.mdx.frontmatter.image && data.mdx.frontmatter.image.childImageSharp.fixed.src} description={data.mdx.excerpt} />
       <Container>
         <Row>
           <Col>
@@ -51,6 +51,13 @@ export const query = graphql`
         title
         date(formatString: $dateFormat)
         group
+        image {
+          childImageSharp {
+            fixed(width: 250) {
+              ...GatsbyImageSharpFixed
+            }
+          }
+        }
       }
       body
     }
