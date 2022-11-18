@@ -16,7 +16,7 @@ const Post = ({ data }) => {
       <SEO
         title={data.mdx.frontmatter.title}
         image={
-          data.mdx.frontmatter.image && data.mdx.frontmatter.image.publicURL
+          data.mdx.frontmatter.image && data.mdx.frontmatter.image.childImageSharp.fixed.src
         }
         description={data.mdx.excerpt}
       />
@@ -58,7 +58,11 @@ export const query = graphql`
         date(formatString: $dateFormat)
         group
         image {
-          publicURL
+          childImageSharp {
+            fixed(width: 1024) {
+              src
+            }
+          }
         }
       }
       body
