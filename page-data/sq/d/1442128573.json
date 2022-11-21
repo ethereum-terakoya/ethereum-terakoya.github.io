@@ -1,1 +1,18 @@
-{"data":{"site":{"siteMetadata":{"title":"EEA Japan","author":"EEA Japan","siteUrl":"https://entethalliance-japan.org"}},"ogImageDefault":{"childImageSharp":{"fixed":{"src":"/static/2e095111a15c8feef890c93eb3df8701/47498/header.jpg"}}}}}
+{
+  "data": {
+    "site": {
+      "siteMetadata": {
+        "title": "EEA Japan",
+        "author": "EEA Japan",
+        "siteUrl": "https://entethalliance-japan.org"
+      }
+    },
+    "ogImageDefault": {
+      "childImageSharp": {
+        "fixed": {
+          "src": "/static/2e095111a15c8feef890c93eb3df8701/47498/header.jpg"
+        }
+      }
+    }
+  }
+}
