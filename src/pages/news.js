@@ -124,7 +124,16 @@ const News = ({ data, pageContext }) => {
         ]
       : [
           // en
-
+          {
+            date: "2022/11/17",
+            title: "News",
+            thumbnail: sources2,
+            linkTitle:
+              `A "[Square Enix and Hitachi Talk] about the cutting edge of blockchain business with game xNFT and Web3x distributed ID" was held.`,
+            link: "/en/events/20221117",
+            description:
+              `On October 31, 2022, EEA Japan (Enterprise Ethereum Alliance Japan) hosted "[Square Enix and Hitachi Talk] about the cutting edge of blockchain business with game xNFT and Web3x distributed ID".`,
+          },
           {
             date: "2022/7/13",
             title: "News",
