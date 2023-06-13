@@ -28,22 +28,21 @@ const News = ({ data, pageContext }) => {
     },
   ];
 
-
   const imageGlobalBanner = [
-    data.imageGlobal.childImageSharp.fixed, {
+    data.imageGlobal.childImageSharp.fixed,
+    {
       ...data.imageGlobal.childImageSharp.fixed,
       media: `(min-width: 992px)`,
     },
-  ]
+  ];
   const imageGlobalBanner2 = [
-    data.imageGlobal2.childImageSharp.fixed, {
+    data.imageGlobal2.childImageSharp.fixed,
+    {
       ...data.imageGlobal2.childImageSharp.fixed,
       media: `(min-width: 992px)`,
     },
-  ]
+  ];
 
-
-  
   const list =
     pageContext.locale === "ja"
       ? [
@@ -161,6 +160,26 @@ const News = ({ data, pageContext }) => {
       ]
       : [
         // en
+        {
+          date: "2023年04月13日",
+          title: "お知らせ",
+          thumbnail: imageGlobalBanner2,
+          linkTitle:
+            "ETHGlobal Tokyoに日本を代表する企業が集結：今、企業とブロックチェーンエコシステムの融合により何が起ころうとしているのか？ 後編",
+          link: "/events/20230413",
+          description:
+            "2023年4月13日から4日間に渡って開催されたETHGlobal Tokyoハッカソン。このイベントの中で、エンタープライズイーサリアムアライアンスジャパンが主催する「エンタープライズイーサリアムステージ」が行われた。ブロックチェーンを活用したサービスやプロダクトを開発・提供している大企業、公的機関の開発者や研究者が一堂に会した歴史に残るブロックチェーンイベントとなった。",
+        },
+        {
+          date: "2023年04月13日",
+          title: "お知らせ",
+          thumbnail: imageGlobalBanner,
+          linkTitle:
+            "ETHGlobal Tokyoに日本を代表する企業が集結：今、企業とブロックチェーンエコシステムの融合により何が起ころうとしているのか？ 前編",
+          link: "/events/20230412",
+          description:
+            "2023年4月13日から4日間に渡って開催されたETHGlobal Tokyoハッカソン。このイベントの中で、エンタープライズイーサリアムアライアンスジャパンが主催する「エンタープライズイーサリアムステージ」が行われた。ブロックチェーンを活用したサービスやプロダクトを開発・提供している大企業、公的機関の開発者や研究者が一堂に会した歴史に残るブロックチェーンイベントとなった。",
+        },
         {
           date: "2022/11/17",
           title: "News",
