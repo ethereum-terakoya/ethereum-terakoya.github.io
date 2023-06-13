@@ -30,6 +30,32 @@
                 "relativeDirectory": "20220701"
               }
             }
+          },
+          {
+            "node": {
+              "frontmatter": {
+                "slug": "20230413",
+                "title": "ETHGlobal Tokyoに日本を代表する企業が集結：今、企業とブロックチェーンエコシステムの融合により何が起ころうとしているのか？ 後編",
+                "date": "2022年04月13日"
+              },
+              "parent": {
+                "__typename": "File",
+                "relativeDirectory": "20230413"
+              }
+            }
+          },
+          {
+            "node": {
+              "frontmatter": {
+                "slug": "20230412",
+                "title": "ETHGlobal Tokyoに日本を代表する企業が集結：今、企業とブロックチェーンエコシステムの融合により何が起ころうとしているのか？ 前編",
+                "date": "2022年04月12日"
+              },
+              "parent": {
+                "__typename": "File",
+                "relativeDirectory": "20230412"
+              }
+            }
           }
         ]
       }
