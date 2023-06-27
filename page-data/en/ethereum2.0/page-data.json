@@ -1,1 +1,56 @@
-{"componentChunkName":"component---src-templates-group-js","path":"/en/ethereum2.0","result":{"data":{"allMdx":{"edges":[{"node":{"frontmatter":{"slug":"eth2-3","title":"AMA event「Aya Miyaguchi and Vitalik talk about Ethereum and EF」","date":"03/10/2021"},"parent":{"__typename":"File","relativeDirectory":"eth2-3"}}},{"node":{"frontmatter":{"slug":"eth2-2","title":"Ethereum 2.0 | No.2","date":"02/04/2021"},"parent":{"__typename":"File","relativeDirectory":"eth2-2"}}},{"node":{"frontmatter":{"slug":"eth2-1","title":"Ethereum 2.0 | No.1","date":"11/30/2020"},"parent":{"__typename":"File","relativeDirectory":"eth2-1"}}}]}},"pageContext":{"group":"ethereum2.0","locale":"en","hrefLang":"en-US","originalPath":"/ethereum2.0","dateFormat":"MM/DD/YYYY"}},"staticQueryHashes":["1239077767","1239077767","1442128573","3280999885","3280999885"]}
+{
+  "componentChunkName": "component---src-templates-group-js",
+  "path": "/en/ethereum2.0",
+  "result": {
+    "data": {
+      "allMdx": {
+        "edges": [
+          {
+            "node": {
+              "frontmatter": {
+                "slug": "eth2-3",
+                "title": "AMA event「Aya Miyaguchi and Vitalik talk about Ethereum and EF」",
+                "date": "03/10/2021"
+              },
+              "parent": { "__typename": "File", "relativeDirectory": "eth2-3" }
+            }
+          },
+          {
+            "node": {
+              "frontmatter": {
+                "slug": "eth2-2",
+                "title": "Ethereum 2.0 | No.2",
+                "date": "02/04/2021"
+              },
+              "parent": { "__typename": "File", "relativeDirectory": "eth2-2" }
+            }
+          },
+          {
+            "node": {
+              "frontmatter": {
+                "slug": "eth2-1",
+                "title": "Ethereum 2.0 | No.1",
+                "date": "11/30/2020"
+              },
+              "parent": { "__typename": "File", "relativeDirectory": "eth2-1" }
+            }
+          }
+        ]
+      }
+    },
+    "pageContext": {
+      "group": "ethereum2.0",
+      "locale": "en",
+      "hrefLang": "en-US",
+      "originalPath": "/ethereum2.0",
+      "dateFormat": "MM/DD/YYYY"
+    }
+  },
+  "staticQueryHashes": [
+    "1239077767",
+    "1239077767",
+    "1442128573",
+    "3280999885",
+    "3280999885"
+  ]
+}

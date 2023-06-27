@@ -1,1 +1,78 @@
-{"componentChunkName":"component---src-templates-group-js","path":"/events","result":{"data":{"allMdx":{"edges":[{"node":{"frontmatter":{"slug":"202306131","title":"ETHGlobal Tokyoに日本を代表する企業が集結：今、企業とブロックチェーンエコシステムの融合により何が起ころうとしているのか？ 前編","date":"2023年06月13日"},"parent":{"__typename":"File","relativeDirectory":"202306131"}}},{"node":{"frontmatter":{"slug":"202306132","title":"ETHGlobal Tokyoに日本を代表する企業が集結：今、企業とブロックチェーンエコシステムの融合により何が起ころうとしているのか？ 後編","date":"2023年06月13日"},"parent":{"__typename":"File","relativeDirectory":"202306132"}}},{"node":{"frontmatter":{"slug":"20221117","title":"「【スクエニ、日立が語る】ゲームxNFT、Web3x分散型IDによるブロックチェーン事業の最前線」を開催しました","date":"2022年11月17日"},"parent":{"__typename":"File","relativeDirectory":"20221117"}}},{"node":{"frontmatter":{"slug":"20220713","title":"「インターオペラビリティがもたらすエンタープライズブロックチェーンの進化とは」を開催しました","date":"2022年07月13日"},"parent":{"__typename":"File","relativeDirectory":"20220701"}}}]}},"pageContext":{"group":"events","locale":"ja","hrefLang":"ja-JA","originalPath":"/events","dateFormat":"YYYY年MM月DD日"}},"staticQueryHashes":["1239077767","1239077767","1442128573","3280999885","3280999885"]}
+{
+  "componentChunkName": "component---src-templates-group-js",
+  "path": "/events",
+  "result": {
+    "data": {
+      "allMdx": {
+        "edges": [
+          {
+            "node": {
+              "frontmatter": {
+                "slug": "202306131",
+                "title": "ETHGlobal Tokyoに日本を代表する企業が集結：今、企業とブロックチェーンエコシステムの融合により何が起ころうとしているのか？ 前編",
+                "date": "2023年06月13日"
+              },
+              "parent": {
+                "__typename": "File",
+                "relativeDirectory": "202306131"
+              }
+            }
+          },
+          {
+            "node": {
+              "frontmatter": {
+                "slug": "202306132",
+                "title": "ETHGlobal Tokyoに日本を代表する企業が集結：今、企業とブロックチェーンエコシステムの融合により何が起ころうとしているのか？ 後編",
+                "date": "2023年06月13日"
+              },
+              "parent": {
+                "__typename": "File",
+                "relativeDirectory": "202306132"
+              }
+            }
+          },
+          {
+            "node": {
+              "frontmatter": {
+                "slug": "20221117",
+                "title": "「【スクエニ、日立が語る】ゲームxNFT、Web3x分散型IDによるブロックチェーン事業の最前線」を開催しました",
+                "date": "2022年11月17日"
+              },
+              "parent": {
+                "__typename": "File",
+                "relativeDirectory": "20221117"
+              }
+            }
+          },
+          {
+            "node": {
+              "frontmatter": {
+                "slug": "20220713",
+                "title": "「インターオペラビリティがもたらすエンタープライズブロックチェーンの進化とは」を開催しました",
+                "date": "2022年07月13日"
+              },
+              "parent": {
+                "__typename": "File",
+                "relativeDirectory": "20220701"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "pageContext": {
+      "group": "events",
+      "locale": "ja",
+      "hrefLang": "ja-JA",
+      "originalPath": "/events",
+      "dateFormat": "YYYY年MM月DD日"
+    }
+  },
+  "staticQueryHashes": [
+    "1239077767",
+    "1239077767",
+    "1442128573",
+    "3280999885",
+    "3280999885"
+  ]
+}
