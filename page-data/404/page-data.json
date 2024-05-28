@@ -1,13 +1,1 @@
-{
-  "componentChunkName": "component---src-pages-404-js",
-  "path": "/404/",
-  "result": {
-    "pageContext": {
-      "locale": "ja",
-      "hrefLang": "ja-JA",
-      "originalPath": "/404/",
-      "dateFormat": "YYYY年MM月DD日"
-    }
-  },
-  "staticQueryHashes": ["1239077767", "1239077767", "3280999885", "3280999885"]
-}
+{"componentChunkName":"component---src-pages-404-js","path":"/404/","result":{"pageContext":{"locale":"ja","hrefLang":"ja-JA","originalPath":"/404/","dateFormat":"YYYY年MM月DD日"}},"staticQueryHashes":["1239077767","1239077767","3280999885","3280999885"]}
